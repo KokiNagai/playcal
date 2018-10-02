@@ -1,0 +1,89 @@
+<%= render 'posts/post_form' %>
+
+<div class="search-area">
+  <div class="upper-search-JS">
+   <div class="gender-JS">
+     検索条件を変更する
+   </div>
+ </div>
+<%= render 'prefs/search' %>
+</div>
+
+
+
+
+<div class="pref-show-title ">
+  <% if @word.present? %>
+  <p><i class="fa fa-tags"></i><span style="color: #5f9ea0; font-size: 17px;"><%= @word  %></span>に関する投稿
+  <% if @result.count >= 10 %>
+  <p><i class="fa fa-tags"></i><span style="color: #5f9ea0; font-size: 17px;"><%= @result.count %></span>件中、<span style="color: #5f9ea0; font-size: 17px;">10件</span>を表示</p>
+  <% else %>
+  <p><i class="fa fa-tags"></i><span style="color: #5f9ea0; font-size: 17px;"><%= @result.count %></span>件中、<span style="color: #5f9ea0; font-size: 17px;"><%= @result.count %></span>件を表示</p>
+  <% end %>
+  <% end %>
+
+  <% if @gender.present? %>
+  <p><i class="fa fa-tags"></i><span style="color: #5f9ea0; font-size: 17px;"><%= @gender %></span>(性別)の投稿を表示</p>
+  <% end %>
+
+  <% if @member.present? %>
+  <p><i class="fa fa-tags"></i>募集人数<span style="color: #5f9ea0; font-size: 18px;"><%= @member %></span>の投稿</p>
+  <% end %>
+
+  <% if @prefectures.present? %>
+  <p><i class="fa fa-tags"></i><span style="color: #5f9ea0; font-size: 17px;"><%= @skill %></span>を募集中の投稿</p>
+  <% end %>
+</div>
+
+<div class="find-wrapper">
+  <div class="find-main">
+    <%= @message %>
+    <% @tennis.each do |post| %>
+    <div class="find-post">
+      <div class="find-user-upper">
+        <div class="find-post-user">
+          <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300' ) if post.user.picture.present? %></p>
+          <p><h2><%= post.title %></h2></p>
+        </div>
+          <div class="find-title">
+            <%= link_to post.user.name, @user, class: "find-user-name" %>
+          </div>
+          <div class="find-post-detail">
+            <%= link_to "詳細を見る", post, id: "find-post-detail" %>
+          </div>
+      </div>
+      <div class="find-post-under">
+        <table class="find-under-table">
+          <tr>
+            <td><i class="fa fa-hashtag"></i><%= post.prefecture %></td>
+            <td><i class="fa fa-hashtag"></i><%= post.member %></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-hashtag"></i><%= post.city %></td>
+            <td><i class="fa fa-hashtag"></i><%= post.gender %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+      <% end %>
+  </div>
+  <div class="side-find">
+      <div class="inbox2-under-picture">
+        <%= link_to 'posting_path' do %>
+        <%= image_tag "https://cdn.pixabay.com/photo/2016/11/23/15/22/adult-1853483_1280.jpg" %>
+        <% end %>
+      </div>
+      <div class="inbox2-under-intro">
+        <h2>練習相手やチームメンバーを募集してみよう</h2>
+        <div class="inbox2-posting-bottom">
+          <%= link_to "募集してみる", posting_path, :style=>"color: white;" %>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+<%= will_paginate @posts %>

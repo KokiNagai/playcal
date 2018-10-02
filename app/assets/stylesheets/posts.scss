@@ -1,0 +1,614 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$gray-medium-light: #b3b3b3;
+$gray-medium-dark: #4c4c4c;
+$gray-border-light: #cfcfcf;
+$gray-word: #919191;
+$green-logo-color: #33cc33;
+$pink-hightlight: #ff6666;
+$pink-borderbottom: #ffd6d6;
+$green-highlight: #5f9ea0;
+
+
+// タブレット、PC用==========================================================
+
+@media screen and (min-width: 768px) {
+
+.post {
+  list-style: none;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #b6b6b6;
+    width: 700px;
+  }
+
+  .post-user-picture {
+      width: 40px;
+      height: 40px;
+      border-radius: 60%;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: #b5b5b5;
+    display: block;
+    margin-left: 60px;
+  }
+}
+
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+/* post_form=(タブレット,PC用)=========================== */
+
+.posting-title h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: $gray-medium-dark;
+  margin-bottom: 50px;
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+
+
+.posting-alert {
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  display: inline-block;
+  margin-bottom: 50px;
+  margin-left: 140px;
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: red;
+    .fa {
+      margin-right: 10px;
+    }
+  }
+   h3 {
+    text-align: left;
+    display: inline-block;
+    font-size: 14px;
+    width: 400px;
+    color: $gray-medium-light;
+  }
+}
+
+.posting-form {
+  width: 700px;
+  margin: 0 auto;
+  small {
+    margin-left: 150px;
+    color: red;
+    border: 1px solid red;
+    padding: 1px;
+    font-size: 11px;
+  }
+  p {
+    font-size: 12px;
+    width: 400px;
+    color: $gray-medium-light;
+  }
+}
+
+#posting-label {
+  width: 180px;
+  margin-bottom: 10px;
+  color: #a9a9a9;
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+
+ .playday, .gender, .people, .skill, .prefecture, .city, .title-field, .content, .submit {
+   margin-top: 40px;
+   display: flex;
+ }
+ #gender-field, #people-field, #prefecture-field, #skill-field {
+   width: 200px;
+ }
+ #city-field, #title-field {
+   width: 400px;
+ }
+ .rails-bootstrap-forms-date-select {
+   width: 350px;
+ }
+ #content-field {
+   width: 400px;
+   height: 180px;
+ }
+ .submit {
+   margin-left: 180px;
+ }
+ #posting-submit {
+   width: 200px;
+ }
+
+
+
+/* _post.html.erb(タブレット,PC用)======================= */
+.user-show-post-wrapper {
+  display: flex;
+  flex-direction: column;
+  .find-main {
+    display: flex;
+    justify-content: space-between;
+    float: center;
+  }
+}
+
+
+// show.html(タブレット,PC用)============================
+
+.post-show-wrapper {
+  border: 1px solid $gray-border-light;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  width: 60%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.post-show-upper {
+  display: flex;
+  border-bottom: 1px solid $gray-border-light;
+  .post-show-user {
+    margin-left: 10%;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 60%;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .post-show-title {
+    margin-left: 10%;
+    h2 {
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+ }
+}
+
+
+.post-show-under-title {
+  text-align: center;
+  border-bottom: 1px solid $gray-border-light;
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.post-show-under {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  border-bottom: 1px solid $gray-border-light;
+  label {
+    margin-right: 10px;
+    color: $gray-word;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 600;
+    color: $gray-medium-light;
+  }
+}
+
+.post-message-submit {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.post-message-check {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.post-message-back {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#post-message-check {
+  color: white;
+}
+
+
+
+
+/* comments(タブレット,PC用)======================== */
+
+.field {
+  padding-left: 30px;
+}
+
+#comment-text {
+  border-radius: 20px;
+  width: 300px;
+}
+
+#comment-label {
+  margin-top: 20px;
+}
+
+.actions {
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+
+.comment-wrapper {
+ margin-bottom: 10px;
+}
+
+.comment-user {
+  padding-top: 15px;
+  border-top: dotted 1px #d6d6d6;
+  margin-top: 20px;
+  li {
+    float: left;
+    list-style: none;
+  }
+}
+
+.main-comment {
+}
+
+.comment-box {
+
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+}
+
+.comment-delete {
+  left: 20px;
+  float: right;
+}
+
+}
+
+
+
+// スマホ用画面 ==============================================================
+
+@media screen and (max-width: 767px) {
+  .post {
+    list-style: none;
+    li {
+      padding: 10px 0;
+      border-top: 1px solid #b6b6b6;
+      width: 700px;
+    }
+
+    .post-user-picture {
+        width: 40px;
+        height: 40px;
+        border-radius: 60%;
+    }
+    .user {
+      margin-top: 5em;
+      padding-top: 0;
+    }
+    .content {
+      display: block;
+      margin-left: 60px;
+      img {
+        display: block;
+        padding: 5px 0;
+      }
+    }
+    .timestamp {
+      color: #b5b5b5;
+      display: block;
+      margin-left: 60px;
+    }
+  }
+
+
+  aside {
+    textarea {
+      height: 100px;
+      margin-bottom: 5px;
+    }
+  }
+
+  span.picture {
+    margin-top: 10px;
+    input {
+      border: 0;
+    }
+  }
+
+  /* posting_form(スマホ用)============================ */
+
+  .posting-title h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    .fa {
+      margin-right: 10px;
+    }
+  }
+
+  .posting-alert {
+    padding: 10px;
+    width: 90%;
+    margin-left: 20px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    display: inline-block;
+    margin-bottom: 50px;
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: red;
+      .fa {
+        margin-right: 10px;
+      }
+    }
+     h3 {
+      text-align: left;
+      display: inline-block;
+      font-size: 12px;
+      width: 90%;
+      color: $gray-medium-light;
+    }
+  }
+
+  .posting-form {
+    width: 100%;
+    margin: 0 auto;
+    small {
+      margin-left: 120px;
+      color: red;
+      border: 1px solid red;
+      padding: 1px;
+      font-size: 11px;
+    }
+    p {
+      font-size: 10px;
+      width: 250px;
+      margin: 0 auto;
+      color: $gray-medium-light;
+    }
+  }
+
+
+  #posting-label {
+    width: 150px;
+    margin-bottom: 10px;
+    color: $gray-word;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 60px;
+  }
+
+
+
+   .playday, .gender, .people, .skill, .prefecture, .city, .title-field, .content, .submit {
+     margin-top: 40px;
+   }
+
+   input#title-field, select#gender-field, select#people-field, select#prefecture-field,
+    select#skill-field, input#city-field, textarea#content-field {
+       margin: 0 auto;
+       width: 250px;
+   }
+
+   .rails-bootstrap-forms-date-select {
+     width: 70%;
+     margin: 0 auto;
+   }
+
+   textarea#content-field {
+     height: 100px;
+     width: 280px;
+   }
+
+   #posting-submit {
+     margin: 0 auto;
+     display: block;
+     width: 280px;
+   }
+
+   span.help-block {
+
+     margin-left: 62.5px;
+   }
+
+  /* _post.html.erb=(スマホ用)====================== */
+  .user-show-post-wrapper {
+    display: flex;
+    flex-direction: column;
+    .find-main {
+      display: flex;
+      justify-content: space-between;
+      float: center;
+    }
+  }
+
+  // show.html(スマホ用)====================================
+  .post-show-wrapper {
+    border: 1px solid $gray-border-light;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    width: 90%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  .post-show-upper {
+    display: flex;
+    border-bottom: 1px solid $gray-border-light;
+    .post-show-user {
+      margin-left: 3%;
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 60%;
+      }
+      p {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    }
+    .post-show-title {
+      margin-left: 10%;
+      h2 {
+      font-size: 1.5rem;
+      line-height: 1.5em;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $gray-medium-dark;
+    }
+   }
+  }
+
+
+  .post-show-under-title {
+    text-align: center;
+    border-bottom: 1px solid $gray-border-light;
+    h2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: $gray-medium-dark;
+    }
+  }
+
+  .post-show-under {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    border-bottom: 1px solid $gray-border-light;
+    label {
+      margin-right: 10px;
+      color: $gray-medium-dark;
+    }
+    p {
+      font-size: 12px;
+      font-weight: 100;
+      color: $gray-medium-light;
+    }
+  }
+
+  .post-show-under-content {
+    padding-top: 10px;
+    p {
+      color: $gray-medium-light;
+    }
+  }
+
+  .post-message-submit {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .post-message-check {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .post-message-back {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  #post-message-check {
+    color: white;
+  }
+
+
+
+  /* comments=(スマホ用)======================= */
+
+  #comment-text {
+    border-radius: 20px;
+    width: 300px;
+  }
+
+  #comment-label {
+    margin-top: 20px;
+  }
+
+  .actions {
+    padding-bottom: 20px;
+    padding-left: 30px;
+  }
+
+  .comment-wrapper {
+   margin-bottom: 10px;
+  }
+
+  .comment-user {
+    padding-top: 15px;
+    border-top: dotted 1px #d6d6d6;
+    margin-top: 20px;
+    li {
+      float: left;
+      list-style: none;
+    }
+  }
+
+  .main-comment {
+  }
+
+  .comment-box {
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+  }
+
+  .comment-delete {
+    left: 20px;
+    float: right;
+  }
+}

@@ -1,0 +1,23 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      post: 投稿
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        picture: プロフィール写真
+
+  
+      post:
+       title: タイトル
+       playday: 練習日
+       style: 練習内容
+       gender: 希望する性別
+       member: 希望する人数
+       skill: 希望する技術レベル
+       prefecture: 都道府県
+       city: 詳細な地域名
+       content: 募集内容の詳細

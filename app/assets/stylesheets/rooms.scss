@@ -1,0 +1,1000 @@
+// Place all the styles related to the Rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$gray-medium-light: #b3b3b3;
+$gray-medium-dark: #4c4c4c;
+$gray-border-light: #cfcfcf;
+$gray-word: #919191;
+$green-logo-color: #33cc33;
+$pink-hightlight: #ff6666;
+$pink-borderbottom: #ffd6d6;
+$green-highlight: #5f9ea0;
+
+.inbox-wrapper {
+  margin-bottom: 100px;
+}
+
+// タブレット、PC用画面=====================================================
+@media only screen and (min-width: 768px) {
+
+// inbox(メッセージがある場合)(タブレット、PC用)==================================
+  .inbox-mail-wrapper {
+    margin-left: 20px;
+  }
+
+.inbox-title {
+  text-align: center;
+  h1 {
+    color: $gray-medium-dark;
+    font-size: 20px;
+  }
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.inbox-main-wrapper {
+  margin-top: 50px;
+}
+
+  .inbox-main {
+    border: 1px solid $gray-border-light;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+   }
+  .inbox-post-left {
+    text-align: center;
+    width: 20%;
+    border-right: 1px solid $gray-border-light;
+    .inbox-post-picture {
+     margin-top: 30px;
+    }
+  }
+
+
+#inbox-user-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 60%;
+}
+
+.inbox-post-name p {
+  font-weight: 600;
+}
+
+
+.inbox-content {
+  width: 60%;
+  margin-top: 15px;
+  h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 20px;
+    color: $gray-medium-dark;
+  }
+  h3 {
+    margin-left: 25px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: $gray-medium-light;
+  }
+  p {
+
+    margin-right: 10px;
+    text-align: right;
+    font-size: 10px;
+  }
+}
+
+.inbox-time {
+  width: 20%;
+  border-left: 1px solid $gray-border-light;
+  text-align: center;
+   h2 {
+   margin-top: 50px;
+   font-size: 14px;
+   font-weight: 600;
+   color: $pink-hightlight;
+  }
+ }
+
+// ポストはあるが、メッセージがない場合(タブレット、PC用)================
+
+.inbox2-main {
+  text-align: center;
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+}
+
+.inbox2-under {
+  margin-top: 100px;
+  margin-left: 40px;
+  padding-top: 30px;
+  border-top: 1px solid $gray-border-light;
+  display: flex;
+  flex-direction: row;
+}
+
+.inbox2-under-picture {
+  img {
+    width: 350px;
+    height: 200px;
+    margin-left: 40px;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  }
+}
+
+.inbox2-under-intro {
+  margin-left: 40px;
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+}
+
+.inbox2-posting-bottom {
+  margin-top: 40px;
+  padding: 5px;
+  display: inline-block;
+  background-color: $pink-hightlight;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+}
+
+// inbox-side(タブレット、PC用)==================================
+
+.inbox-mail-wrapper {
+  margin-top: 50px;
+}
+
+.inbox-mail-main {
+  border: 1px solid $gray-border-light;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.inbox-maiil-title {
+  border-bottom: 1px solid $gray-border-light;
+  text-align: center;
+  h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: $gray-medium-dark;
+ }
+}
+
+.inbox-mail-sent {
+  text-align: center;
+  border-bottom: 1px solid $gray-border-light;
+  h2 .fa {
+    margin-right: 10px;
+  }
+}
+
+.inbox-mail-recieved {
+  text-align: center;
+  h2 .fa {
+    margin-right: 10px;
+  }
+}
+
+.inbox-mail-sent h2, .inbox-mail-recieved h2 {
+  font-size: 13px;
+  color: $gray-medium-light
+}
+
+.inbox-mail-sent a:hover, .inbox-mail-recieved a:hover {
+  border-bottom: 3px solid $pink-borderbottom;
+}
+
+
+
+// room-under(タブレット、PC用)============================
+.room-under {
+  display: flex;
+  justify-content: space-around;
+}
+
+// room-side(タブレット、PC用)=============================
+.room-side-wrapper {
+  margin-top: 50px;
+  border-right: 1px solid #cfcfcf;
+}
+
+.room-side-title {
+  h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #4c4c4c;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h2, h3, p {
+    margin-bottom: 5px;
+  }
+  img {
+    width: 140px;
+    height: 140px;
+    border-radius: 20%;
+  }
+}
+
+.room-side-image {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.side-post-info {
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 20px;
+  h3 {
+    color: #b3b3b3;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  h2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+.fa {
+  margin-right: 15px;
+ }
+}
+
+.side-post-title {
+  margin-bottom: 20px;
+p {
+  font-size: 20px;
+  font-weight: 600;
+ }
+}
+
+.side-post-main {
+  margin-left: 20px;
+}
+
+.side-detail-comment {
+  p {
+  display: inline-block;
+  color: #b3b3b3;
+ }
+ h3 {
+   font-size: 17px;
+ }
+}
+
+
+// 共通room-comment(タブレット、PC用)======================
+.room-post .find-main {
+  border-bottom: 1px solid $gray-border-light;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.room-under {
+  margin-top: 50px;
+}
+
+.room-show-main {
+  padding: 20px 10px;
+  margin: 0px 0px 20px 0px;
+  font-size: 14px;
+}
+
+.room-comment-all {
+  margin-bottom: 40px;
+}
+
+.room-comment-all {
+  display: flex;
+  flex-direction: row;
+}
+
+.room-comment-main1 .inbox-user-main img, .room-comment-main2 .inbox-user-main img,{
+    width: 70px;
+    height: 70px;
+    border-radius: 60%;
+}
+
+.room-user-name {
+  text-align: center;
+}
+
+.room-show-alert {
+  position: relative;
+  left: 23%;
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  display: inline-block;
+  margin-bottom: 50px;
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+    .fa {
+      margin-right: 10px;
+    }
+  }
+   h3 {
+    text-align: left;
+    display: inline-block;
+    font-size: 14px;
+    width: 400px;
+    color: $gray-medium-light;
+  }
+}
+
+// room-comment-main1(current_user側)(タブレット、PC用)=====================
+
+.room-comment-main1 {
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 20px 0 0;
+  .room-comment-all {
+    float: right;
+  }
+}
+
+.room-comment-main1 .room-user-name, .room-comment-main1 .room-user-picture {
+  position: relative;
+  left: 83%;
+}
+
+.room-comment-main1 .inbox-user-main {
+  position: relative;
+  right: 100%;
+  margin-right: 20px;
+}
+
+.room-comment-main1 .room-comment {
+  position: absolute;
+  right: 35%;
+}
+
+.room-comment-main1 .room-comment-body {
+  position: relative;
+  left: 30%;
+  padding: 20px;
+  width: 200px;
+  max-width: 250px;
+  height: 120px;
+  border-radius: 5px 0px 5px 5px / 5px 0px 5px 5px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  p {
+    text-align: left;
+  }
+}
+
+
+.room-comment-main1 .room-comment-body:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -50px;
+  top: -1px;
+  border-left: 25px solid #cfcfcf;
+  border-top: 25px solid #cfcfcf;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+
+.room-comment-main1 .room-comment-body:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -48px;
+  top: 0px;
+  border-left: 25px solid #fff;
+  border-top: 25px solid #fff;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+
+
+// room-comment-main2(other_user側)(タブレットPC用)=========================
+
+.room-comment-main2 {
+  width: 100%;
+  margin: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.room-comment-main2 .inbox-user-main {
+ position: relative;
+ left: 7%;
+}
+
+.room-comment-main2 .room-comment {
+  position: absolute;
+  left: 20%;
+}
+
+
+.room-comment-main2 .room-comment-body {
+    position: relative;
+    left: 25%;
+    padding: 20px;
+    max-width: 300px;
+    width: 200px;
+    height: 120px;
+    border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
+    border: 1px solid #cfcfcf;
+    background: #fff;
+}
+
+.room-comment-main2 .room-comment-body:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -50px;
+  top: -1px;
+  border-right: 25px solid #cfcfcf;
+  border-top: 25px solid #cfcfcf;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid transparent;
+}
+
+.room-comment-main2 .room-comment-body:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -48px;
+  top: 0px;
+  border-right: 25px solid #fff;
+  border-top: 25px solid #fff;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid transparent;
+}
+
+// comment-form(タブレット、PC用)=========================
+.room-comment-box {
+  margin-top: 40px;
+  border-top: 1px solid #cfcfcf;
+}
+
+.comment-form-main {
+  text-align: center;
+}
+
+textarea#comment-text {
+  border-color: #cfcfcf;
+  margin-top: 30px;
+  height: 110px;
+  width: 450px;
+}
+
+#comment-label {
+  margin-top: 20px;
+}
+
+.actions {
+  float: right;
+  margin: 40px 0 0 70px;
+ }
+}
+
+// スマホ用画面=================================================================
+
+@media only screen and (max-width: 767px) {
+  .inbox-mail-wrapper {
+  }
+
+  .inbox-mail-main {
+    width: 250px;
+    margin: 60px auto;
+  }
+
+.inbox-title {
+  text-align: center;
+  h1 {
+    color: $gray-medium-dark;
+    font-size: 18px;
+  }
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.inbox-main-wrapper {
+  margin-top: 50px;
+}
+
+  .inbox-main {
+    border: 1px solid $gray-border-light;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+   }
+  .inbox-post-left {
+    text-align: center;
+    width: 20%;
+    border-right: 1px solid $gray-border-light;
+    .inbox-post-picture {
+     margin-top: 30px;
+    }
+  }
+
+
+#inbox-user-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 60%;
+}
+
+.inbox-post-name p {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+
+.inbox-content {
+  width: 60%;
+  margin-top: 15px;
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 20px;
+    color: $gray-medium-dark;
+  }
+  h3 {
+    margin-left: 25px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: $gray-medium-light;
+  }
+  p {
+    margin-right: 10px;
+    text-align: right;
+    font-size: 10px;
+  }
+}
+
+.inbox-time {
+  width: 20%;
+  border-left: 1px solid $gray-border-light;
+  text-align: center;
+   h2 {
+   margin-top: 50px;
+   font-size: 12px;
+   font-weight: 600;
+   color: $pink-hightlight;
+  }
+ }
+
+// ポストはあるが、メッセージがない場合(スマホ用)================
+
+.inbox2-main {
+  text-align: center;
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+}
+
+.inbox2-under {
+  margin-top: 100px;
+  margin-left: 40px;
+  padding-top: 30px;
+  border-top: 1px solid $gray-border-light;
+  display: flex;
+  flex-direction: row;
+}
+
+.inbox2-under-picture {
+  img {
+    width: 350px;
+    height: 200px;
+    margin-left: 40px;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  }
+}
+
+.inbox2-under-intro {
+  margin-left: 40px;
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+}
+
+.inbox2-posting-bottom {
+  margin-top: 40px;
+  padding: 5px;
+  display: inline-block;
+  background-color: $pink-hightlight;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+}
+
+// inbox-side(スマホ用)==================================
+
+.inbox-mail-wrapper {
+  margin-top: 30px;
+}
+
+.inbox-mail-main {
+  border: 1px solid $gray-border-light;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.inbox-maiil-title {
+  border-bottom: 1px solid $gray-border-light;
+  text-align: center;
+  h2 {
+  font-size: 12px;
+  font-weight: 600;
+  color: $gray-medium-dark;
+ }
+}
+
+.inbox-mail-sent {
+  text-align: center;
+  border-bottom: 1px solid $gray-border-light;
+  a {
+    font-size: 10px;
+  }
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.inbox-mail-recieved {
+  text-align: center;
+  a {
+    font-size: 10px;
+  }
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.inbox-mail-sent h2, .inbox-mail-recieved h2 {
+  font-size: 13px;
+  color: $gray-medium-light
+}
+
+.inbox-mail-sent a:hover, .inbox-mail-recieved a:hover {
+  border-bottom: 3px solid $pink-borderbottom;
+}
+
+
+
+// room-under(スマホ用)============================
+.room-under {
+  display: flex;
+  justify-content: space-around;
+}
+
+// room-side(スマホ用)=============================
+.room-side-wrapper {
+  margin-top: 50px;
+  border-right: 1px solid #cfcfcf;
+}
+
+.room-side-title {
+  h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #4c4c4c;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h2, h3, p {
+    margin-bottom: 5px;
+  }
+  img {
+    width: 140px;
+    height: 140px;
+    border-radius: 20%;
+  }
+}
+
+.room-side-image {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.side-post-info {
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 20px;
+  h3 {
+    color: #b3b3b3;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  h2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+.fa {
+  margin-right: 15px;
+ }
+}
+
+.side-post-title {
+  margin-bottom: 20px;
+p {
+  font-size: 20px;
+  font-weight: 600;
+ }
+}
+
+.side-post-main {
+  margin-left: 20px;
+}
+
+.side-detail-comment {
+  p {
+  display: inline-block;
+  color: #b3b3b3;
+ }
+ h3 {
+   font-size: 17px;
+ }
+}
+
+
+// 共通room-comment(スマホ用)======================
+.room-post .find-main {
+  border-bottom: 1px solid $gray-border-light;
+}
+.room-under {
+  margin-top: 50px;
+}
+
+.room-show-main {
+  font-size: 14px;
+}
+
+.room-comment-all {
+  margin-bottom: 40px;
+}
+
+.room-comment-all {
+  display: flex;
+  flex-direction: row;
+}
+
+.room-comment-main1 .inbox-user-main img, .room-comment-main2 .inbox-user-main img,{
+    width: 50px;
+    height: 50px;
+    border-radius: 60%;
+}
+
+.room-user-name {
+  text-align: center;
+  strong {
+    font-size: 13px;
+    font-weight: 500;
+    color: $gray-word;
+  }
+}
+
+.room-show-alert {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  display: inline-block;
+  margin-bottom: 50px;
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+    .fa {
+      margin-right: 10px;
+    }
+  }
+   h3 {
+    text-align: left;
+    display: inline-block;
+    font-size: 14px;
+    width: 90%;
+    color: $gray-medium-light;
+  }
+}
+
+// room-comment-main1(current_user側)(スマホ用)=====================
+
+.room-comment-main1 {
+  width: 100%;
+  overflow: hidden;
+  margin: 40px 40px 0 0;
+  .room-comment-all {
+    float: right;
+  }
+}
+
+.room-comment-main1 .room-user-name, .room-comment-main1 .room-user-picture {
+  position: relative;
+  left: 83%;
+}
+
+.room-comment-main1 .inbox-user-main {
+  position: relative;
+  right: 100%;
+  margin-right: 10px;
+}
+
+.room-comment-main1 .room-comment {
+  position: absolute;
+  right: 35%;
+}
+
+.room-comment-main1 .room-comment-body {
+  position: relative;
+  left: -40%;
+  padding: 20px;
+  width: 160px;
+  height: 120px;
+  border-radius: 5px 0px 5px 5px / 5px 0px 5px 5px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  p {
+    text-align: left;
+    font-size: 10px;
+  }
+}
+
+
+.room-comment-main1 .room-comment-body:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -50px;
+  top: -1px;
+  border-left: 25px solid #cfcfcf;
+  border-top: 25px solid #cfcfcf;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+
+.room-comment-main1 .room-comment-body:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -48px;
+  top: 0px;
+  border-left: 25px solid #fff;
+  border-top: 25px solid #fff;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+
+
+// room-comment-main2(other_user側)(スマホ用)=========================
+
+.room-comment-main2 {
+  width: 100%;
+  margin: 40px 40px 0 0;
+  overflow: hidden;
+}
+
+.room-comment-main2 .inbox-user-main {
+ position: relative;
+ left: 7%;
+}
+
+.room-comment-main2 .room-comment {
+  position: absolute;
+  left: 20%;
+}
+
+
+.room-comment-main2 .room-comment-body {
+    position: relative;
+    left: 70%;
+    padding: 20px;
+    width: 160px;
+    height: 120px;
+    border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
+    border: 1px solid #cfcfcf;
+    background: #fff;
+    p {
+      font-size: 10px;
+    }
+}
+
+.room-comment-main2 .room-comment-body:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -50px;
+  top: -1px;
+  border-right: 25px solid #cfcfcf;
+  border-top: 25px solid #cfcfcf;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid transparent;
+}
+
+.room-comment-main2 .room-comment-body:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -48px;
+  top: 0px;
+  border-right: 25px solid #fff;
+  border-top: 25px solid #fff;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid transparent;
+}
+
+// comment-form(スマホ用)=========================
+.room-comment-box {
+  margin-top: 40px;
+  border-top: 1px solid #cfcfcf;
+}
+
+.comment-form-main {
+  text-align: center;
+}
+
+textarea#comment-text {
+  border-color: #cfcfcf;
+  margin-top: 30px;
+  height: 110px;
+  width: 90%;
+}
+
+#comment-label {
+  margin-top: 20px;
+}
+
+.actions {
+  float: right;
+  margin: 40px 0 0 70px;
+ }
+
+}
