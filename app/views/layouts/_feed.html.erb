@@ -1,0 +1,6 @@
+<% if @feed_index.any? %>
+<ol class='post'>
+    <%= render @feed_index %>
+</ol>
+<%= will_paginate @feed_index %>
+<% end %>

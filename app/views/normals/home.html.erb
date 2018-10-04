@@ -1,0 +1,58 @@
+<% if user_signed_in? %>
+<div class="home-title">
+  <h2><span>Find</span> your tennis partner</h2>
+  <h3>ここであなたのテニス仲間やヒッティングパートナーを見つけよう。</h3>
+</div>
+<div class="recommend-search">
+  <p><%= link_to "あなたの都道府県 × ダブルス", "/search?utf8=✓&q%5Bcity_cont%5D=&q%5Bplayday_gteq%281i%29%5D=&q%5Bplayday_gteq%282i%29%5D=&q%5Bplayday_gteq%283i%29%5D=&q%5Bplayday_lteq%281i%29%5D=&q%5Bplayday_lteq%282i%29%5D=&q%5Bplayday_lteq%283i%29%5D=&q%5Bprefecture_eq%5D=#{current_user.live}&q%5Bgender_eq%5D=&q%5Bstyle_eq%5D=ダブルス&button=", id: "recommend1" %>で検索</p>
+  <p><%= link_to "あなたの都道府県 × 一週間後", "/search?utf8=✓&q%5Bcity_cont%5D=&q%5Bplayday_gteq%281i%29%5D=#{Time.now.next_week.year}&q%5Bplayday_gteq%282i%29%5D=#{Time.now.next_week.month}&q%5Bplayday_gteq%283i%29%5D=#{Time.now.next_week.day}&q%5Bplayday_lteq%281i%29%5D=#{Time.now.next_week.year}&q%5Bplayday_lteq%282i%29%5D=#{Time.now.next_week.month}&q%5Bplayday_lteq%283i%29%5D=#{Time.now.next_week.day}&q%5Bprefecture_eq%5D=#{current_user.live}&q%5Bgender_eq%5D=&q%5Bstyle_eq%5D=&button=", id: "recommend1" %>で検索</p>
+</div>
+
+<div class="home-section">
+
+  <div class="home-section-1">
+    <h2>募集する</h2>
+    <%= link_to posting_path  do %>
+    <%= image_tag "https://fedexkoki.com/wp-content/uploads/2018/09/cooperate-2924261_1280.png" %>
+    <% end %>
+    <p><span class="home-section-sub">あなたのヒッティングパートナーやチームメンバーをここで募集してみよう。</span></p>
+</div>
+
+     <div class="home-section-2">
+       <h2>探す</h2>
+       <%= link_to("/search?utf8=✓&q%5Bplayday_gteq%281i%29%5D=&q%5Bplayday_gteq%282i%29%5D=&q%5Bplayday_gteq%283i%29%5D=&q%5Bplayday_lteq%281i%29%5D=&q%5Bplayday_lteq%282i%29%5D=&q%5Bplayday_lteq%283i%29%5D=&q%5Bprefecture_eq%5D=#{current_user.live}&q%5Bgender_eq%5D=&q%5Bmember_eq%5D=&button=&q%5Bcity_cont%5D=") do %>
+       <%= image_tag "https://fedexkoki.com/wp-content/uploads/2018/09/shoes-614176_1280.jpg"  %>
+       <% end %>
+       <p><span class="home-section-sub">あなたが練習したい人や、試合をしたいパートナーをここで見つけよう。</span></p>
+    </div>
+</div>
+
+  <% else %>
+  <div class="login-modal-dieplay hidden-xs">
+    <%= render 'devise/sessions/new' %>
+  </div>
+
+  <div class="top-wrapper">
+    <div class="top-upper">
+      <div class="top-section">
+        <img src="https://cdn.pixabay.com/photo/2015/01/27/20/17/shoes-614176_1280.jpg">
+        <h1>More fun for tennis</h1>
+        <h2>明日の練習相手、一生のテニス仲間がここで見つかる</h2>
+        <p><%= link_to '新規登録', new_user_registration_path, :style=>"color: white; font-size: 14px;" %></p>
+      </div>
+    </div>
+
+    <div class="top-under">
+         <div class="top-under-main">
+           <h2>練習相手を探してみる</h2>
+           <%= link_to find_path do %>
+           <%= image_tag "https://cdn.pixabay.com/photo/2013/02/21/15/03/borkum-84281_1280.jpg"  %>
+           <% end %>
+        </div>
+        <div class="top-under-sub">
+          <p>ここではあなたの近くに住むテニスの練習相手を見つけることが出来ます。また、性別、技術レベル、日にち、ダブルスかシングルスかなど、
+          あなたが望むベストな日程と練習内容、そして練習相手を見つけることが可能です。</p>
+        </div>
+    </div>
+  </div>
+<% end %>

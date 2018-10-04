@@ -1,0 +1,41 @@
+<div class="wrapper-user">
+    <div class="user-info">
+      <div class="user-info-2">
+        <div class="user-show-upper">
+          <p><%= image_tag(@user.picture_url) if @user.picture.present? %></p>
+        </div>
+        <div class="user-show-under">
+        <p><h2><%= @user.name %></h2></p>
+        <div class="user-show-under-info">
+          <p><h3><i class="fa fa-map-marker"></i><%= @user.live %></h3></p>
+          <p><h3><i class="fa fa-check"></i><%= age %>歳</h3></p>
+        </div>
+        <div class="user-intro">
+          <%= @user.introduction %>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+  <div class="user-show-right">
+    <% if @user == current_user %>
+    <div class="user-show-right-upper">
+      <div class="upper-user-sent">
+        <h2><i class="fa fa-paper-plane-o"></i><%= link_to "送信メッセージ", "/users/#{current_user.id}/outbox" %></h2>
+      </div>
+      <div class="upper-user-recieved">
+        <h2><i class="fa fa-envelope-o"></i><%= link_to "受信メッセージ", "/users/#{current_user.id}/inbox" %></h2>
+      </div>
+      <div class="upper-user-edit">
+        <h2><i class="fa fa-user"></i><%= link_to "プロフィールの編集", edit_user_path %></h2>
+      </div>
+    </div>
+    <% end %>
+    <div class="user-post">
+      <%= render "posts/post" %>
+    </div>
+  </div>
+
+
+    </div>

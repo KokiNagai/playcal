@@ -1,0 +1,34 @@
+<div class="login-modal-wrapper" id="login-modal">
+ <div class="modals">
+   <div class="close-modal">
+    <i class="fa fa-2x fa-times"></i>
+   </div>
+      <div id="login-form">
+        <h2>ログイン</h2>        <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+        <div class="login-mail">
+        <%= f.email_field :email, class: 'login-form', hide_label: true, placeholder: "メールアドレス"%>
+      </div>
+
+      <div class="login-password">
+        <%= f.password_field :password, class: 'login-form', hide_label: true, placeholder: "パスワード" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="login-mail">
+          <%= f.check_box :remember_me, class: 'login-form', hide_label: true %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <%= f.submit "ログイン", class: "btn btn-success", id: "login-submit" %>
+      <% end %>
+
+      <p></p>
+      <p>アカウントをお持ちでないですか?</p>
+      <p><%= link_to "登録はこちら", new_user_registration_path %></p>
+    </div>
+  </div>
+<%= render "devise/shared/links" %>
+</div>
+<script src="script.js"></script>

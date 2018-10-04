@@ -1,0 +1,26 @@
+<div class="login-modal-wrapper" id="login-modal">
+ <div class="modals">
+   <div class="close-modal">
+    <i class="fa fa-2x fa-times"></i>
+   </div>
+      <div id="login-form">
+        <h2>ログイン</h2>
+        <%= bootstrap_form_for(:session, url: login_path, layout: :horizontal) do |f| %>
+
+        <div class="login-mail">
+        <%= f.email_field :email, class: 'login-form', hide_label: true, placeholder: "メールアドレス"%>
+      </div>
+
+      <div class="login-password">
+        <%= f.password_field :password, class: 'login-form', hide_label: true, placeholder: "パスワード" %>
+      </div>
+
+      <%= f.submit "ログイン", class: "btn btn-success", id: "login-submit" %>
+      <% end %>
+        <p></p>
+        <p>アカウントをお持ちでないですか?</p>
+        <p><%= link_to "登録はこちら", signup_path %></p>
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>

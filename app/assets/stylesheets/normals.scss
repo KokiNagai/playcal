@@ -1,0 +1,923 @@
+// Place all the styles related to the Normals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$gray-medium-light: #b3b3b3;
+$gray-medium-dark: #4c4c4c;
+$gray-border-light: #cfcfcf;
+$gray-word: #919191;
+$green-logo-color: #33cc33;
+$pink-hightlight: #ff6666;
+$pink-borderbottom: #ffd6d6;
+$green-highlight: #5f9ea0;
+
+html,body{margin:0;padding:0;}
+
+body {
+  padding-top: 73px;
+  background-color: #fff;
+  font-family: Circular,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","MS Gothic","ＭＳ ゴシック","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: #535353;
+  }
+  &:link {
+    color: #535353;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+textarea {
+  resize: none
+}
+
+.alert .alert-danger {
+  background-color: gray;
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: #ff6347;
+  }
+}
+
+#error_explanation {
+  width: 350px;
+  margin: 30px auto;
+ul li {
+  list-style: none;
+  margin-top: 5px;
+  color: red;
+ }
+}
+
+#will_paginate {
+  margin: 0 auto;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    background-color: $green-logo-color;
+    border-color: $green-logo-color;
+    cursor: default;
+}
+
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.428571429;
+    text-decoration: none;
+    color: $green-highlight;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+}
+// タブレット、PC用画面==================================================================
+
+@media screen and (min-width: 768px) {
+
+/* ヘッダー(タブレット,PC用) ===============================*/
+
+header {
+  font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular', sans-serif;
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
+  height: 70px;
+}
+
+#header-home {
+  color: #666666;
+}
+
+#logo {
+  font-family: 'Courier';
+  float: left;
+  margin-top: 13px;
+  margin-right: 10px;
+  font-size: 33px;
+  color: #32cd32;
+  letter-spacing: -1px;
+  padding-top: 4px;
+  font-weight: bold;
+ }
+
+
+.navbar-fixed-top {
+ background-color: #fff;
+ border-bottom: 1px solid #dcdcdc;
+ top: 0;
+ right:0;
+ left: 0;
+ z-index: 1030;
+ margin-bottom: 0;
+}
+
+.header-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 60%;
+
+}
+
+.header-name {
+  margin-right: 20px;
+  #header-name {
+   color: #666666;
+  }
+}
+
+
+#header-name:hover, #header-home:hover, #header-message:hover {
+      border-bottom: 2px solid $pink-borderbottom;
+}
+
+#signin-pop {
+  cursor: pointer;
+  margin-bottom: 200px;
+}
+
+.dropdown {
+  margin-bottom: 30px;
+ }
+ .nonloggedin-right li {
+     font-weight: 600;
+     color: #666666;
+     float: left;
+     list-style: none;
+     margin-left: 20px;
+     margin-top: 25px;
+     line-height: 35px;
+     font-size: 14px;
+ }
+ .dropdown-menu {
+   width: 270px;
+   p {
+     font-size: 12px;
+     width: 200px;
+     margin-top: 20px;
+     margin-left: 30px;
+   }
+   .divider {
+     width: 270px;
+   }
+ }
+.down-color {
+  color: #666666;
+}
+
+/* フッター(タブレット、PC用画面)=================================== */
+footer {
+  position: relative;
+  margin-top: 35px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  border-top: 1px solid #dcdcdc;
+  color: #666666;
+  background-color:#fff;
+  bottom: 0;
+  a {
+    color: white;
+    font-weight: 300;
+  }
+
+  a:hover {
+    color: #222;
+  }
+
+  small {
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 30px;
+    float: left;
+  }
+
+  nav {
+    margin-right: 30px;
+  }
+
+  ul{
+    float: right;
+    list-style: none;
+
+    li{
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+// ログイン後のホーム(タブレット、PC用)=====================
+
+.home-title {
+  margin-top: 20px;
+  margin-bottom: 70px;
+h2 {
+  font-size: 32px;
+  margin-top: 40px;
+  margin-left: 130px;
+  font-weight: 700;
+  color: #4c4c4c;
+  span {
+    font-size: 50px;
+    margin-right: 5px;
+  }
+ }
+ h3 {
+   margin-left: 130px;
+   font-weight: 400;
+   font-size: 17px;
+   color: #4c4c4c;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+.home-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-section-1 {
+  text-align: center;
+  background-size: cover;
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #666666;
+  }
+  img {
+  width: 450px;
+  height: 350px;
+  border-radius: 5%;
+ }
+ p {
+   margin-top: 10px;
+   width: 450px;
+   text-align: left;
+ }
+}
+
+.home-section-2 {
+  text-align: center;
+  background-size: cover;
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #666666;
+  }
+  img {
+  width: 450px;
+  height: 350px;
+  border-radius: 5%;
+ }
+ p {
+   margin-top: 10px;
+   width: 450px;
+   text-align: left;
+ }
+}
+}
+
+@media screen and (max-width: 1023px) {
+.home-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-section-1 {
+  text-align: center;
+  background-size: cover;
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #666666;
+  }
+  img {
+  width: 450px;
+  height: 350px;
+  border-radius: 5%;
+ }
+ p {
+   margin-top: 10px;
+   text-align: center;
+ }
+}
+
+.home-section-2 {
+  text-align: center;
+  background-size: cover;
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #666666;
+  }
+  img {
+  width: 450px;
+  height: 350px;
+  border-radius: 5%;
+ }
+ p {
+   margin-top: 10px;
+   text-align: center;
+ }
+}
+}
+
+.home-section-sub {
+  letter-spacing: 0.3px !important;
+  font-size: 17px !important;
+  color: #666666;
+ }
+
+ .recommend-search {
+   margin-left: 10%;
+   margin-bottom: 50px;
+   #recommend1 {
+     font-size: 15px;
+     margin-right: 10px;
+     color: $green-highlight;
+     font-weight: 500;
+     border: 1px solid $green-highlight;
+     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+     padding: 10px 20px 10px 20px;
+   }
+   p {
+     margin-bottom: 30px;
+   }
+ }
+
+// ログイン前ホーム画面(タブレット、PC用)====================
+
+.top-section {
+  position: relative;
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 49px;
+    font-weight: 600;
+    left: 10%;
+    top: 25%;
+  }
+  h2 {
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    left: 15%;
+    top: 35%;
+  }
+}
+
+.top-section p {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  background-color: $green-logo-color;
+  cursor: pointer;
+  #top-section-p {
+    color: #fff;
+  }
+}
+.top-section p:hover {
+  background-color: #99ff66;
+}
+
+.top-section img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1023px) {
+.top-under {
+  display: flex;
+  flex-direction: column;
+  width: 728px;
+  margin: 40px auto;
+
+ }
+ .top-under-sub {
+   border-top: 1px dotted $gray-border-light;
+   border-bottom: 1px dotted $gray-border-light;
+   margin-top: 40px;
+   margin-left: 10px;
+   padding-top: 10px;
+   width: 480px;
+   height: 288px;
+   color: $gray-medium-light;
+   font-size: 15px;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+.top-under {
+  display: flex;
+  margin: 40px auto;
+  width: 1000px;
+ }
+ .top-under-sub {
+   border-top: 1px dotted $gray-border-light;
+   border-bottom: 1px dotted $gray-border-light;
+   margin-top: 90px;
+   margin-left: 10px;
+   padding-top: 10px;
+   width: 480px;
+   height: 288px;
+   color: $gray-medium-light;
+   font-size: 15px;
+ }
+}
+
+
+.top-under-main {
+
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: $gray-medium-dark;
+  }
+  img {
+    width: 480px;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  }
+}
+
+
+
+// ログインモーダル(タブレットPC用)================
+
+.login-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+
+.modals {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  background-color: #f5f5f5;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+#login-form {
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+  }
+  .login-mail, .login-password {
+    width: 500px;
+    margin: 0 auto;
+    .login-form {
+      width: 500px;
+    }
+  }
+    input#login-submit {
+      margin: 30px auto;
+      width: 500px;
+      display: block;
+    }
+    .login-under {
+     text-align: center;
+     #login-under-signup {
+       color: $green-highlight;
+  }
+ }
+}
+
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+}
+
+
+// スマホ画面用==========================================================================
+
+
+
+@media screen and (max-width: 767px) {
+
+ // ヘッダー(スマホ)==============================
+
+ header {
+   font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular', sans-serif;
+   box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
+   height: 70px;
+ }
+
+ #header-home {
+   color: #666666;
+ }
+
+   #logo {
+     font-family: 'Courier';
+     float: left;
+     margin-top: 13px;
+     margin-right: 10px;
+     font-size: 25px;
+     color: #32cd32;
+     letter-spacing: -1px;
+     padding-top: 4px;
+     font-weight: bold;
+    }
+
+ .navbar-fixed-top {
+  background-color: #fff;
+  border-bottom: 1px solid #dcdcdc;
+  top: 0;
+  right:0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0;
+ }
+
+ .header-picture {
+   width: 30px;
+   height: 30px;
+   border-radius: 60%;
+
+ }
+
+ .header-name {
+   margin-right: 20px;
+   #header-name {
+    color: #666666;
+   }
+ }
+
+
+ #header-name:hover, #header-home:hover, #header-message:hover {
+       border-bottom: 2px solid $pink-borderbottom;
+ }
+
+ #signin-pop {
+   cursor: pointer;
+   margin-bottom: 200px;
+ }
+
+ // ヘッダードロップダウン=(スマホ)===============
+
+ .smartphone-dropdown {
+   text-align: right;
+   margin-top: 15px;
+   margin-right: 30px;
+ }
+
+ // ドロップダウンモーダル(スマホ)==============
+
+ .smartphone-dropdown {
+
+ }
+
+ .dropdown-modal-wrapper {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.6);
+   z-index: 100;
+   display: none;
+ }
+
+ .dropdown-modal {
+   position: absolute;
+   top: 10%;
+   width: 100%;
+   height: 500px;
+   padding-right: 10px;
+   text-align: center;
+   z-index: 10 !important;
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 14px 36px 2px !important;
+   overflow-y: auto !important;
+   overflow-x: hidden !important;
+   white-space: normal !important;
+   background: rgb(255, 255, 255) !important;
+   border-width: 1px !important;
+   border-style: solid !important;
+   border-color: rgba(0, 0, 0, 0.2) !important;
+   border-image: initial !important;
+   border-radius: 4px !important;
+ }
+
+ .dropdown-modal p {
+   width: 90%;
+   margin: 30px auto;
+   text-align: left;
+   .fa {
+     margin-right: 10px;
+   }
+ }
+
+ #dropdown-list-p {
+   border-bottom: 1px solid $gray-border-light;
+   padding-bottom: 20px;
+ }
+
+ .close-modal {
+   text-align: right;
+   margin-right: 5px;
+   margin-top: 5px;
+ }
+
+ // フッター(スマホ)======================
+
+ footer {
+   position: relative;
+   margin-top: 35px;
+   padding-top: 60px;
+   padding-bottom: 30px;
+   border-top: 1px solid #dcdcdc;
+   color: #666666;
+   background-color:#fff;
+   bottom: 0;
+   a {
+     color: white;
+     font-weight: 300;
+   }
+
+   a:hover {
+     color: #222;
+   }
+
+   small {
+     font-weight: 300;
+     font-size: 15px;
+     margin-left: 30px;
+     float: left;
+   }
+
+   nav {
+     margin-right: 30px;
+   }
+
+   ul{
+     float: right;
+     list-style: none;
+
+     li{
+       float: left;
+       margin-left: 15px;
+     }
+   }
+ }
+
+ // ログイン後のホーム画面(スマホ)============
+
+ .home-title {
+   margin-top: 20px;
+   margin-bottom: 70px;
+ h2 {
+   font-size: 1.7rem;
+   margin-top: 40px;
+   margin-left: 30px;
+   font-weight: 700;
+   color: #4c4c4c;
+   span {
+     font-size: 40px;
+     margin-right: 5px;
+   }
+  }
+  h3 {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.5em;
+    color: $gray-word;
+  }
+ }
+
+ .home-section-1 {
+   text-align: center;
+   background-size: cover;
+   margin-bottom: 80px;
+   h2 {
+     margin-bottom: 20px;
+     margin-left: 30px;
+     text-align: left;
+     font-size: 20px;
+     font-weight: 600;
+     color: $gray-medium-dark;
+   }
+   img {
+   width: 80%;
+   height: 300px;
+   border-radius: 5%;
+  }
+  p {
+    margin: 10px;
+    margin: 20px 10px 30px 30px;
+    text-align: left;
+    color: $gray-medium-light;
+  }
+ }
+
+ .home-section-2 {
+   text-align: center;
+   background-size: cover;
+   h2 {
+     margin-bottom: 20px;
+     margin-left: 30px;
+     text-align: left;
+     font-size: 20px;
+     font-weight: 600;
+     color: $gray-medium-dark;
+   }
+   img {
+   width: 80%;
+   height: 300px;
+   border-radius: 5%;
+  }
+  p {
+    margin-top: 10px;
+    margin: 20px 10px 30px 30px;
+    text-align: left;
+    color: $gray-medium-light;
+  }
+}
+
+.recommend-search {
+  margin-left: 30px;
+  margin-bottom: 50px;
+  #recommend1 {
+    font-size: 15px;
+    margin-right: 10px;
+    color: $green-highlight;
+    font-weight: 500;
+    border: 1px solid $green-highlight;
+    border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+    padding: 10px 20px 10px 20px;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+// ログイン前ホーム画面(スマホ)==============
+
+.top-section {
+  position: relative;
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: 2.7rem;
+    font-weight: 600;
+    left: 5%;
+    top: 15%;
+  }
+  h2 {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    left: 5%;
+    top: 30%;
+  }
+}
+
+.top-section p {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  background-color: $green-logo-color;
+  cursor: pointer;
+  #top-section-p {
+    color: #fff;
+  }
+}
+.top-section p:hover {
+  background-color: #99ff66;
+}
+
+.top-section img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.top-under {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 40px auto;
+ }
+
+ .top-under-sub {
+   border-top: 1px dotted $gray-border-light;
+   border-bottom: 1px dotted $gray-border-light;
+   margin-top: 40px;
+   margin-left: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   width: 90%;
+   color: $gray-medium-light;
+   font-size: 15px;
+ }
+
+
+.top-under-main {
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: $gray-medium-dark;
+  }
+  img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  }
+}
+
+
+// ログインモーダル(スマホ)==============
+
+.login-main {
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+  }
+  .login-mail, .login-password {
+    width: 300px;
+    margin: 0 auto;
+    #login-form {
+      width: 300px;
+    }
+  }
+    input#login-submit {
+      margin: 30px auto;
+      width: 300px;
+      display: block;
+    }
+    .login-under {
+     text-align: center;
+     #login-under-signup {
+       color: $green-highlight;
+     }
+  }
+}
+
+}

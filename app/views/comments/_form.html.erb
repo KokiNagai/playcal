@@ -1,0 +1,29 @@
+  <%= form_for(@comment) do |f| %>
+    <% if @comment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+        <ul>
+        <% comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :post_id %>
+    <%= f.hidden_field :from_id, :value => current_user.id %>
+    <%= f.hidden_field :to_id, :value => @room.post.user.id %>
+    <%= f.hidden_field :room_id, :value => @room.id %>
+<div class="comment-form-main">
+  <div class="field">
+    <%= f.label :募集者に聞きたいことを聞いてみよう, id: "comment-label" %>
+    <p><%= f.text_area :body, id: "comment-text" %></p>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "コメントする", class: "btn btn-success" %>
+  </div>
+<% end %>
+</div>

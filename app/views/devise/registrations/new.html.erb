@@ -1,0 +1,54 @@
+<div class="edit-user-wapper">
+  <div class="login-modal-display hidden-xs">
+    </div>
+<%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="edit-user-main">
+  <div class="edit-user-title">
+    <h2>Playcalへようこそ</h2>
+    <h2>登録をしてさっそく始めよう</h2>
+  </div>
+  <%= render 'shared/error_messages', object: f.object %>
+
+<div class="name-edit">
+  <%= f.label :名前 %><small>(15字以内)</small><i>必須</i>
+  <%= f.text_field :name, id: "name-edit", hide_label: true %>
+</div>
+
+<div class="birth-date-edit">
+  <%= f.label :生年月日 %><i>必須</i>
+  <%= f.date_select(
+          :birth_date,
+          use_month_numbers: true,
+          start_year:     1930,
+          end_year:       (Time.now.year - 18),
+          default:        Date.new(1989, 1, 1),
+          hide_label: true,
+          date_separator: '/', id: "birth-date-edit") %>
+  </div>
+
+  <div class="email-edit">
+   <%= f.label :メールアドレス %><i>必須</i>
+   <%= f.email_field :email, id: "email-edit", hide_label: true %>
+ </div>
+
+  <div class="password-edit">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %>字以内)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", hide_label: true  %>
+  </div>
+
+  <div class="password_confirmation-edit">
+    <%= f.label :password_confirmation %><br/>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", hide_label: true  %>
+  </div>
+
+  <div class="edit-submit">
+  <%= f.submit "アカウント登録を完了する", class: "btn btn-success", id: "edit-submit" %>
+</div>
+
+</div>
+<% end %>
+</div>
+<%= render "devise/shared/links" %>
