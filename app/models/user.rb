@@ -11,7 +11,7 @@ class User < ApplicationRecord
            :confirmable, :lockable, :timeoutable
 
 
-
+   mount_uploader :picture, PictureUploader
    validates :password, presence: true, length: { minimum: 7 }, allow_nil: true
    validates :email, presence: true, length: { maximum: 255 }
 

@@ -31,7 +31,6 @@ class PostsController < ApplicationController
        if logged_in?
     @post = current_user.posts.build
     @user = User.find_by(params[:id])
-    @feed_index = @user.feed.paginate(page: params[:page])
   end
   end
 
