@@ -1,15 +1,10 @@
 require_relative 'boot'
 
-require 'rails/all'
-require 'carrierwave'
-require 'devise'
-require 'carrierwave/orm/activerecord'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.assets.initialize_on_precompile = false
 
 module Tennis
   class Application < Rails::Application
@@ -19,6 +14,12 @@ module Tennis
     config.active_record.default_timezone = :local
     config.i18n.default_locale = :ja
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
+    config.assets.initialize_on_precompile = false
+
+    require 'rails/all'
+    require 'carrierwave'
+    require 'devise'
+    require 'carrierwave/orm/activerecord'
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
