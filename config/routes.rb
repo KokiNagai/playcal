@@ -13,13 +13,14 @@ Rails.application.routes.draw do
 
   get '/posting', to: 'posts#posting'
 
-  get "users/:id" => "users#show"
-  get "users/:id/inbox" => "users#inbox"
-  get "users/:id/outbox" => "usersi#outbox"
 
 
-
-
+  resources :users, only: [:show, :inbox, :outbox] do
+    member do
+      get 'outbox'
+      get 'inbox'
+    end
+  end
   resources :prefs
   resources :comments
   resources :posts, only: [:create, :destroy, :show]
