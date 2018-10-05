@@ -50,7 +50,7 @@ gem 'jquery-rails'
 
 gem 'jquery-turbolinks'
 
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
