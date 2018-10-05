@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:index, :edit, :update, :destroy, :inbox, :outbox, :show]
-  before_action :correct_user, only: [:edit, :update]
+  before_action :correct_user, only: [:edit, :update, :inbox, :outbox]
 
   def index
     @users = User.all
@@ -15,13 +15,11 @@ class UsersController < ApplicationController
 
   def outbox
     @post = current_user.posts.build
-    @comment_recieved = current_user.to_comments
     @comments = current_user.comments
   end
 
   def inbox
     @post = current_user.posts.build
-    @comment_recieved = current_user.to_comments
     @posts = current_user.posts
   end
 
