@@ -22,10 +22,10 @@
     <% if @user == current_user %>
     <div class="user-show-right-upper">
       <div class="upper-user-sent">
-        <h2><i class="fa fa-paper-plane-o"></i><%= link_to "送信メッセージ", "/users/#{current_user.id}/outbox" %></h2>
+        <h2><i class="fa fa-paper-plane-o"></i><%= link_to "送信メッセージ", "/outbox" %></h2>
       </div>
       <div class="upper-user-recieved">
-        <h2><i class="fa fa-envelope-o"></i><%= link_to "受信メッセージ", "/users/#{current_user.id}/inbox" %></h2>
+        <h2><i class="fa fa-envelope-o"></i><%= link_to "受信メッセージ", "/inbox" %></h2>
       </div>
       <div class="upper-user-edit">
         <h2><i class="fa fa-user"></i><%= link_to "プロフィールの編集", edit_user_registration_path %></h2>

@@ -9,10 +9,10 @@
         <h2>メッセージボックス</h2>
       </div>
       <div class="inbox-mail-sent">
-        <h2><i class="fa fa-paper-plane-o"></i><%= link_to("送信済みメッセージ", "/users/#{current_user.id}/outbox") %></h2>
+        <h2><i class="fa fa-paper-plane-o"></i><%= link_to("送信済みメッセージ", "/outbox") %></h2>
       </div>
       <div class="inbox-mail-recieved">
-        <h2><i class="fa fa-envelope-o"></i><%= link_to("受信済みメッセージ", "/users/#{current_user.id}/inbox") %></h2>
+        <h2><i class="fa fa-envelope-o"></i><%= link_to("受信済みメッセージ", "/inbox") %></h2>
       </div>
     </div>
   </div>
@@ -21,13 +21,15 @@
   <div class="inbox-title hidden-xs">
       <h1><i class="fa fa-envelope-o"></i>送信メッセージ</h1>
    </div>
-      <% @comments.group_by{ |item| [item[:post_id]]}.values.where(to_id: other_user.ids).each do |comment| %>
+   <% @k = @comments.group('post_id') %>
+   <% @k.where(to_id: other_user.ids).each do |comment| %>
+
         <% if comment.present? %>
       <div class="inbox-main-wrapper">
         <div class="inbox-main">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
-            <p><%= link_to image_tag(comment.user.picture_url, id: "inbox-user-picture"), "/users/#{comment.user.id}" if comment.user.picture.present? %></p>
+            <p><%= link_to image_tag(comment.user.picture_url, id: "inbox-user-picture"), "/users/#{comment.user.id}"  if comment.user.picture.present?%></p>
             </div>
             <div class="inbox-post-name">
               <p><%= link_to(comment.post.user.name, "/rooms/#{comment.room_id}") %></p>
