@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :logged_in_user, only: [:show, :create, :destroy]
+  before_action :authenticate_user!, only: [:show, :create, :destroy]
 
   def show
     @post = current_user.posts.build

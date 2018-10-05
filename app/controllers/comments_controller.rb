@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-  before_action :logged_in_user, only: [:create, :new, :destroy]
+  before_action :authenticate_user!, only: [:create, :new, :destroy]
 
 
   def show

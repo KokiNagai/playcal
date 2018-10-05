@@ -1,17 +1,13 @@
 Rails.application.routes.draw do
-
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}
+  root 'normals#home'
+  devise_for :users
 
 
   get 'rooms/show'
 
-  root 'normals#home'
-
   get '/find', to: 'normals#find'
   post '/find', to: 'normals#find'
   get '/about', to: 'normals#about'
-
-
 
   get '/posting', to: 'posts#posting'
 

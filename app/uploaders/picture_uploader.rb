@@ -3,7 +3,15 @@ class PictureUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 include CarrierWave::MiniMagick
-process resize_to_limit: [400, 500]
+process :fix_rotate, resize_to_limit: [400, 500]
+  def fix_rotate
+      manipulate! do |img|
+          img = img.auto_orient
+          img = yield(img) if block_given?
+          img
+      end
+  end
+
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
@@ -13,7 +21,7 @@ process resize_to_limit: [400, 500]
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
-  
+
   def extension_white_list
     %w(jpg jpeg gif png)
   end
@@ -29,6 +37,7 @@ process resize_to_limit: [400, 500]
 
   # Process files as they are uploaded:
   # process scale: [200, 300]
+
   #
   # def scale(width, height)
   #   # do something

@@ -1,16 +1,22 @@
-<h2>Resend unlock instructions</h2>
-
-<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="email-wrapper">
+  <div class="side-links-info col-md-3 hidden-xs">
+    <%= render "devise/shared/links" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Resend unlock instructions" %>
-  </div>
-<% end %>
+<div class="email-sent-wrapper col-md-8">
+  <div class="email-sent-main">
+    <h2>アカウント凍結解除メールの再送信</h2>
+    <%= bootstrap_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
 
-<%= render "devise/shared/links" %>
+    <div class="email">
+      <%= f.email_field :email, autofocus: true, hide_label: true, placeholder: "メールアドレス", autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+    </div>
+
+    <%= f.submit "送信する", class: "btn btn-success", id: "email-submit" %>
+  <% end %>
+</div>
+</div>
+</div>
+  <div class="under-links-info visible-xs">
+    <%= render "devise/shared/links" %>
+  </div>

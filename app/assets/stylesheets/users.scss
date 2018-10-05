@@ -85,7 +85,7 @@ $green-highlight: #5f9ea0;
      margin-top: 40px;
      img {
        width: 80%;
-       height: 400px;
+       height: 300px;
        border-radius: 3%;
        display: block;
        margin: 0 auto;
@@ -186,10 +186,15 @@ $green-highlight: #5f9ea0;
 .edit-user-title {
   text-align: center;
   margin-top: 50px;
+  h1 {
+    font-weight: 600;
+    font-size: 24px;
+    color: $green-highlight;
+  }
   h2 {
     font-weight: 600;
-    font-size: 17px;
-    color: $gray-medium-dark;
+    font-size: 20px;
+    color: $green-highlight;
   }
 }
 
@@ -352,7 +357,7 @@ input#edit-submit {
    }
 
    img {
-     width: 90%;
+     width: 50%;
      height: 300px;
      border-radius: 3%;
      margin: 0 auto;
@@ -441,10 +446,15 @@ input#edit-submit {
   .edit-user-title {
     text-align: center;
     margin-top: 40px;
+    h1 {
+      font-weight: 600;
+      font-size: 19px;
+      color: $green-highlight;
+    }
     h2 {
       font-weight: 600;
       font-size: 17px;
-      color: $gray-medium-dark;
+      color: $green-highlight;
     }
   }
 
@@ -528,7 +538,7 @@ input#edit-submit {
   }
 
   .password-edit, .password_confirmation-edit {
-    margin: 0 auto;
+    margin-left: 33px;
     width: 300px;
     label {
       margin-top: 30px;

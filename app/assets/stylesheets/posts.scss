@@ -232,6 +232,13 @@ span.picture {
   }
 }
 
+.post-show-under-content {
+  padding: 20px 20px 0 20px;
+  p {
+    color: $gray-medium-light;
+  }
+}
+
 .post-message-submit {
   text-align: center;
   margin-top: 40px;

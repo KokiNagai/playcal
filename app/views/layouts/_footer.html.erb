@@ -1,12 +1,19 @@
-<footer class="nav navbar-bottom">
-  <small>
-    Playcal by koki
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "Playcalとは",   about_path %></li>
-      <li><%= link_to "お問い合わせ", root_path %></li>
-      <li><a href="https://twitter.com/nkok1995">Twitter</a></li>
-    </ul>
-  </nav>
+<footer class="nav navbar-bottom hidden-xs">
+  <div class="footer-under">
+     <p id="footer-logo">Copyright © 2018 Playcal All Right Reserved.</p>
+      <p id="footer-logo1"><%= link_to "Playcalとは",   about_path %></p>
+      <p id="footer-logo2"><%= link_to "お問い合わせ", root_path %></p>
+      <p id="footer-logo3"><a href="https://twitter.com/nkok1995">Twitter</a></p>
+  </div>
+</footer>
+
+<footer class="nav navbar-bottom visible-xs">
+  <div class="footer-under">
+    <p id="footer-logo">Copyright © 2018 Playcal All Right Reserved.</p>
+    <div class="footer-under-smart">
+      <p id="footer-logo1"><%= link_to "Playcalとは",   about_path, :style =>"color: #5f9ea0;" %></p>
+      <p id="footer-logo2"><%= link_to "お問い合わせ", root_path, :style =>"color: #5f9ea0;" %></p>
+      <p id="footer-logo3"><a href="https://twitter.com/nkok1995">Twitter</a></p>
+    </div>
+  </div>
 </footer>

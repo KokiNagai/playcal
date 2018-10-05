@@ -15,11 +15,26 @@ $green-highlight: #5f9ea0;
 
 html,body{margin:0;padding:0;}
 
-body {
-  padding-top: 73px;
-  background-color: #fff;
-  font-family: Circular,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","MS Gothic","ＭＳ ゴシック","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+@media screen and (max-width: 1024px) {
+  body {
+    padding-top: 73px;
+    background-color: #fff;
+    font-family: Circular,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","MS Gothic","ＭＳ ゴシック","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  }
 }
+
+@media screen and (min-width: 1024px) {
+  body {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 73px;
+    background-color: #fff;
+    font-family: Circular,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","MS Gothic","ＭＳ ゴシック","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  }
+}
+
+
+
 
 
 a {
@@ -180,7 +195,7 @@ header {
 footer {
   position: relative;
   margin-top: 35px;
-  padding-top: 60px;
+  padding-top: 20px;
   padding-bottom: 30px;
   border-top: 1px solid #dcdcdc;
   color: #666666;
@@ -195,27 +210,64 @@ footer {
     color: #222;
   }
 
-  small {
-    font-weight: 300;
-    font-size: 15px;
-    margin-left: 30px;
-    float: left;
-  }
-
-  nav {
-    margin-right: 30px;
-  }
-
-  ul{
-    float: right;
-    list-style: none;
-
-    li{
-      float: left;
-      margin-left: 15px;
+  .footer-under {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 8%;
+    #footer-logo {
+      margin-right: 30%;
+    }
+    p {
+      margin-right: 20px;
     }
   }
 }
+
+// about(PC,タブレット)=============================
+.about-main {
+  margin-top: 40px;
+  .about-title h1 {
+    display: inline-block;
+    border-bottom: 4px solid $green-highlight;
+    font-size: 27px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+  .about-explain p {
+    color: $gray-word;
+    margin-top: 10px;
+    font-size: 18px;
+
+  }
+  .about-question {
+    margin-top: 100px;
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 60px;
+      color: $gray-medium-dark;
+      display: inline-block;
+      border-bottom: 2px solid $green-highlight;
+      i {
+        border-bottom: 4px solid #fff;
+        margin-right: 10px;
+      }
+    }
+    p {
+      color: $gray-medium-light;
+      font-size: 18px !important;
+      line-height: 27px !important;
+      letter-spacing: normal !important;
+      i {
+        font-size: 20px;
+        color: $gray-medium-dark;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
 
 // ログイン後のホーム(タブレット、PC用)=====================
 
@@ -499,7 +551,7 @@ h2 {
   text-align: center;
 }
 
-#login-form {
+.login-main {
   h2 {
     font-size: 18px;
     font-weight: 600;
@@ -526,14 +578,55 @@ h2 {
   }
  }
 }
-
-
 .fa-times {
   position: absolute;
   top: 12px;
   right: 12px;
   color: rgba(128, 128, 128, 0.46);
   cursor: pointer;
+}
+
+
+// メール送信(PC、タブレット)==========================
+.email-sent-main {
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+  }
+  .email {
+    width: 500px;
+    margin: 0 auto;
+  }
+    input#email-submit {
+      margin: 30px auto;
+      width: 500px;
+      display: block;
+    }
+  }
+
+
+.link-info {
+  margin-left: 40px;
+  font-size: 15px;
+  p {
+    margin-top: 10px;
+    width: 270px;
+    color: $green-highlight;
+  }
+  .fa {
+    margin-right: 10px;
+  }
+}
+.link-info p:hover {
+  border-bottom: 2px solid $green-highlight;
+}
+
+.side-links-info {
+  margin-top: 50px;
+  border-right: 1px solid $gray-border-light;
 }
 
 }
@@ -632,7 +725,7 @@ h2 {
    position: absolute;
    top: 10%;
    width: 100%;
-   height: 500px;
+   height: 550px;
    padding-right: 10px;
    text-align: center;
    z-index: 10 !important;
@@ -650,17 +743,24 @@ h2 {
 
  .dropdown-modal p {
    width: 90%;
-   margin: 30px auto;
+   margin: 25px auto;
    text-align: left;
    .fa {
      margin-right: 10px;
    }
  }
 
+ #dropdown-list-Q {
+   border-bottom: 1px solid $gray-border-light;
+   padding-bottom: 30px;
+ }
+
  #dropdown-list-p {
    border-bottom: 1px solid $gray-border-light;
    padding-bottom: 20px;
  }
+
+
 
  .close-modal {
    text-align: right;
@@ -671,9 +771,8 @@ h2 {
  // フッター(スマホ)======================
 
  footer {
-   position: relative;
    margin-top: 35px;
-   padding-top: 60px;
+   padding-top: 30px;
    padding-bottom: 30px;
    border-top: 1px solid #dcdcdc;
    color: #666666;
@@ -688,28 +787,81 @@ h2 {
      color: #222;
    }
 
-   small {
-     font-weight: 300;
-     font-size: 15px;
-     margin-left: 30px;
-     float: left;
-   }
-
-   nav {
-     margin-right: 30px;
-   }
-
-   ul{
-     float: right;
-     list-style: none;
-
-     li{
-       float: left;
-       margin-left: 15px;
+   .footer-under {
+     #footer-logo {
+       text-align: left;
+       margin-left: 7%;
+     }
+     .footer-under-smart {
+       display: flex;
+       margin-top: 20px;
+       p {
+         margin-right: 20px;
+       }
+       #footer-logo1 {
+         margin-left: 7%;
+       }
+       #footer-logo3 a{
+         color: $green-highlight;
+       }
      }
    }
+
+
+
+
  }
 
+// about(スマホ)=============================
+
+.about-main {
+  margin-top: 40px;
+  width: 95%;
+  margin: 0 auto;
+  .about-title h1 {
+    display: inline-block;
+    border-bottom: 4px solid $green-highlight;
+    font-size: 20px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+  .about-explain p {
+    color: $gray-word;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 90%;
+  }
+  .about-question {
+    margin-top: 70px;
+    h2 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 60px;
+      color: $gray-medium-dark;
+      display: inline-block;
+      border-bottom: 2px solid $green-highlight;
+      padding-bottom: 5px;
+      i {
+        border-bottom: 4px solid #fff;
+        margin-right: 10px;
+      }
+    }
+    p {
+      color: $gray-medium-light;
+      font-size: 14px !important;
+      line-height: 27px !important;
+      letter-spacing: normal !important;
+      width: 90%;
+      margin: 0 auto;
+      i {
+        font-size: 14px;
+        color: $gray-medium-dark;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+    }
+  }
+}
  // ログイン後のホーム画面(スマホ)============
 
  .home-title {
@@ -913,11 +1065,66 @@ h2 {
       display: block;
     }
     .login-under {
-     text-align: center;
+      margin-top: 50px;
      #login-under-signup {
        color: $green-highlight;
      }
+     p {
+       font-size: 13px;
+        width: 300px;
+        margin-left: 33px;
+     }
+     p #login-under-link {
+       font-size: 10px;
+     }
   }
 }
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+
+
+// メール送信(スマホ)=======================
+.email-sent-main {
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: $gray-medium-dark;
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+  }
+  .email {
+    width: 250px;
+    margin: 0 auto;
+  }
+    input#email-submit {
+      margin: 30px auto;
+      width: 250px;
+      display: block;
+    }
+  }
+
+.link-info {
+  margin-left: 40px;
+  font-size: 13px;
+  p {
+    margin-top: 10px;
+    color: $green-highlight;
+
+  }
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.link-info a:hover {
+  border-bottom: 2px solid $green-highlight;
+}
+
 
 }

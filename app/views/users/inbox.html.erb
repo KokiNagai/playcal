@@ -83,26 +83,26 @@
     <% end %>
   </div>
 
-<% if @posts.empty? %>
-<div class="inbox-no-message1 col-md-8 col-sm-8">
-   <div class="inbox2-main">
-     <h2>メッセージは0件です</h2>
-   </div>
-
-   <div class="inbox2-under">
-     <div class="inbox2-under-picture">
-       <%= link_to 'posting_path' do %>
-       <%= image_tag "https://cdn.pixabay.com/photo/2016/11/23/15/22/adult-1853483_1280.jpg" %>
-       <% end %>
+  <% if @posts.empty? %>
+  <div class="inbox-no-message1 col-md-8 col-sm-8">
+     <div class="inbox2-main">
+       <h2>メッセージは0件です</h2>
      </div>
-     <div class="inbox2-under-intro">
-       <h2>練習相手やチームメンバーを募集してみよう</h2>
-       <div class="inbox2-posting-bottom">
-         <%= link_to "募集してみる", posting_path, :style=>"color: white;" %>
+
+     <div class="inbox2-under">
+       <div class="inbox2-under-picture">
+         <%= link_to 'posting_path' do %>
+         <%= image_tag "https://cdn.pixabay.com/photo/2016/11/23/15/22/adult-1853483_1280.jpg" %>
+         <% end %>
+       </div>
+       <div class="inbox2-under-intro">
+         <h2>練習相手やチームメンバーを募集してみよう</h2>
+         <div class="inbox2-posting-bottom">
+           <%= link_to "募集してみる", posting_path, :style=>"color: white;" %>
+         </div>
        </div>
      </div>
-   </div>
- <% end %>
-</div>
+   <% end %>
+  </div>
 
-</div>
+  </div>

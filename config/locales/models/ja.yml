@@ -9,8 +9,10 @@ ja:
         email: メールアドレス
         password: パスワード
         picture: プロフィール写真
+        remember_me: パスワードを記憶する
+        current_password: 現在のパスワード
 
-  
+
       post:
        title: タイトル
        playday: 練習日

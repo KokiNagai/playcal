@@ -1,12 +1,8 @@
-<div class="login-modal-wrapper" id="login-modal">
- <div class="modals">
-   <div class="close-modal">
-    <i class="fa fa-2x fa-times"></i>
-   </div>
+<div class="login-wrapper">
       <div class="login-main">
         <h2>ログイン</h2>
-
         <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
 
         <div class="login-mail">
         <%= f.email_field :email, class: 'login-form', hide_label: true, placeholder: "メールアドレス"%>
@@ -18,19 +14,18 @@
 
       <% if devise_mapping.rememberable? -%>
         <div class="login-mail">
-          <%= f.check_box :remember_me, class: 'login-form', hide_label: true %>
-          <%= f.label :remember_me %>
+          <%= f.check_box :remember_me, hide_label: true, class: 'login-form' %>
         </div>
       <% end %>
 
       <%= f.submit "ログイン", class: "btn btn-success", id: "login-submit" %>
       <% end %>
 
-      <p></p>
-      <p>アカウントをお持ちでないですか?</p>
-      <p><%= link_to "登録はこちら", new_user_registration_path %></p>
+      <div class="login-under">
+        <p>アカウントをお持ちでないですか?</p>
+        <p><%= link_to "登録はこちら", new_user_registration_path, id: "login-under-signup" %></p>
+        <p>パスワードをお忘れですか？</p>
+        <p><%= link_to "パスワードの再設定はこちらから", new_password_path(resource_name), id: "login-under-signup" %></p>
+      </div>
     </div>
   </div>
-</div>
-
-<script src="script.js"></script>

@@ -114,26 +114,25 @@
           ], {include_blank: '選択してください', hide_label: true}, id: 'prefecture-edit' %></div>
 
        <div class="introduction-edit">
-        <%= f.label :プロフィール %>
+        <%= f.label :プロフィール %><i>任意</i>
         <%= f.text_area :introduction, id: "introduction-edit", class: "edit-introduction-area", hide_label: true %>
       </div>
 
-      <div class="login-password">
-        <%= f.label :password %> <i>(変更がなければ空白)</i><br />
-        <%= f.password_field :password, autocomplete: "new-password", hide_label: true  %>
-        <% if @minimum_password_length %>
-          <br />
-          <em><%= @minimum_password_length %>字以内</em>
+      <div class="password-edit">
+        <%= f.label :password %><small>(変更がなければ空白)</small><% if @minimum_password_length %>
+          <br/>
+          <em><%= @minimum_password_length %>字以上</em>
         <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", hide_label: true  %>
       </div>
 
-      <div class="login-password">
+      <div class="password_confirmation-edit">
         <%= f.label :パスワードの確認 %><br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password", hide_label: true %>
       </div>
 
-      <div class="login-password">
-        <%= f.label :現在のパスワード %> <i>(we need your current password to confirm your changes)</i><br />
+      <div class="password-edit">
+        <%= f.label :現在のパスワード %>
         <%= f.password_field :current_password, autocomplete: "current-password", hide_label: true %>
       </div>
 

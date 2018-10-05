@@ -1,16 +1,24 @@
-<h2>Resend confirmation instructions</h2>
-
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+<div class="email-wrapper">
+  <div class="side-links-info col-md-3 hidden-xs">
+    <%= render "devise/shared/links" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
+  <div class="email-sent-wrapper col-md-8">
+    <div class="email-sent-main">
+      <h2>メールの再送信</h2>
+      <%= bootstrap_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
 
-<%= render "devise/shared/links" %>
+
+    <div class="email">
+      <%= f.email_field :email, autofocus: true,placeholder: "メールアドレス", hide_label: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+    </div>
+
+    <%= f.submit "送信する", class: "btn btn-success", id: "email-submit" %>
+   <% end %>
+  </div>
+ </div>
+</div>
+
+  <div class="under-links-info visible-xs">
+    <%= render "devise/shared/links" %>
+  </div>

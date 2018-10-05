@@ -606,27 +606,28 @@ textarea#comment-text {
 
 .inbox2-under {
   margin-top: 100px;
-  margin-left: 40px;
   padding-top: 30px;
   border-top: 1px solid $gray-border-light;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .inbox2-under-picture {
   img {
-    width: 350px;
+    width: 90%;
     height: 200px;
-    margin-left: 40px;
+    margin: 0 auto;
+    display: block;
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
   }
 }
 
 .inbox2-under-intro {
-  margin-left: 40px;
+  margin-left: 20px;
   h2 {
     font-size: 16px;
     font-weight: 600;
+    width: 310px;
     color: $gray-medium-dark;
   }
 }
