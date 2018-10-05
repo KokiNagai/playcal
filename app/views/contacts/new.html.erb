@@ -1,0 +1,36 @@
+<div class="inquiry-wrapper">
+  <div class="inquiry-main">
+    <div class="inquiry-title">
+      <h1>お問い合わせ</h1>
+    </div>
+    <%= bootstrap_form_for @contact do |f| %>
+
+      <% if @contact.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <strong>入力内容にエラーがあります</strong>
+          <ul>
+            <% @contact.errors.each do |attr, msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+      <div class="name-inquiry">
+        <%= f.label :名前 %><span class="text-danger">（必須）
+        <%= f.text_field :name, hide_label: true, id: "inquiry-form"  %>
+      </div>
+      <div class="email-inquiry">
+        <%= f.label :メールアドレス %><span class="text-danger">（必須）
+        <%= f.text_field :email, hide_label: true, id: "inquiry-form"  %>
+      </div>
+      <div class="text-inquiry">
+        <%= f.label :お問い合わせ内容 %><span class="text-danger">（必須）
+        <%= f.text_area :message, hide_label: true, id: "inquiry-form1"  %>
+      </div>
+
+      <%= f.submit '送信', class: 'btn btn-success', id: "inquiry-submit" %>
+    <% end %>
+  </div>
+</div>

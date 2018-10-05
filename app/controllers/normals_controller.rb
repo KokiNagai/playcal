@@ -12,6 +12,9 @@ class NormalsController < ApplicationController
   def about
   end
 
+  def inquiry
+  end
+
   def find
     @posts = Post.all.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
     @member_nunber = [["1人", "1人"],["2人","2人"],["3人","3人"],["4人","4人"],["5人","5人"],["6人", "6人"],["それ以上","それ以上"]]

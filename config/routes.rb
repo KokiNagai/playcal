@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'normals#home'
   devise_for :users
 
@@ -8,8 +9,10 @@ Rails.application.routes.draw do
   get '/find', to: 'normals#find'
   post '/find', to: 'normals#find'
   get '/about', to: 'normals#about'
+  get '/inquiry/confirm', to: "contacts#inquiry"
 
   get '/posting', to: 'posts#posting'
+
 
 
   resources :users, only: [:show, :inbox, :outbox] do
@@ -22,6 +25,8 @@ Rails.application.routes.draw do
   resources :comments
   resources :posts, only: [:create, :destroy, :show]
   resources :rooms, only: [:create, :destroy, :show, :inbox]
+  resource :contacts, only: [:new, :create]
+
 
   post "prefs/:id", to: 'prefs#show'
   get '/search', to: 'normals#search'
