@@ -9,8 +9,8 @@
     <p><i class="fa fa-sticky-note-o"></i><%= link_to "募集する", posting_path, id: "dropdown-list" %></p>
     <p id="dropdown-list-p"><i class="fa fa-sticky-note-o"></i><%= link_to "探す", "/search?utf8=✓&q%5Bplayday_gteq%281i%29%5D=&q%5Bplayday_gteq%282i%29%5D=&q%5Bplayday_gteq%283i%29%5D=&q%5Bplayday_lteq%281i%29%5D=&q%5Bplayday_lteq%282i%29%5D=&q%5Bplayday_lteq%283i%29%5D=&q%5Bprefecture_eq%5D=#{current_user.live}&q%5Bgender_eq%5D=&q%5Bmember_eq%5D=&button=&q%5Bcity_cont%5D=", id: "dropdown-list" %></p>
     <p id="dropdown-list-p"><i class="fa fa-pencil-square-o"></i><%= link_to "プロフィールを編集する", edit_user_registration_path, id: "dropdown-list" %></p>
-    <p><i class="fa fa-envelope-o"></i><%= link_to "送信メッセージ", "/users/#{current_user.id}/outbox", id: "dropdown-list" %></p>
-    <p id="dropdown-list-p"><i class="fa fa-envelope-o"></i><%= link_to "受信メッセージ", "/users/#{current_user.id}/inbox", id: "dropdown-list" %></p>
+    <p><i class="fa fa-envelope-o"></i><%= link_to "送信メッセージ", "/outbox", id: "dropdown-list" %></p>
+    <p id="dropdown-list-p"><i class="fa fa-envelope-o"></i><%= link_to "受信メッセージ", "/inbox", id: "dropdown-list" %></p>
     <p><i class="fa fa-bookmark-o"></i><%= link_to "ログアウト", destroy_user_session_path, id: "dropdown-list", method: :delete %></p>
   </div>
   <% else %>

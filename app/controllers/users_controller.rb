@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:index, :edit, :update, :destroy, :inbox, :outbox, :show]
-  before_action :correct_user, only: [:edit, :update, :inbox, :outbox]
+  before_action :correct_user, only: [:edit, :updat]
 
   def index
     @users = User.all
@@ -13,15 +13,6 @@ class UsersController < ApplicationController
     @posts = @user.posts.order(created_at: :desc).paginate(page: params[:page])
   end
 
-  def outbox
-    @post = current_user.posts.build
-    @comments = current_user.comments
-  end
-
-  def inbox
-    @post = current_user.posts.build
-    @posts = current_user.posts
-  end
 
   def new
     @user = User.new

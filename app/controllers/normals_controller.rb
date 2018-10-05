@@ -1,4 +1,5 @@
 class NormalsController < ApplicationController
+  before_action :authenticate_user!, only: [:inbox, :outbox]
 
 
   def home
@@ -6,6 +7,16 @@ class NormalsController < ApplicationController
     @post = current_user.posts.build
     @user = User.find_by(params[:id])
   end
+  end
+
+  def outbox
+    @post = current_user.posts.build
+    @comments = current_user.comments
+  end
+
+  def inbox
+    @post = current_user.posts.build
+    @posts = current_user.posts
   end
 
 
