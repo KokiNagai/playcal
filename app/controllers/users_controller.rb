@@ -25,37 +25,7 @@ class UsersController < ApplicationController
     @posts = current_user.posts
   end
 
-  def new
-    @user = User.new
-  end
-
-  def edit
-    @user = User.find_by(id: params[:id])
-  end
-
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      log_in @user
-      redirect_to @user
-    else
-      render 'new'
-  end
-end
-
-  def update
-    @user = User.find_by(id: params[:id])
-   if @user.update_attributes(user_params)
-     @user.save
-      redirect_to @user
-    else
-      render 'edit'
-    end
-  end
-
-  def destroy
-  end
-
+  
 
 
   private

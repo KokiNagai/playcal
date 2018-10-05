@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    extend Devise::Models
+
     has_many :posts, dependent: :destroy
     has_many :comments, dependent: :destroy
     has_many :rooms, dependent: :destroy
