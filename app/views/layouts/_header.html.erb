@@ -9,7 +9,7 @@
             <li class="hidden-xs"><%= image_tag(current_user.picture_url, :class => "header-picture") if current_user.picture.present? %></li>
             <li class="hidden-xs"><div class="header-name"><%= link_to current_user.name, current_user, id: "header-name" %></div></li>
             <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "ホーム", root_path, id: "header-home" %></li>
-            <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "メッセージ", "/users/#{current_user.id}/inbox", id: "header-message" %></li>
+            <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "メッセージ", "/inbox", id: "header-message" %></li>
             <li class="dropdown hidden-xs">
             <a href="#" class="btn  dropdown-toggle", data-toggle="dropdown">
             <span id="user-pop"><i class="fa fa-navicon fa-2x down-color"></i><span>

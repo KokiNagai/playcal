@@ -9,10 +9,10 @@
         <h2>メッセージボックス</h2>
       </div>
       <div class="inbox-mail-sent">
-        <h2><i class="fa fa-paper-plane-o"></i><%= link_to("送信済みメッセージ", "/users/#{current_user.id}/outbox") %></h2>
+        <h2><i class="fa fa-paper-plane-o"></i><%= link_to("送信済みメッセージ", "/outbox") %></h2>
       </div>
       <div class="inbox-mail-recieved">
-        <h2><i class="fa fa-envelope-o"></i><%= link_to("受信済みメッセージ", "/users/#{current_user.id}/inbox") %></h2>
+        <h2><i class="fa fa-envelope-o"></i><%= link_to("受信済みメッセージ", "/inbox") %></h2>
       </div>
     </div>
   </div>
