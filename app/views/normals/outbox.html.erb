@@ -21,8 +21,9 @@
   <div class="inbox-title hidden-xs">
       <h1><i class="fa fa-envelope-o"></i>送信メッセージ</h1>
    </div>
-   <% @k = @comments.group('post_id') %>
-   <% @k.where(to_id: other_user.ids).each do |comment| %>
+   <% @k = @comments.group('comments.id').where(to_id: other_user.ids).group('post_id').each do |comment| %>
+
+
 
         <% if comment.present? %>
       <div class="inbox-main-wrapper">
