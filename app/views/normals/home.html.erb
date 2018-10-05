@@ -13,7 +13,7 @@
   <div class="home-section-1">
     <h2>募集する</h2>
     <%= link_to posting_path  do %>
-    <%= image_tag "https://fedexkoki.com/wp-content/uploads/2018/09/cooperate-2924261_1280.png" %>
+    <%= image_tag('cooperate-2924261_1280.png') %>
     <% end %>
     <p><span class="home-section-sub">あなたのヒッティングパートナーやチームメンバーをここで募集してみよう。</span></p>
 </div>
@@ -21,7 +21,7 @@
      <div class="home-section-2">
        <h2>探す</h2>
        <%= link_to("/search?utf8=✓&q%5Bplayday_gteq%281i%29%5D=&q%5Bplayday_gteq%282i%29%5D=&q%5Bplayday_gteq%283i%29%5D=&q%5Bplayday_lteq%281i%29%5D=&q%5Bplayday_lteq%282i%29%5D=&q%5Bplayday_lteq%283i%29%5D=&q%5Bprefecture_eq%5D=#{current_user.live}&q%5Bgender_eq%5D=&q%5Bmember_eq%5D=&button=&q%5Bcity_cont%5D=") do %>
-       <%= image_tag "https://fedexkoki.com/wp-content/uploads/2018/09/shoes-614176_1280.jpg"  %>
+       <%= image_tag("shoes-614176_1280.jpg")  %>
        <% end %>
        <p><span class="home-section-sub">あなたが練習したい人や、試合をしたいパートナーをここで見つけよう。</span></p>
     </div>
@@ -35,7 +35,7 @@
   <div class="top-wrapper">
     <div class="top-upper">
       <div class="top-section">
-        <img src="https://cdn.pixabay.com/photo/2015/01/27/20/17/shoes-614176_1280.jpg">
+        <img src="shoes-614176_1280.jpg">
         <h1>More fun for tennis</h1>
         <h2>明日の練習相手、一生のテニス仲間がここで見つかる</h2>
         <p><%= link_to '新規登録', new_user_registration_path, :style=>"color: white; font-size: 14px;" %></p>
@@ -46,7 +46,7 @@
          <div class="top-under-main">
            <h2>練習相手を探してみる</h2>
            <%= link_to find_path do %>
-           <%= image_tag "https://cdn.pixabay.com/photo/2013/02/21/15/03/borkum-84281_1280.jpg"  %>
+           <%= image_tag("borkum-84281_1280.jpg")  %>
            <% end %>
         </div>
         <div class="top-under-sub">
