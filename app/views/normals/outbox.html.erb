@@ -27,7 +27,7 @@
         <div class="inbox-main">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
-            <p><%= link_to image_tag(comment.user.picture_url, id: "inbox-user-picture"), "/users/#{comment.user.id}"%></p>
+            <p><%= link_to image_tag(comment.user.picture_url, id: "inbox-user-picture"), "/users/#{comment.user.id}" if comment.user.picture.present? %></p>
             </div>
             <div class="inbox-post-name">
               <p><%= link_to(comment.post.user.name, "/rooms/#{comment.room_id}") %></p>
