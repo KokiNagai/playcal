@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get "users/:id" => "users#show"
   get "users/:id/inbox" => "users#inbox"
-  get "users/:id/inbox" => "usersi#outbox"
+  get "users/:id/outbox" => "usersi#outbox"
 
 
 
