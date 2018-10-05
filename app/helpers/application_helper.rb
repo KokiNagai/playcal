@@ -14,4 +14,8 @@ end
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  def other_user
+    @other_user ||= User.where.not(id: current_user.id)
+  end
 end
