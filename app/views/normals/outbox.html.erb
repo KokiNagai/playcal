@@ -22,10 +22,7 @@
       <h1><i class="fa fa-envelope-o"></i>送信メッセージ</h1>
    </div>
    <% @k = @comments.group('comments.id').where(to_id: other_user.ids).group('post_id').each do |comment| %>
-
-
-
-        <% if comment.present? %>
+    <% if comment.present? %>
       <div class="inbox-main-wrapper">
         <div class="inbox-main">
           <div class="inbox-post-left">
@@ -33,7 +30,7 @@
               <% if comment.user.picture.present? %>
             <p><%= image_tag(comment.user.picture_url, id: "inbox-user-picture") %></p>
             <% else %>
-            <p><%= link_to image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
+            <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
             <% end %>
             </div>
             <div class="inbox-post-name">
