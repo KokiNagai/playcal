@@ -2,7 +2,11 @@
   <div class="post-show-wrapper">
     <div class="post-show-upper">
       <div class="post-show-user">
-        <p><%= image_tag(@room.post.user.picture_url, class: "post-showr-picture" ) if @room.post.user.picture.present? %></p>
+        <% if @room.post.user.picture.present? %>
+        <p><%= image_tag(@room.post.user.picture_url, class: "post-showr-picture" ) %></p>
+        <% else %>
+        <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+        <% end %>
         <p><%= @room.post.user.name %></p>
       </div>
       <div class="post-show-title">
@@ -56,7 +60,11 @@
       <div class="room-comment-all">
         <div class="inbox-user-main">
          <div class="room-user-picture">
-           <%= image_tag(comment.user.picture_url) if comment.user.picture.present? %>
+           <% if comment.user.picture.present? %>
+           <%= image_tag(comment.user.picture_url) %>
+           <% else %>
+           <%= image_tag('blank-profile-picture-973460_1280.png') %>
+           <% end %>
          </div>
         <div class="room-user-name">
          <strong><%= comment.user.name %></strong>

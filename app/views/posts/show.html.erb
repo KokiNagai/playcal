@@ -2,7 +2,11 @@
   <div class="post-show-wrapper">
     <div class="post-show-upper">
       <div class="post-show-user">
-        <p><%= image_tag(@post.user.picture_url, class: "post-showr-picture" ) if @post.user.picture.present? %></p>
+        <% if @post.user.picture.present? %>
+        <p><%= image_tag(@post.user.picture_url, class: "post-showr-picture" ) %></p>
+        <% else %>
+        <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+
         <p><%= @room.post.user.name %></p>
       </div>
       <div class="post-show-title">

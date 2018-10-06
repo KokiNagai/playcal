@@ -30,15 +30,19 @@
         <div class="inbox-main">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
-            <p><%= link_to image_tag(comment.user.picture_url, id: "inbox-user-picture"), "/users/#{comment.user.id}"  if comment.user.picture.present?%></p>
+              <% if comment.user.picture.present? %>
+            <p><%= image_tag(comment.user.picture_url, id: "inbox-user-picture") %></p>
+            <% else %>
+            <p><%= link_to image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
+            <% end %>
             </div>
             <div class="inbox-post-name">
-              <p><%= link_to(comment.post.user.name, "/rooms/#{comment.room_id}") %></p>
+              <p><%= link_to(comment.post.user.name, comment.post.user) %></p>
             </div>
            </div>
           <div class="inbox-content">
             <h2><%= comment.post.title %></h2>
-            <h3><%= comment.post.content %></h3>
+            <h3><%= link_to(comment.post.content, comment.room %></h3>
           </div>
           <div class="inbox-time">
             <% if comment.room.comments.where(from_id: other_user.ids) != [] %>

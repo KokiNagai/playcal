@@ -2,7 +2,11 @@
     <div class="user-info">
       <div class="user-info-2">
         <div class="user-show-upper">
-          <p><%= image_tag(@user.picture_url) if @user.picture.present? %></p>
+          <% if @user.picture.present? %>
+          <p><%= image_tag(@user.picture_url) %></p>
+          <% else %>
+          <p><<%= image_tag('blank-profile-picture-973460_1280.png') %></p>
+          <% end %>
         </div>
         <div class="user-show-under">
         <p><h2><%= @user.name %></h2></p>

@@ -23,20 +23,24 @@
    </div>
       <% @posts.each do |post| %>
       <% @k = post.comments.group('comments.id').where(to_id: current_user.id).group('from_id').each do |comment| %>
-  
+
         <% if comment.room.present? && comment.user != current_user %>
       <div class="inbox-main-wrapper">
         <div class="inbox-main">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
-              <p><%= link_to image_tag(comment.user.picture_url, id: "inbox-user-picture"), "/users/#{comment.user.id}" if comment.user.picture.present? %></p>
+              <% if  comment.user.picture.present? %>
+              <p><%= link_to image_tag(comment.user.picture_url, id: "inbox-user-picture"), "/users/#{comment.user.id}" %></p>
+              <% else %>
+              <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
+              <% end %>
             </div>
             <div class="inbox-post-name">
               <p><%= link_to(comment.user.name, "/rooms/#{comment.room.id}") %></p>
             </div>
            </div>
           <div class="inbox-content">
-            <h2><%= comment.post.title %></h2>
+            <h2><%= link_to(comment.post.title, comment.room)%></h2>
             <h3><%= comment.post.content %></h3>
             <% comment.room.comments.order(created_at: :desc).limit(1).each do |k| %>
             <p><%= k.created_at.strftime('%Y/%m/%d %H:%M') %>にメッセージ</p>

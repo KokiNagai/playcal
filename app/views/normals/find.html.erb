@@ -21,7 +21,11 @@
     <div class="find-post">
       <div class="find-user-upper">
         <div class="find-post-user">
-          <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300' ) if post.user.picture.present? %></p>
+          <% if post.user.picture.present? %>
+          <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300' ) %></p>
+          <% else %>
+          <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300' ) %></p>
+          <% end %>
           <p><h2><%= post.title %></h2></p>
         </div>
           <div class="find-title">

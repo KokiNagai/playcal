@@ -6,7 +6,11 @@
         <ul class="nav navbar-nav navbar-right">
           <ul class="nonloggedin-right">
             <% if user_signed_in? %>
-            <li class="hidden-xs"><%= image_tag(current_user.picture_url, :class => "header-picture") if current_user.picture.present? %></li>
+            <% if current_user.picture.present? %>
+            <li class="hidden-xs"><%= image_tag(current_user.picture_url, :class => "header-picture") %></li>
+            <% else %>
+            <li class="hidden-xs"><%= image_tag('blank-profile-picture-973460_1280.png', :class => "header-picture") %></li>
+            <% end %>
             <li class="hidden-xs"><div class="header-name"><%= link_to current_user.name, current_user, id: "header-name" %></div></li>
             <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "ホーム", root_path, id: "header-home" %></li>
             <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "メッセージ", "/inbox", id: "header-message" %></li>
