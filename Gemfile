@@ -20,6 +20,10 @@ gem 'omniauth-twitter'
 
 gem 'less-rails'
 
+gem 'cancancan'
+
+gem 'rails_admin'
+
 gem 'therubyracer'
 
 gem 'execjs'
