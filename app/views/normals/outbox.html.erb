@@ -38,8 +38,8 @@
             </div>
            </div>
           <div class="inbox-content">
-            <h2><%= comment.post.title %></h2>
-            <h3><%= link_to(comment.post.content, comment.room) %></h3>
+            <h2><%= link_to(comment.post.title, comment.room) %></h2>
+            <h3><%= comment.post.content %></h3>
           </div>
           <div class="inbox-time">
             <% if comment.room.comments.where(from_id: other_user.ids) != [] %>
