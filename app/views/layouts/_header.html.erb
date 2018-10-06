@@ -25,6 +25,7 @@
                 <p><%= link_to "プロフィールを編集する", edit_user_registration_path %></p>
                 <li class="divider"></li>
                 <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+                <p><%= link_to "退会", user_registration_path, id: "dropdown-list", method: :delete %></p>
                 <% if current_user.id == 1 %>
                 <p><%= link_to "管理者画面", rails_admin_path %></p>
                 <% end %>
