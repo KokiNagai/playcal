@@ -3,14 +3,13 @@ Rails.application.routes.draw do
   root 'normals#home'
   devise_for :users
 
-
   get 'rooms/show'
 
   get '/find', to: 'normals#find'
   post '/find', to: 'normals#find'
   get '/about', to: 'normals#about'
   get '/mail_confirm', to: "normals#after_mail"
-  
+
   get '/inquiry/confirm', to: "contacts#inquiry"
 
 

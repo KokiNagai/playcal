@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
       user_path(current_user)
     end
 
-    def after_sign_up_path_for(resource)
+    def after_inactive_sign_up_path_for(resource)
       mail_confirm_path
     end
 
