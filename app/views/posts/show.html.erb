@@ -6,7 +6,7 @@
         <p><%= image_tag(@post.user.picture_url, class: "post-showr-picture" ) %></p>
         <% else %>
         <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
-
+        <% end %>
         <p><%= @room.post.user.name %></p>
       </div>
       <div class="post-show-title">
@@ -49,7 +49,7 @@
            <% end %>
            <% elsif current_user == @user %>
            <div class="post-message-check">
-             <%= link_to("メッセージボックスで確認する", "/users/#{current_user.id}/inbox", class: "btn btn-success", id: "post-message-check") %>
+             <%= link_to("メッセージボックスで確認する", "/inbox", class: "btn btn-success", id: "post-message-check") %>
            </div>
            <% elsif @post.rooms.where(from_id: current_user.id).present? %>
            <% room = @post.rooms.find_by(from_id: current_user.id) %>
