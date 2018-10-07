@@ -7,4 +7,4 @@ $(function() {
   $('.close-modal2').click(function() {
     $('.search-modal-wrapper').fadeOut();
   });
-};
+});
