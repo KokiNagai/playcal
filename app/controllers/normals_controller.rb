@@ -24,7 +24,7 @@ class NormalsController < ApplicationController
   end
 
   def after_mail
-  end 
+  end
 
   def inquiry
   end

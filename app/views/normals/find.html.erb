@@ -21,11 +21,15 @@
     <div class="find-post">
       <div class="find-user-upper">
         <div class="find-post-user">
+<<<<<<< HEAD
           <% if post.user.picture.present? %>
           <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300' ) %></p>
           <% else %>
           <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300' ) %></p>
           <% end %>
+=======
+          <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300' ) if post.user.picture.present? %></p>
+>>>>>>> origin/master
           <p><h2><%= post.title %></h2></p>
         </div>
           <div class="find-title">
@@ -53,7 +57,11 @@
   <div class="side-find">
       <div class="inbox2-under-picture">
         <%= link_to 'posting_path' do %>
+<<<<<<< HEAD
         <%= image_tag "adult-1853483_1280.jpg" %>
+=======
+        <%= image_tag "https://cdn.pixabay.com/photo/2016/11/23/15/22/adult-1853483_1280.jpg" %>
+>>>>>>> origin/master
         <% end %>
       </div>
       <div class="inbox2-under-intro">
