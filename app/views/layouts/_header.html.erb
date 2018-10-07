@@ -5,7 +5,6 @@
         <nav>
         <ul class="nav navbar-nav navbar-right">
           <ul class="nonloggedin-right">
-<<<<<<< HEAD
             <% if user_signed_in? %>
             <% if current_user.picture.present? %>
             <li class="hidden-xs"><%= image_tag(current_user.picture_url, :class => "header-picture") %></li>
@@ -15,13 +14,7 @@
             <li class="hidden-xs"><div class="header-name"><%= link_to current_user.name, current_user, id: "header-name" %></div></li>
             <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "ホーム", root_path, id: "header-home" %></li>
             <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "メッセージ", "/inbox", id: "header-message" %></li>
-=======
-            <% if logged_in? %>
-            <li class="hidden-xs"><%= image_tag(current_user.picture_url, :class => "header-picture") if current_user.picture.present? %></li>
-            <li class="hidden-xs"><div class="header-name"><%= link_to current_user.name, current_user, id: "header-name" %></div></li>
-            <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "ホーム", root_path, id: "header-home" %></li>
-            <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "メッセージ", "/users/#{current_user.id}/inbox", id: "header-message" %></li>
->>>>>>> origin/master
+
             <li class="dropdown hidden-xs">
             <a href="#" class="btn  dropdown-toggle", data-toggle="dropdown">
             <span id="user-pop"><i class="fa fa-navicon fa-2x down-color"></i><span>
@@ -30,7 +23,7 @@
                 <p><%= link_to "募集する", posting_path %></p>
                 <p><%= link_to "探す", find_path %></p>
                 <p><%= link_to "プロフィール", current_user %></p>
-<<<<<<< HEAD
+
                 <p><%= link_to "プロフィールを編集する", edit_user_registration_path %></p>
                 <li class="divider"></li>
                 <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
@@ -38,44 +31,26 @@
                 <% if current_user.id == 1 %>
                 <p><%= link_to "管理者画面", rails_admin_path %></p>
                 <% end %>
-=======
-                <p><%= link_to "プロフィールを編集する", edit_user_path(current_user.id) %></p>
-                <li class="divider"></li>
-                <p><%= link_to "ログアウト", logout_path, method: :delete %></p>
->>>>>>> origin/master
+
               </ul>
               </li>
 
               <div class="smartphone-dropdown visible-xs">
                   <p><i class="fa fa-navicon fa-1.5x down-color"  id="dropdown-fontawesome"></i></p>
-<<<<<<< HEAD
+
                     <%= render 'layouts/dropdown' %>
                 </div>
-
-=======
-                </div>
-                <%= render 'layouts/dropdown' %>
->>>>>>> origin/master
 
 
             <% else %>
             <li  class="hidden-xs"><%= link_to "ホーム", root_path, id: "sub" %></li>
-<<<<<<< HEAD
             <li  class="hidden-xs"><%= link_to "登録", new_user_registration_path, id: "sub" %></li>
-=======
-            <li  class="hidden-xs"><%= link_to "登録", signup_path, id: "sub" %></li>
->>>>>>> origin/master
             <li  class="hidden-xs"><span id="signin-pop">ログイン</span></li>
 
             <div class="smartphone-dropdown visible-xs">
                 <p><i class="fa fa-navicon fa-1.5x down-color"  id="dropdown-fontawesome"></i></p>
-<<<<<<< HEAD
                 <%= render 'layouts/dropdown' %>
               </div>
-=======
-              </div>
-              <%= render 'layouts/dropdown' %>
->>>>>>> origin/master
 
 
             <% end %>
