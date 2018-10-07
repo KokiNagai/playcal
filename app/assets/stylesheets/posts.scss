@@ -181,6 +181,7 @@ span.picture {
   margin-top: 40px;
 }
 
+
 .post-show-upper {
   display: flex;
   border-bottom: 1px solid $gray-border-light;
@@ -487,6 +488,19 @@ span.picture {
     padding-bottom: 40px;
     margin: 0 auto;
     margin-top: 40px;
+  }
+
+  .post-show-top {
+    text-align: center;
+    color: $pink-hightlight;
+    margin-top: 40px;
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .fa {
+      margin-right: 10px;
+    }
   }
 
   .post-show-upper {

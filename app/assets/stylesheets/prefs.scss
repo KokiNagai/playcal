@@ -425,14 +425,13 @@ $green-highlight: #5f9ea0;
      }
 
      .find-post-detail {
-       margin-top: 10px;
-       margin-bottom: 10px;
-       text-align: center;
+       margin: 10px auto;
+       border-bottom: 3px solid $pink-borderbottom;
+       display: block;
+       width: 72px;
      }
 
-     #find-post-detail:hover {
-       border-bottom: 3px solid $pink-borderbottom;
-     }
+
      .find-user-upper {
        border-bottom: 1px solid $gray-border-light;
        margin-bottom: 10px;
@@ -551,7 +550,7 @@ $green-highlight: #5f9ea0;
 
       .search-modal {
         position: absolute;
-        top: 8%;
+        top: 5%;
         left: 5%;
         width: 90%;
         height: 465px;

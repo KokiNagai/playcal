@@ -366,7 +366,7 @@ input#edit-submit {
 
      .user-show-under {
        h2 {
-         margin-left: 10%;
+         margin-left: 7%;
          font-size: 18px;
          font-weight: 600;
          color: $gray-medium-dark;
@@ -374,12 +374,9 @@ input#edit-submit {
        .user-show-under-info {
          border-bottom: 1px solid $gray-border-light;
          margin: 0 auto;
-         width: 95%;
-         p {
-
-         }
+         width: 90%;
          h3 {
-           margin-left: 8%;
+           margin-left: 5%;
            font-size: 13px;
            display: block;
          }
@@ -394,13 +391,21 @@ input#edit-submit {
          padding-top: 10px;
          margin: 0 auto;
          color: $gray-medium-dark;
+         border-bottom: 1px solid $gray-border-light;
+         padding-bottom: 20px;
+         h3 {
+           color: $gray-medium-dark;
+           font-size: 14px;
+           display: inline-block;
+           border-bottom: 4px solid $pink-borderbottom;
+         }
        }
      }
 
      .user-show-right-upper {
        border: 1px solid $gray-border-light;
        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-       padding: 10px;
+       padding: 5px 10px 5px 10px;
        width: 85%;
        margin: 40px auto;
        .upper-user-sent {

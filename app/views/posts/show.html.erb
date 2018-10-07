@@ -1,4 +1,7 @@
 <div class="main-pref">
+  <div class="post-show-top">
+    <h2><i class="fa fa-tags"></i>投稿情報の詳細</h2>
+  </div>
   <div class="post-show-wrapper">
     <div class="post-show-upper">
       <div class="post-show-user">
@@ -36,28 +39,30 @@
       <p><%= @post.content %></p>
     </div>
   </div>
-           <% post = @post.comments %>
-           <% if current_user != @user  && @post.rooms.where(from_id: current_user.id).empty? %>
-           <%= form_for(@room) do |f| %>
-           <%= f.hidden_field :post_id, :value => @post.id %>
-           <%= f.hidden_field :to_id, :value => @user.id %>
-           <%= f.hidden_field :from_id, :value => current_user.id %>
-           <%= f.hidden_field :user_id, :value => current_user.id %>
-           <div class="post-message-submit">
-             <%= f.submit "メッセージを送る", class: "btn btn-success" %>
-           </div>
-           <% end %>
-           <% elsif current_user == @user %>
-           <div class="post-message-check">
-             <%= link_to("メッセージボックスで確認する", "/inbox", class: "btn btn-success", id: "post-message-check") %>
-           </div>
-           <% elsif @post.rooms.where(from_id: current_user.id).present? %>
-           <% room = @post.rooms.find_by(from_id: current_user.id) %>
-           <div class="post-message-back">
-             <%= link_to("以前のメッセージへ戻る", "/rooms/#{room.id}", class: "btn btn-success", id: "post-message-check") %>
-           </div>
-           <% end %>
-          </div>
 
-           </div>
-          </div>
+
+  <% post = @post.comments %>
+  <% if current_user != @user  && @post.rooms.where(from_id: current_user.id).empty? %>
+  <%= form_for(@room) do |f| %>
+  <%= f.hidden_field :post_id, :value => @post.id %>
+  <%= f.hidden_field :to_id, :value => @user.id %>
+  <%= f.hidden_field :from_id, :value => current_user.id %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <div class="post-message-submit">
+    <%= f.submit "メッセージを送る", class: "btn btn-success" %>
+  </div>
+  <% end %>
+  <% elsif current_user == @user %>
+  <div class="post-message-check">
+    <%= link_to("メッセージボックスで確認する", "/inbox", class: "btn btn-success", id: "post-message-check") %>
+  </div>
+  <% elsif @post.rooms.where(from_id: current_user.id).present? %>
+  <% room = @post.rooms.find_by(from_id: current_user.id) %>
+  <div class="post-message-back">
+    <%= link_to("以前のメッセージへ戻る", "/rooms/#{room.id}", class: "btn btn-success", id: "post-message-check") %>
+  </div>
+  <% end %>
+ </div>
+
+  </div>
+ </div>
