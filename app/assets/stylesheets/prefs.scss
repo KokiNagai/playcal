@@ -491,6 +491,38 @@ $green-highlight: #5f9ea0;
         width: 100px !important;
       }
 
+      .searched-info {
+        margin: 10px auto;
+        width: 90%;
+        .searched-main {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        #searched-main {
+          margin-right: 7px;
+          .hash {
+            margin-right: 5px;
+            color: $green-highlight;
+          }
+        }
+      }
+
+      .searched-message {
+        border-top: 1px solid $gray-border-light;
+        padding-top: 40px;
+        text-align: center;
+        h2 {
+          font-size: 16px;
+          font-weight: 600;
+          color: $gray-medium-dark;
+        }
+      }
+
+
+
+
+
       // findfor-パーシャル=======================
 
 
@@ -551,8 +583,7 @@ $green-highlight: #5f9ea0;
       .search-modal {
         position: absolute;
         top: 5%;
-        left: 5%;
-        width: 90%;
+        width: 100%;
         height: 465px;
         padding-right: 10px;
         text-align: center;
@@ -610,7 +641,7 @@ $green-highlight: #5f9ea0;
         font-weight: 600;
         color: $green-highlight;
         .fa {
-          margin-right: 12px;
+          margin-right: 8px;
         }
       }
 

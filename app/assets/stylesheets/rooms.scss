@@ -623,19 +623,21 @@ textarea#comment-text {
 }
 
 .inbox2-under-intro {
-  margin-left: 20px;
+
   h2 {
     font-size: 16px;
     font-weight: 600;
-    width: 310px;
+    text-align: center;
     color: $gray-medium-dark;
   }
 }
 
 .inbox2-posting-bottom {
-  margin-top: 40px;
+  margin: 40px auto;
+  width: 110px;
   padding: 5px;
-  display: inline-block;
+  text-align: center;
+  display: block;
   background-color: $pink-hightlight;
   border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
 }
@@ -844,7 +846,7 @@ p {
 .room-comment-main1 {
   width: 100%;
   overflow: hidden;
-  margin: 40px 40px 0 0;
+  margin: 40px 20px 0 0;
   .room-comment-all {
     float: right;
   }
@@ -852,13 +854,13 @@ p {
 
 .room-comment-main1 .room-user-name, .room-comment-main1 .room-user-picture {
   position: relative;
-  left: 83%;
+  right: -120%;
 }
 
 .room-comment-main1 .inbox-user-main {
   position: relative;
   right: 100%;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 .room-comment-main1 .room-comment {
@@ -868,7 +870,7 @@ p {
 
 .room-comment-main1 .room-comment-body {
   position: relative;
-  left: -40%;
+  left: -20%;
   padding: 20px;
   width: 160px;
   height: 120px;
@@ -921,7 +923,7 @@ p {
 
 .room-comment-main2 .inbox-user-main {
  position: relative;
- left: 7%;
+ left: 2%;
 }
 
 .room-comment-main2 .room-comment {
@@ -932,7 +934,7 @@ p {
 
 .room-comment-main2 .room-comment-body {
     position: relative;
-    left: 70%;
+    left: 45%;
     padding: 20px;
     width: 160px;
     height: 120px;
@@ -974,7 +976,7 @@ p {
 
 // comment-form(スマホ用)=========================
 .room-comment-box {
-  margin-top: 40px;
+  margin-top: 60px;
   border-top: 1px solid #cfcfcf;
 }
 

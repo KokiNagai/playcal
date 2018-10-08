@@ -121,7 +121,7 @@
   <div class="password-edit">
     <%= f.label :password %><i>必須</i>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %>字以内)</em>
+    <em>(<%= @minimum_password_length %>字以上)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password", hide_label: true  %>
   </div>

@@ -85,7 +85,7 @@ class NormalsController < ApplicationController
 end
 
 def search
-  if logged_in?
+  if user_signed_in?
   @post = current_user.posts.build
   @posts = Post.all.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
   @member_nunber = [["1人", "1人"],["2人","2人"],["3人","3人"],["4人","4人"],["5人","5人"],["6人", "6人"],["それ以上","それ以上"]]
@@ -211,6 +211,7 @@ else
        hash2 = playday_params2
        hash3 = prefecture_params
        hash4 = city_params
+       hash5 = style_params
 
          @gender = hash.values.first
          @start_date = hash1.values.first
@@ -221,6 +222,7 @@ else
          @end_date3 = hash2.values.third
          @prefectures = hash3.values.first
          @word = hash4.values.first
+         @style = hash5.values.first
 
        @q = Post.search(search_params)
        @posts = @q.result.paginate(page: params[:page], per_page: 10).order(created_at: :desc)
@@ -239,6 +241,10 @@ end
 
 def gender_params
     params.require(:q).permit(:gender_eq)
+end
+
+def style_params
+    params.require(:q).permit(:style_eq)
 end
 
 def playday_params

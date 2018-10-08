@@ -67,7 +67,9 @@
            <% end %>
          </div>
         <div class="room-user-name">
+          <% if comment.user != current_user %>
          <strong><%= comment.user.name %></strong>
+         <% end %>
        </div>
        </div>
 

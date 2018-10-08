@@ -1,23 +1,41 @@
 <div class="search-area">
   <div class="upper-search-JS">
    <div class="gender-JS">
-     検索条件
+     検索
    </div>
  </div>
  <%= render 'normals/findfor' %>
 </div>
 
 
-<div class="pref-show-title ">
-  <% if @word.present? %>
-  <p><i class="fa fa-tags"></i><span style="color: #5f9ea0; font-size: 17px;"><%= @word  %></span>に関する投稿
-    <% end %>
+<div class="searched-info">
+      <div class="searched-main">
+        <% if @start_date.present? && @start_date2.present? && @start_date3.present? %>
+        <div id="searched-main"><i class="hash">#</i><span style="color: #5f9ea0; font-size: 12px;"><%= @start_date + "年" + @start_date2 + "月" + @start_date3 + "日から"  %></span></div>
+        <% end %>
+        <% if @end_date.present? && @end_date2.present? && @end_date3.present? %>
+        <div id="searched-main"><i class="hash">#</i><span style="color: #5f9ea0; font-size: 12px;"><%= @end_date + "年" + @end_date2 + "月" + @end_date3 + "日まで"  %></span></div>
+        <% end %>
+        <% if @word.present? %>
+        <div id="searched-main"><i class="hash">#</i><span style="color: #5f9ea0; font-size: 12px;"><%= @word  %></span></div>
+        <% end %>
+        <% if @prefectures.present? %>
+        <div id="searched-main"><i class="hash">#</i><span style="color: #5f9ea0; font-size: 12px;"><%= @prefectures  %></span></div>
+        <% end %>
+        <% if @gender.present? %>
+        <div id="searched-main"><i class="hash">#</i><span style="color: #5f9ea0; font-size: 12px;"><%= @gender  %></span></div>
+        <% end %>
+        <% if @style.present? %>
+        <div id="searched-main"><i class="hash">#</i><span style="color: #5f9ea0; font-size: 12px;"><%= @style  %></span></div>
+        <% end %>
+      </div>
+    </div>
 
-    <% if @prefectures.present? %>
-    <p><i class="fa fa-tags"></i><span style="color: #5f9ea0; font-size: 17px;"><%= @prefectures  %></span>の投稿
-    <% end %>
-
-</div>
+    <div class="searched-message">
+      <% if @posts.empty? %>
+      <h2>その条件に合う投稿はありません</h2>
+      <% end %>
+    </div>
 
 <div class="find-wrapper">
   <div class="find-main">

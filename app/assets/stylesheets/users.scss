@@ -367,10 +367,12 @@ input#edit-submit {
      .user-show-under {
        h2 {
          margin-left: 7%;
+         display: inline-block;
          font-size: 18px;
          font-weight: 600;
          color: $gray-medium-dark;
-       }
+         border-bottom: 3px solid $pink-borderbottom;
+      }
        .user-show-under-info {
          border-bottom: 1px solid $gray-border-light;
          margin: 0 auto;
@@ -388,7 +390,6 @@ input#edit-submit {
          width: 90%;
          font-size: 12px;
          line-height: 1.5em;
-         padding-top: 10px;
          margin: 0 auto;
          color: $gray-medium-dark;
          border-bottom: 1px solid $gray-border-light;
@@ -397,7 +398,8 @@ input#edit-submit {
            color: $gray-medium-dark;
            font-size: 14px;
            display: inline-block;
-           border-bottom: 4px solid $pink-borderbottom;
+           border-bottom: 3px solid $pink-borderbottom;
+           margin-left: 10px;
          }
        }
      }
@@ -465,7 +467,8 @@ input#edit-submit {
   }
 
   .name-edit {
-    margin-left: 33px;
+    margin: 0 auto;
+    width: 300px;
     label {
       margin-top: 30px;
       margin-bottom: 10px;
@@ -478,7 +481,8 @@ input#edit-submit {
   }
 
   .picture-edit {
-    margin-left: 33px;
+    margin: 0 auto;
+    width: 300px;
     label {
       margin-top: 30px;
       margin-bottom: 10px;
@@ -486,12 +490,13 @@ input#edit-submit {
       font-size: 13px;
     }
     #prefecture-edit {
-      width: 300px;
+
     }
   }
 
   .birth-date-edit {
-    margin-left: 33px;
+    margin: 0 auto;
+    width: 300px;
     label {
       margin-top: 30px;
       margin-bottom: 10px;
@@ -499,12 +504,14 @@ input#edit-submit {
       font-size: 13px;
     }
     .rails-bootstrap-forms-date-select {
-      margin-left: 0;
+      margin: 0 auto;
+      width: 300px;
     }
   }
 
   .email-edit {
-    margin-left: 33px;
+    margin: 0 auto;
+    width: 300px;
     label {
       margin-top: 30px;
       margin-bottom: 10px;
@@ -517,7 +524,8 @@ input#edit-submit {
   }
 
   .prefecture-edit {
-    margin-left: 33px;
+    margin: 0 auto;
+    width: 300px;
     label {
       margin-top: 30px;
       margin-bottom: 10px;
@@ -525,12 +533,13 @@ input#edit-submit {
       font-size: 13px;
     }
     #prefecture-edit {
-      width: 200px;
+      width: 300px;
     }
   }
 
   .introduction-edit {
-    margin-left: 33px;
+    margin: 0 auto;
+    width: 300px;
     label {
       margin-top: 30px;
       margin-bottom: 10px;
@@ -544,7 +553,7 @@ input#edit-submit {
   }
 
   .password-edit, .password_confirmation-edit {
-    margin-left: 33px;
+    margin: 0 auto;
     width: 300px;
     label {
       margin-top: 30px;
