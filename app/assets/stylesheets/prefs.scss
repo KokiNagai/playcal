@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$gray-medium-light: #b3b3b3;
+$gray-medium-light: #a7a7a7;
 $gray-medium-dark: #4c4c4c;
 $gray-border-light: #cfcfcf;
 $gray-word: #919191;
@@ -98,7 +98,7 @@ $green-highlight: #5f9ea0;
    }
 
    .find-title {
-     margin-left: 12px;
+     margin-left: 8px;
    }
 
    .find-under-table {
@@ -122,6 +122,9 @@ $green-highlight: #5f9ea0;
        width: 60px;
        height: 60px;
        border-radius: 60%;
+       p {
+       margin-left: 10px;
+     }
      }
    }
    .find-post-detail {
@@ -446,10 +449,13 @@ $green-highlight: #5f9ea0;
          height: 50px;
          border-radius: 60%;
        }
+       p {
+       margin-left: 10px;
+     }
      }
 
      .find-title {
-       margin-left: 10px;
+       margin-left: 0px;
      }
 
      .find-post-detail {
@@ -526,8 +532,8 @@ $green-highlight: #5f9ea0;
         h3 {
           margin-top: 10px;
           font-size: 14px;
-          font-weight: 500;
-          color: $gray-word;
+          font-weight: 600;
+          color: $gray-medium-dark;
           border-bottom: 2px solid $green-highlight;
           display: inline-block;
         }
@@ -658,7 +664,7 @@ $green-highlight: #5f9ea0;
         height: 20px;
         font-size: 12px;
         font-weight: 500;
-        color: $gray-word;
+        color: $gray-medium-dark;
         background-color: #fff;
         border: 1px solid $gray-border-light;
       }
@@ -684,7 +690,7 @@ $green-highlight: #5f9ea0;
 
       #findfor-label {
         width: 130px;
-        color: $gray-word;
+        color: $gray-medium-dark;
         font-size: 13px;
       }
 
