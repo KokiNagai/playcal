@@ -2,7 +2,7 @@
 
   <div class="inbox-mail-wrapper col-md-3 col-sm-3">
     <div class="inbox-title visible-xs">
-        <h1><i class="fa fa-envelope-o"></i>受信メッセージ</h1>
+        <h1><i class="fa fa-envelope-o"></i>送信メッセージ</h1>
      </div>
     <div class="inbox-mail-main">
       <div class="inbox-maiil-title">
@@ -21,28 +21,30 @@
   <div class="inbox-title hidden-xs">
       <h1><i class="fa fa-envelope-o"></i>送信メッセージ</h1>
    </div>
-   <% @comments.group('comments.id').where(to_id: other_user.ids).group('post_id').each do |comment| %>
-    <% if comment.present? %>
+   <% @comments.pluck(:room_id).uniq.each do |rid| %>
+   <% @room = Room.find(rid) %>
+   <% post = Room.find(rid).post %>
+    <% if post.present? && @room.comments.first.user == current_user %>
       <div class="inbox-main-wrapper">
         <div class="inbox-main">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
-            <% if comment.user.picture.present? %>
-            <p><%= image_tag(comment.user.picture_url, id: "inbox-user-picture") %></p>
+            <% if post.user.picture.present? %>
+            <p><%= image_tag(post.user.picture_url, id: "inbox-user-picture") %></p>
             <% else %>
             <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
             <% end %>
             </div>
             <div class="inbox-post-name">
-              <p><%= link_to(comment.post.user.name, comment.post.user) %></p>
+              <p><%= link_to(post.user.name, post.user) %></p>
             </div>
            </div>
           <div class="inbox-content">
-            <h2><%= link_to(comment.post.title, comment.room) %></h2>
-            <h3><%= comment.post.content %></h3>
+            <h2><%= link_to(post.title, @room) %></h2>
+            <h3><%= post.content %></h3>
           </div>
           <div class="inbox-time">
-            <% if comment.room.comments.where(from_id: other_user.ids) != [] %>
+            <% if @room.comments.where(from_id: other_user.ids) != [] %>
             <P><h2>返信あり</h2></p>
             <i class="fa fa-check"></i>
             <% else %>
