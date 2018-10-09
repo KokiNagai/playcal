@@ -22,7 +22,7 @@
       <h1><i class="fa fa-envelope-o"></i>受信メッセージ</h1>
    </div>
    <% Room.where(to_id: current_user.id).each do |room| %>
-   <% if room.present? %>
+   <% if room.present? && room.comments.present? %>
       <div class="inbox-main-wrapper">
         <div class="inbox-main">
           <div class="inbox-post-left">
