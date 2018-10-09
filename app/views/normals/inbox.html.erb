@@ -22,7 +22,7 @@
       <h1><i class="fa fa-envelope-o"></i>受信メッセージ</h1>
    </div>
       <% @posts.each do |post| %>
-      <% post.comments.group('comments.id').where(to_id: current_user.id).group('room_id').limit(1).each do |comment| %>
+      <% post.comments.group('comments.id').where(to_id: current_user.id).group('from_id').each do |comment| %>
 
         <% if comment.room.present? && comment.user != current_user %>
       <div class="inbox-main-wrapper">
