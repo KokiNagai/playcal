@@ -552,8 +552,8 @@ textarea#comment-text {
 }
 
 .inbox-post-name p {
-  font-weight: 600;
-  font-size: 11px;
+  font-weight: 500;
+  font-size: 10px;
 }
 
 
@@ -561,14 +561,14 @@ textarea#comment-text {
   width: 60%;
   margin-top: 15px;
   h2 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-left: 20px;
     color: $gray-medium-dark;
   }
   h3 {
     margin-left: 25px;
-    font-size: 12px;
+    font-size: 1.0rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -846,7 +846,7 @@ p {
 .room-comment-main1 {
   width: 100%;
   overflow: hidden;
-  margin: 40px 20px 0 0;
+  margin: 40px 20px 60px 0;
   .room-comment-all {
     float: right;
   }
@@ -917,7 +917,7 @@ p {
 
 .room-comment-main2 {
   width: 100%;
-  margin: 40px 40px 0 0;
+  margin: 40px 40px 40px 0;
   overflow: hidden;
 }
 
@@ -986,6 +986,7 @@ p {
 
 textarea#comment-text {
   border-color: #cfcfcf;
+  padding: 10px;
   margin-top: 30px;
   height: 110px;
   width: 90%;
