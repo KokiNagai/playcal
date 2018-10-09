@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
 
    mount_uploader :picture, PictureUploader
-   validates :name, presence: true, length: {maximum: 8}
+   validates :name, presence: true, length: {maximum: 15}
    validates :password, presence: true, length: { minimum: 7 }, allow_nil: true
    validates :email, presence: true, length: { maximum: 255 }
    validates :live, presence: true

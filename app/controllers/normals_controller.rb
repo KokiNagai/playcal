@@ -142,6 +142,7 @@ def search
        hash2 = playday_params2
        hash3 = prefecture_params
        hash4 = city_params
+       hash5 = style_params
 
          @gender = hash.values.first
          @start_date = hash1.values.first
@@ -152,6 +153,7 @@ def search
          @end_date3 = hash2.values.third
          @prefectures = hash3.values.first
          @word = hash4.values.first
+         @style = hash5.values.first
 
        @q = Post.search(search_params)
        @posts = @q.result.paginate(page: params[:page], per_page: 10).order(created_at: :desc)
