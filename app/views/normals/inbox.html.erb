@@ -21,9 +21,17 @@
   <div class="inbox-title hidden-xs">
       <h1><i class="fa fa-envelope-o"></i>受信メッセージ</h1>
    </div>
+   <div class="message-change">
+     <div class="reply">
+       <p>返信済み</p>
+     </div>
+     <div class="no-reply">
+       <p>未返信</p>
+     </div>
+   </div>
    <% Room.where(to_id: current_user.id).each do |room| %>
-   <% if room.present? && room.comments.present? %>
-      <div class="inbox-main-wrapper">
+   <% if room.present? && room.comments.present? && room.comments.where(from_id: current_user).present? %>
+      <div class="inbox-main-wrapper1">
         <div class="inbox-main">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
@@ -45,18 +53,43 @@
             <% end %>
           </div>
           <div class="inbox-time">
-            <% if room.comments.where(from_id: current_user).present? %>
              <P><h2>返信済み</h2></p>
              <i class="fa fa-check"></i>
-             <% else %>
-             <P><h2>未返信</h2></p>
-               <% end %>
          </div>
        </div>
      </div>
+     <% elsif room.present? && room.comments.present? && room.comments.where(from_id: current_user).blank? %>
+     <div class="inbox-main-wrapper2">
+       <div class="inbox-main">
+         <div class="inbox-post-left">
+           <div class="inbox-post-picture">
+             <% if room.user.picture.present? %>
+             <p><%= image_tag(user.picture_url, id: "inbox-user-picture") %></p>
+             <% else %>
+             <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
+             <% end %>
+           </div>
+           <div class="inbox-post-name">
+             <p><%= link_to(room.user.name, "/rooms/#{room.id}") %></p>
+           </div>
+          </div>
+         <div class="inbox-content">
+           <h2><%= link_to(room.post.title, room) %></h2>
+           <h3><%= room.post.content %></h3>
+           <% room.comments.order(created_at: :desc).limit(1).each do |k| %>
+           <p><%= k.created_at.strftime('%Y/%m/%d %H:%M') %>にメッセージ</p>
+           <% end %>
+         </div>
+         <div class="inbox-time">
+            <P><h2>未返信</h2></p>
+        </div>
+      </div>
+    </div>
   <% end %>
   <% end %>
   </div>
+
+  <script src="post.js"></script>
 
 
 <% no_comment = @posts.select do |i| %>

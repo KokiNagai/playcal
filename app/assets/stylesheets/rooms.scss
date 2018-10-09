@@ -504,8 +504,7 @@ textarea#comment-text {
 // スマホ用画面=================================================================
 
 @media only screen and (max-width: 767px) {
-  .inbox-mail-wrapper {
-  }
+
 
   .inbox-mail-main {
     width: 250px;
@@ -523,7 +522,42 @@ textarea#comment-text {
   }
 }
 
-.inbox-main-wrapper {
+
+.message-change {
+  display: flex;
+  border-bottom: 1px solid $gray-border-light;
+  .reply {
+    padding: 5px 10px 0 10px;
+    border: 1px solid $gray-border-light;
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+    p {
+      margin-bottom: 1px;
+      color: $gray-medium-light;
+    }
+  }
+  .no-reply {
+    padding: 5px 14px 0 14px;
+    border: 1px solid $gray-border-light;
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+    background-color: $pink-borderbottom;
+    p {
+      margin-bottom: 1px;
+      color: $gray-medium-light;
+    }
+  }
+}
+
+.reply1 {
+  background-color: $pink-borderbottom;
+}
+
+.inbox-main-wrapper1 {
+  display: none;
+}
+
+.inbox-main-wrapper1, .inbox-main-wrapper2 {
   margin-top: 50px;
 }
 

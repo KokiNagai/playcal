@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   validates :user_id, presence: true
   validates :content, presence: true, length: {maximum: 200}
   validates :prefecture, presence: true
-  validates :title, presence: true, length: {maximum: 35}
+  validates :title, presence: true, length: {maximum: 20}
   validates :city, presence: true, length: {maximum: 20}
   validates :gender, presence: true
   validates :style, presence: true

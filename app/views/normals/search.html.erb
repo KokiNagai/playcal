@@ -50,6 +50,9 @@
     <%= @message %>
     <% @posts.each do |post| %>
     <div class="find-post">
+      <time datetime="<%= post.created_at %>">
+        <p><%= time_ago_in_words(post.created_at) %>前</p>
+      </time>
       <div class="find-user-upper">
         <div class="find-post-user">
          <% if post.user.picture.present? %>

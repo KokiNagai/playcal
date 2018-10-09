@@ -422,6 +422,11 @@ $green-highlight: #5f9ea0;
        width: 90%;
        padding: 15px;
        margin-bottom: 40px;
+       time {
+         font-size: 13px;
+         text-align: right;
+         color: $gray-medium-light;
+       }
      }
      .side-find {
       .inbox2-under-picture {
@@ -437,10 +442,10 @@ $green-highlight: #5f9ea0;
      .find-post-user {
        display: flex;
        h2 {
-         margin-top: 25px;
-         margin-left: 50px;
+         margin-left: 20px;
          font-weight: 600;
          font-size: 1.5rem;
+         margin-top: 0px;
          line-height: 1.5em;
          color: $gray-medium-dark;
        }
@@ -452,10 +457,11 @@ $green-highlight: #5f9ea0;
        p {
        margin-left: 10px;
      }
-     }
+    }
 
      .find-title {
        margin-left: 0px;
+
      }
 
      .find-post-detail {
@@ -476,6 +482,8 @@ $green-highlight: #5f9ea0;
       padding-top: 40px;
       border-top: 1px solid $gray-border-light;
     }
+
+
 
     // 上部検索画面(スマホ)===================================
       .search-area {
