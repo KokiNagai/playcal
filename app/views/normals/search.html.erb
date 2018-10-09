@@ -9,6 +9,7 @@
 
 
 <div class="searched-info">
+  <h3>検索条件</h3>
       <div class="searched-main">
         <% if @start_date.present? && @start_date2.present? && @start_date3.present? %>
         <div id="searched-main"><i class="hash">#</i><span style="color: #5f9ea0; font-size: 12px;"><%= @start_date + "年" + @start_date2 + "月" + @start_date3 + "日から"  %></span></div>
@@ -36,6 +37,13 @@
       <h2>その条件に合う投稿はありません</h2>
       <% end %>
     </div>
+
+    <% if @start_date.blank? && @start_date2.blank? && @start_date3.blank? &&
+      @end_date.blank? && @end_date2.blank? && @end_date3.blank? && @word.blank? && @prefectures.blank? && @gender.blank? && @style.blank? %>
+    <div class="pref-show-title">
+      <p style="color: #5f9ea0; font-size: 17px;"><i class="fa fa-tags"></i>すべての投稿</p>
+    </div>
+    <% end %>
 
 <div class="find-wrapper">
   <div class="find-main">

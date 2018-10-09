@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:index, :edit, :update, :destroy, :inbox, :outbox, :show]
-  before_action :correct_user, only: [:edit, :updat]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
     @users = User.all
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @post = current_user.posts.build
-    @user = User.find(params[:id])
+    @user = User.find_by(name: params[:name])
     @posts = @user.posts.order(created_at: :desc).paginate(page: params[:page])
   end
 
@@ -19,37 +19,13 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find_by(id: params[:id])
+    @user = User.find_by(name: params[:name])
   end
-
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      log_in @user
-      redirect_to @user
-    else
-      render 'new'
-  end
-end
-
-  def update
-    @user = User.find_by(id: params[:id])
-   if @user.update_attributes(user_params)
-     @user.save
-      redirect_to @user
-    else
-      render 'edit'
-    end
-  end
-
-  def destroy
-  end
-
 
 
   private
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find_by(name: params[:name])
     end
 
     def user_params
@@ -57,7 +33,7 @@ end
     end
 
     def correct_user
-      @user = User.find(params[:id])
+      @user = User.find_by(name: params[:name])
       if current_user != @user
         redirect_to root_path
       end

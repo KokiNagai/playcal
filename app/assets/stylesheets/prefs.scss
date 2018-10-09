@@ -207,6 +207,34 @@ $green-highlight: #5f9ea0;
     }
   }
 
+  .searched-info {
+    margin: 10px auto;
+    width: 90%;
+    .searched-main {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    #searched-main {
+      margin-right: 7px;
+      .hash {
+        margin-right: 5px;
+        color: $green-highlight;
+      }
+    }
+  }
+
+  .searched-message {
+    border-top: 1px solid $gray-border-light;
+    padding-top: 40px;
+    text-align: center;
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: $gray-medium-dark;
+    }
+  }
+
   // findforパーシャル(タブレット,PC用)==================
 
   #city-label {
@@ -492,8 +520,17 @@ $green-highlight: #5f9ea0;
       }
 
       .searched-info {
-        margin: 10px auto;
+        margin: 0 auto;
         width: 90%;
+        margin-bottom: 30px;
+        h3 {
+          margin-top: 10px;
+          font-size: 14px;
+          font-weight: 500;
+          color: $gray-word;
+          border-bottom: 2px solid $green-highlight;
+          display: inline-block;
+        }
         .searched-main {
           display: flex;
           flex-direction: row;
@@ -509,7 +546,6 @@ $green-highlight: #5f9ea0;
       }
 
       .searched-message {
-        border-top: 1px solid $gray-border-light;
         padding-top: 40px;
         text-align: center;
         h2 {
@@ -620,8 +656,9 @@ $green-highlight: #5f9ea0;
       #q_playday_lteq_1i,#q_playday_lteq_2i,#q_playday_lteq_3i,
       #pref-search-select, #gender-search-select, #style-search-select {
         height: 20px;
-        font-weight: 600;
-        color: $gray-medium-dark;
+        font-size: 12px;
+        font-weight: 500;
+        color: $gray-word;
         background-color: #fff;
         border: 1px solid $gray-border-light;
       }

@@ -3,7 +3,7 @@
       <div class="user-info-2">
         <div class="user-show-upper">
           <% if @user.picture.present? %>
-          <p><%= image_tag(@user.picture_url) %></p>
+          <%= image_tag(@user.picture_url) %>
           <% else %>
           <p><%= image_tag('blank-profile-picture-973460_1280.png') %></p>
           <% end %>
@@ -11,12 +11,12 @@
         <div class="user-show-under">
         <p><h2><%= @user.name %></h2></p>
         <div class="user-show-under-info">
-          <p><h3><i class="fa fa-map-marker"></i><%= @user.live %></h3></p>
-          <p><h3><i class="fa fa-check"></i><%= age %>歳</h3></p>
-        </div>
-        <div class="user-intro">
-          <h3>自己紹介</h3></br>
-          <%= @user.introduction %>
+          <p><h3><label>居住地</label><%= @user.live %></h3></p>
+          <p><h3><label>年齢</label><%= age %>歳</h3></p>
+          <p><h3><label>テニス歴</label><%= @user.history %></h3></p>
+          <div class="user-intro">
+            <%= @user.introduction %>
+          </div>
         </div>
       </div>
       </div>

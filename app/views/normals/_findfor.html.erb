@@ -9,10 +9,17 @@
 
           <h2><i class="fa fa-search"></i>検索条件</h2>
 
+
+          <div class="JS-search-pref">
+            <%= f.label :prefecture, "都道府県", id: "findfor-label" %></br class="visible-xs">
+            <%= f.select :prefecture_eq, options_for_select(@prefecture),  {:include_blank => ""}, {:id => "pref-search-select"} %>
+          </div>
+
           <div class="JS-search-city">
            <%= f.label :city, "市町村名", id: "findfor-label" %></br class="visible-xs">
            <%= f.text_field :city_cont, id: "form-control", class: "font-awesome", placeholder: "\uF002"  %>
           </div>
+
 
           <div class="JS-search-day">
             <div class="playday-select"><%= f.label :playday, "練習日", id: "findfor-label" %></br class="visible-xs">
@@ -27,11 +34,6 @@
           date_separator: '%s'),
               '年 ', '月 ') + '日' %></br class="visible-xs">まで
           </div>
-
-            <div class="JS-search-pref">
-              <%= f.label :prefecture, "都道府県", id: "findfor-label" %></br class="visible-xs">
-              <%= f.select :prefecture_eq, options_for_select(@prefecture),  {:include_blank => ""}, {:id => "pref-search-select"} %>
-            </div>
 
             <div class="JS-search-gender">
               <%= f.label :gender, "希望している性別", id: "findfor-label" %></br class="visible-xs">

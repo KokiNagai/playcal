@@ -112,31 +112,32 @@ $green-highlight: #5f9ea0;
          color: $gray-medium-dark;
        }
        .user-show-under-info {
-         border-bottom: 1px solid $gray-border-light;
+         border: 1px solid $gray-border-light;
+         border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+         height: 350px;
          margin: 0 auto;
-         width: 95%;
-         p {
-
-         }
+         padding: 12px;
+         width: 90%;
          h3 {
-           margin-left: 8%;
+           margin-left: 5%;
+           margin-top: 0px;
            font-size: 13px;
            display: block;
+           color: $gray-word;
          }
-         .fa {
+         label {
            margin-right: 10px;
+           color: $gray-medium-dark;
+           width: 55px;
          }
-       }
-       .user-intro {
-         width: 90%;
-         font-size: 12px;
-         line-height: 1.5em;
-         padding-top: 10px;
-         margin: 0 auto;
-         color: $gray-medium-dark;
+         .user-intro {
+           padding-top: 12px;
+           letter-spacing: 1px;
+           line-height: 1.6em;
+           border-top: 1px solid $gray-border-light;
+         }
        }
      }
-
      .user-show-right-upper {
        border: 1px solid $gray-border-light;
        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
@@ -276,6 +277,7 @@ $green-highlight: #5f9ea0;
     width: 500px;
     height: 200px;
   }
+  
 }
 
 .password-edit, .password_confirmation-edit {
@@ -357,9 +359,9 @@ input#edit-submit {
    }
 
    img {
-     width: 80%;
-     height: 200px;
-     border-radius: 3%;
+     width: 210px;
+     height: 210px;
+     border-radius: 60%;
      object-fit: cover;
      margin: 0 auto;
      }
@@ -371,35 +373,31 @@ input#edit-submit {
          font-size: 18px;
          font-weight: 600;
          color: $gray-medium-dark;
-         border-bottom: 3px solid $pink-borderbottom;
       }
        .user-show-under-info {
-         border-bottom: 1px solid $gray-border-light;
+         border: 1px solid $gray-border-light;
+         border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+         height: 360px;
          margin: 0 auto;
+         padding: 12px;
          width: 90%;
          h3 {
            margin-left: 5%;
+           margin-top: 0px;
            font-size: 13px;
            display: block;
+           color: $gray-word;
          }
-         .fa {
+         label {
            margin-right: 10px;
-         }
-       }
-       .user-intro {
-         width: 90%;
-         font-size: 12px;
-         line-height: 1.5em;
-         margin: 0 auto;
-         color: $gray-medium-dark;
-         border-bottom: 1px solid $gray-border-light;
-         padding-bottom: 20px;
-         h3 {
            color: $gray-medium-dark;
-           font-size: 14px;
-           display: inline-block;
-           border-bottom: 3px solid $pink-borderbottom;
-           margin-left: 10px;
+           width: 55px;
+         }
+         .user-intro {
+           padding-top: 12px;
+           letter-spacing: 1px;
+           line-height: 1.6em;
+           border-top: 1px solid $gray-border-light;
          }
        }
      }

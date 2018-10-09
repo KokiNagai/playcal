@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get '/outbox', to: 'normals#outbox'
 
 
-  resources :users, only: [:show]
+  resources :users, param: :name, only: [:show]
   resources :prefs
   resources :comments
   resources :posts, only: [:create, :destroy, :show]

@@ -5,7 +5,7 @@ class NormalsController < ApplicationController
   def home
     if logged_in?
     @post = current_user.posts.build
-    @user = User.find_by(params[:id])
+    @user = User.find_by(name: params[:name])
   end
   end
 
