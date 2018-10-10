@@ -1,0 +1,30 @@
+<% if current_user.notifications.where(read: false).order('created_at DESC').blank? %>
+<div class="notification-wrapper">
+<div class="notifications-list">
+  <div class="notification-list-modal">
+    <div class="close-cross">
+     <i class="fa fa-times" id="close-cross"></i>
+    </div>
+    <div class="notification-non">
+      <h2>通知はありません</h2>
+    </div>
+    </div>
+  </div>
+</div>
+  <% end %>
+
+<% if current_user.notifications.where(read: false).order('created_at DESC').present? %>
+<div class="notification-wrapper">
+    <div class="notification-list-modal2">
+      <div class="close-cross">
+       <i class="fa fa-times" id="close-cross"></i>
+      </div>
+      <h2>通知</h2>
+      <div class="notification-present">
+        <%= render current_user.notifications.where(read: false).order('created_at DESC').last(5) %>
+      </div>
+      </div>
+</div>
+
+  <% end %>
+<script src="notify.js"></script>

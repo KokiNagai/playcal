@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:create, :new, :destroy]
+  after_action :create_notifications, only: [:create]
 
 
   def show
@@ -35,4 +36,17 @@ class CommentsController < ApplicationController
       params.require(:comment).permit(:user_id, :post_id, :body, :from_id, :to_id, :room_id)
     end
 
+    def create_notifications
+      @room = Room.find_by(id: @comment.room_id)
+
+      if @comment.post.user == current_user
+        @room = Room.find_by(id: @comment.room_id)
+      Notification.create(user_id: @room.user_id, notified_by_id: current_user.id, post_id: @room.post.id, notified_type: 'コメント')
+    end
+
+    if @comment.post.user != current_user
+      @post = @comment.post
+      Notification.create(user_id: @post.user.id, notified_by_id: current_user.id, post_id: @post.id, notified_type: 'コメント')
+    end
+  end
 end

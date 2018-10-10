@@ -3,6 +3,7 @@ class User < ApplicationRecord
     has_many :posts, dependent: :destroy
     has_many :comments, dependent: :destroy
     has_many :rooms, dependent: :destroy
+    has_many :notifications, dependent: :destroy
 
     has_many :from_comments, class_name: "Comment", foreign_key: "from_id", dependent: :destroy
     has_many :to_comments, class_name: "Comment", foreign_key: "to_id", dependent: :destroy

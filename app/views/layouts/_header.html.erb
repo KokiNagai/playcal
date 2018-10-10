@@ -1,12 +1,12 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <%= link_to "Playcal", root_path, id: "logo" %>
-
         <nav>
         <ul class="nav navbar-nav navbar-right">
           <ul class="nonloggedin-right">
             <% if user_signed_in? %>
             <% if current_user.picture.present? %>
+
             <li class="hidden-xs"><%= image_tag(current_user.picture_url, :class => "header-picture") %></li>
             <% else %>
             <li class="hidden-xs"><%= image_tag('blank-profile-picture-973460_1280.png', :class => "header-picture") %></li>
@@ -15,16 +15,23 @@
             <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "ホーム", root_path, id: "header-home" %></li>
             <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "メッセージ", "/inbox", id: "header-message" %></li>
 
+
+            <li class="notification hidden-xs">
+              <div class="notification-bell">
+                <p><i class="fa fa-bell  fa-1.6x down-color" id="notifications"></i></p>
+                <span><%= current_user.notifications.where(read: false).count %></span>
+              </div>
+              <%= render 'layouts/notifications_dropdown' %>
+            </li>
+
             <li class="dropdown hidden-xs">
             <a href="#" class="btn  dropdown-toggle", data-toggle="dropdown">
             <span id="user-pop"><i class="fa fa-navicon fa-2x down-color"></i><span>
             </a>
-
               <ul class="dropdown-menu">
                 <p><%= link_to "募集する", posting_path %></p>
                 <p><%= link_to "探す", find_path %></p>
                 <p><%= link_to "プロフィール", current_user %></p>
-
                 <p><%= link_to "プロフィールを編集する", edit_user_registration_path %></p>
                 <li class="divider"></li>
                 <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
@@ -32,15 +39,29 @@
                 <% if current_user.id == 1 %>
                 <p><%= link_to "管理者画面", rails_admin_path %></p>
                 <% end %>
-
               </ul>
-              </li>
+            </li>
 
-              <div class="smartphone-dropdown visible-xs">
-                  <p><i class="fa fa-navicon fa-1.5x down-color"  id="dropdown-fontawesome"></i></p>
 
-                    <%= render 'layouts/dropdown' %>
-                </div>
+
+              <div class="notification visible-xs">
+                <i class="fa fa-bell-o  fa-1.6x JS-bell"  id="bell"></i>
+                <% if current_user.notifications.where(read: false).count != 0 %>
+                <span class="JS-bell"><%= current_user.notifications.where(read: false).count %></span>
+                <% end %>
+                <%= render 'layouts/notification2' %>
+              </div>
+
+                <div class="smartphone-dropdown visible-xs">
+                    <p><i class="fa fa-navicon fa-1.5x down-color"  id="dropdown-fontawesome"></i></p>
+                      <%= render 'layouts/dropdown' %>
+                  </div>
+
+
+
+
+
+
 
 
             <% else %>

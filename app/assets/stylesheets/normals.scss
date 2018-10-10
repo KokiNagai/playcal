@@ -744,15 +744,23 @@ h2 {
 
  .smartphone-dropdown {
    text-align: right;
-   margin-top: 15px;
    margin-right: 30px;
+   margin-top: 20px;
  }
+
+ .nonloggedin-right {
+   height: 40px;
+ }
+
+ .fad {
+
+   margin-top: 20px;
+   margin-left: 240px;
+ }
+
 
  // ドロップダウンモーダル(スマホ)==============
 
- .smartphone-dropdown {
-
- }
 
  .dropdown-modal-wrapper {
    position: fixed;

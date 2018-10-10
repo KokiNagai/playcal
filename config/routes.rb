@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'notifications/link_through'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'normals#home'
   devise_for :users
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
   get '/mail_confirm', to: "normals#after_mail"
 
   get '/inquiry/confirm', to: "contacts#inquiry"
+
+  get 'notifications/:id/link_through', to: 'notifications#link_through', as: :link_through
 
 
   get '/posting', to: 'posts#posting'

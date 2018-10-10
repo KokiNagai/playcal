@@ -30,19 +30,19 @@
      </div>
    </div>
    <% Room.where(to_id: current_user.id).each do |room| %>
-   <% if room.present? && room.comments.present? && room.comments.where(from_id: current_user).present? %>
+   <% if room.present? && room.comments.present? && room.comments.where(to_id: current_user).present? %>
       <div class="inbox-main-wrapper1">
         <div class="inbox-main">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
               <% if room.user.picture.present? %>
-              <p><%= image_tag(user.picture_url, id: "inbox-user-picture") %></p>
+              <p><%= image_tag(room.user.picture_url, id: "inbox-user-picture") %></p>
               <% else %>
               <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
               <% end %>
             </div>
             <div class="inbox-post-name">
-              <p><%= link_to(room.user.name, room.user) %></p>
+              <p><%= link_to(room.user.name.truncate(8), room.user) %></p>
             </div>
            </div>
           <div class="inbox-content">
@@ -70,7 +70,7 @@
              <% end %>
            </div>
            <div class="inbox-post-name">
-             <p><%= link_to(room.user.name, room.user) %></p>
+             <p><%= link_to(room.user.name.truncate(8), room.user) %></p>
            </div>
           </div>
          <div class="inbox-content">
