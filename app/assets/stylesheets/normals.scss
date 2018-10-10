@@ -787,7 +787,7 @@ h2 {
 
  .dropdown-modal p {
    width: 90%;
-   margin: 25px auto;
+   margin: 15px auto;
    text-align: left;
    .fa {
      margin-right: 10px;
@@ -800,6 +800,7 @@ h2 {
 
  #dropdown-list-Q {
    border-bottom: 1px solid $gray-border-light;
+   margin-top: 70px;
    padding-bottom: 25px;
  }
 
@@ -927,6 +928,7 @@ h2 {
    margin-left: 30px;
    font-weight: 700;
    color: #4c4c4c;
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
    span {
      font-size: 40px;
      margin-right: 5px;

@@ -34,7 +34,41 @@ $green-highlight: #5f9ea0;
   }
 }
 
-.inbox-main-wrapper {
+.message-change {
+  display: flex;
+  border-bottom: 1px solid $green-highlight;
+  .reply {
+    padding: 5px 10px 0 10px;
+    border: 1px solid $green-highlight;
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+    p {
+      margin-bottom: 1px;
+      color: $gray-medium-dark;
+    }
+  }
+  .no-reply {
+    padding: 5px 16px 0 16px;
+    border: 1px solid $green-highlight;
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+    background-color: $green-highlight;
+    p {
+      margin-bottom: 1px;
+      color: #fff;
+    }
+  }
+}
+
+.reply1 {
+  background-color: $pink-borderbottom;
+}
+
+.inbox-main-wrapper1 {
+  display: none;
+}
+
+.inbox-main-wrapper1, .inbox-main-wrapper2 {
   margin-top: 50px;
 }
 
@@ -516,6 +550,8 @@ textarea#comment-text {
   h1 {
     color: $gray-medium-dark;
     font-size: 18px;
+    font-weight: 500;
+    margin-right: 10px;
   }
   .fa {
     margin-right: 10px;
@@ -525,26 +561,26 @@ textarea#comment-text {
 
 .message-change {
   display: flex;
-  border-bottom: 1px solid $gray-border-light;
+  border-bottom: 1px solid $green-highlight;
   .reply {
     padding: 5px 10px 0 10px;
-    border: 1px solid $gray-border-light;
+    border: 1px solid $green-highlight;
     border-bottom: none;
     border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
     p {
       margin-bottom: 1px;
-      color: $gray-medium-light;
+      color: $gray-medium-dark;
     }
   }
   .no-reply {
-    padding: 5px 14px 0 14px;
-    border: 1px solid $gray-border-light;
+    padding: 5px 16px 0 16px;
+    border: 1px solid $green-highlight;
     border-bottom: none;
     border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
-    background-color: $pink-borderbottom;
+    background-color: $green-highlight;
     p {
       margin-bottom: 1px;
-      color: $gray-medium-light;
+      color: #fff;
     }
   }
 }
@@ -558,7 +594,7 @@ textarea#comment-text {
 }
 
 .inbox-main-wrapper1, .inbox-main-wrapper2 {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
   .inbox-main {
@@ -689,12 +725,12 @@ textarea#comment-text {
   padding-left: 5px;
 }
 
-.inbox-maiil-title {
+.inbox-mail-title {
   border-bottom: 1px solid $gray-border-light;
   text-align: center;
   h2 {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   color: $gray-medium-dark;
  }
 }
@@ -703,7 +739,8 @@ textarea#comment-text {
   text-align: center;
   border-bottom: 1px solid $gray-border-light;
   a {
-    font-size: 10px;
+    font-size: 13px;
+    margin-right: 10px;
   }
   .fa {
     margin-right: 10px;
@@ -713,7 +750,8 @@ textarea#comment-text {
 .inbox-mail-recieved {
   text-align: center;
   a {
-    font-size: 10px;
+    font-size: 13px;
+    margin-right: 10px;
   }
   .fa {
     margin-right: 10px;

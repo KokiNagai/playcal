@@ -2,10 +2,10 @@
 
   <div class="inbox-mail-wrapper col-md-3 col-sm-3">
     <div class="inbox-title visible-xs">
-        <h1><i class="fa fa-envelope-o"></i>送信メッセージ</h1>
+        <h1><i class="fa fa-envelope-o"></i>送信ボックス</h1>
      </div>
     <div class="inbox-mail-main">
-      <div class="inbox-maiil-title">
+      <div class="inbox-mail-title">
         <h2>メッセージボックス</h2>
       </div>
       <div class="inbox-mail-sent">
@@ -21,11 +21,19 @@
   <div class="inbox-title hidden-xs">
       <h1><i class="fa fa-envelope-o"></i>送信メッセージ</h1>
    </div>
+   <div class="message-change">
+     <div class="reply">
+       <p>返信あり</p>
+     </div>
+     <div class="no-reply">
+       <p>未返信</p>
+     </div>
+   </div>
    <% @comments.pluck(:room_id).uniq.each do |rid| %>
    <% @room = Room.find(rid) %>
    <% post = Room.find(rid).post %>
-    <% if post.present? && @room.comments.first.user == current_user %>
-      <div class="inbox-main-wrapper">
+    <% if post.present? && @room.comments.first.user == current_user && @room.comments.where(from_id: other_user.ids) != [] %>
+      <div class="inbox-main-wrapper1">
         <div class="inbox-main">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
@@ -44,18 +52,39 @@
             <h3><%= post.content %></h3>
           </div>
           <div class="inbox-time">
-            <% if @room.comments.where(from_id: other_user.ids) != [] %>
             <P><h2>返信あり</h2></p>
             <i class="fa fa-check"></i>
-            <% else %>
-            <p><h2>返信なし</h2></p>
-            <% end %>
          </div>
        </div>
      </div>
+     <% elsif post.present? && @room.comments.first.user == current_user && @room.comments.where(from_id: other_user.ids) == [] %>
+     <div class="inbox-main-wrapper2">
+       <div class="inbox-main">
+         <div class="inbox-post-left">
+           <div class="inbox-post-picture">
+           <% if post.user.picture.present? %>
+           <p><%= image_tag(post.user.picture_url, id: "inbox-user-picture") %></p>
+           <% else %>
+           <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
+           <% end %>
+           </div>
+           <div class="inbox-post-name">
+             <p><%= link_to(post.user.name, post.user) %></p>
+           </div>
+          </div>
+         <div class="inbox-content">
+           <h2><%= link_to(post.title, @room) %></h2>
+           <h3><%= post.content %></h3>
+         </div>
+         <div class="inbox-time">
+           <p><h2>返信なし</h2></p>
+        </div>
+      </div>
+    </div>
   <% end %>
   <% end %>
  </div>
+ <script src="post.js"></script>
 
 <% if @comments.where(to_id: other_user.ids) == [] %>
   <div class="inbox-no-message1 col-md-8 col-sm-8">
