@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @post = current_user.posts.build
-    @user = User.find_by(name: params[:name])
+
     @posts = @user.posts.order(created_at: :desc).paginate(page: params[:page])
   end
 

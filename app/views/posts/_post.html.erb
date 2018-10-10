@@ -6,8 +6,8 @@
       <div class="find-user-upper">
         <div class="post-show-upper">
           <div class="post-show-user">
-            <% if @post.user.picture.present? %>
-            <p><%= image_tag(@post.user.picture_url, class: "post-showr-picture" ) %></p>
+            <% if post.user.picture.present? %>
+            <p><%= image_tag(post.user.picture_url, class: "post-showr-picture" ) %></p>
             <% else %>
             <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
             <% end %>

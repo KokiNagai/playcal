@@ -42,7 +42,7 @@
               <% end %>
             </div>
             <div class="inbox-post-name">
-              <p><%= link_to(room.user.name, "/rooms/#{room.id}") %></p>
+              <p><%= link_to(room.user.name, room.user) %></p>
             </div>
            </div>
           <div class="inbox-content">
@@ -70,7 +70,7 @@
              <% end %>
            </div>
            <div class="inbox-post-name">
-             <p><%= link_to(room.user.name, "/rooms/#{room.id}") %></p>
+             <p><%= link_to(room.user.name, room.user) %></p>
            </div>
           </div>
          <div class="inbox-content">
