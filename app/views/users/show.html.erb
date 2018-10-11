@@ -38,7 +38,11 @@
     </div>
     <% end %>
     <div class="user-post">
+      <% if @user.posts.present? %>
       <%= render "posts/post" %>
+      <% else %>
+      <h2><i class="fa fa-frown-o"></i>投稿はありません</h2>
+      <% end %>
     </div>
   </div>
 

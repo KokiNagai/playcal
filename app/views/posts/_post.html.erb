@@ -11,10 +11,10 @@
             <% else %>
             <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
             <% end %>
-            <p><%= post.user.name %></p>
+            <p><%= post.user.name.truncate(8) %></p>
           </div>
           <div class="post-show-title">
-            <h2><%= post.title %></h2>
+            <h2><%= post.title.truncate(15) %></h2>
           </div>
         </div>
           <div class="find-post-detail">

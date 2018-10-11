@@ -48,7 +48,7 @@
         <div class="room-show-alert">
           <h2><i class="fa fa-flag-o"></i>投稿に関する注意</h2>
           <h3>練習場所の詳細や、詳しい日時などをこの場で確認しましょう。
-            また、他のSNS等への連絡を誘致するような文章は禁止されています。禁止されている内容についてはカスタマーヘルプをご覧ください</h3>
+            また、他のSNS等への連絡を誘致するような文章は禁止されています。そのような行為を受けましたら、<%= link_to 'こちら', new_contacts_path %>でお知らせください。</h3>
         </div>
       <% @comments.each do |comment| %>
       <% if comment.user == current_user %>

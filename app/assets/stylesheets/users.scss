@@ -377,7 +377,7 @@ input#edit-submit {
        .user-show-under-info {
          border: 1px solid $gray-border-light;
          border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-         height: 360px;
+         height: auto;
          margin: 0 auto;
          padding: 12px;
          width: 90%;
@@ -427,6 +427,19 @@ input#edit-submit {
        }
        .fa {
          margin-right: 10px;
+       }
+     }
+     .user-post {
+       text-align: center;
+       h2 {
+       font-size: 18px;
+       font-weight: 600;
+       margin-top: 60px;
+       color: $gray-medium-dark;
+        .fa {
+          margin-right: 10px;
+          font-size: 18px;
+        }
        }
      }
 
