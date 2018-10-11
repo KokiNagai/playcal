@@ -18,6 +18,7 @@
   </div>
 
 <div class="inbox-sent-wrapper col-md-8 col-sm-8">
+
   <div class="inbox-title hidden-xs">
       <h1><i class="fa fa-envelope-o"></i>受信メッセージ</h1>
    </div>
@@ -27,12 +28,13 @@
      </div>
      <div class="no-reply">
         <% if Room.where(to_id: current_user.id).select{|i| i.comments.last.user != current_user}.present?  %>
-       <p>未返信(<%= Room.where(to_id: current_user.id).select{|i| i.comments.last.user != current_user}.count %>)</p>
+       <p>未返信(<%= Room.where(to_id: current_user.id).select{|i| i.comments.present? && i.comments.last.user != current_user}.count %>)</p>
        <% else %>
        <p>未返信(0)</p>
        <% end %>
      </div>
    </div>
+
    <% Room.where(to_id: current_user.id).order(updated_at: :desc).each do |room| %>
    <% if room.present? && room.comments.present? %>
       <div class="inbox-main-wrapper1">
