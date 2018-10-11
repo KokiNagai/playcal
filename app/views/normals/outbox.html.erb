@@ -23,62 +23,61 @@
    </div>
    <div class="message-change">
      <div class="reply">
-       <p>返信あり</p>
+       <p>すべて(<%= Room.where(from_id: current_user.id).select{|i| i.comments.present?}.count %>)</p>
      </div>
      <div class="no-reply">
-       <p>未返信</p>
+       <p>返信あり(<%= Room.where(from_id: current_user.id).select{|i| i.comments.present? && i.comments.last.user != current_user}.count %>)</p>
      </div>
    </div>
-   <% @comments.pluck(:room_id).uniq.each do |rid| %>
-   <% @room = Room.find(rid) %>
-   <% post = Room.find(rid).post %>
-    <% if post.present? && @room.comments.first.user == current_user && @room.comments.where(from_id: other_user.ids) != [] %>
+   <% Room.where(from_id: current_user.id).order(updated_at: :desc).each do |room| %>
+    <% if room.present? && room.comments.first.user == current_user %>
       <div class="inbox-main-wrapper1">
         <div class="inbox-main">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
-            <% if post.user.picture.present? %>
-            <p><%= image_tag(post.user.picture_url, id: "inbox-user-picture") %></p>
+            <% if room.post.user.picture.present? %>
+            <p><%= image_tag(room.post.user.picture_url, id: "inbox-user-picture") %></p>
             <% else %>
             <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
             <% end %>
             </div>
             <div class="inbox-post-name">
-              <p><%= link_to(post.user.name.truncate(8), post.user) %></p>
+              <p><%= link_to(room.post.user.name.truncate(8), room.post.user) %></p>
             </div>
            </div>
           <div class="inbox-content">
-            <h2><%= link_to(post.title, @room) %></h2>
-            <h3><%= post.content %></h3>
+            <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(15), room) %></h2>
+            <h3><%= room.post.content.truncate(8) %></h3>
+            <% room.comments.order(created_at: :desc).limit(1).each do |k| %>
+            <p><%= k.created_at.strftime('%Y/%m/%d %H:%M') %>にメッセージ</p>
+            <% end %>
           </div>
-          <div class="inbox-time">
-            <P><h2>返信あり</h2></p>
-            <i class="fa fa-check"></i>
-         </div>
        </div>
      </div>
-     <% elsif post.present? && @room.comments.first.user == current_user && @room.comments.where(from_id: other_user.ids) == [] %>
+     <% end %>
+
+     <% if room.post.present? && room.comments.first.user == current_user && room.comments.last.user != current_user %>
      <div class="inbox-main-wrapper2">
        <div class="inbox-main">
          <div class="inbox-post-left">
            <div class="inbox-post-picture">
-           <% if post.user.picture.present? %>
-           <p><%= image_tag(post.user.picture_url, id: "inbox-user-picture") %></p>
+           <% if room.post.user.picture.present? %>
+           <p><%= image_tag(room.post.user.picture_url, id: "inbox-user-picture") %></p>
            <% else %>
            <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
            <% end %>
            </div>
            <div class="inbox-post-name">
-             <p><%= link_to(post.user.name.truncate(8), post.user) %></p>
+             <p><%= link_to(room.post.user.name.truncate(8), room.post.user) %></p>
            </div>
           </div>
          <div class="inbox-content">
-           <h2><%= link_to(post.title, @room) %></h2>
-           <h3><%= post.content %></h3>
+           <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(15), room) %></h2>
+           <h3><%= room.post.content.truncate(8) %></h3>
+           <% room.comments.order(created_at: :desc).limit(1).each do |k| %>
+           <p><%= k.created_at.strftime('%Y/%m/%d %H:%M') %>にメッセージ</p>
+           <% end %>
          </div>
-         <div class="inbox-time">
-           <p><h2>返信なし</h2></p>
-        </div>
       </div>
     </div>
   <% end %>

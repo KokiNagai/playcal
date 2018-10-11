@@ -1,11 +1,11 @@
 <% if current_user.notifications.where(read: false).order('created_at DESC').blank? %>
 <div class="notifications-list">
   <div class="notification-list-modal">
-    <div class="close-modal2" id="jobs">
+    <div class="close-modal3">
      <i class="fa fa-times" id="close-modal3"></i>
     </div>
     <div class="notification-non">
-      <h2>通知はありません</h2>
+      <h2><i class="fa fa-bell-o"></i>通知はありません</h2>
     </div>
 
     </div>
@@ -18,7 +18,7 @@
     <div class="close-modal3">
      <i class="fa fa-times" id="close-modal3"></i>
     </div>
-    <h2>通知</h2>
+    <h2><i class="fa fa-bell-o"></i>通知</h2>
     <div class="notification-present">
       <%= render current_user.notifications.where(read: false).order('created_at DESC').last(5) %>
     </div>

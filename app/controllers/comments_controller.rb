@@ -15,6 +15,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = current_user.comments.build(comment_params)
+    @comment.room.touch
     if @comment.save
       redirect_to request.referrer || root_url
     end

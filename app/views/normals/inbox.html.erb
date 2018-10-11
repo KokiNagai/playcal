@@ -9,10 +9,10 @@
         <h2>メッセージボックス</h2>
       </div>
       <div class="inbox-mail-sent">
-        <h2><i class="fa fa-paper-plane-o"></i><%= link_to("送信済みメッセージ", "/outbox") %></h2>
+        <h2><i class="fa fa-paper-plane-o"></i><%= link_to("送信メッセージ", "/outbox") %></h2>
       </div>
       <div class="inbox-mail-recieved">
-        <h2><i class="fa fa-envelope-o"></i><%= link_to("受信済みメッセージ", "/inbox") %></h2>
+        <h2><i class="fa fa-envelope-o"></i><%= link_to("受信メッセージ", "/inbox") %></h2>
       </div>
     </div>
   </div>
@@ -23,14 +23,14 @@
    </div>
    <div class="message-change">
      <div class="reply">
-       <p>返信済み</p>
+       <p>すべて(<%= Room.where(to_id: current_user.id).count %>)</p>
      </div>
      <div class="no-reply">
-       <p>未返信</p>
+       <p>未返信(<%= Room.where(to_id: current_user.id).select{|i| i.comments.last.user != current_user}.count %>)</p>
      </div>
    </div>
-   <% Room.where(to_id: current_user.id).each do |room| %>
-   <% if room.present? && room.comments.present? && room.comments.where(to_id: current_user).present? %>
+   <% Room.where(to_id: current_user.id).order(updated_at: :desc).each do |room| %>
+   <% if room.present? && room.comments.present? %>
       <div class="inbox-main-wrapper1">
         <div class="inbox-main">
           <div class="inbox-post-left">
@@ -45,26 +45,24 @@
               <p><%= link_to(room.user.name.truncate(8), room.user) %></p>
             </div>
            </div>
-          <div class="inbox-content">
-            <h2><%= link_to(room.post.title, room) %></h2>
-            <h3><%= room.post.content %></h3>
-            <% room.comments.order(created_at: :desc).limit(1).each do |k| %>
-            <p><%= k.created_at.strftime('%Y/%m/%d %H:%M') %>にメッセージ</p>
-            <% end %>
-          </div>
-          <div class="inbox-time">
-             <P><h2>返信済み</h2></p>
-             <i class="fa fa-check"></i>
-         </div>
+           <div class="inbox-content">
+             <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(15), room) %></h2>
+             <h3><%= room.post.content.truncate(15) %></h3>
+             <% room.comments.order(created_at: :desc).limit(1).each do |k| %>
+             <p><%= k.created_at.strftime('%Y/%m/%d %H:%M') %>にメッセージ</p>
+             <% end %>
+             <% end %>
+           </div>
        </div>
      </div>
-     <% elsif room.present? && room.comments.present? && room.comments.where(from_id: current_user).blank? %>
+
+     <% if room.present? && room.comments.present? && room.comments.last.user != current_user %>
      <div class="inbox-main-wrapper2">
        <div class="inbox-main">
          <div class="inbox-post-left">
            <div class="inbox-post-picture">
              <% if room.user.picture.present? %>
-             <p><%= image_tag(user.picture_url, id: "inbox-user-picture") %></p>
+             <p><%= image_tag(room.user.picture_url, id: "inbox-user-picture") %></p>
              <% else %>
              <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
              <% end %>
@@ -73,21 +71,21 @@
              <p><%= link_to(room.user.name.truncate(8), room.user) %></p>
            </div>
           </div>
+
          <div class="inbox-content">
-           <h2><%= link_to(room.post.title, room) %></h2>
-           <h3><%= room.post.content %></h3>
+           <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(15), room) %></h2>
+           <h3><%= room.post.content.truncate(15) %></h3>
            <% room.comments.order(created_at: :desc).limit(1).each do |k| %>
            <p><%= k.created_at.strftime('%Y/%m/%d %H:%M') %>にメッセージ</p>
            <% end %>
          </div>
-         <div class="inbox-time">
-            <P><h2>未返信</h2></p>
-        </div>
       </div>
     </div>
-  <% end %>
+    <% end %>
   <% end %>
   </div>
+
+
 
   <script src="post.js"></script>
 

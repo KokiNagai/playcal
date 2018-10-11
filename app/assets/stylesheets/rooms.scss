@@ -102,13 +102,16 @@ $green-highlight: #5f9ea0;
 
 
 .inbox-content {
-  width: 60%;
+  width: 80%;
   margin-top: 15px;
   h2 {
     font-size: 17px;
     font-weight: 600;
     margin-left: 20px;
     color: $gray-medium-dark;
+    .fa {
+      margin-right: 10px;
+    }
   }
   h3 {
     margin-left: 25px;
@@ -563,7 +566,7 @@ textarea#comment-text {
   display: flex;
   border-bottom: 1px solid $green-highlight;
   .reply {
-    padding: 5px 10px 0 10px;
+    padding: 5px 19px 0 19px;
     border: 1px solid $green-highlight;
     border-bottom: none;
     border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
@@ -573,7 +576,7 @@ textarea#comment-text {
     }
   }
   .no-reply {
-    padding: 5px 16px 0 16px;
+    padding: 5px 15px 0 15px;
     border: 1px solid $green-highlight;
     border-bottom: none;
     border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
@@ -628,24 +631,31 @@ textarea#comment-text {
 
 
 .inbox-content {
-  width: 60%;
+  width: 80%;
   margin-top: 15px;
   h2 {
     font-size: 1.4rem;
     font-weight: 600;
     margin-left: 20px;
     color: $gray-medium-dark;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    .fa {
+      margin-right: 10px;
+      font-size: 16px;
+    }
   }
   h3 {
-    margin-left: 25px;
-    font-size: 1.0rem;
+    margin-left: 50px;
+    font-size: 1.2rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     color: $gray-medium-light;
   }
   p {
-    margin-right: 10px;
+    margin-right: 20px;
     text-align: right;
     font-size: 10px;
   }

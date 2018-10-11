@@ -45,7 +45,7 @@
 
 
               <div class="notification visible-xs">
-                <i class="fa fa-bell-o  fa-1.6x JS-bell"  id="bell"></i>
+                <i class="fa fa-bell  fa-1.6x JS-bell"  id="bell"></i>
                 <% if current_user.notifications.where(read: false).count != 0 %>
                 <span class="JS-bell"><%= current_user.notifications.where(read: false).count %></span>
                 <% end %>
@@ -56,13 +56,6 @@
                     <p><i class="fa fa-navicon fa-1.5x down-color"  id="dropdown-fontawesome"></i></p>
                       <%= render 'layouts/dropdown' %>
                   </div>
-
-
-
-
-
-
-
 
             <% else %>
             <li  class="hidden-xs"><%= link_to "ホーム", root_path, id: "sub" %></li>
