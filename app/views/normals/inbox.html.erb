@@ -26,7 +26,11 @@
        <p>すべて(<%= Room.where(to_id: current_user.id).count %>)</p>
      </div>
      <div class="no-reply">
+        <% if current_user.comments.present? %>
        <p>未返信(<%= Room.where(to_id: current_user.id).select{|i| i.comments.last.user != current_user}.count %>)</p>
+       <% else %>
+       <p>未返信(0)</p>
+       <% end %>
      </div>
    </div>
    <% Room.where(to_id: current_user.id).order(updated_at: :desc).each do |room| %>
