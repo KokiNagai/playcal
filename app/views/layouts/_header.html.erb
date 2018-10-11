@@ -18,10 +18,10 @@
 
             <li class="notification hidden-xs">
               <div class="notification-bell">
-                <p><i class="fa fa-bell  fa-1.6x down-color" id="notifications"></i></p>
+                <p><i class="fa fa-bell  fa-1.6x down-color JS-bell" id="bell"></i></p>
                 <span><%= current_user.notifications.where(read: false).count %></span>
               </div>
-              <%= render 'layouts/notifications_dropdown' %>
+              <%= render 'layouts/notification2' %>
             </li>
 
             <li class="dropdown hidden-xs">

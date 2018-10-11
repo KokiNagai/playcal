@@ -12,6 +12,8 @@ gem 'bootstrap-sass'
 
 gem 'jp_prefecture'
 
+gem 'fog'
+
 gem 'rails-i18n'
 
 gem 'devise'
