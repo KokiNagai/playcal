@@ -60,7 +60,8 @@
        </div>
      </div>
 
-     <% if room.present? && room.comments.present? && room.comments.last.user != current_user %>
+     <% if room.present? && room.comments.present? %>
+     <% if room.comments.last.user != current_user %>
      <div class="inbox-main-wrapper2">
        <div class="inbox-main">
          <div class="inbox-post-left">
@@ -85,6 +86,7 @@
          </div>
       </div>
     </div>
+    <% end %>
     <% end %>
   <% end %>
   </div>
