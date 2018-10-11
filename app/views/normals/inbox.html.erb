@@ -24,7 +24,7 @@
    </div>
    <div class="message-change">
      <div class="reply">
-       <p>すべて(<%= Room.where(to_id: current_user.id).count %>)</p>
+       <p>すべて(<%= Room.where(to_id: current_user.id).select{|i| i.comments.present?}.count %>)</p>
      </div>
      <div class="no-reply">
         <% if Room.where(to_id: current_user.id).select{|i| i.comments}.present?  %>
