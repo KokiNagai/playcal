@@ -26,7 +26,7 @@
        <p>すべて(<%= Room.where(to_id: current_user.id).count %>)</p>
      </div>
      <div class="no-reply">
-        <% if current_user.comments.present? %>
+        <% if Room.where(to_id: current_user.id).select{|i| i.comments.last.user != current_user}.present?  %>
        <p>未返信(<%= Room.where(to_id: current_user.id).select{|i| i.comments.last.user != current_user}.count %>)</p>
        <% else %>
        <p>未返信(0)</p>
