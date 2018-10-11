@@ -181,6 +181,20 @@ span.picture {
   margin-top: 40px;
 }
 
+.post-show-top {
+  text-align: center;
+  color: $pink-hightlight;
+  margin-top: 40px;
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+
 
 .post-show-upper {
   display: flex;
@@ -207,6 +221,13 @@ span.picture {
  }
 }
 
+.post-delete {
+  .fa {
+    margin-top: 120px;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
 
 .post-show-under-title {
   text-align: center;
@@ -524,10 +545,19 @@ span.picture {
       font-size: 1.5rem;
       line-height: 1.5em;
       font-weight: 600;
+      width: 140px;
       margin-top: 20px;
       color: $gray-medium-dark;
     }
    }
+  }
+
+  .post-delete {
+    .fa {
+      margin-top: 120px;
+      font-size: 18px;
+      margin-right: 10px;
+    }
   }
 
 

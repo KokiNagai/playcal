@@ -672,6 +672,37 @@ h2 {
   }
 }
 
+.setting {
+  .setting-title {
+    text-align: center;
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: $gray-medium-dark;
+    }
+  }
+
+    .setting-list {
+      border: 1px solid $gray-border-light;
+      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+      padding: 10px;
+      padding-top: 20px;
+      width: 570px;
+      margin: 0 auto;
+      p {
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        color: $gray-medium-dark;
+        border-bottom: 1px solid $gray-border-light;
+      }
+      .fa {
+        margin-right: 15px;
+      }
+    }
+}
+
 
 }
 
@@ -746,17 +777,15 @@ h2 {
    text-align: right;
    margin-right: 30px;
    margin-top: 20px;
+   .fa {
+     margin-top: 5px;
+   }
  }
 
  .nonloggedin-right {
    height: 40px;
  }
 
- .fad {
-
-   margin-top: 20px;
-   margin-left: 240px;
- }
 
 
  // ドロップダウンモーダル(スマホ)==============
@@ -1251,6 +1280,37 @@ inquiry-main {
   .after-mail-under {
     color: $gray-word;
   }
+}
+
+.setting {
+  .setting-title {
+    text-align: center;
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: $gray-medium-dark;
+    }
+  }
+
+    .setting-list {
+      border: 1px solid $gray-border-light;
+      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+      padding: 10px;
+      padding-top: 20px;
+      width: 270px;
+      margin: 0 auto;
+      p {
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        color: $gray-medium-dark;
+        border-bottom: 1px solid $gray-border-light;
+      }
+      .fa {
+        margin-right: 10px;
+      }
+    }
 }
 
 

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     before_action :authenticate_user!, only: [:create, :destroy, :show, :posting]
-    before_action :correct_user, only: :destroy
+
 
     def show
         @post = Post.includes(:user).find(params[:id])
@@ -23,8 +23,9 @@ class PostsController < ApplicationController
  end
 
    def destroy
+      @post = Post.includes(:user).find(params[:id])
       @post.destroy
-      redirect_to request.referrer || root_path
+      redirect_to current_user
   end
 
   def posting
@@ -42,11 +43,6 @@ class PostsController < ApplicationController
 
     def posts_params
         params.require(:post).permit(:content, :prefecture, :city, :title, :member, :skill, :gender, :playday, :style)
-    end
-
-    def correct_user
-        @post = current_user.posts.find_by(id: params[:id])
-        redirect_to root_path if @post.nil?
     end
 
 

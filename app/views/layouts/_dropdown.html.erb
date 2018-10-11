@@ -12,7 +12,7 @@
     <p><i class="fa fa-envelope-o"></i><%= link_to "送信メッセージ", "/outbox", id: "dropdown-list" %></p>
     <p id="dropdown-list-p"><i class="fa fa-envelope-o"></i><%= link_to "受信メッセージ", "/inbox", id: "dropdown-list" %></p>
     <p><i class="fa fa-bookmark-o"></i><%= link_to "ログアウト", destroy_user_session_path, id: "dropdown-list", method: :delete %></p>
-    <p><i class="fa fa-bookmark-o"></i><%= link_to "退会", user_registration_path, id: "dropdown-list", method: :delete %></p>
+    <p><i class="fa fa-bookmark-o"></i><%= link_to "設定", setting_path, id: "dropdown-list" %></p>
 
     <% if current_user.id == 1 %>
     <p><i class="fa fa-bookmark-o"></i><%= link_to "管理者画面", rails_admin_path, id: "dropdown-list" %></p>
