@@ -9,10 +9,10 @@
         <h2>メッセージボックス</h2>
       </div>
       <div class="inbox-mail-sent">
-        <h2><i class="fa fa-paper-plane-o"></i><%= link_to("送信メッセージ", "/outbox") %></h2>
+        <h2><i class="fa fa-paper-plane-o"></i><%= link_to("送信ボックス", "/outbox") %></h2>
       </div>
       <div class="inbox-mail-recieved">
-        <h2><i class="fa fa-envelope-o"></i><%= link_to("受信メッセージ", "/inbox") %></h2>
+        <h2><i class="fa fa-envelope-o"></i><%= link_to("受信ボックス", "/inbox") %></h2>
       </div>
     </div>
   </div>
@@ -52,10 +52,12 @@
             </div>
            </div>
            <div class="inbox-content">
-             <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(15), room) %></h2>
-             <h3><%= room.post.title.truncate(15) %></h3>
-             <% room.comments.order(created_at: :desc).limit(1).each do |k| %>
-             <p><%= k.created_at.strftime('%Y/%m/%d %H:%M') %>にメッセージ</p>
+             <% comments1 = room.comments.where.not(from_id: current_user.id) %>
+             <h2><i class="fa fa-commenting-o"></i><%= link_to(comments1.last.body.truncate(12), room) %></h2>
+             <h4>from <%= comments1.last.user.name.truncate(8) %></h4>
+             <h3>「<%= room.post.title.truncate(15) %>」</h3>
+             <% comments1.order(created_at: :desc).limit(1).each do |k| %>
+             <p><%= time_ago_in_words(k.created_at) %>前</p>
              <% end %>
              <% end %>
            </div>
@@ -80,10 +82,11 @@
           </div>
 
          <div class="inbox-content">
-           <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(15), room) %></h2>
-           <h3><%= room.post.title.truncate(15) %></h3>
+           <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(12), room) %></h2>
+           <h4>from <%= room.comments.last.user.name.truncate(15) %></h4>
+           <h3>「<%= room.post.title.truncate(15) %>」</h3>
            <% room.comments.order(created_at: :desc).limit(1).each do |k| %>
-           <p><%= k.created_at.strftime('%Y/%m/%d %H:%M') %>にメッセージ</p>
+           <p><%= time_ago_in_words(k.created_at) %>前</p>
            <% end %>
          </div>
       </div>

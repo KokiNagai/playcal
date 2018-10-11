@@ -17,6 +17,7 @@ $(function() {
     $('.no-reply').css('background-color','#fff');
     $('.reply p').css('color','#fff');
     $('.no-reply p').css('color','#4c4c4c');
+    $('no-reply').css('border', '1px solid #cfcfcf');
   });
   $('.no-reply').click(function () {
     $('.inbox-main-wrapper1').hide();
@@ -25,6 +26,7 @@ $(function() {
     $('.reply').css('background-color','#fff');
     $('.reply p').css('color','#4c4c4c');
     $('.no-reply p').css('color','#fff');
+    $('reply').css('border', '1px solid #cfcfcf');
 });
 
 });
