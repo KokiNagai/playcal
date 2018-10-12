@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tennis</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,6 +13,7 @@
     <link href="sticky-footer.css" rel="stylesheet">
     <meta name="google-site-verification" content="ZYNQ3fXFZPpi0z3_7cYzPAhLicqOhb-04AKgGO4ovZU" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
   </head>
   <body>
     <%= render 'layouts/header' %>

@@ -18,4 +18,13 @@ end
   def other_user
     @other_user ||= User.where.not(id: current_user.id)
   end
+
+  def full_title(page_title)
+    base_title = "Playcal.jp"
+    if page_title.empty?
+      base_title
+    else
+      page_title + " | " + base_title
+    end
+  end
 end
