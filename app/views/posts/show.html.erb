@@ -47,6 +47,23 @@
     </div>
   </div>
 
+<% if @post.user != current_user %>
+  <div class="like-wrapper">
+    <div class="like-star">
+      <% if Like.find_by(user_id: current_user.id, post_id: @post.id).present? %>
+      <p>お気に入りを解除</p>
+      <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
+      <i class="fa fa-star fa-2x btn-star"></i>
+      <% end %>
+      <% else %>
+      <p>お気に入りに追加</p>
+      <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
+      <i class="fa fa-star-o fa-2x btn-nonstar"></i></p>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
 
   <% post = @post.comments %>
   <% if current_user != @user  && @post.rooms.where(from_id: current_user.id).empty? %>

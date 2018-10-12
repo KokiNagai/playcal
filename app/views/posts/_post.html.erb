@@ -31,13 +31,6 @@
             <p><label>練習希望日</label></br class="visible-xs"><%= post.playday %></p>
             <p><label>練習の内容</label></br class="visible-xs"><%= post.style %></p>
           </div>
-          <div class="post-delete">
-            <% if post.user == current_user %>
-            <% link_to post, method: :delete do %>
-            <i class="fa fa-trash-o"></i>
-            <% end %>
-            <% end %>
-          </div>
         </div>
       </div>
     </div>

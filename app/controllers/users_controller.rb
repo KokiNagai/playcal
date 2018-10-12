@@ -22,6 +22,10 @@ class UsersController < ApplicationController
     @user = User.find_by(name: params[:name])
   end
 
+  def likes
+    @likes = Like.where(user_id: current_user.id).limit(20).order(created_at: :desc)
+  end
+
 
   private
     def set_user

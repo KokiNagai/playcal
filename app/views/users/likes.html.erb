@@ -1,0 +1,45 @@
+<div class="like-wrapper">
+  <h2><i class="fa fa-star"></i>お気に入りした投稿</h2>
+  <div class="user-show-post-wrapper">
+    <div class="find-main">
+      <%= @message %>
+      <% @likes.each do |like| %>
+      <div class="find-post">
+        <time datetime="<%= like.post.created_at %>">
+          <p><%= time_ago_in_words(like.post.created_at) %>前</p>
+        </time>
+        <div class="find-user-upper">
+          <div class="post-show-upper">
+            <div class="post-show-user">
+              <% if like.post.user.picture.present? %>
+              <p><%= image_tag(like.post.user.picture_url, class: "post-showr-picture" ) %></p>
+              <% else %>
+              <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+              <% end %>
+              <p><%= link_to like.post.user.name.truncate(8), like.post.user %></p>
+            </div>
+            <div class="post-show-title">
+              <h2><%= like.post.title.truncate(18) %></h2>
+            </div>
+          </div>
+            <div class="find-post-detail">
+              <%= link_to "詳細を見る", like.post, id: "find-post-detail" %>
+            </div>
+        </div>
+        <div class="find-post-under">
+          <div class="post-show-under">
+            <div class="post-show-under-left">
+              <p><label>都道府県</label></br class="visible-xs"><%= like.post.prefecture %></p>
+              <p><label>地域名の詳細</label></br class="visible-xs"><%= like.post.city %></p>
+            </div>
+            <div class="post-show-under-right">
+              <p><label>練習希望日</label></br class="visible-xs"><%= like.post.playday %></p>
+              <p><label>練習の内容</label></br class="visible-xs"><%= like.post.style %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <% end %>
+    </div>
+  </div>
+</div>

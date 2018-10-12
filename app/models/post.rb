@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :rooms, dependent: :destroy
   has_many :notifications, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
 
   validates :user_id, presence: true

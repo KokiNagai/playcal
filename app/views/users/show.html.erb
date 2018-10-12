@@ -37,6 +37,9 @@
       <div class="upper-user-edit">
         <h2><i class="fa fa-user"></i><%= link_to "プロフィールの編集", edit_user_registration_path %></h2>
       </div>
+      <div class="upper-user-like">
+        <h2><i class="fa fa-star"></i><%= link_to "お気に入り", likes_user_path %></h2>
+      </div>
     </div>
     <% end %>
     <div class="user-post">
@@ -47,6 +50,4 @@
       <% end %>
     </div>
   </div>
-
-
-    </div>
+</div>

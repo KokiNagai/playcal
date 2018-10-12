@@ -298,6 +298,27 @@ span.picture {
   color: white;
 }
 
+.like-star {
+  margin: 20px 20px 0 20px;
+  display: flex;
+   p {
+     margin-right: 3px;
+     margin-bottom: 0px;
+     margin-top: 8px;
+     font-weight: 600;
+     color: $gray-medium-dark;
+   }
+  .btn-star {
+    color: #ffe259;
+    color: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+    color: linear-gradient(to bottom, #ffa751, #ffe259);
+    opacity: 0.6;
+  }
+  .fa {
+    margin-left: 10px;
+  }
+}
+
 
 
 
@@ -647,6 +668,27 @@ span.picture {
 
   #post-message-check {
     color: white;
+  }
+
+  .like-star {
+    margin: 20px 20px 0 20px;
+    display: flex;
+     p {
+       margin-right: 3px;
+       margin-bottom: 0px;
+       margin-top: 8px;
+       font-weight: 600;
+       color: $gray-medium-dark;
+     }
+    .btn-star {
+      color: #ffe259;
+      color: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+      color: linear-gradient(to bottom, #ffa751, #ffe259);
+      opacity: 0.6;
+    }
+    .fa {
+      margin-left: 10px;
+    }
   }
 
 
