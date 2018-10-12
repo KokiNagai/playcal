@@ -115,14 +115,14 @@
           ], {include_blank: '選択してください', hide_label: true}, id: 'prefecture-edit' %></div>
 
           <div class="prefecture-edit">
-            <%= f.label :テニス歴 %><i>任意</i>
+            <%= f.label :テニス歴 %><span>任意</span>
             <%= f.select :history, [['1年未満', '1年未満'], ['1年~5年', '1年~5年'],
              ['5年~10年', '5年~10年'], ['10年以上', '10年以上']], {include_blank: '選択してください', hide_label: true},
               id: 'prefecture-edit' %>
           </div>
 
        <div class="introduction-edit">
-        <%= f.label :プロフィール %><i>任意</i><small>(200字以内)</small>
+        <%= f.label :プロフィール %><span>任意</span><small>(200字以内)</small>
         <%= f.text_area :introduction, id: "introduction-edit", class: "edit-introduction-area", hide_label: true, placeholder: "自己紹介を詳しく書くと、募集の際に人が集まりやすくなります。"%>
       </div>
 
