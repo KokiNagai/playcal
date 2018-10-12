@@ -4,10 +4,14 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127371510-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-127371510-1');
+  </script>
+
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.japan-map.min.js"></script>
     <link href="sticky-footer.css" rel="stylesheet">

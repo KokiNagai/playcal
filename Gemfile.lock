@@ -275,6 +275,7 @@ GEM
     formatador (0.2.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.1)
     grease (0.3.1)
     haml (5.0.4)
       temple (>= 0.8.0)
@@ -531,6 +532,7 @@ DEPENDENCIES
   execjs
   faker
   fog
+  google-analytics-rails
   jbuilder (~> 2.5)
   jp_prefecture
   jquery-rails

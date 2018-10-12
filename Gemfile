@@ -16,6 +16,8 @@ gem 'fog'
 
 gem 'rails-i18n'
 
+gem 'google-analytics-rails'
+
 gem 'devise'
 
 gem 'omniauth-twitter'
