@@ -19,15 +19,16 @@ class ApplicationController < ActionController::Base
       user_path(current_user)
     end
 
-    def after_inactive_sign_up_path_for(resource)
-      mail_confirm_path
+    def after_update_path_for(resource)
+      user_path(current_user)
     end
+
 
 
     protected
 
     def configure_permitted_parameters
-      added_attrs = [:name, :birth_date, :picture, :live]
+      added_attrs = [:name, :birth_date, :picture, :live, :gender]
       added_attrs2 = [:live, :name, :birth_date, :introduction, :picture, :history]
       devise_parameter_sanitizer.permit(:sign_up, keys:  added_attrs)
       devise_parameter_sanitizer.permit(:account_update, keys: added_attrs2)

@@ -201,17 +201,32 @@ span.picture {
   border-bottom: 1px solid $gray-border-light;
   .post-show-user {
     margin-left: 10%;
+    width: 20%;
     img {
       width: 60px;
       height: 60px;
       border-radius: 60%;
     }
     p {
-      text-align: center;
+      text-align: left;
     }
   }
   .post-show-title {
     margin-left: 10%;
+    width: 70%;
+    text-align: left;
+    h2 {
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+}
+
+  .post-show-title1 {
+    margin-left: 10%;
+    width: 80%;
+    text-align: left;
     h2 {
     font-size: 1.6rem;
     line-height: 1.5em;
@@ -222,6 +237,7 @@ span.picture {
 }
 
 .post-delete {
+  width: 10%;
   .fa {
     margin-top: 120px;
     font-size: 18px;
@@ -513,7 +529,7 @@ span.picture {
 
   .post-show-top {
     text-align: center;
-    color: $pink-hightlight;
+    color: $green-highlight;
     margin-top: 40px;
     h2 {
       font-size: 18px;
@@ -529,30 +545,45 @@ span.picture {
     border-bottom: 1px solid $gray-border-light;
     .post-show-user {
       margin-left: 3%;
+      width: 20%;
       img {
         width: 60px;
         height: 60px;
         border-radius: 60%;
       }
       p {
-        text-align: center;
-        font-size: 1.2rem;
+        text-align: left;
+        font-size: 1.1rem;
       }
     }
     .post-show-title {
       margin-left: 10%;
+      width: 70%;
+      text-align: left;
       h2 {
       font-size: 1.5rem;
       line-height: 1.5em;
       font-weight: 600;
-      width: 140px;
       margin-top: 20px;
       color: $gray-medium-dark;
     }
    }
+   .post-show-title1 {
+     margin-left: 10%;
+     width: 80%;
+     text-align: left;
+     h2 {
+       margin-top: 30px;
+     font-size: 1.6rem;
+     line-height: 1.5em;
+     font-weight: 600;
+     color: $gray-medium-dark;
+   }
+  }
   }
 
   .post-delete {
+    width: 10%;
     .fa {
       margin-top: 120px;
       font-size: 18px;

@@ -1,5 +1,6 @@
 class PrefsController < ApplicationController
   protect_from_forgery except: :search # searchアクションを除外
+  before_action :redirect_root, only: [:index, :show, :search, :new, :edit, :destroy]
 
   # GET /prefs
   # GET /prefs.json
@@ -52,5 +53,10 @@ class PrefsController < ApplicationController
     def pref_params
       params.require(:pref).permit(:name)
     end
+
+    def redirect_root
+      redirect_to root_path
+    end
+
   end
 end

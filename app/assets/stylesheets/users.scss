@@ -174,7 +174,7 @@ $green-highlight: #5f9ea0;
     margin-left: 10px;
     font-size: 12px;
   }
-  i {
+  span {
     border: 1px solid red;
     padding: 5px;
     font-size: 10px;
@@ -210,6 +210,13 @@ $green-highlight: #5f9ea0;
   }
   #name-edit {
     width: 500px;
+  }
+  p {
+    color: $gray-medium-light;
+    font-size: 13px;
+  }
+  .fa {
+    margin-right: 10px;
   }
 }
 
@@ -290,6 +297,13 @@ $green-highlight: #5f9ea0;
   }
   #email-edit {
     width: 500px;
+  }
+  p {
+    color: $gray-medium-light;
+    font-size: 13px;
+  }
+  .fa {
+    margin-right: 10px;
   }
 }
 
@@ -451,7 +465,7 @@ input#edit-submit {
       margin-left: 10px;
       font-size: 12px;
     }
-    i {
+    span {
       border: 1px solid red;
       padding: 5px;
       font-size: 10px;
@@ -488,6 +502,13 @@ input#edit-submit {
     }
     #name-edit {
       width: 300px;
+    }
+    p {
+      color: $gray-medium-light;
+      font-size: 13px;
+    }
+    .fa {
+      margin-right: 10px;
     }
   }
 
@@ -575,12 +596,19 @@ input#edit-submit {
     input#password-edit {
       width: 300px;
     }
+    p {
+      color: $gray-medium-light;
+      font-size: 13px;
+    }
+    .fa {
+      margin-right: 10px;
+    }
   }
 
   input#edit-submit {
     display: block;
     margin: 40px auto;
-    width: 200px;
+    width: 300px;
   }
-
+  
 }
