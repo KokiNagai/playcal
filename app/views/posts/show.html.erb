@@ -3,7 +3,16 @@
   <div class="post-show-top">
     <h2><i class="fa fa-tags"></i>投稿情報の詳細</h2>
   </div>
+
+
   <div class="post-show-wrapper">
+    <div class="post-recrut-label">
+      <% if @post.term == true %>
+      <p id="post-recrut-label">募集中</p>
+      <% elsif @post.term == false %>
+      <p id="post-recrut-label1">募集は終了しました</p>
+      <% end %>
+    </div>
     <div class="post-show-upper">
       <div class="post-show-user">
         <% if @post.user.picture.present? %>
@@ -56,7 +65,7 @@
       <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
       <i class="fa fa-star fa-2x btn-star"></i>
       <% end %>
-      <% else %>
+      <% elsif Like.find_by(user_id: current_user.id, post_id: @post.id).blank? && @post.term == true%>
       <p>お気に入りに追加</p>
       <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
       <i class="fa fa-star-o fa-2x btn-nonstar"></i></p>
@@ -66,8 +75,18 @@
   </div>
   <% end %>
 
+  <div class="post-end">
+    <% if @post.user == current_user && @post.term == true %>
+    <%= link_to "/posts/#{@post.id}/post_end", data: {confirm: "投稿を終了しますか？ 一度締め切ると再び表示することは出来なくなります。"} do %>
+    <p id="post-end">募集を締め切る</p>
+    <% end %>
+    <% elsif @post.user == current_user && @post.term == false %>
+    <p id="post-end1">募集は終了しました</p>
+    <% end %>
+  </div>
+
   <% post = @post.comments %>
-  <% if current_user != @user  && @post.rooms.where(from_id: current_user.id).empty? %>
+  <% if current_user != @user  && @post.rooms.where(from_id: current_user.id).empty? && @post.term == true %>
   <%= form_for(@room) do |f| %>
   <%= f.hidden_field :post_id, :value => @post.id %>
   <%= f.hidden_field :to_id, :value => @user.id %>

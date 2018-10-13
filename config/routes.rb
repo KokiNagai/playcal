@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
 
   get '/posting', to: 'posts#posting'
+  get '/posts/:id/post_end', to: 'posts#post_end'
 
   get '/inbox', to: 'normals#inbox'
   get '/outbox', to: 'normals#outbox'

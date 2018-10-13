@@ -77,6 +77,11 @@ $green-highlight: #5f9ea0;
      width: 500px;
      padding: 15px;
      margin-bottom: 40px;
+     time {
+       font-size: 13px;
+       text-align: right;
+       color: $gray-medium-light;
+     }
    }
    .side-find {
      img {

@@ -92,18 +92,12 @@ $green-highlight: #5f9ea0;
      }
     }
   }
-
-
      .user-info {
       width: 40%;
      }
-
      .user-show-right {
        width: 70%;
      }
-
-
-
      .user-show-under {
        h2 {
          margin-left: 10%;
@@ -172,6 +166,55 @@ $green-highlight: #5f9ea0;
          margin-right: 10px;
        }
      }
+     
+     .user-post {
+       text-align: center;
+       h2 {
+       font-size: 18px;
+       font-weight: 600;
+       margin-top: 60px;
+       color: $gray-medium-dark;
+        .fa {
+          margin-right: 10px;
+          font-size: 18px;
+        }
+       }
+    }
+
+     .user-post-label {
+       display: flex;
+       width: 90%;
+       margin: 0 auto;
+       margin-top: 40px;
+       border-bottom: 1px solid $gray-border-light;
+       .user-post-count {
+         text-align: center;
+         border-bottom: none;
+         background-color: $green-highlight;
+         border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+         padding: 10px 15px 0 15px;
+         width: 120px;
+         cursor: pointer;
+         p {
+           color: #fff;
+           margin-bottom: 5px;
+         }
+       }
+       .user-post-recrut {
+         text-align: center;
+         border-bottom: none;
+         border: 1px solid $gray-border-light;
+         border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+         padding: 10px 15px 0 15px;
+         width: 120px;
+         cursor: pointer;
+       }
+       p {
+         color: $gray-medium-dark;
+         margin-bottom: 5px;
+       }
+     }
+
 
 
 // ユーザー編集ページと新規登録画面(タブレット、PC用)======================//
@@ -495,8 +538,10 @@ input#edit-submit {
       display: flex;
       width: 90%;
       margin: 0 auto;
+      margin-top: 40px;
       border-bottom: 1px solid $gray-border-light;
       .user-post-count {
+        text-align: center;
         border-bottom: none;
         background-color: $green-highlight;
         border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
@@ -509,6 +554,7 @@ input#edit-submit {
         }
       }
       .user-post-recrut {
+        text-align: center;
         border-bottom: none;
         border: 1px solid $gray-border-light;
         border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;

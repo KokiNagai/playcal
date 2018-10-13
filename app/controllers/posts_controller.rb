@@ -34,10 +34,13 @@ class PostsController < ApplicationController
   end
 
 
-  def count_user
-    @count_user2 = @post.user
-    return @count_user2
+  def post_end
+    @post = Post.find_by(id: params[:id])
+    @post.update term: false
+    redirect_to @post
   end
+
+
 
  private
 

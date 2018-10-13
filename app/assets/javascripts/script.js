@@ -41,3 +41,26 @@ $('.close-modal2').click(function() {
   $('.search-modal-wrapper').fadeOut();
 });
 });
+
+$(function() {
+  $('.user-post-recrut').click(function() {
+    $('.user-post-show-2').show();
+    $('.user-post-show-1').hide();
+    $('.user-post-recrut').css('background-color', '#5f9ea0');
+    $('.user-post-recrut p').css('color', '#fff');
+    $('.user-post-count').css('background-color', '#fff');
+    $('.user-post-count p' ).css('color', '#4c4c4c');
+    $('.user-post-count').css('border', '1px solid #cfcfcf');
+  });
+
+  $('.user-post-count').click(function() {
+    $('.user-post-show-2').hide();
+    $('.user-post-show-1').show();
+    $('.user-post-count').css('background-color', '#5f9ea0');
+    $('.user-post-count p').css('color', '#fff');
+    $('.user-post-recrut').css('background-color', '#fff');
+    $('.user-post-recrut p' ).css('color', '#4c4c4c');
+    $('.user-post-recrut').css('border', '1px solid #cfcfcf');
+  });
+
+});

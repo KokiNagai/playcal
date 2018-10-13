@@ -181,9 +181,86 @@ span.picture {
   margin-top: 40px;
 }
 
+.post-recrut-label {
+  text-align: center;
+  margin: 10px 10px 30px 10px;
+  #post-recrut-label {
+    width: 160px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background: $pink-hightlight;
+    color: #fff;
+    margin-right: 30px;
+    padding: 10px 10px 10px 30px;
+    position: relative;
+    opacity: 0.7;
+  }
+  #post-recrut-label:before {
+    background: #fff;
+    margin-top :-10px;
+    height: 15px;
+    width: 15px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    box-shadow: 0px 0px 0px $gray-border-light inset;
+    -moz-box-shadow: 0px 0px 0px $gray-border-light inset;
+    -webkit-box-shadow: 0px 0px 0px $gray-border-light inset;
+    -o-box-shadow: 0px 0px 0px $gray-border-light inset;
+    -ms-box-shadow: 0px 0px 0px $gray-border-light inset;
+  }
+  #post-recrut-label:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    border-width: 24px 17px;
+    border-style: solid;
+    border-color: $pink-hightlight;
+    border-right-color: transparent;
+  }
+  #post-recrut-label1 {
+    width: 200px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    background: $green-highlight;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    color: #fff;
+    margin-right: 30px;
+    padding: 10px 10px 10px 30px;
+    position: relative;
+  }
+  #post-recrut-label1:before {
+    background: #fff;
+    margin-top :-10px;
+    height: 15px;
+    width: 15px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    box-shadow: 0px 0px 0px $gray-border-light inset;
+    -moz-box-shadow: 0px 0px 0px $gray-border-light inset;
+    -webkit-box-shadow: 0px 0px 0px $gray-border-light inset;
+    -o-box-shadow: 0px 0px 0px $gray-border-light inset;
+    -ms-box-shadow: 0px 0px 0px $gray-border-light inset;
+  }
+}
+
 .post-show-top {
   text-align: center;
-  color: $pink-hightlight;
+  color: $green-highlight;
   margin-top: 40px;
   h2 {
     font-size: 18px;
@@ -288,7 +365,7 @@ span.picture {
 }
 
 .like-star {
-  margin: 20px 20px 0 20px;
+  margin: 20px 20px 0 230px;
   display: flex;
    p {
      margin-right: 3px;
@@ -306,6 +383,26 @@ span.picture {
   .fa {
     margin-left: 10px;
   }
+}
+
+.post-end  {
+  text-align: center;
+  margin-top: 40px;
+  p {
+    margin: 0 auto;
+    width: 222px;
+    color: #fff;
+    background-color: $green-highlight;
+    padding: 6px 0 6px 0;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  }
+}
+
+.user-post-show-1 {
+}
+
+.user-post-show-2 {
+  display: none;
 }
 
 
@@ -540,6 +637,85 @@ span.picture {
     margin-top: 40px;
   }
 
+  .post-recrut-label {
+    text-align: center;
+    margin: 5px 10px 30px 10px;
+    width: 160px;
+    #post-recrut-label {
+      width: 100px;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      background: $pink-hightlight;
+      color: #fff;
+      margin-right: 30px;
+      padding: 10px 10px 10px 30px;
+      position: relative;
+      opacity: 0.7;
+    }
+    #post-recrut-label:before {
+      background: #fff;
+      margin-top :-10px;
+      height: 15px;
+      width: 15px;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      box-shadow: 0px 0px 0px $gray-border-light inset;
+      -moz-box-shadow: 0px 0px 0px $gray-border-light inset;
+      -webkit-box-shadow: 0px 0px 0px $gray-border-light inset;
+      -o-box-shadow: 0px 0px 0px $gray-border-light inset;
+      -ms-box-shadow: 0px 0px 0px $gray-border-light inset;
+      opacity: 0.7;
+    }
+    #post-recrut-label:after {
+      content: " ";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0px;
+      left: 100%;
+      border-width: 22px 17px;
+      border-style: solid;
+      border-color: $pink-hightlight;
+      border-right-color: transparent;
+    }
+    #post-recrut-label1 {
+      width: 160px;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      background: $green-highlight;
+      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+      color: #fff;
+      margin-right: 30px;
+      padding: 10px 10px 10px 30px;
+      position: relative;
+    }
+    #post-recrut-label1:before {
+      background: #fff;
+      margin-top :-10px;
+      height: 15px;
+      width: 15px;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      box-shadow: 0px 0px 0px $gray-border-light inset;
+      -moz-box-shadow: 0px 0px 0px $gray-border-light inset;
+      -webkit-box-shadow: 0px 0px 0px $gray-border-light inset;
+      -o-box-shadow: 0px 0px 0px $gray-border-light inset;
+      -ms-box-shadow: 0px 0px 0px $gray-border-light inset;
+    }
+  }
+
   .post-show-top {
     text-align: center;
     color: $green-highlight;
@@ -569,24 +745,12 @@ span.picture {
         font-size: 1.1rem;
       }
     }
-    .post-show-title {
-      margin-left: 10%;
-      width: 70%;
-      text-align: left;
-      h2 {
-      font-size: 1.5rem;
-      line-height: 1.5em;
-      font-weight: 600;
-      margin-top: 20px;
-      color: $gray-medium-dark;
-    }
-   }
    .post-show-title {
      margin-left: 10%;
      width: 80%;
      text-align: left;
      p {
-      margin-top: 30px;
+     margin-top: 0px;
      font-size: 1.6rem;
      line-height: 1.5em;
      font-weight: 600;
@@ -678,6 +842,19 @@ span.picture {
     }
     .fa {
       margin-left: 10px;
+    }
+  }
+
+  .post-end  {
+    text-align: center;
+    margin-top: 40px;
+    p {
+      margin: 0 auto;
+      width: 222px;
+      color: #fff;
+      background-color: $green-highlight;
+      padding: 6px 0 6px 0;
+      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
     }
   }
 
