@@ -17,7 +17,7 @@
           <p><h3><label>性別</label><%= @user.gender %></h3></p>
           <p><h3><label>テニス歴</label><%= @user.history %></h3></p>
           <div class="user-intro">
-            <%= @user.introduction %>
+            <p><%= @user.introduction %></p>
           </div>
         </div>
       </div>
@@ -44,7 +44,9 @@
     <% end %>
     <div class="user-post">
       <% if @user.posts.present? %>
-      <%= render "posts/post" %>
+      <div class="user-post-show-1">
+        <%= render "posts/post" %>
+      </div>
       <% else %>
       <h2><i class="fa fa-frown-o"></i>投稿はありません</h2>
       <% end %>

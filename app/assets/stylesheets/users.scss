@@ -84,8 +84,8 @@ $green-highlight: #5f9ea0;
    .user-show-upper {
      margin-top: 40px;
      img {
-       width: 80%;
-       height: 300px;
+       width: 70%;
+       height: 250px;
        border-radius: 3%;
        display: block;
        margin: 0 auto;
@@ -107,6 +107,7 @@ $green-highlight: #5f9ea0;
      .user-show-under {
        h2 {
          margin-left: 10%;
+         margin-bottom: 20px;
          font-size: 18px;
          font-weight: 600;
          color: $gray-medium-dark;
@@ -114,7 +115,7 @@ $green-highlight: #5f9ea0;
        .user-show-under-info {
          border: 1px solid $gray-border-light;
          border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-         height: 350px;
+         height: auto;
          margin: 0 auto;
          padding: 12px;
          width: 90%;
@@ -420,20 +421,24 @@ input#edit-submit {
          h3 {
            margin-left: 5%;
            margin-top: 0px;
-           font-size: 13px;
+           font-size: 1.4rem;
            display: block;
            color: $gray-word;
          }
          label {
            margin-right: 10px;
            color: $gray-medium-dark;
-           width: 55px;
+           width: 70px;
          }
          .user-intro {
            padding-top: 12px;
            letter-spacing: 1px;
            line-height: 1.6em;
            border-top: 1px solid $gray-border-light;
+          p {
+            margin: 0 auto;
+            width: 90%;
+          }
          }
        }
      }
@@ -447,7 +452,7 @@ input#edit-submit {
        .upper-user-sent {
          border-bottom: 1px solid $gray-border-light;
          h2 {
-           font-size: 13px;
+           font-size: 1.4rem;
          }
        }
        .upper-user-recieved {
@@ -484,6 +489,37 @@ input#edit-submit {
           font-size: 18px;
         }
        }
+    }
+
+    .user-post-label {
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+      border-bottom: 1px solid $gray-border-light;
+      .user-post-count {
+        border-bottom: none;
+        background-color: $green-highlight;
+        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+        padding: 10px 15px 0 15px;
+        width: 120px;
+        cursor: pointer;
+        p {
+          color: #fff;
+          margin-bottom: 5px;
+        }
+      }
+      .user-post-recrut {
+        border-bottom: none;
+        border: 1px solid $gray-border-light;
+        border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+        padding: 10px 15px 0 15px;
+        width: 120px;
+        cursor: pointer;
+      }
+      p {
+        color: $gray-medium-dark;
+        margin-bottom: 5px;
+      }
     }
 
 
