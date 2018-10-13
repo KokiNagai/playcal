@@ -20,6 +20,8 @@ gem 'google-analytics-rails'
 
 gem 'devise'
 
+gem 'meta-tags'
+
 gem 'omniauth-twitter'
 
 gem 'less-rails'

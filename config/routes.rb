@@ -33,7 +33,7 @@ Rails.application.routes.draw do
       get :likes
     end
   end
-  
+
   resources :prefs
   resources :comments
   resources :posts, only: [:create, :destroy, :show]
