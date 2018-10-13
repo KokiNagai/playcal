@@ -560,7 +560,7 @@ span.picture {
       font-size: 11px;
     }
     p {
-      font-size: 10px;
+      font-size: 1.3rem;
       width: 250px;
       margin: 0 auto;
       color: $gray-medium-light;
@@ -573,7 +573,7 @@ span.picture {
     margin-bottom: 10px;
     color: $gray-medium-dark;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 60px;
   }
 
@@ -586,26 +586,26 @@ span.picture {
    input#title-field, select#gender-field, select#people-field, select#prefecture-field,
     select#skill-field, input#city-field, textarea#content-field {
        margin: 0 auto;
-       width: 250px;
+       width: 300px;
        color: $gray-medium-dark;
    }
 
    .rails-bootstrap-forms-date-select {
-     width: 70%;
+     width: 80%;
      margin: 0 auto;
      color: $gray-medium-dark;
    }
 
    textarea#content-field {
-     height: 100px;
-     width: 280px;
+     height: 150px;
+     width: 300px;
      color: $gray-medium-dark;
    }
 
    #posting-submit {
      margin: 0 auto;
      display: block;
-     width: 280px;
+     width: 300px;
    }
 
    span.help-block {
