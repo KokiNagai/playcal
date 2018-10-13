@@ -38,9 +38,18 @@
       <div class="top-section">
         <img src="assets/shoes-614176_1280.jpg">
         <h1>More fun for Tennis</h1>
-        <h2>明日の練習相手、一生のテニス仲間がここで見つかる</h2>
+        <h2>明日の練習相手、テニス仲間がここで見つかる</h2>
         <p><%= link_to '新規登録', new_user_registration_path, :style=>"color: white; font-size: 17px;" %></p>
       </div>
+    </div>
+
+    <div class="top-description">
+      <h2>Be Simple</h2>
+      <p>検索や投稿、メッセージなどは非常にシンプルでわかりやすくなっています。</p>
+      <h2>Be Fast</h2>
+      <p>練習相手をすばやく見つけ、明日にでも練習できます。</p>
+      <h2>Be Fun</h2>
+      <p>好きな相手と好きなときに練習できるためあなたのテニスライフをより楽しくします。</p>
     </div>
 
     <div class="top-under">
@@ -53,6 +62,11 @@
         <div class="top-under-sub">
           <p>ここではあなたの近くに住むテニスの練習相手を見つけることが出来ます。また、性別、技術レベル、日にち、ダブルスかシングルスかなど、
           あなたが望むベストな日程と練習内容、そして練習相手を見つけることが可能です。</p>
+        </div>
+        <div class="top-under-find visible-xs">
+          <%= link_to find_path do %>
+          <p>探してみる</p>
+          <% end %>
         </div>
     </div>
   </div>
