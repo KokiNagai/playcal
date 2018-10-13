@@ -144,6 +144,7 @@
         <%= f.password_field :current_password, autocomplete: "current-password", hide_label: true %>
       </div>
 
+      <%= f.hidden_field :gender, :value => current_user.gender %>
 
       <div class="edit-submit">
       <%= f.submit "編集を完了する", class: "btn btn-success", id: "edit-submit" %>
