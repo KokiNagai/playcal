@@ -12,6 +12,7 @@ ja:
         remember_me: パスワードを記憶する
         current_password: 現在のパスワード
         introduction: 自己紹介
+        gender: 性別
 
 
       post:
