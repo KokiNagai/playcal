@@ -166,7 +166,7 @@ $green-highlight: #5f9ea0;
          margin-right: 10px;
        }
      }
-     
+
      .user-post {
        text-align: center;
        h2 {
@@ -566,6 +566,10 @@ input#edit-submit {
         color: $gray-medium-dark;
         margin-bottom: 5px;
       }
+    }
+
+    .user-post-show-2 {
+      display: none;
     }
 
 
