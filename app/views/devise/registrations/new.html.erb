@@ -19,24 +19,24 @@
   </div>
 
 <div class="name-edit">
-  <%= f.label :名前 %><small>(15字以内)</small><span>必須</span>
+  <%= f.label :名前 %><small>(15字以内)</small><i>必須</i>
   <%= f.text_field :name, id: "name-edit", hide_label: true %>
 </div>
 
 <div class="email-edit">
- <%= f.label :メールアドレス %><span>必須</span>
+ <%= f.label :メールアドレス %><i>必須</i>
  <%= f.email_field :email, id: "email-edit", hide_label: true %>
 </div>
 
 <div class="name-edit">
-  <%= f.label :性別 %><small></small><span>必須</span>
+  <%= f.label :性別 %><small></small><i>必須</i>
   <%= f.select :gender, [['男性', '男性'], ['女性','女性']], {include_blank: '選択してください', hide_label: true}, id: "name-edit" %>
   <p><i class="fa fa-flag-o"></i> アカウント登録移行は変更出来なくなりますので注意してください。</p>
 </div>
 
 
 <div class="birth-date-edit">
-  <%= f.label :生年月日 %><span>必須</span>
+  <%= f.label :生年月日 %><i>必須</i>
   <%= f.date_select(
           :birth_date,
           use_month_numbers: true,
@@ -48,7 +48,7 @@
   </div>
 
  <div class="prefecture-edit">
-  <%= f.label :住んでいる都道府県 %><span>必須</span>
+  <%= f.label :住んでいる都道府県 %><i>必須</i>
  <%= f.select :live , [
    ['北海道地方', [
        ['北海道',   '北海道'],
@@ -127,7 +127,7 @@
    ], {include_blank: '選択してください', hide_label: true}, id: 'prefecture-edit' %></div>
 
   <div class="password-edit">
-    <%= f.label :password %><span>必須</span>
+    <%= f.label :password %><i>必須</i>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %>字以上)</em>
     <% end %><br />
@@ -136,7 +136,7 @@
   </div>
 
   <div class="password_confirmation-edit">
-    <%= f.label :パスワードの確認 %><span>必須</span>
+    <%= f.label :パスワードの確認 %><i>必須</i>
     <%= f.password_field :password_confirmation, autocomplete: "new-password", hide_label: true  %>
 
   </div>
