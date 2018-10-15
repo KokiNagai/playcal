@@ -36,7 +36,7 @@ end
       reverse: true,
       charset: 'utf-8',
       description: 'Playcalは「シンプルですばやく」テニスの練習相手を見つけることができます',
-      keywords: 'テニス, オフ会, 仲間, 練習相手, ダブルス',
+      keywords: 'テニス, 仲間, 練習相手, ダブルス, テニス女子',
       noindex: ! Rails.env.production?,
       canonical: request.original_url,
       separator: '-',
