@@ -44,7 +44,7 @@ end
         site_name: 'Playcal',
         title: '「シンプルですばやく」テニスの練習相手がここで見つかる',
         description: 'Playcalは「シンプルですばやく」テニスの練習相手を見つけることができます',
-        image: image_url("https://cdn.pixabay.com/photo/2016/04/01/08/31/tennis-1298769_1280.png"),
+        image: image_url("https://fedexkoki.com/wp-content/uploads/2018/10/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2018-10-13-12.33.54.png"),
         type: 'website',
         url: request.original_url,
         locale: 'ja_JP',
