@@ -2,7 +2,7 @@
       <div class="login-main">
         <h2>ログイン</h2>
         <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
+        <h3><%= flash[:alert] %></h3>
 
         <div class="login-mail">
         <%= f.email_field :email, class: 'login-form', hide_label: true, placeholder: "メールアドレス"%>
