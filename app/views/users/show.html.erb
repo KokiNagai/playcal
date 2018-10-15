@@ -47,11 +47,9 @@
         <div class="user-post-count">
           <p><span>投稿数</span>(<%= @user.posts.count %>)<p>
         </div>
-        <% if @user == current_user %>
         <div class="user-post-recrut">
-          <p><span>募集中の投稿</span></p>
+          <p><span>募集中の投稿</span>(<%= @user.posts.where(term: true).count %>)</p>
         </div>
-        <% end %>
       </div>
 
       <% if @user.posts.present? %>

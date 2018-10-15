@@ -198,9 +198,11 @@ $green-highlight: #5f9ea0;
 
 .inbox2-posting-bottom {
   margin-top: 40px;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
   display: inline-block;
-  background-color: $pink-hightlight;
+  background: #ff9966;
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+  background: linear-gradient(to right, #ff5e62, #ff9966);
   border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
 }
 
@@ -741,11 +743,13 @@ textarea#comment-text {
 
 .inbox2-posting-bottom {
   margin: 40px auto;
-  width: 110px;
-  padding: 5px;
+  width: 130px;
+  padding: 7px 10px 7px 10px;
   text-align: center;
   display: block;
-  background-color: $pink-hightlight;
+  background: #ff9966;
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+  background: linear-gradient(to right, #ff5e62, #ff9966);
   border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
 }
 

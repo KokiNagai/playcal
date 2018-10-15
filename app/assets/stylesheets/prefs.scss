@@ -218,6 +218,12 @@ $green-highlight: #5f9ea0;
   .searched-info {
     margin: 10px auto;
     width: 90%;
+    h3 {
+      font-weight: 600;
+      color: $gray-medium-dark;
+      width: 100px;
+      border-bottom: 3px solid $green-highlight;
+    }
     .searched-main {
       display: flex;
       flex-direction: row;
@@ -240,6 +246,9 @@ $green-highlight: #5f9ea0;
       font-size: 16px;
       font-weight: 600;
       color: $gray-medium-dark;
+    }
+    .fa {
+      margin-right: 10px;
     }
   }
 
@@ -547,7 +556,7 @@ $green-highlight: #5f9ea0;
       .searched-info {
         margin: 0 auto;
         width: 90%;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         h3 {
           margin-top: 10px;
           font-size: 14px;
@@ -571,17 +580,17 @@ $green-highlight: #5f9ea0;
       }
 
       .searched-message {
-        padding-top: 40px;
+        padding-top: 20px;
         text-align: center;
         h2 {
           font-size: 16px;
           font-weight: 600;
           color: $gray-medium-dark;
         }
+        .fa {
+          margin-right: 10px;
+        }
       }
-
-
-
 
 
       // findfor-パーシャル=======================

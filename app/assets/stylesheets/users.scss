@@ -545,9 +545,9 @@ input#edit-submit {
         text-align: center;
         border-bottom: none;
         background-color: $green-highlight;
-        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+        border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
         padding: 10px 15px 0 15px;
-        width: 120px;
+        width: 150px;
         cursor: pointer;
         p {
           color: #fff;
@@ -560,7 +560,7 @@ input#edit-submit {
         border: 1px solid $gray-border-light;
         border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
         padding: 10px 15px 0 15px;
-        width: 120px;
+        width: 150px;
         cursor: pointer;
       }
       p {

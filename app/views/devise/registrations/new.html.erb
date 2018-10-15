@@ -31,7 +31,7 @@
 <div class="name-edit">
   <%= f.label :性別 %><small></small><i>必須</i>
   <%= f.select :gender, [['男性', '男性'], ['女性','女性']], {include_blank: '選択してください', hide_label: true}, id: "name-edit" %>
-  <p><i class="fa fa-flag-o"></i> アカウント登録移行は変更出来なくなりますので注意してください。</p>
+  <p><span class="fa fa-flag-o"></span> アカウント登録移行は変更出来なくなりますので注意してください。</p>
 </div>
 
 
@@ -132,7 +132,7 @@
     <em>(<%= @minimum_password_length %>字以上)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password", hide_label: true  %>
-    <p><i class="fa fa-flag-o"></i>小文字や大文字を組み合わせると安全性が増します。</p>
+    <p><span class="fa fa-flag-o"></span>小文字や大文字を組み合わせると安全性が増します。</p>
   </div>
 
   <div class="password_confirmation-edit">
