@@ -32,7 +32,7 @@ end
     {
       site: 'Playcal',
       sitename: 'Playcal',
-      title: '「シンプルですばやく」テニスの練習相手がここで見つかる',
+      title: '「シンプルで楽しく」テニスの練習相手がここで見つかる',
       reverse: true,
       charset: 'utf-8',
       description: 'Playcalは「シンプルですばやく」テニスの練習相手を見つけることができます',
