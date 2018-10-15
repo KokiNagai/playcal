@@ -64,3 +64,12 @@ $(function() {
   });
 
 });
+
+$(function() {
+  $('#room-report').click(function () {
+    $('.report-wrapper').show();
+    });
+    $('.report-close span').click(function () {
+      $('.report-wrapper').hide();
+    })
+})

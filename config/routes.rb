@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   post "/likes/:post_id/create", to: 'likes#create'
   post "/likes/:post_id/destroy", to: 'likes#destroy'
 
+  post "/reports", to: "report#create"
+
 
   resources :users, param: :name, only: [:show] do
     member do
@@ -37,6 +39,7 @@ Rails.application.routes.draw do
 
   resources :prefs
   resources :comments
+  resources :reports
   resources :posts, only: [:create, :destroy, :show]
   resources :rooms, only: [:create, :destroy, :show, :inbox]
   resource :contacts, only: [:new, :create]

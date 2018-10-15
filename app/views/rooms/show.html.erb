@@ -88,6 +88,10 @@
       </div>
     </div>
   </div>
+  <div class="room-report">
+    <p id="room-report"><i class="fa fa-flag-o"></i>通報する</p>
+    <%= render 'report/report' %>
+  </div>
   <div class="room-destroy">
     <%= link_to "/rooms/#{@room.id}",
      data: {confirm: "相手とのメッセージのやり取りを打ち切りますか？", method: :delete} do  %>
