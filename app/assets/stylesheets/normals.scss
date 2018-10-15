@@ -639,6 +639,16 @@ h2 {
       width: 500px;
       display: block;
     }
+    p {
+      color: $gray-medium-light;
+      font-size: 14px;
+      width: 500px;
+      text-align: left;
+      margin: 30px auto;
+    }
+    .fa {
+      margin-right: 10px;
+    }
   }
 
 
@@ -647,7 +657,7 @@ h2 {
   font-size: 15px;
   p {
     margin-top: 10px;
-    width: 270px;
+    width: 170px;
     color: $green-highlight;
   }
   .fa {
@@ -1247,19 +1257,25 @@ h2 {
       margin: 30px auto;
       width: 300px;
       display: block;
+
     }
     .login-under {
-      margin-top: 50px;
+      margin-top: 90px;
      #login-under-signup {
        color: $green-highlight;
+       margin-bottom: 10px;
      }
      p {
        font-size: 13px;
+       margin-bottom: 5px;
         width: 300px;
         margin-left: 33px;
      }
      p #login-under-link {
        font-size: 10px;
+     }
+     #login-under-list {
+       margin-bottom: 10px;
      }
   }
 }
@@ -1290,6 +1306,16 @@ h2 {
       margin: 30px auto;
       width: 250px;
       display: block;
+    }
+    p {
+      color: $gray-medium-light;
+      font-size: 14px;
+      width: 300px;
+      text-align: left;
+      margin: 30px auto;
+    }
+    .fa {
+      margin-right: 10px;
     }
   }
 

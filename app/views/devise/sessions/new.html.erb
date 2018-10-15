@@ -23,9 +23,11 @@
 
       <div class="login-under">
         <p>アカウントをお持ちでないですか?</p>
-        <p><%= link_to "登録はこちら", new_user_registration_path, id: "login-under-signup" %></p>
+        <p id="login-under-list"><%= link_to "登録はこちら", new_user_registration_path, id: "login-under-signup" %></p>
         <p>パスワードをお忘れですか？</p>
-        <p><%= link_to "パスワードの再設定はこちらから", new_password_path(resource_name), id: "login-under-signup" %></p>
+        <p id="login-under-list"><%= link_to "パスワードの再設定はこちらから", new_password_path(resource_name), id: "login-under-signup" %></p>
+        <p>アカウント登録メールが来ませんか？</p>
+        <p id="login-under-list"><%= link_to "アカウント登録メールの再送はこちらから", new_confirmation_path(resource_name), id: "login-under-signup" %></p>
       </div>
     </div>
   </div>
