@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create, :destroy]
-  before_action :correct_params
+  before_action :correct_params, only: [:show]
 
   def show
     @post = current_user.posts.build
@@ -37,7 +37,7 @@ class RoomsController < ApplicationController
   end
 
   def correct_params
-    @room = Room.find(params[:id])
+    @room = Room.find_by(id: params[:id])
     unless (@room.from_id == current_user.id && @room.to_id != current_user.id) || (@room.from_id != current_user.id && @room.to_id == current_user.id)
       redirect_to root_path
     end
