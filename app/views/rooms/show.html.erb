@@ -85,8 +85,13 @@
       <div class="room-comment-box">
          <%= render 'comments/form' %>
       </div>
-     </div>
+      </div>
     </div>
-</div>
-
+  </div>
+  <div class="room-destroy">
+    <%= link_to "/rooms/#{@room.id}",
+     data: {confirm: "相手とのメッセージのやり取りを打ち切りますか？", method: :delete} do  %>
+    <p><i class="fa fa-cut"></i>メッセージのやり取りを打ち切る</p>
+    <% end %>
+  </div>
  </div>

@@ -23,6 +23,9 @@ class RoomsController < ApplicationController
   end
 
   def destroy
+    @room = Room.find_by(id: params[:id])
+      @room.destroy
+      redirect_to current_user
   end
 
  private
