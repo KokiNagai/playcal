@@ -79,7 +79,7 @@ Devise.setup do |config|
   # config.http_authentication_realm = 'Application'
 
 
-  config.maximum_attempts = 2
+  config.maximum_attempts = 8
   config.last_attempt_warning = true
 
   # It will change confirmation, password recovery and other workflows
