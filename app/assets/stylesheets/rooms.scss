@@ -1134,10 +1134,27 @@ textarea#comment-text {
 
  .room-destroy {
    padding: 10px 0 10px 0;
-   margin-top: 50px;
    vertical-align: middle;
    border-top: 1px solid $gray-border-light;
    border-bottom: 1px solid $gray-border-light;
+   p {
+     margin: 0 auto;
+     width: 240px;
+     text-align: center;
+     color: #ea5550;
+     font-weight: 600;
+     margin-bottom: 0px;
+   }
+   .fa {
+     margin-right: 10px;
+   }
+ }
+
+ .room-report {
+   padding: 10px 0 10px 0;
+   margin-top: 50px;
+   vertical-align: middle;
+   border-top: 1px solid $gray-border-light;
    p {
      margin: 0 auto;
      width: 240px;
