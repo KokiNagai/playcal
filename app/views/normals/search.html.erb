@@ -43,7 +43,8 @@
       <% end %>
     </div>
 
-<div class="find-wrapper">
+<div class="find-wrapper-p">
+ <div class="find-wrapper col-md-9 col-sm-12">
   <div class="find-main">
     <%= @message %>
     <% @posts.each do |post| %>
@@ -96,6 +97,19 @@
       </div>
   </div>
 </div>
+<div class="google-ad col-md-3 hidden-xs">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- playcal-side -->
+<ins class="adsbygoogle"
+   style="display:inline-block;width:300px;height:600px"
+   data-ad-client="ca-pub-5276826909376331"
+   data-ad-slot="1679934176"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
 
 <%= will_paginate(@posts, inner_window: 3, previous_label: "前へ", next_label: "次へ", id: "will_paginate") %>
 

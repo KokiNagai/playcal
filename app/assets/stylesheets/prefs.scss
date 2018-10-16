@@ -151,6 +151,20 @@ $green-highlight: #5f9ea0;
   border-top: 1px solid $gray-border-light;
 }
 
+.find-show-title {
+  width: 400px;
+  margin: 10px 0 40px 50px;
+  p {
+    font-weight: 600;
+    color: $green-highlight;
+    font-size: 20px;
+  }
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+
 
 // 検索画面上部(タブレット、PC用)================================
 
@@ -412,6 +426,21 @@ $green-highlight: #5f9ea0;
 // 検索画面全体===================================
 
   @media only screen and (max-width: 767px) {
+
+    .find-show-title {
+      width: 200px;
+      margin: 40px auto;
+      p {
+        text-align: center;
+        font-weight: 600;
+        color: $green-highlight;
+        font-size: 20px;
+      }
+      .fa {
+        margin-right: 10px;
+      }
+    }
+
     .find-wrapper {
       display: flex;
       flex-direction: column;
@@ -433,7 +462,7 @@ $green-highlight: #5f9ea0;
        margin: 20px auto;
        border: 1px solid $gray-border-light;
        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-       width: 90%;
+       width: 100%;
        padding: 15px;
        margin-bottom: 40px;
        time {
