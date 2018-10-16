@@ -60,6 +60,8 @@ gem 'jquery-rails'
 
 gem 'jquery-turbolinks'
 
+gem 'sitemap_generator'
+
 #gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
