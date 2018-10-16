@@ -471,6 +471,19 @@ $green-highlight: #5f9ea0;
          color: $gray-medium-light;
        }
      }
+     .find-post1 {
+       margin: 20px auto;
+       border: 1px solid $gray-border-light;
+       border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+       width: 90%;
+       padding: 15px;
+       margin-bottom: 40px;
+       time {
+         font-size: 13px;
+         text-align: right;
+         color: $gray-medium-light;
+       }
+     }
      .side-find {
       .inbox2-under-picture {
          img {
