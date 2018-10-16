@@ -32,11 +32,11 @@ end
     {
       site: 'Playcal',
       sitename: 'Playcal',
-      title: '「シンプルで楽しく」テニスの練習相手がここで見つかる',
+      title: '「シンプルで楽しく」テニスの練習相手や仲間がここで見つかる',
       reverse: true,
       charset: 'utf-8',
       description: 'Playcalは「シンプルですばやく」テニスの練習相手を見つけることができます',
-      keywords: 'テニス, 仲間, 練習相手, ダブルス, テニス女子',
+      keywords: 'テニス, 仲間, 練習相手, ダブルス, オフ会',
       canonical: request.original_url,
       separator: '-',
       og: {
