@@ -891,6 +891,9 @@ h1 {
    color: $gray-medium-dark;
    font-size: 1.7rem;
  }
+ #dropdown-list:hover {
+   color: $green-highlight;
+ }
 
  #dropdown-list-Q {
    border-bottom: 1px solid $gray-border-light;
@@ -918,6 +921,10 @@ h1 {
    text-align: right;
    margin-right: 5px;
    margin-top: 5px;
+ }
+
+ #close-modal:hover {
+   color: $gray-medium-dark;
  }
 
  // フッター(スマホ)======================

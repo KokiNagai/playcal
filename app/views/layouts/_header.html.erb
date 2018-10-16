@@ -44,7 +44,7 @@
 
 
               <div class="notification visible-xs">
-                <i class="fa fa-bell fa-2x JS-bell"  id="bell"></i>
+                <i class="fa fa-bell fa-2x JS-bell"  id="bell" ontouchstart=""></i>
                 <% if current_user.notifications.where(read: false).count != 0 %>
                 <span class="JS-bell"><%= current_user.notifications.where(read: false).count %></span>
                 <% end %>
