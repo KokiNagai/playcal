@@ -13,7 +13,6 @@ class PostsController < ApplicationController
     def create
     @post = current_user.posts.build(posts_params)
     @place = @post.prefecture
-    @pref = Pref.find_by(name: @place)
     if @post.save
         @posts = Post.where(prefecture: @post.prefecture).paginate(page: params[:page], per_page: 10)
         redirect_to("/find")
