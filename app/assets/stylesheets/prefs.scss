@@ -542,7 +542,7 @@ $green-highlight: #5f9ea0;
         padding-top: 6px !important;
         padding-bottom: 6px !important;
         background: none !important;
-        border: 1px solid #dce0e0 !important;
+        border: 1px solid $gray-medium-light !important;
         border-radius: 4px !important;
         cursor: pointer !important;
         display: inline-block !important;
@@ -694,7 +694,7 @@ $green-highlight: #5f9ea0;
         font-weight: 500;
         color: $gray-medium-dark;
         background-color: #fff;
-        border: 1px solid $gray-border-light;
+        border: 1px solid $gray-medium-dark;
       }
 
 
