@@ -866,6 +866,11 @@ h1 {
    border-color: #f5f5f5;
    border-image: initial !important;
    border-radius: 4px !important;
+   .close-modal {
+     .fa {
+       font-size: 33px;
+     }
+   }
  }
 
  .dropdown-modal p {

@@ -39,7 +39,7 @@
    <% Room.where(to_id: current_user.id).order(updated_at: :desc).each do |room| %>
    <% if room.present? && room.comments.present? %>
       <div class="inbox-main-wrapper1">
-        <div class="inbox-main">
+        <div class="inbox-main1">
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
               <% if room.user.picture.present? %>
@@ -68,7 +68,7 @@
      <% if room.present? && room.comments.present? %>
      <% if room.comments.last.user != current_user %>
      <div class="inbox-main-wrapper2">
-       <div class="inbox-main">
+       <div class="inbox-main1">
          <div class="inbox-post-left">
            <div class="inbox-post-picture">
              <% if room.user.picture.present? %>

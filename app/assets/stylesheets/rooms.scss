@@ -727,6 +727,16 @@ textarea#comment-text {
     margin: 0 auto;
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
    }
+
+   .inbox-main1 {
+     border: 1px solid $gray-border-light;
+     width: 90%;
+     display: flex;
+     flex-direction: row;
+     margin: 0 auto;
+     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    }
+
    .inbox-main:hover {
      background-color:#efffef;
    }
