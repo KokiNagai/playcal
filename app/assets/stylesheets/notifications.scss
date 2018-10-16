@@ -17,29 +17,21 @@ $green-highlight: #5f9ea0;
 
   #bell {
     cursor: pointer;
+    margin-left: 100px;
   }
 
   .notification-bell {
-    position: relative;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    border: 1px solid $gray-medium-dark;
     width: 30px;
     height: 30px;
+    background-color: #f1f1f1;
+    text-align: center;
     p {
-      position: absolute;
-      left: 0%;
-    }
-    span {
-      position: absolute;
-      text-align: center;
-      vertical-align: text-top;
-      background-color: $green-highlight;
-      border: 1px solid #fff;
-      border-radius: 60%;
-      width: 19px;
-      height: 19px;
-      line-height: 18px;
-      z-index: 10;
-      color: white;
-      right: 20%;
+      color: $gray-medium-dark;
+      font-weight: 600;
+      vertical-align: middle;
+      margin-bottom: 5px;
     }
   }
 
@@ -158,16 +150,16 @@ $green-highlight: #5f9ea0;
       line-height: 18px;
       z-index: 10;
       color: white;
-      right: 18%;
+      right: 24%;
     }
     .fa {
-      font-size: 17px;
+      font-size: 23px;
     }
   }
 
   #bell {
     position: absolute;
-    right: 22%;
+    right: 26%;
     margin-top: 5px;
     color: $gray-medium-dark;
   }
