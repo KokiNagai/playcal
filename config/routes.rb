@@ -37,7 +37,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :prefs
   resources :comments
   resources :reports
   resources :posts, only: [:create, :destroy, :show]

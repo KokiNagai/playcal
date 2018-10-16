@@ -1,2 +1,0 @@
-class Pref < ApplicationRecord
-end
