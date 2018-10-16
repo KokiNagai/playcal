@@ -614,11 +614,9 @@ $green-highlight: #5f9ea0;
 
       #form-control {
         border-style: solid !important;
-        border-color: rgba(0, 0, 0, 0.1) !important;
+        border-color: $gray-medium-light;
         border-image: initial !important;
         border-radius: 3px !important;
-        background-color: transparent !important;
-        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px !important;
         padding-right: 20px;
         padding-left: 10px;
         padding-bottom: 8px;
