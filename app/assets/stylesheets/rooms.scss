@@ -23,6 +23,9 @@ $green-highlight: #5f9ea0;
     margin-left: 20px;
   }
 
+  .inbox-wrapper {
+    margin-bottom: 0px;
+  }
 .inbox-title {
   text-align: center;
   h1 {
@@ -653,6 +656,10 @@ textarea#comment-text {
 
 @media only screen and (max-width: 767px) {
 
+
+.inbox-wrapper {
+  margin-bottom: 0px;
+}
 
 .inbox-mail-main {
     width: 250px;
