@@ -1,8 +1,8 @@
 $(function() {
-  $('.JS-bell').click(function() {
+  $('.JS-bell').fastClick(function() {
     $('.notification-wrapper').fadeIn();
   });
-  $('.close-cross').click(function() {
+  $('.close-cross').fastClick(function() {
     $('.notification-wrapper').fadeOut();
   });
 });
