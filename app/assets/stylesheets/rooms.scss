@@ -685,7 +685,7 @@ textarea#comment-text {
   display: flex;
   border-bottom: none;
   .reply {
-    padding: 5px 19px 0 19px;
+    padding: 5px 17px 0 17px;
     border: 1px solid $gray-border-light;
     border-bottom: none;
     border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
@@ -748,6 +748,7 @@ textarea#comment-text {
 
   .inbox-post-left a:active {
     border-bottom: 3px solid $pink-borderbottom;
+    color: $pink-borderbottom;
   }
 
 
