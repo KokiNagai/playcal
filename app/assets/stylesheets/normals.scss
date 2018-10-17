@@ -33,10 +33,6 @@ html,body{margin:0;padding:0;}
   }
 }
 
-
-
-
-
 a {
   text-decoration: none;
 
@@ -47,7 +43,9 @@ a {
     color: #535353;
   }
   &:hover {
-    text-decoration: none;
+    background-color: #e5ffcc;
+    opacity: 0.7;
+    color: $green-highlight;
   }
 }
 
@@ -895,11 +893,7 @@ h1 {
    color: $gray-medium-dark;
    font-size: 1.7rem;
  }
- a#dropdown-list:active {
-   color: $green-highlight;
-   border-bottom: 3px solid $green-highlight;
-   font-weight: 600;
- }
+
 
  #dropdown-list-Q {
    border-bottom: 1px solid $gray-border-light;
