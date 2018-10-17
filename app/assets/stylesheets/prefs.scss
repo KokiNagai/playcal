@@ -83,6 +83,20 @@ $green-highlight: #5f9ea0;
        color: $gray-medium-light;
      }
    }
+   .find-post1 {
+     margin-left: 50px;
+     border: 1px solid $gray-border-light;
+     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+     width: 500px;
+     padding: 15px;
+     margin-bottom: 40px;
+     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+     time {
+       font-size: 13px;
+       text-align: right;
+       color: $gray-medium-light;
+     }
+   }
    .side-find {
      img {
        width: 300px;
@@ -211,6 +225,7 @@ $green-highlight: #5f9ea0;
     text-align: center !important;
     text-decoration: none !important;
     width: auto !important;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
   }
 
   .search-form {

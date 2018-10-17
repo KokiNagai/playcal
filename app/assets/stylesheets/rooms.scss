@@ -84,6 +84,7 @@ $green-highlight: #5f9ea0;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
    }
    .inbox-main:hover {
@@ -220,6 +221,7 @@ $green-highlight: #5f9ea0;
   border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
   padding-right: 10px;
   padding-left: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
 }
 
 .inbox-mail-title {

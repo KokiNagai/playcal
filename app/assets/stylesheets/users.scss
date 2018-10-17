@@ -113,6 +113,7 @@ $green-highlight: #5f9ea0;
          margin: 0 auto;
          padding: 12px;
          width: 90%;
+         box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
          h3 {
            margin-left: 5%;
            margin-top: 0px;
@@ -139,6 +140,7 @@ $green-highlight: #5f9ea0;
        padding: 10px;
        width: 85%;
        margin: 40px auto;
+       box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
        .upper-user-sent {
          border-bottom: 1px solid $gray-border-light;
          h2 {
