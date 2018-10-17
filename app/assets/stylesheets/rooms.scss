@@ -671,7 +671,7 @@ textarea#comment-text {
   h1 {
     color: $gray-medium-dark;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     margin-right: 10px;
   }
   .fa {
@@ -687,7 +687,6 @@ textarea#comment-text {
   .reply {
     padding: 5px 17px 0 17px;
     border: 1px solid $gray-border-light;
-    border-bottom: none;
     border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
     p {
       margin-bottom: 1px;
@@ -697,7 +696,6 @@ textarea#comment-text {
   .no-reply {
     padding: 5px 15px 0 15px;
     border: 1px solid $green-highlight;
-    border-bottom: none;
     border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
     background-color: $green-highlight;
     p {
@@ -880,13 +878,14 @@ textarea#comment-text {
   border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
   padding-right: 5px;
   padding-left: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
 }
 
 .inbox-mail-title {
   border-bottom: 1px solid $gray-border-light;
   text-align: center;
   h2 {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   color: $gray-medium-dark;
  }
@@ -895,12 +894,16 @@ textarea#comment-text {
 .inbox-mail-sent {
   text-align: center;
   border-bottom: 1px solid $gray-border-light;
+  h2 {
+    font-size: 16px;
+  }
   a {
-    font-size: 13px;
+    font-size: 16px;
     margin-right: 10px;
   }
   .fa {
     margin-right: 10px;
+    font-size: 16px;
   }
 }
 
@@ -911,11 +914,15 @@ textarea#comment-text {
 .inbox-mail-recieved {
   text-align: center;
   a {
-    font-size: 13px;
+    font-size: 16px;
     margin-right: 10px;
+  }
+  h2 {
+    font-size: 16px;
   }
   .fa {
     margin-right: 10px;
+    font-size: 16px;
   }
 }
 
