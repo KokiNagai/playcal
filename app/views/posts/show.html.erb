@@ -93,12 +93,16 @@
   <%= f.hidden_field :from_id, :value => current_user.id %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="post-message-submit">
-    <%= f.submit "メッセージを送る", class: "btn btn-success" %>
+    <button type="submit", class="btn btn-success", id="post-message-submit">
+      <i class="fa fa-paper-plane-o"></i>メッセージを送る
+     </button>
   </div>
   <% end %>
   <% elsif current_user == @user %>
   <div class="post-message-check">
-    <%= link_to("メッセージボックスで確認する", "/inbox", class: "btn btn-success", id: "post-message-check") %>
+    <%= link_to("/inbox", class: "btn btn-success", id: "post-message-check") do %>
+    メッセージボックスで確認する
+    <% end %>
   </div>
   <% elsif @post.rooms.where(from_id: current_user.id).present? %>
   <% room = @post.rooms.find_by(from_id: current_user.id) %>
