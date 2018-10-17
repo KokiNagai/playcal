@@ -781,6 +781,10 @@ h1 {
      font-weight: bold;
     }
 
+    a#logo:active {
+      color: #99ff66;
+    }
+
  .navbar-fixed-top {
   background-color: #fff;
   border-bottom: 1px solid #dcdcdc;
@@ -827,7 +831,7 @@ h1 {
    }
  }
 
- #dropdown-fontawesome:hover {
+ #dropdown-fontawesome:active {
    color: $gray-medium-light;
  }
 
@@ -891,15 +895,19 @@ h1 {
    color: $gray-medium-dark;
    font-size: 1.7rem;
  }
- #dropdown-list:hover {
+ a#dropdown-list:active {
    color: $green-highlight;
+   font-weight: 600;
  }
 
  #dropdown-list-Q {
    border-bottom: 1px solid $gray-border-light;
    margin-top: 30px;
    padding-bottom: 10px;
-   font-size: 1.5rem;
+   a {
+   font-size: 1.8rem;
+   color: $gray-medium-dark;
+ }
  }
 
  #dropdown-list-p {
@@ -923,7 +931,7 @@ h1 {
    margin-top: 5px;
  }
 
- #close-modal:hover {
+ #close-modal:active {
    color: $gray-medium-dark;
  }
 

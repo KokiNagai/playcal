@@ -526,6 +526,10 @@ $green-highlight: #5f9ea0;
        }
      }
 
+     .find-title a.find-user-name:active {
+       border-bottom: 3px solid $pink-borderbottom;
+     }
+
      .find-post-detail {
        margin: 10px auto;
        border-bottom: 3px solid $pink-borderbottom;
@@ -593,6 +597,10 @@ $green-highlight: #5f9ea0;
         text-align: center !important;
         text-decoration: none !important;
         width: 100px !important;
+      }
+
+      .gender-JS:active {
+        background-color: #cfcfcf;
       }
 
       .searched-info {

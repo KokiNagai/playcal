@@ -727,6 +727,10 @@ input#edit-submit {
     width: 300px;
   }
 
+  input#edit-submit:active {
+    color: #99ff66;
+  }
+
  // like(スマホ)================================
 
  .like-wrapper {

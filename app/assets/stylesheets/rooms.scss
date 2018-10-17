@@ -749,6 +749,10 @@ textarea#comment-text {
     }
   }
 
+  .inbox-post-left a:active {
+    border-bottom: 3px solid $pink-borderbottom;
+  }
+
 
 #inbox-user-picture {
   width: 40px;
@@ -778,6 +782,11 @@ textarea#comment-text {
       font-size: 1.8rem;
     }
   }
+
+  .inbox-content h2 a:active {
+    border-bottom: 3px solid $pink-borderbottom;
+  }
+
   h4 {
     font-size: 1.2rem;
     color: $gray-medium-dark;
@@ -895,6 +904,10 @@ textarea#comment-text {
   .fa {
     margin-right: 10px;
   }
+}
+
+.inbox-mail-sent a:active, .inbox-mail-recieved a:active {
+  border-bottom: 3px solid $pink-borderbottom;
 }
 
 .inbox-mail-recieved {
