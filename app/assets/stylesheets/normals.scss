@@ -897,6 +897,7 @@ h1 {
  }
  a#dropdown-list:active {
    color: $green-highlight;
+   border-bottom: 3px solid $green-highlight;
    font-weight: 600;
  }
 
