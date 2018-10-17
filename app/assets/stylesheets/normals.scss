@@ -19,7 +19,7 @@ html,body{margin:0;padding:0;}
   body {
     padding-top: 73px;
     background-color: #fff;
-    font-family: Circular,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","MS Gothic","ＭＳ ゴシック","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-family: 'Ropa Sans', -apple-system, "Helvetica Neue", "Arial", "hiragino kaku gothic pron", sans-serif;
   }
 }
 
@@ -1175,6 +1175,17 @@ h1 {
   border-radius: 0%;
 }
 
+.top-post-title {
+  width: 300px;
+  margin: 50px auto;
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    color: $green-logo-color;
+    font-size: 25px;
+  }
+}
+
 .top-description {
   text-align: center;
   margin: 100px 0 100px 0;
@@ -1248,6 +1259,10 @@ h1 {
     background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
+}
+
+#will_paginate1 {
+  margin-left: 40px;
 }
 
 // ログインモーダル(スマホ)==============
