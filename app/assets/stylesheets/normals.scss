@@ -448,13 +448,17 @@ h1 {
   font-size: 27px;
   border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
   background-color: $green-logo-color;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #56ab2f;
   cursor: pointer;
   #top-section-p {
     color: #fff;
   }
 }
-.top-section p:hover {
+.top-section p:active {
   background-color: #99ff66;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
 }
 
 .top-section img {
@@ -462,16 +466,70 @@ h1 {
   height: 600px;
   object-fit: cover;
 }
+
+.top-news {
+    position: relative;
+    margin: 90px auto;
+    padding: 1.2em 1em;
+    border: solid 3px $pink-borderbottom;
+    border-radius: 8px;
+    width: 90%;
+    p {
+      font-size: 1.5rem;
+      color: $gray-medium-dark;
+    }
+}
+.top-news .top-news-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: $pink-borderbottom;
+    font-weight: bold;
+}
+.top-news p {
+    margin: 0;
+    padding: 0;
+}
+
 .top-post-title {
   width: 300px;
-  margin: 50px auto;
+  margin: 30px auto;
+  position: relative;
+  padding: 2em 0.7em;
+  background: $pink-borderbottom;
+  font-weight: bold;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
   h2 {
     text-align: center;
     font-weight: 600;
-    color: $green-logo-color;
-    font-size: 25px;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 1.2px;
+  }
+  .fa {
+    margin-right: 10px;
   }
 }
+.top-post-title:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid $pink-borderbottom;
+  width: 0;
+  height: 0;
+}
+.top-post-title h2 {
+  margin: 0;
+  padding: 0;
+}
+
 
 .top-description {
   text-align: center;
@@ -553,6 +611,11 @@ h1 {
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
   }
 }
+
+#will_paginate1 {
+  margin-left: 400px;
+}
+
 
 
 
@@ -1133,12 +1196,12 @@ h1 {
   position: relative;
   h1 {
     position: absolute;
-    color: white;
+    color: #66ff33;
     font-family: 'Corben', cursive;
     font-size: 3.2rem;
     font-weight: 600;
     left: 5%;
-    top: 15%;
+    top: 7%;
     letter-spacing: 0.06em;
   }
   h2 {
@@ -1148,7 +1211,7 @@ h1 {
     font-size: 1.8rem;
     font-weight: 600;
     left: 5%;
-    top: 33%;
+    top: 22%;
   }
 }
 
@@ -1165,35 +1228,92 @@ h1 {
   padding-right: 20px;
   color: #fff;
   font-size: 15px;
+  font-weight: 600;
   border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
   background: #56ab2f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #56ab2f, #a8e063); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #56ab2f, #a8e063); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #56ab2f, #a8e063);
+  background: linear-gradient(to right, #56ab2f, #a8e063);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #56ab2f;
   cursor: pointer;
   #top-section-p {
     color: #fff;
   }
 }
-.top-section p:hover {
+.top-section p:active {
   background-color: #99ff66;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
 }
 
 .top-section img {
   width: 100%;
-  height: 400px;
+  height: 300px;
   object-fit: cover;
   border-radius: 0%;
 }
 
+.top-news {
+    position: relative;
+    margin: 90px auto;
+    padding: 1.2em 1em;
+    border: solid 3px $pink-borderbottom;
+    border-radius: 8px;
+    width: 90%;
+    p {
+      font-size: 1.5rem;
+      color: $gray-medium-dark;
+    }
+}
+.top-news .top-news-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: $pink-borderbottom;
+    font-weight: bold;
+}
+.top-news p {
+    margin: 0;
+    padding: 0;
+}
+
 .top-post-title {
   width: 300px;
-  margin: 50px auto;
+  margin: 30px auto;
+  position: relative;
+  padding: 2em 0.7em;
+  background: $pink-borderbottom;
+  font-weight: bold;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
   h2 {
     text-align: center;
     font-weight: 600;
-    color: $green-logo-color;
-    font-size: 25px;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 1.2px;
   }
+  .fa {
+    margin-right: 10px;
+  }
+}
+.top-post-title:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid $pink-borderbottom;
+  width: 0;
+  height: 0;
+}
+.top-post-title h2 {
+  margin: 0;
+  padding: 0;
 }
 
 .top-description {
@@ -1266,13 +1386,20 @@ h1 {
     padding: 5px 10px 5px 10px;
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
     background: #ff9966;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #ff9966;
   }
 }
 
+.top-under-find p:active {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
 #will_paginate1 {
-  margin-left: 40px;
+  margin-left: 80px;
 }
 
 // ログインモーダル(スマホ)==============

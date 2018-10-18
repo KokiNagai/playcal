@@ -8,8 +8,11 @@
   <p><%= link_to "あなたの都道府県 × 一週間後", "/search?utf8=✓&q%5Bcity_cont%5D=&q%5Bplayday_gteq%281i%29%5D=#{Time.now.next_week.year}&q%5Bplayday_gteq%282i%29%5D=#{Time.now.next_week.month}&q%5Bplayday_gteq%283i%29%5D=#{Time.now.next_week.day}&q%5Bplayday_lteq%281i%29%5D=#{Time.now.next_week.year}&q%5Bplayday_lteq%282i%29%5D=#{Time.now.next_week.month}&q%5Bplayday_lteq%283i%29%5D=#{Time.now.next_week.day}&q%5Bprefecture_eq%5D=#{current_user.live}&q%5Bgender_eq%5D=&q%5Bstyle_eq%5D=&button=", id: "recommend1" %>で検索</p>
 </div>
 
-<div class="home-section">
+<div class="home-news">
 
+</div>
+
+<div class="home-section">
   <div class="home-section-1">
     <h2>募集する</h2>
     <%= link_to posting_path  do %>
@@ -61,13 +64,18 @@
       <div class="top-section">
         <img src="assets/shoes-614176_1280.jpg">
         <h1>Playcal</h1>
-        <h2>明日の練習相手、テニス仲間をここで見つけよう！</h2>
+        <h2>「シンプルで楽しく」テニス仲間や練習相手が見つかる！</h2>
         <p><%= link_to '登録無料', new_user_registration_path, :style=>"color: white; font-size: 17px;" %></p>
       </div>
     </div>
 
+    <div class="top-news">
+    <span class="top-news-title">Playcal News</span>
+    <p>2018年10月18日 - Playcalに「ATPワールドツアー・チャットカフェ」が開店しました！</p>
+  </div>
+
     <div class="top-post-title">
-      <h2>現在募集している投稿</h2>
+      <h2><i class="fa fa-bullhorn"></i>現在募集している投稿</h2>
     </div>
 
     <div class="find-main">
