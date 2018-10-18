@@ -1,0 +1,201 @@
+<div class="tour-wrapper">
+  <div class="tour-wrapper-title">
+    <h1><i class="fa fa-coffee"></i>ATPワールドツアー</br>チャットカフェ</h1>
+    <p>ATPワールドツアーチャットカフェはATPの試合を応援したり、試合経過を見たりできる掲示板です。</p>
+    <p>ATPワールドツアー・チャットカフェは、大会の数日前にオープンいたします。</p>
+    <p>オープンの日程に関しては下のATPワールド・ツアーの日程表を御覧ください。</p>
+    <p>※ ATP250以下の大会や、有名選手が出場しない大会に関してはオープンしませんのでご了承ください。</p>
+  </div>
+  <div class="tour-now-wrapper">
+    <div class="tour-now">
+      <p>現在開催中のATPワールドツアー</p>
+    </div>
+    <div class="top-chatbox-main-now">
+      <% if @chatboxes.present? %>
+      <% @chatboxes.each do |chatbox| %>
+      <div class="tour-name-flex">
+        <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+        <p>( <%= chatbox.chats.count %>件のコメント )</p>
+      </div>
+      <p>大会期間: <%= chatbox.chatterm %></p>
+      <% end %>
+      <% else %>
+      <p>現在開催中のツアーはありません</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="tour-close-wrapper">
+    <div class="tour-close">
+      <p>終了したATPワールドツアー</p>
+    </div>
+    <div class="top-chatbox-main-close">
+      <% @chatboxes1.each do |chatbox| %>
+      <div class="tour-name-flex">
+        <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+        <p>( <%= chatbox.chats.count %>件のコメント )</p>
+      </div>
+      <p>大会期間: <%= chatbox.chatterm %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="atp-schedule">
+    <div class="atp-schedule-title">
+      <h2>2018年オープン予定スケジュール</h2>
+    </div>
+    <div class="atp-schedule-main">
+      <div class="atp-schedule-2018">
+        <table>
+          <tr>
+            <th id="ten">10月</th>
+          </tr>
+          <tr>
+            <td>10月22日～</br>10月28日</td><td>スイス・インドア</br>(スイス/バーゼル)</td><td>ATP500</td>
+          </tr>
+          <tr>
+            <td>10月29日～</br>11月4日</td><td>パリ・マスターズ</br>(フランス/パリ)</td><td>Masters1000</td>
+          </tr>
+          <tr>
+            <th id="eleven">11月</th>
+          </tr>
+          <tr>
+            <td>11月11日～</br>11月18日</td><td>Nitto ATPファイナルズ</br>(イギリス/ロンドン)</td><td>ATPFinals</td>
+          </tr>
+          <tr>
+            <td>11月23日～</br>11月25日</td><td>Davis Cupワールドグループ 決勝</td><td>DavisCup</td>
+          </tr>
+  </table>
+      </div>
+    </div>
+
+      <div class="atp-schedule-title2">
+        <h2>2019年オープン予定スケジュール</h2>
+        <p>※2018年のスケジュールをもとにしています</p>
+      </div>
+      <div class="atp-schedule-main1">
+        <div class="atp-schedule-2019">
+          <table border="1">
+            <tr>
+              <th id="one">1月</th>
+            </tr>
+            <tr>
+              <td>12月31日～</br>1月7日</td><td>ブリスベン国際</br>(オーストラリア/ブリスベン)</td><td>ATP250</td>
+            </tr>
+            <tr>
+              <td>1月15日～</br>1月28日</td><td>全豪オープン</br>(オーストラリア/メルボルン)</td><td>グランドスラム</td>
+            </tr>
+            <tr>
+              <th id="two">2月</th>
+            </tr>
+            <tr>
+              <td>2月2日～</br>2月4日</td><td>Davis Cup ワールドグループ 1回戦</td><td>DavisCup</td>
+            </tr>
+            <tr>
+              <td>2月26日～</br>3月3日</td><td>メキシコ・オープン</br>(メキシコ/アカプルコ)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <th id="three">3月</th>
+            </tr>
+            <tr>
+              <td>3月8日～</br>3月18日</td><td>BNPパリバ・オープン</br>(アメリカ/インディアンウェルズ)</td><td>Masters1000</td>
+            </tr>
+            <tr>
+              <td>3月21日～</br>4月1日</td><td>マイアミ・オープン</br>(アメリカ/マイアミ)</td><td>Masters1000</td>
+            </tr>
+            <tr>
+              <th id="four">4月</th>
+            </tr>
+            <tr>
+              <td>4月6日～</br>4月8日</td><td>Davis Cup ワールドグループ 準々決勝</td><td>DavisCup</td>
+            </tr>
+            <tr>
+              <td>4月23日～</br>4月29日</td><td>バルセロナ・オープン</br>(スペイン/バルセロナ)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <th id="five">5月</th>
+            </tr>
+            <tr>
+              <td>5月6日～</br>5月13日</td><td>ムチュア・マドリード・オープン</br>(スペイン/マドリード)</td><td>Masters1000</td>
+            </tr>
+            <tr>
+              <td>5月13日～</br>5月20日</td><td>BNLイタリア国際</br>(イタリア/ローマ)</td><td>Masters1000</td>
+            </tr>
+            <tr>
+              <td>5月27日～</br>6月10日</td><td>全仏オープン</br>(フランス/パリ)</td><td>グランドスラム</td>
+            </tr>
+            <tr>
+              <th id="six">6月</th>
+            </tr>
+            <tr>
+              <td>6月18日～</br></br>6月24日</td><td>ゲリー・ウェバー・オープン</br>(ドイツ/ハレ)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <td>6月18日～</br>6月24日</td><td>フィーバーツリー選手権</br>(イギリス/ロンドン)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <th id="seven">7月</th>
+            </tr>
+            <tr>
+              <td>7月2日～</br>7月15日</td><td>ウィンブルドン</br>(イギリス/ロンドン)</td><td>グランドスラム</td>
+            </tr>
+            <tr>
+              <td>7月23日～</br>7月29日</td><td>ドイツ・テニス選手権</br>(ドイツ/ハンブルク)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <td>7月30日～</br>8月5日</td><td>シティ・オープン</br>(アメリカ/ワシントンD.C.)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <th id="eight">8月</th>
+            </tr>
+            <tr>
+              <td>8月6日～</br>8月12日</td><td>ロジャーズ・カップ</br>(カナダ/トロント)</td><td>Masters1000</td>
+            </tr>
+            <tr>
+              <td>8月12日～</br>8月19日</td><td>ウエスタン＆サザン・オープン</br>(アメリカ/シンシナティ)</td><td>Masters1000</td>
+            </tr>
+            <tr>
+              <td>8月27日～</br>9月9日</td><td>全米オープン</br>(アメリカ/ニューヨーク)</td><td>グランドスラム</td>
+            </tr>
+            <tr>
+              <th id="nine">9月</th>
+            </tr>
+            <tr>
+              <td>9月14日～</br>9月16日</td><td>Davis Cup ワールドグループ 準決勝</td><td>DavisCup</td>
+            </tr>
+            <tr>
+              <th id="ten">10月</th>
+            </tr>
+            <tr>
+              <td>10月1日～</br>10月7日</td><td>チャイナ・オープン</br>(中国/北京)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <td>10月1日～</br>10月7日</td><td>楽天オープン</br>(日本/東京)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <td>10月7日～</br>10月14日</td><td>上海マスターズ</br>(中国/上海)</td><td>Masters1000</td>
+            </tr>
+            <tr>
+              <td>10月22日～</br>10月28日</td><td>エルステ・バンク・オープン</br>(オーストリア/ウィーン)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <td>10月7日～</br>10月14日</td><td>上海マスターズ</br>(中国/上海)</td><td>Masters1000</td>
+            </tr>
+            <tr>
+              <td>10月22日～</br>10月28日</td><td>スイス・インドア</br>(スイス/バーゼル)</td><td>ATP500</td>
+            </tr>
+            <tr>
+              <td>10月29日～</br>11月4日</td><td>パリ・マスターズ</br>(フランス/パリ)</td><td>Masters1000</td>
+            </tr>
+            <tr>
+              <th id="eleven">11月</th>
+            </tr>
+            <tr>
+              <td>11月11日～</br>11月18日</td><td>Nitto ATPファイナルズ</br>(イギリス/ロンドン)</td><td>ATPFinals</td>
+            </tr>
+            <tr>
+              <td>11月23日～</br>11月25日</td><td>Davis Cupワールドグループ 決勝</td><td>DavisCup</td>
+            </tr>
+    </table>
+        </div>
+      </div>
+    </div>
+</div>

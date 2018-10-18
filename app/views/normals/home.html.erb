@@ -27,6 +27,30 @@
     </div>
 </div>
 
+<div class="top-chatbox-wrapper">
+  <div class="top-chatbox-title">
+    <img src="assets/ATPtour.jpeg">
+    <h2 class="visible-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 2.4rem; font-weight: 600;" %></h2>
+    <h2 class="hidden-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 4rem; font-weight: 600;" %></h2>
+
+
+  </div>
+  <div class="top-chatbox-under">
+    <div class="top-chatbox-now">
+      <p><i class="fa fa-comments-o"></i>現在オープン中のATPワールドツアーチャット</p>
+    </div>
+    <div class="top-chatbox-main">
+      <% @chatboxes.each do |chatbox| %>
+      <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+      <p>大会期間: <%= chatbox.chatterm %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="top-chatbox-bottom">
+    <p><%= link_to "過去の大会や開催予定の大会はこちら", "/tourlists", style: "color: #ff6666;" %></p>
+  </div>
+</div>
+
   <% else %>
   <div class="login-modal-dieplay hidden-xs">
     <%= render 'devise/sessions/new' %>
@@ -87,14 +111,29 @@
 
   <%= will_paginate(@posts, inner_window: 3, previous_label: "前へ", next_label: "次へ", id: "will_paginate1") %>
 
-    <div class="top-description">
-      <h2><i class="fa fa-check-circle-o fa-2x"></i>Be simple</h2>
-      <p>検索や投稿、メッセージなどは非常にシンプルでわかりやすくなっています。</p>
-      <h2><i class="fa fa-check-circle-o fa-2x"></i>Be fun</h2>
-      <p>好きな相手と好きなときに練習できるためあなたのテニスライフをより楽しくします。</p>
-      <h2><i class="fa fa-check-circle-o fa-2x"></i>Be fast</h2>
-      <p>練習相手をすばやく見つけ、明日にでも練習できます。</p>
+  <div class="top-chatbox-wrapper">
+    <div class="top-chatbox-title">
+      <img src="assets/ATPtour.jpeg">
+      <h2 class="visible-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 2.4rem; font-weight: 600;" %></h2>
+      <h2 class="hidden-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 4rem; font-weight: 600;" %></h2>
+
     </div>
+    <div class="top-chatbox-under">
+      <div class="top-chatbox-now">
+        <p><i class="fa fa-comments-o"></i>現在オープン中のATPワールドツアーチャット</p>
+      </div>
+      <div class="top-chatbox-main">
+        <% @chatboxes.each do |chatbox| %>
+        <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+        <p>大会期間: <%= chatbox.chatterm %></p>
+        <% end %>
+      </div>
+    </div>
+    <div class="top-chatbox-bottom">
+      <p><%= link_to "過去の大会や開催予定の大会はこちら", "/tourlists", style: "color: #ff6666;" %></p>
+    </div>
+  </div>
+
 
     <div class="top-under">
          <div class="top-under-main">

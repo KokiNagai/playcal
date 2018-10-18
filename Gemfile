@@ -60,6 +60,7 @@ gem 'jquery-rails'
 
 gem 'jquery-turbolinks'
 
+
 gem 'sitemap_generator'
 
 #gem 'sqlite3'

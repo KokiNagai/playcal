@@ -30,12 +30,18 @@ Rails.application.routes.draw do
 
   post "/reports", to: "report#create"
 
+  post "/chats", to: "chats#create"
+
+  get "/tourlists", to: "normals#tourlist"
+
 
   resources :users, param: :name, only: [:show] do
     member do
       get :likes
     end
   end
+
+  get "/:chatname", to: "chatboxes#chatbox"
 
   resources :comments
   resources :reports

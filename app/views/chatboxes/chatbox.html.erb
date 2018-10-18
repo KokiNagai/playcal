@@ -1,0 +1,81 @@
+<div class="chatbox-wrapper">
+  <div class="row row-0">
+    <div class="chatbox-prewrapper col-md-8 col-sm-12">
+      <div class="chatbox-main">
+        <div class="chatbox-open">
+          <% if @chatbox.touropen == true %>
+          <p>大会開催中</p>
+          <% end %>
+        </div>
+        <div class="chatbox-open1">
+          <% if @chatbox.touropen == false %>
+          <p>大会閉会中</p>
+          <% end %>
+        </div>
+        <div class="chatbox-title">
+          <span><%= image_tag("ATPLOGO.png")%></span>
+          <h1><%= @chatbox.chatname %></h1>
+        </div>
+        <div class="chatbox-term">
+          <p>大会期間: <%= @chatbox.chatterm %></p>
+        </div>
+
+        <div class="chatbox-count">
+          <p><%= @chatbox.chats.count %>件のコメント</p>
+        </div>
+        <% if @chats.present? %>
+        <% @chats.each do |chat| %>
+        <div class="chatbox-content-wrapper">
+          <div class="chatbox-content">
+            <% if chat.user.picture.present? %>
+            <div class="chat-user-picture">
+              <p><%= image_tag(chat.user.picture_url, :id => "chat-user-picuture") %></p>
+            <% else %>
+            <p><%= image_tag('blank-profile-picture-973460_1280.png', :class => "chat-user-picuture") %></p>
+            <% end %>
+            </div>
+            <div class="chat-user-content">
+              <p id="chatbox-content-Q"><%= chat.text %></p>
+            </div>
+          </div>
+          <div class="chat-user-name">
+            <p><%= chat.user.name %></p>
+          </div>
+          <div class="chatbox-time">
+          <p><%= time_ago_in_words(chat.created_at) %>前</p>
+          </div>
+        </div>
+        <% end  %>
+        <% end %>
+      </div>
+      <div class="render-chat">
+        <div class="render-chat-title">
+          <p><i class="fa fa-pencil-square-o"></i>コメントを書く</p>
+        </div>
+        <%= render 'chatboxes/chat' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 hidden-xs">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- playcal-side -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-5276826909376331"
+     data-ad-slot="1679934176"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>
+</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- playcal-foot -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5276826909376331"
+     data-ad-slot="9544189741"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
