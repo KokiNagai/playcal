@@ -3,12 +3,12 @@
     <div class="chatbox-prewrapper col-md-8 col-sm-12">
       <div class="chatbox-main">
         <div class="chatbox-open">
-          <% if @chatbox.touropen == true %>
+          <% if @chatbox.touropen == false %>
           <p>カフェオープン中</p>
           <% end %>
         </div>
         <div class="chatbox-open1">
-          <% if @chatbox.touropen == false %>
+          <% if @chatbox.touropen == true %>
           <p>大会終了</p>
           <% end %>
         </div>
