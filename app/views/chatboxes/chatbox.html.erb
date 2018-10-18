@@ -30,10 +30,13 @@
             <% if chat.user.picture.present? %>
             <div class="chat-user-picture">
               <p><%= image_tag(chat.user.picture_url, :id => "chat-user-picuture") %></p>
+              </div>
             <% else %>
-            <p><%= image_tag('blank-profile-picture-973460_1280.png', :class => "chat-user-picuture") %></p>
-            <% end %>
+            <div class="chat-user-picture">
+            <p><%= image_tag('blank-profile-picture-973460_1280.png', :id => "chat-user-picuture") %></p>
             </div>
+            <% end %>
+
             <div class="chat-user-content">
               <p id="chatbox-content-Q"><%= chat.text %></p>
             </div>
