@@ -657,7 +657,7 @@ $green-highlight: #5f9ea0;
 
   .chatbox-content-wrapper {
     border-top: 1px solid $gray-border-light;
-    padding: 20px 0 40px 0;
+    padding: 20px 0 10px 0;
   }
 
   .chatbox-content {
@@ -721,13 +721,14 @@ $green-highlight: #5f9ea0;
   }
   .render-chat {
     border-top: 1px solid $gray-border-light;
+    margin-bottom: 60px;
   }
   .render-chat-title {
     .fa {
-      margin-right: 10px;
+      margin-right: 8px;
     }
     p {
-      margin: 30px 0 0 20px;
+      margin: 30px 0 0 10px;
       font-size: 1.7rem;
       color: $gray-medium-dark;
     }
