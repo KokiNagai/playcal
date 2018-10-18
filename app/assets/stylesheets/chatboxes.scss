@@ -664,8 +664,8 @@ $green-highlight: #5f9ea0;
     display: flex;
     width: 100%;
     img {
-      width: 30px;
-      height: 30px;
+      width: 33px;
+      height: 33px;
     }
     .chat-user-picture {
       width: 10%;
@@ -675,16 +675,18 @@ $green-highlight: #5f9ea0;
       width: 80%;
       p {
         color: $gray-medium-dark;
+        font-weight: 500;
         line-height: 1.5em;
         letter-spacing: 1px;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
     }
   }
   .chat-user-name {
-    margin-left: 15%;
-    font-size: 1.1rem;
+    margin-left: 17%;
+    font-size: 1.4rem;
     color: $gray-medium-light;
+
   }
 
   .chatbox-time {
@@ -692,7 +694,7 @@ $green-highlight: #5f9ea0;
     margin-right: 10px;
     p {
       color: $gray-medium-light;
-      font-size: 12px;
+      font-size: 1.4rem;
       margin-bottom: 0px;
     }
   }
