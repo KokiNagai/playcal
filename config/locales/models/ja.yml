@@ -16,6 +16,7 @@ ja:
         live: 住まい
         history: テニス歴
         birth_date: 生年月日
+        password_confirmation: パスワードの確認
 
       post:
        title: タイトル
