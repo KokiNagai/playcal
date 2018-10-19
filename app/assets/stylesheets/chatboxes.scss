@@ -6,7 +6,7 @@ $gray-medium-light: #919191;
 $gray-medium-dark: #4c4c4c;
 $gray-border-light: #cfcfcf;
 $gray-word: #919191;
-$green-logo-color: #33cc33;
+$green-logo-color: #9cd75b;
 $pink-hightlight: #ff6666;
 $pink-borderbottom: #ffd6d6;
 $green-highlight: #5f9ea0;
@@ -22,7 +22,7 @@ $green-highlight: #5f9ea0;
       width: 160px;
       padding: 10px;
       font-weight: 600;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       background: $pink-hightlight;
       color: #fff;
       margin-right: 30px;
@@ -69,7 +69,7 @@ $green-highlight: #5f9ea0;
       width: 160px;
       padding: 10px;
       font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       background: #6495ed;
       color: #fff;
       margin-right: 30px;
@@ -195,6 +195,15 @@ $green-highlight: #5f9ea0;
       }
       #chat-form-submit {
         margin-left: 200px;
+        background-color: $green-logo-color;
+        border: none;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+        border-bottom: solid 3px $green-logo-color;
+        font-weight: 600;
+      }
+      #chat-form-submit:active {
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+        border-bottom: none;
       }
     }
     #chatform {
@@ -708,6 +717,15 @@ $green-highlight: #5f9ea0;
     }
     #chat-form-submit {
       margin-left: 200px;
+      background-color: $green-logo-color;
+      border: none;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+      border-bottom: solid 3px $green-logo-color;
+      font-weight: 600;
+    }
+    #chat-form-submit:active {
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+      border-bottom: none;
     }
   }
   #chatform {

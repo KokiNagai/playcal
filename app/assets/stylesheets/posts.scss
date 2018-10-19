@@ -6,7 +6,7 @@ $gray-medium-light: #919191;
 $gray-medium-dark: #4c4c4c;
 $gray-border-light: #cfcfcf;
 $gray-word: #919191;
-$green-logo-color: #33cc33;
+$green-logo-color: #9cd75b;
 $pink-hightlight: #ff6666;
 $pink-borderbottom: #ffd6d6;
 $green-highlight: #5f9ea0;
@@ -151,8 +151,16 @@ span.picture {
  }
  #posting-submit {
    width: 200px;
+   background-color: $green-logo-color;
+   border: none;
+   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+   border-bottom: solid 3px $green-logo-color;
  }
 
+ #posting-submit:active {
+   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+   border-bottom: none;
+ }
 
 
 /* _post.html.erb(タブレット,PC用)======================= */
@@ -532,7 +540,7 @@ span.picture {
     border: 1px solid #cfcfcf;
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
     display: inline-block;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     h2 {
       font-size: 13px;
       font-weight: 600;
@@ -606,7 +614,15 @@ span.picture {
    #posting-submit {
      margin: 0 auto;
      display: block;
-     width: 300px;
+     width: 200px;
+     background-color: $green-logo-color;
+     border: none;
+     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+     border-bottom: solid 3px $green-logo-color;
+   }
+   #posting-submit:active {
+     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+     border-bottom: none;
    }
 
    span.help-block {

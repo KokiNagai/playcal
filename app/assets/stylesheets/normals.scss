@@ -8,7 +8,7 @@ $gray-medium-light: #a0a0a0;
 $gray-medium-dark: #4c4c4c;
 $gray-border-light: #cfcfcf;
 $gray-word: #919191;
-$green-logo-color: #33cc33;
+$green-logo-color: #9cd75b;
 $pink-hightlight: #ff6666;
 $pink-borderbottom: #ffd6d6;
 $green-highlight: #5f9ea0;
@@ -119,7 +119,7 @@ header {
   margin-top: 13px;
   margin-right: 10px;
   font-size: 33px;
-  color: #32cd32;
+  color: $green-logo-color;
   letter-spacing: -1px;
   padding-top: 4px;
   font-weight: bold;
@@ -177,7 +177,7 @@ header {
    width: 270px;
    p {
      font-size: 12px;
-     width: 200px;
+     width: 240px;
      margin-top: 20px;
      margin-left: 30px;
    }
@@ -675,7 +675,18 @@ h1 {
       margin: 30px auto;
       width: 500px;
       display: block;
+      background-color: $green-logo-color;
+      border: none;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+      border-bottom: solid 3px $green-logo-color;
     }
+
+    input#login-submit:active {
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+      border-bottom: none;
+    }
+
+
     .login-under {
      text-align: center;
      #login-under-signup {
@@ -708,8 +719,15 @@ h1 {
     input#email-submit {
       margin: 30px auto;
       width: 500px;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+      border-bottom: solid 3px #56ab2f;
       display: block;
     }
+    input#email-submit:active {
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+      border-bottom: none;
+    }
+
     p {
       color: $gray-medium-light;
       font-size: 14px;
@@ -724,19 +742,16 @@ h1 {
 
 
 .link-info {
-  margin-left: 40px;
-  font-size: 15px;
+  margin-left: 10px;
+  font-size: 12px;
+  width: 250px;
   p {
     margin-top: 10px;
-    width: 170px;
     color: $green-highlight;
   }
   .fa {
     margin-right: 10px;
   }
-}
-.link-info p:hover {
-  border-bottom: 2px solid $green-highlight;
 }
 
 .side-links-info {
@@ -846,7 +861,7 @@ h1 {
      margin-top: 13px;
      margin-right: 10px;
      font-size: 25px;
-     color: #32cd32;
+     color: $green-logo-color;
      letter-spacing: -1px;
      padding-top: 4px;
      font-weight: bold;
@@ -1196,22 +1211,22 @@ h1 {
   position: relative;
   h1 {
     position: absolute;
-    color: #66ff33;
-    font-family: 'Corben', cursive;
-    font-size: 3.2rem;
-    font-weight: 600;
+    color: $green-logo-color;
+    font-size: 3.9rem;
+    font-weight: 900;
     left: 5%;
     top: 7%;
     letter-spacing: 0.06em;
+
   }
   h2 {
     position: absolute;
     color: white;
     line-height: 1.5;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    left: 5%;
-    top: 22%;
+    left: 3%;
+    top: 26%;
   }
 }
 
@@ -1369,7 +1384,7 @@ h1 {
     color: $gray-medium-dark;
   }
   img {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     display: block;
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
@@ -1430,8 +1445,17 @@ h1 {
       margin: 30px auto;
       width: 300px;
       display: block;
-
+      background-color: $green-logo-color;
+      border: none;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+      border-bottom: solid 3px $green-logo-color;
     }
+
+    input#login-submit:active {
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+      border-bottom: none;
+    }
+
     .login-under {
       margin-top: 90px;
      #login-under-signup {
