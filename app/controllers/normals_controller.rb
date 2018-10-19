@@ -3,7 +3,7 @@ class NormalsController < ApplicationController
 
 
   def home
-    @posts = Post.all.order(created_at: :desc).paginate(page: params[:page], per_page: 6)
+    @posts = Post.where(term: true).order("RANDOM()").limit(6)
     @chatboxes = Chatbox.where(touropen: false).limit(5)
     if logged_in?
     @post = current_user.posts.build
