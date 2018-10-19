@@ -78,18 +78,18 @@ $green-highlight: #5f9ea0;
 }
 
 
-  .inbox-main {
-    border: 1px solid $gray-border-light;
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
-    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-   }
-   .inbox-main:hover {
-     background-color:#efffef;
-   }
+   .inbox-main1 {
+     border: 1px solid $gray-border-light;
+     width: 95%;
+     display: flex;
+     flex-direction: row;
+     margin: 0 auto;
+     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    }
+    .inbox-main1:hover {
+      background-color:#efffef;
+    }
 
   .inbox-post-left {
     text-align: center;
