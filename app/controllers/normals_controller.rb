@@ -10,6 +10,8 @@ class NormalsController < ApplicationController
     @post = current_user.posts.build
     @user = User.find_by(name: params[:name])
     @chatboxes = Chatbox.where(touropen: false).limit(5)
+    @posts = Post.where(prefecture: current_user.live)
+    @posts2 = Post.where(term: true).where(playday: Date.today.strftime(date_format).to_i..Float::INFINITY).order("RANDOM()").limit(6)
   end
   end
 

@@ -1,0 +1,35 @@
+<div class="find-main">
+  <%= @message %>
+  <% @posts2.each do |post| %>
+  <div class="find-post1">
+    <div class="find-user-upper">
+      <div class="find-post-user">
+        <% if post.user.picture.present? %>
+        <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300' ) %></p>
+        <% else %>
+        <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300' ) %></p>
+        <% end %>
+        <p><h2><%= post.title.truncate(25) %></h2></p>
+      </div>
+        <div class="find-title">
+          <%= link_to post.user.name.truncate(8), post.user, class: "find-user-name" %>
+        </div>
+        <div class="find-post-detail">
+          <%= link_to "詳細を見る", post, id: "find-post-detail" %>
+        </div>
+    </div>
+    <div class="find-post-under">
+      <div class="post-show-under">
+        <div class="post-show-under-left">
+          <p><label>都道府県</label></br class="visible-xs"><%= post.prefecture %></p>
+          <p><label>都市名</label></br class="visible-xs"><%= post.city %></p>
+        </div>
+        <div class="post-show-under-right">
+          <p><label>練習希望日</label></br class="visible-xs"><%= post.playday %></p>
+          <p><label>練習の内容</label></br class="visible-xs"><%= post.style %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <% end %>
+</div>
