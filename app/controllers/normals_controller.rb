@@ -3,7 +3,8 @@ class NormalsController < ApplicationController
 
 
   def home
-    @posts = Post.where(term: true).order("RANDOM()").limit(6)
+    date_format = "%Y%m%d"
+    @posts = Post.where(term: true).where(playday: Date.today.strftime(date_format).to_i..Float::INFINITY).order("RANDOM()").limit(6)
     @chatboxes = Chatbox.where(touropen: false).limit(5)
     if logged_in?
     @post = current_user.posts.build
