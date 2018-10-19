@@ -15,8 +15,4 @@ class Post < ApplicationRecord
   validates :style, presence: true
   validates :playday, presence: true
 
-
-
-
-
 end
