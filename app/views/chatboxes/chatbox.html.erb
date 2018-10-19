@@ -19,7 +19,7 @@
         <div class="chatbox-term">
           <p>大会期間: <%= @chatbox.chatterm %></p>
         </div>
-
+        <% if user_signed_in? %>
         <div class="chatbox-count">
           <p><%= @chatbox.chats.count %>件のコメント</p>
         </div>
@@ -50,13 +50,22 @@
         </div>
         <% end  %>
         <% end %>
+        <% else %>
+        <div class="chat-form-nonlogin">
+          <h2>閲覧とコメントにはログインが必要です</h2>
+          <p id="chat-form-nonlogin1"><%= link_to('ログインはこちらから', new_user_session_path, style: "color: #5f9ea0;") %></p>
+          <p id="chat-form-nonlogin2"><%= link_to('新規登録はこちらから', new_user_session_path, style: "color: #5f9ea0;") %></p>
+        </div>
+        <% end %>
       </div>
+      <% if user_signed_in? %>
       <div class="render-chat">
         <div class="render-chat-title">
           <p><i class="fa fa-pencil-square-o"></i>コメントを書く</p>
         </div>
         <%= render 'chatboxes/chat' %>
       </div>
+      <% end %>
     </div>
   <div class="col-md-3 hidden-xs">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

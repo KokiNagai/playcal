@@ -16,7 +16,9 @@
       <% @chatboxes.each do |chatbox| %>
       <div class="tour-name-flex">
         <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+        <% if user_signed_in? %>
         <p>( <%= chatbox.chats.count %>件のコメント )</p>
+        <% end %>
       </div>
       <p>大会期間: <%= chatbox.chatterm %></p>
       <% end %>

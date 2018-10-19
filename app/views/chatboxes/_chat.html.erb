@@ -1,4 +1,3 @@
-<% if user_signed_in? %>
 <div class="chat-wrapper">
   <%= bootstrap_form_for(@chat) do |f| %>
   <%= f.hidden_field :chatbox_id, :value => @chatbox.id %>
@@ -11,10 +10,3 @@
   </div>
   <% end %>
 </div>
-<% else %>
-<div class="chat-form-nonlogin">
-  <h2>コメントを書くにはログインが必要です</h2>
-  <p id="chat-form-nonlogin1"><%= link_to('ログインはこちらから', new_user_session_path, style: "color: #5f9ea0;") %></p>
-  <p id="chat-form-nonlogin2"><%= link_to('新規登録はこちらから', new_user_session_path, style: "color: #5f9ea0;") %></p>
-</div>
-<% end %>
