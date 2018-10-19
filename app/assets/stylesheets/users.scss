@@ -263,7 +263,7 @@ $green-highlight: #5f9ea0;
 }
 
 .name-edit {
-  margin-top: 50px;
+  margin-top: 0px;
   margin-left: 95px;
   label {
     margin-top: 30px;
@@ -368,6 +368,20 @@ $green-highlight: #5f9ea0;
   .fa {
     margin-right: 10px;
   }
+}
+
+input#user_password, input#user_password_confirmation {
+  width: 500px;
+}
+
+.edit-submit {
+  margin-bottom: 40px;
+p {
+  color: $gray-medium-dark;
+  margin: 10px auto;
+  font-size: 1.4rem;
+  width: 500px;
+}
 }
 
 input#edit-submit {
@@ -770,6 +784,16 @@ input#edit-submit:active {
       margin-right: 10px;
     }
   }
+
+  .edit-submit {
+    margin-bottom: 40px;
+  p {
+    color: $gray-medium-dark;
+    margin: 10px auto;
+    font-size: 1.4rem;
+    width: 300px;
+  }
+}
 
   input#edit-submit {
     display: block;
