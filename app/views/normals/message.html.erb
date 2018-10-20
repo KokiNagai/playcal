@@ -1,5 +1,4 @@
-<div class="row row-0">
-  <div class="col-md-8 col-sm-12">
+<div class="user-message-wrapper">
     <div class="user-message">
       <div class="user-message-title">
         <h1><i class="fa fa-envelope"></i>メッセージボックス</h1>
@@ -14,11 +13,11 @@
           <div class="user-show-post-picture">
             <% if room.comments.first.user.picture.present? && room.post.user == current_user %>
             <p><%= image_tag(room.comments.first.user.picture_url, class: "post-show-picture" ) %></p>
-            <% elsif room.comments.first.user.picture.nil? && room.post.user == current_user %>
+            <% elsif room.comments.first.user.picture_url.nil? && room.post.user == current_user %>
             <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
             <% elsif room.post.user.picture.present? && room.post.user != current_user %>
             <p><%= image_tag(room.post.user.picture_url, class: "post-show-picture" ) %></p>
-            <% elsif room.post.user.picture.nil? && room.post.user != current_user %>
+            <% elsif room.post.user.picture_url.nil? && room.post.user != current_user %>
             <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
             <% end %>
           </div>
@@ -40,8 +39,7 @@
         <% end %>
         <% end %>
       </div>
-  </div>
-  <div class="col-md-4 hidden-xs">
+  <div class="message-side hidden-xs">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- playcal-side -->
     <ins class="adsbygoogle"
