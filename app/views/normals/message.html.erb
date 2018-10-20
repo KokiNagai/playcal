@@ -12,13 +12,13 @@
         <div class="user-show-post-flex">
           <div class="user-show-post-picture">
             <% if room.comments.first.user.picture.present? && room.post.user == current_user %>
-            <p><%= image_tag(room.comments.first.user.picture_url, class: "post-show-picture" ) %></p>
+            <p><%= link_to image_tag(room.comments.first.user.picture_url, class: "post-show-picture" ), room.comments.first.user %></p>
             <% elsif room.comments.first.user.picture_url.nil? && room.post.user == current_user %>
-            <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+            <p><%= link_to image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ), room.comments.first.user %></p>
             <% elsif room.post.user.picture.present? && room.post.user != current_user %>
-            <p><%= image_tag(room.post.user.picture_url, class: "post-show-picture" ) %></p>
+            <p><%= link_to image_tag(room.post.user.picture_url, class: "post-show-picture" ), room.post.user %></p>
             <% elsif room.post.user.picture_url.nil? && room.post.user != current_user %>
-            <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+            <p><%= link_to image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ), room.post.user %></p>
             <% end %>
           </div>
           <div class="user-show-post-title">
