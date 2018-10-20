@@ -24,11 +24,11 @@
       </div>
     </div>
 
+<% if @user == current_user %>
   <div class="user-show-right">
     <div class="user-show-right-tag">
       <h3>メニュー</h3>
     </div>
-    <% if @user == current_user %>
     <div class="user-show-right-upper">
       <div class="upper-user-recieved">
         <h2><i class="fa fa-envelope-o"></i><%= link_to "メッセージ", "/message" %></h2>
