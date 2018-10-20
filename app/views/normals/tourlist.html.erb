@@ -27,7 +27,7 @@
       <% @chatboxes.each do |chatbox| %>
       <div class="tour-name-flex">
         <span><%= image_tag("ATPLOGO.png", :alt => "テニスの試合の写真") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
-        <span><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</span>
+        <p><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</p>
       </div>
       <p>大会期間: <%= chatbox.chatterm %></p>
       <% end %>
@@ -44,7 +44,7 @@
       <% @chatboxes1.each do |chatbox| %>
       <div class="tour-name-flex">
         <span><%= image_tag("ATPLOGO.png", :alt => "テニスの試合の写真") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
-        <span><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</span>
+        <p><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</p>
       </div>
       <p>大会期間: <%= chatbox.chatterm %></p>
       <% end %>
