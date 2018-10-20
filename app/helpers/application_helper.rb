@@ -42,7 +42,7 @@ end
       og: {
         site_name: 'Playcal',
         title: '「シンプルで楽しく」テニス仲間や練習相手がここで見つかる',
-        description: 'Playcalは「シンプルですばやく」テニスの練習相手を見つけることができます',
+        description: 'Playcalは「シンプルで楽しく」テニスの練習相手を見つけることができます',
         image: image_url("https://fedexkoki.com/wp-content/uploads/2018/10/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2018-10-13-12.33.54.png"),
         type: 'website',
         url: request.original_url,
