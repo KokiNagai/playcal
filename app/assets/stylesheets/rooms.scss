@@ -65,24 +65,23 @@ $green-highlight: #5f9ea0;
     margin-left: 20px;
   }
   .user-show-post-title {
+    display: flex;
     margin-bottom: 10px;
     .fa {
       margin-right: 10px;
       font-size: 1.7rem;
     }
+    span {
+      margin: 20px 0 0 20px;
+      color: $gray-medium-light;
+    }
   }
   .user-message-post {
     margin: 0px 0 10px 0;
-    display: flex;
-    justify-content: space-around;
     span {
-      margin-left: 20px;
+      margin-left: 120px;
       color: $gray-medium-light;
       font-size: 1.5rem;
-    }
-    p {
-      margin: 0px;
-      color: $gray-medium-light;
     }
   }
   .user-show-post-title {
@@ -546,6 +545,11 @@ textarea#comment-text {
   }
   .user-show-post-title {
     margin-bottom: 10px;
+    display: flex;
+    span {
+      margin: 20px 0 0 20px;
+      color: $gray-medium-light;
+    }
     .fa {
       margin-right: 10px;
       font-size: 1.7rem;
@@ -553,16 +557,10 @@ textarea#comment-text {
   }
   .user-message-post {
     margin: 0px 0 10px 0;
-    display: flex;
-    justify-content: space-around;
     span {
-      margin-left: 20px;
+      margin-left: 80px;
       color: $gray-medium-light;
       font-size: 1.5rem;
-    }
-    p {
-      margin: 0px;
-      color: $gray-medium-light;
     }
   }
   .user-show-post-title {

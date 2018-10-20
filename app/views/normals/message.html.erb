@@ -22,12 +22,12 @@
             <% end %>
           </div>
           <div class="user-show-post-title">
-            <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(20),  room, :style=>"font-size: 1.6rem; color: #5f9ea0; font-weight: 500;") %></h2>
+            <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(15),  room, :style=>"font-size: 1.6rem; color: #5f9ea0; font-weight: 500;") %></h2>
+            <span>by <%= room.comments.last.user.name %></span>
           </div>
         </div>
         <div class="user-message-post">
-          <span>「<%= room.post.title %>」</span>
-          <p>from <%= room.comments.last.user.name %></p>
+          <span>「<%= room.post.title.truncate(18) %>」</span>
         </div>
         <div class="user-show-post-under-wrapper">
 
