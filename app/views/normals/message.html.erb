@@ -13,12 +13,16 @@
           <div class="user-show-post-picture">
             <% if room.comments.first.user.picture.present? && room.post.user == current_user %>
             <p><%= link_to image_tag(room.comments.first.user.picture_url, class: "post-show-picture" ), room.comments.first.user %></p>
+            <span><%= room.comments.first.user.name %></span>
             <% elsif room.comments.first.user.picture_url.nil? && room.post.user == current_user %>
             <p><%= link_to image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ), room.comments.first.user %></p>
+            <span><%= room.comments.first.user.name %></span>
             <% elsif room.post.user.picture.present? && room.post.user != current_user %>
             <p><%= link_to image_tag(room.post.user.picture_url, class: "post-show-picture" ), room.post.user %></p>
+            <span><%= room.post.user.name %></span>
             <% elsif room.post.user.picture_url.nil? && room.post.user != current_user %>
             <p><%= link_to image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ), room.post.user %></p>
+            <span><%= room.post.user.name %></span>
             <% end %>
           </div>
           <div class="user-show-post-title">

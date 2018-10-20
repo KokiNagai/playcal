@@ -61,8 +61,15 @@ $green-highlight: #5f9ea0;
       }
     }
   }
-  img {
-    margin-left: 20px;
+  .user-show-post-picture {
+    display: flex;
+    flex-direction: column;
+    img {
+      margin-left: 33px;
+    }
+    span {
+      text-align: center;
+    }
   }
   .user-show-post-title {
     display: flex;
@@ -540,8 +547,16 @@ textarea#comment-text {
       }
     }
   }
-  img {
-    margin-left: 20px;
+  .user-show-post-picture {
+    display: flex;
+    flex-direction: column;
+    img {
+      margin-left: 22px;
+    }
+    span {
+      text-align: center;
+
+    }
   }
   .user-show-post-title {
     margin-bottom: 10px;
