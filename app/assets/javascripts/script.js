@@ -46,21 +46,25 @@ $(function() {
   $('.user-post-recrut').fastClick(function() {
     $('.user-post-show-2').show();
     $('.user-post-show-1').hide();
-    $('.user-post-recrut').css('background-color', '#5f9ea0');
-    $('.user-post-recrut p').css('color', '#fff');
+    $('.user-post-recrut').css('background-color', '#ffd6d6');
+    $('.user-post-recrut p').css('color', '#919191');
     $('.user-post-count').css('background-color', '#fff');
-    $('.user-post-count p' ).css('color', '#4c4c4c');
+    $('.user-post-count p' ).css('color', '#919191');
     $('.user-post-count').css('border', '1px solid #cfcfcf');
+    $('.user-post-count').css('border-bottom', 'none');
+    $('.user-post-recrut').css('border', 'none');
   });
 
   $('.user-post-count').fastClick(function() {
     $('.user-post-show-2').hide();
     $('.user-post-show-1').show();
-    $('.user-post-count').css('background-color', '#5f9ea0');
-    $('.user-post-count p').css('color', '#fff');
+    $('.user-post-count').css('background-color', '#ffd6d6');
+    $('.user-post-count p').css('color', '#919191');
     $('.user-post-recrut').css('background-color', '#fff');
-    $('.user-post-recrut p' ).css('color', '#4c4c4c');
+    $('.user-post-recrut p' ).css('color', '#919191');
     $('.user-post-recrut').css('border', '1px solid #cfcfcf');
+    $('.user-post-recrut').css('border-bottom', 'none');
+    $('.user-post-count').css('border', 'none');
   });
 
 });

@@ -25,6 +25,9 @@
     </div>
 
   <div class="user-show-right">
+    <div class="user-show-right-tag">
+      <h3>メニュー</h3>
+    </div>
     <% if @user == current_user %>
     <div class="user-show-right-upper">
       <div class="upper-user-sent">
@@ -34,10 +37,10 @@
         <h2><i class="fa fa-envelope-o"></i><%= link_to "受信メッセージ", "/inbox" %></h2>
       </div>
       <div class="upper-user-edit">
-        <h2><i class="fa fa-user"></i><%= link_to "プロフィールの編集", edit_user_registration_path %></h2>
+        <h2><i class="fa fa-cog"></i><%= link_to "プロフィールの編集", edit_user_registration_path %></h2>
       </div>
       <div class="upper-user-like">
-        <h2><i class="fa fa-star"></i><%= link_to "お気に入り", likes_user_path %></h2>
+        <h2><i class="fa fa-star-o"></i><%= link_to "お気に入り", likes_user_path %></h2>
       </div>
     </div>
     <% end %>
@@ -54,10 +57,10 @@
 
       <% if @user.posts.present? %>
       <div class="user-post-show-1">
-        <%= render "posts/post" %>
+        <%= render "posts/user_post" %>
       </div>
       <div class="user-post-show-2">
-        <%= render "posts/post1" %>
+        <%= render "posts/user_post2" %>
       </div>
 
       <% else %>

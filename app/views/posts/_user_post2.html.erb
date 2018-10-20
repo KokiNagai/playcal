@@ -1,0 +1,28 @@
+<div class="user-post-wrapper">
+    <%= @message %>
+    <% @posts.where(term: true).each do |post| %>
+  <div class="user-show-post-main">
+    <div class="user-show-post-flex">
+      <div class="user-show-post-picture">
+        <% if post.user.picture.present? %>
+        <p><%= image_tag(post.user.picture_url, class: "post-show-picture" ) %></p>
+        <% else %>
+        <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+        <% end %>
+      </div>
+      <div class="user-show-post-title">
+        <h2><%= link_to(post.title.truncate(20),  post, :style=>"font-size: 1.7rem; color: #5f9ea0; font-weight: 500;") %></h2>
+      </div>
+    </div>
+    <div class="user-show-post-under-wrapper">
+      <div class="user-show-post-under-info">
+        <span id="user-show-post-under-info-tag2"><i class="fa fa-tag"></i>募集終了</span>
+        <span><i class="fa fa-calendar"></i><%= post.playday %></span>
+      </div>
+      <div class="user-show-post-under">
+          <span><%= time_ago_in_words(post.created_at) %>前</span>
+      </div>
+    </div>
+    </div>
+    <% end %>
+  </div>

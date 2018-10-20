@@ -192,39 +192,112 @@ $green-highlight: #5f9ea0;
        }
     }
 
-     .user-post-label {
-       display: flex;
-       width: 85%;
-       margin: 20px auto;
-       margin-top: 40px;
+    .user-post-label {
+      display: flex;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-left: 20px;
+      border-bottom: 1px solid $gray-border-light;
+      .user-post-count {
+        text-align: center;
+        border-bottom: none;
+        background-color: $pink-borderbottom;
+        border-radius: 5px 5px 0px 0px / 0px 0px 0px 0px;
+        padding: 10px 15px 0 15px;
+        border-bottom: none;
+        width: 150px;
+        cursor: pointer;
+        p {
+          color: $gray-medium-light;
+          font-size: 1.5rem;
+          margin-bottom: 5px;
+        }
+      }
+      .user-post-recrut {
+        text-align: center;
+        border-bottom: none;
+        border: 1px solid $gray-border-light;
+        border-radius: 0px 0px 0px 0px / 5px 5px 0px 0px;
+        padding: 10px 15px 0 15px;
+        width: 150px;
+        border-bottom: none;
+        cursor: pointer;
+      }
+      p {
+        color: $gray-medium-light;
+        margin-bottom: 5px;
+      }
+    }
+
+     .user-show-post-main {
+       padding: 13px 0 5px 0;
        border-bottom: 1px solid $gray-border-light;
-       .user-post-count {
-         text-align: center;
-         border-bottom: none;
-         background-color: $green-highlight;
-         border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
-         padding: 10px 15px 0 15px;
-         width: 150px;
-         cursor: pointer;
-         p {
-           color: #fff;
-           margin-bottom: 5px;
+       .user-show-post-flex {
+         display: flex;
+         margin-bottom: 10px;
+       }
+       .user-show-post-picture {
+         width: 20%;
+         img {
+           margin-top: 10px;
+           width: 30px;
+           height: 30px;
+           border-radius: 60%;
+           object-fit: cover;
          }
        }
-       .user-post-recrut {
-         text-align: center;
-         border-bottom: none;
-         border: 1px solid $gray-border-light;
-         border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
-         padding: 10px 15px 0 15px;
-         width: 150px;
-         cursor: pointer;
+       .user-show-post-title {
+         width: 80%;
+         h2 {
+           color: $green-highlight;
+           text-align: left;
+           margin-top: 10px;
+           color: $gray-medium-dark;
+         }
        }
-       p {
-         color: $gray-medium-dark;
-         margin-bottom: 5px;
+       .user-show-post-under-wrapper {
+         display: flex;
+         justify-content: flex-end;
+         .user-show-post-under-info {
+           display: flex;
+           span {
+             padding-top: 2px;
+             font-size: 1.2rem;
+             margin-right: 15px;
+             color: $gray-medium-dark;
+             background-color:#dfdfdf;
+             padding: 0px 5px 0px 5px;
+             border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+             .fa {
+               margin-right: 10px;
+             }
+           }
+           #user-show-post-under-info-tag {
+             padding-top: 2px;
+             background-color: $pink-hightlight;
+             color: #fff;
+           }
+           #user-show-post-under-info-tag2 {
+             padding-top: 2px;
+             background-color: $pink-borderbottom;
+             color: #fff;
+           }
+         }
+       }
+       .user-show-post-under {
+         text-align: right;
+         margin-right: 10px;
+         span {
+           color: $gray-medium-dark;
+           margin-left: 23px;
+         }
        }
      }
+
+     .user-post-show-1, .user-post-show-1 {
+       margin-left: 20px;
+     }
+
 
 
 
@@ -489,19 +562,18 @@ input#edit-submit:active {
        h2 {
          margin-left: 7%;
          display: inline-block;
-         font-size: 18px;
+         font-size: 2.5rem;
          font-weight: 600;
-         margin-bottom: 30px;
+         margin-bottom: 0px;
          color: $gray-medium-dark;
       }
        .user-show-under-info {
-         border: 1px solid $gray-border-light;
-         border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+         border-top: 1px solid $gray-border-light;
+         border-bottom: 1px solid $gray-border-light;
          height: auto;
          margin: 0 auto;
          padding: 12px;
-         width: 90%;
-         box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+         width: 100%;
          h3 {
            margin-left: 5%;
            margin-top: 0px;
@@ -518,7 +590,7 @@ input#edit-submit:active {
            padding-top: 12px;
            letter-spacing: 1px;
            line-height: 1.6em;
-           border-top: 1px solid $gray-border-light;
+           border-top: 1px dotted $gray-border-light;
           p {
             margin: 0 auto;
             width: 90%;
@@ -527,13 +599,23 @@ input#edit-submit:active {
        }
      }
 
+     .user-show-right-tag {
+       margin-top: 50px;
+       text-align: center;
+       background-color: $pink-borderbottom;
+       padding: 10px 0 10px 0;
+       h3 {
+         font-size: 1.6rem;
+         color: $gray-medium-light;
+         font-weight: 600;
+         margin: 0px;
+       }
+     }
+
      .user-show-right-upper {
-       border: 1px solid $gray-border-light;
-       border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-       padding: 5px 10px 5px 10px;
-       width: 85%;
-       margin: 40px auto;
-       box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+       border-bottom: 1px solid $gray-border-light;
+       padding: 5px 12px 5px 12px;
+       margin: 0px auto;
        .upper-user-sent {
          border-bottom: 1px solid $gray-border-light;
          h2 {
@@ -552,17 +634,18 @@ input#edit-submit:active {
            font-size: 13px;
          }
        }
-
        .upper-user-like {
          h2 {
            font-size: 13px;
          }
        }
        .fa {
-         margin-right: 10px;
+         margin: 0 10px 0 20px;
+         font-size: 1.7rem;
        }
      }
      .user-post {
+       margin-top: 50px;
        text-align: center;
        h2 {
        font-size: 18px;
@@ -578,20 +661,21 @@ input#edit-submit:active {
 
     .user-post-label {
       display: flex;
-      width: 90%;
       margin: 0 auto;
       margin-top: 40px;
       border-bottom: 1px solid $gray-border-light;
       .user-post-count {
         text-align: center;
         border-bottom: none;
-        background-color: $green-highlight;
-        border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+        background-color: $pink-borderbottom;
+        border-radius: 5px 5px 0px 0px / 0px 0px 0px 0px;
         padding: 10px 15px 0 15px;
+        border-bottom: none;
         width: 150px;
         cursor: pointer;
         p {
-          color: #fff;
+          color: $gray-medium-light;
+          font-size: 1.5rem;
           margin-bottom: 5px;
         }
       }
@@ -599,19 +683,85 @@ input#edit-submit:active {
         text-align: center;
         border-bottom: none;
         border: 1px solid $gray-border-light;
-        border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+        border-radius: 0px 0px 0px 0px / 5px 5px 0px 0px;
         padding: 10px 15px 0 15px;
         width: 150px;
+        border-bottom: none;
         cursor: pointer;
       }
       p {
-        color: $gray-medium-dark;
+        color: $gray-medium-light;
         margin-bottom: 5px;
       }
     }
 
     .user-post-show-2 {
       display: none;
+    }
+
+    .user-show-post-main {
+      padding: 13px 0 5px 0;
+      border-bottom: 1px solid $gray-border-light;
+      .user-show-post-flex {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      .user-show-post-picture {
+        width: 20%;
+        img {
+          margin-top: 10px;
+          width: 30px;
+          height: 30px;
+          border-radius: 60%;
+          object-fit: cover;
+        }
+      }
+      .user-show-post-title {
+        width: 80%;
+        h2 {
+          color: $green-highlight;
+          text-align: left;
+          margin-top: 10px;
+          color: $gray-medium-dark;
+        }
+      }
+      .user-show-post-under-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        .user-show-post-under-info {
+          display: flex;
+          span {
+            padding-top: 2px;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            color: $gray-medium-dark;
+            background-color:#dfdfdf;
+            padding: 0px 5px 0px 5px;
+            border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+            .fa {
+              margin-right: 10px;
+            }
+          }
+          #user-show-post-under-info-tag {
+            padding-top: 2px;
+            background-color: $pink-hightlight;
+            color: #fff;
+          }
+          #user-show-post-under-info-tag2 {
+            padding-top: 2px;
+            background-color: $pink-borderbottom;
+            color: #fff;
+          }
+        }
+      }
+      .user-show-post-under {
+        text-align: right;
+        margin-right: 10px;
+        span {
+          color: $gray-medium-dark;
+          margin-left: 23px;
+        }
+      }
     }
 
 
