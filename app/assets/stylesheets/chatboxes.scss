@@ -390,15 +390,14 @@ $green-highlight: #5f9ea0;
           margin: 20px auto;
           .tour-name-flex {
             display: flex;
-              span {
-                font-size: 1.7rem;
-              }
-              p {
-                margin-top: 0px;
-                margin-left: 3px;
-                color: $gray-word;
-                font-size: 1.3rem;
-              }
+            span {
+              font-size: 1.7rem;
+              color: $gray-medium-dark;
+            }
+            .fa {
+              margin: 0 5px 0px 10px;
+              font-size: 1.6rem;
+            }
             }
           img {
             width: 25px;
@@ -436,15 +435,14 @@ $green-highlight: #5f9ea0;
           .tour-name-flex {
             margin-top: 50px;
             display: flex;
-              span {
-                font-size: 1.7rem;
-              }
-              p {
-                margin-top: 0px;
-                margin-left: 3px;
-                color: $gray-word;
-                font-size: 1.3rem;
-              }
+            span {
+              font-size: 1.7rem;
+              color: $gray-medium-dark;
+            }
+            .fa {
+              margin: 0 5px 0px 10px;
+              font-size: 1.6rem;
+            }
             }
           img {
             width: 25px;
@@ -923,15 +921,14 @@ $green-highlight: #5f9ea0;
         margin: 20px auto;
         .tour-name-flex {
           display: flex;
-            span {
-              font-size: 1.7rem;
-            }
-            p {
-              margin-top: 0px;
-              margin-left: 3px;
-              color: $gray-word;
-              font-size: 1.3rem;
-            }
+          span {
+            font-size: 1.7rem;
+            color: $gray-medium-dark;
+          }
+          .fa {
+            margin: 0 5px 0px 10px;
+            font-size: 1.6rem;
+          }
           }
         img {
           width: 25px;
@@ -972,11 +969,9 @@ $green-highlight: #5f9ea0;
             span {
               font-size: 1.7rem;
             }
-            p {
-              margin-top: 0px;
-              margin-left: 3px;
-              color: $gray-word;
-              font-size: 1.3rem;
+            .fa {
+              margin: 0 5px 0px 10px;
+              font-size: 1.6rem;
             }
           }
         img {
