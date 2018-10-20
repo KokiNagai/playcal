@@ -12,9 +12,9 @@
           <div class="post-show-upper">
             <div class="post-show-user">
               <% if like.post.user.picture.present? %>
-              <p><%= image_tag(like.post.user.picture_url, class: "post-showr-picture" ) %></p>
+              <p><%= image_tag(like.post.user.picture_url, class: "post-showr-picture", :alt => "ユーザーの写真" ) %></p>
               <% else %>
-              <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+              <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture", :alt => "ユーザーの写真" ) %></p>
               <% end %>
               <p><%= link_to like.post.user.name.truncate(8), like.post.user %></p>
             </div>

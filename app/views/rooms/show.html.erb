@@ -4,9 +4,9 @@
     <div class="post-show-upper">
       <div class="post-show-user">
         <% if @room.post.user.picture.present? %>
-        <p><%= image_tag(@room.post.user.picture_url, class: "post-showr-picture" ) %></p>
+        <p><%= image_tag(@room.post.user.picture_url, class: "post-showr-picture", :alt => "ユーザーの写真" ) %></p>
         <% else %>
-        <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+        <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture", :alt => "ユーザーの写真" ) %></p>
         <% end %>
         <p><%= link_to(@room.post.user.name.truncate(8), @room.post.user) %></p>
       </div>
@@ -62,9 +62,9 @@
         <div class="inbox-user-main">
          <div class="room-user-picture">
            <% if comment.user.picture.present? %>
-           <%= image_tag(comment.user.picture_url) %>
+           <%= image_tag(comment.user.picture_url, :alt => "ユーザーの写真") %>
            <% else %>
-           <%= image_tag('blank-profile-picture-973460_1280.png') %>
+           <%= image_tag('blank-profile-picture-973460_1280.png', :alt => "ユーザーの写真") %>
            <% end %>
          </div>
         <div class="room-user-name">

@@ -4,9 +4,9 @@
       <div class="user-info-2">
         <div class="user-show-upper">
           <% if @user.picture.present? %>
-          <p><%= image_tag(@user.picture_url) %></p>
+          <p><%= image_tag(@user.picture_url, :alt => "ユーザーの写真") %></p>
           <% else %>
-          <p><%= image_tag('blank-profile-picture-973460_1280.png') %></p>
+          <p><%= image_tag('blank-profile-picture-973460_1280.png', :alt => "ユーザーの写真") %></p>
           <% end %>
         </div>
         <div class="user-show-under">

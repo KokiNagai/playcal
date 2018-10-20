@@ -29,11 +29,11 @@
           <div class="chatbox-content">
             <% if chat.user.picture.present? %>
             <div class="chat-user-picture">
-              <p><%= image_tag(chat.user.picture_url, :id => "chat-user-picuture") %></p>
+              <p><%= image_tag(chat.user.picture_url, :id => "chat-user-picuture", :alt => "ユーザーの写真") %></p>
               </div>
             <% else %>
             <div class="chat-user-picture">
-            <p><%= image_tag('blank-profile-picture-973460_1280.png', :id => "chat-user-picuture") %></p>
+            <p><%= image_tag('blank-profile-picture-973460_1280.png', :id => "chat-user-picuture", :alt => "ユーザーの写真") %></p>
             </div>
             <% end %>
 

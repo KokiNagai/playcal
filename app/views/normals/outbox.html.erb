@@ -42,9 +42,9 @@
           <div class="inbox-post-left">
             <div class="inbox-post-picture">
             <% if room.post.user.picture.present? %>
-            <p><%= image_tag(room.post.user.picture_url, id: "inbox-user-picture") %></p>
+            <p><%= image_tag(room.post.user.picture_url, id: "inbox-user-picture", :alt => "ユーザーの写真") %></p>
             <% else %>
-            <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
+            <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture", :alt => "ユーザーの写真") %></p>
             <% end %>
             </div>
             <div class="inbox-post-name">
@@ -72,9 +72,9 @@
          <div class="inbox-post-left">
            <div class="inbox-post-picture">
            <% if room.post.user.picture.present? %>
-           <p><%= image_tag(room.post.user.picture_url, id: "inbox-user-picture") %></p>
+           <p><%= image_tag(room.post.user.picture_url, id: "inbox-user-picture", :alt => "ユーザーの写真") %></p>
            <% else %>
-           <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture") %></p>
+           <p><%= image_tag('blank-profile-picture-973460_1280.png', id: "inbox-user-picture", :alt => "ユーザーの写真") %></p>
            <% end %>
            </div>
            <div class="inbox-post-name">
@@ -106,7 +106,7 @@
      <div class="inbox2-under">
        <div class="inbox2-under-picture">
          <%= link_to posting_path do %>
-         <%= image_tag("borkum-84281_1280.jpg") %>
+         <%= image_tag("borkum-84281_1280.jpg", :alt => "探すページへ") %>
          <% end %>
        </div>
        <div class="inbox2-under-intro">

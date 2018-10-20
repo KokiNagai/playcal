@@ -18,7 +18,7 @@
 
 <div class="home-section">
   <div class="home-section-1">
-    <%= image_tag('adult-1853483_1280.jpg') %>
+    <%= image_tag('adult-1853483_1280.jpg', :alt => "募集写真") %>
     <h2>募集する</h2>
     <p>あなたのヒッティングパートナーやチームメンバーをここで募集してみよう。</p>
   </div>
@@ -28,7 +28,7 @@
     <% end %>
   </div>
   <div class="home-section-2">
-    <%= image_tag('home-section2-picture.jpeg') %>
+    <%= image_tag('home-section2-picture.jpeg', :alt => "探す写真") %>
     <h2>探す</h2>
     <p>あなたが練習したい人や、試合をしたいパートナーをここで見つけよう。</p>
   </div>
@@ -41,7 +41,7 @@
 
 <div class="top-chatbox-wrapper">
   <div class="top-chatbox-title">
-    <img src="assets/ATPtour.jpeg">
+    <img src="assets/ATPtour.jpeg", alt="テニスの試合写真">
     <h2 class="visible-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 3rem; font-weight: 600;" %></h2>
     <h2 class="hidden-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 4rem; font-weight: 600;" %></h2>
   </div>
@@ -52,7 +52,7 @@
     <div class="top-chatbox-main">
       <% @chatboxes.each do |chatbox| %>
       <div class="top-chatbox-name">
-        <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+        <span><%= image_tag("ATPLOGO.png", :alt => "探す写真") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
         <span><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</span>
       </div>
       <p>大会期間: <%= chatbox.chatterm %></p>
@@ -72,7 +72,7 @@
   <div class="top-wrapper">
     <div class="top-upper">
       <div class="top-section">
-        <img src="assets/shoes-614176_1280.jpg">
+        <img src="assets/shoes-614176_1280.jpg", alt="トップ写真">
         <h1>Playcal</h1>
         <h2>「シンプルで楽しく」テニス仲間や練習相手が見つかる！</h2>
         <p><%= link_to '登録無料', new_user_registration_path, :style=>"color: white; font-size: 17px;" %></p>
@@ -95,9 +95,9 @@
         <div class="find-user-upper">
           <div class="find-post-user">
             <% if post.user.picture.present? %>
-            <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300' ) %></p>
+            <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300', :alt => "募集者の写真" ) %></p>
             <% else %>
-            <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300' ) %></p>
+            <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300', :alt => "募集者の写真" ) %></p>
             <% end %>
             <p><h2><%= post.title.truncate(25) %></h2></p>
           </div>
@@ -128,7 +128,7 @@
 
   <div class="top-chatbox-wrapper">
     <div class="top-chatbox-title">
-      <img src="assets/ATPtour.jpeg">
+      <img src="assets/ATPtour.jpeg", alt="テニスの試合の写真">
       <h2 class="visible-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 3rem; font-weight: 900;" %></h2>
       <h2 class="hidden-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 4rem; font-weight: 600;" %></h2>
 
@@ -140,7 +140,7 @@
       <div class="top-chatbox-main">
         <% @chatboxes.each do |chatbox| %>
         <div class="top-chatbox-name">
-          <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+          <span><%= image_tag("ATPLOGO.png", :alt => "ATPロゴ") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
           <span><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</span>
         </div>
         <p>大会期間: <%= chatbox.chatterm %></p>
@@ -157,7 +157,7 @@
          <div class="top-under-main">
            <h2>練習相手を探してみる</h2>
            <%= link_to find_path do %>
-           <%= image_tag("borkum-84281_1280.jpg")  %>
+           <%= image_tag("borkum-84281_1280.jpg", :alt => "探すページ")  %>
            <% end %>
         </div>
         <div class="top-under-sub">
