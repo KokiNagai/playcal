@@ -51,7 +51,10 @@
     </div>
     <div class="top-chatbox-main">
       <% @chatboxes.each do |chatbox| %>
-      <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+      <div class="top-chatbox-name">
+        <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+        <span><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</span>
+      </div>
       <p>大会期間: <%= chatbox.chatterm %></p>
       <% end %>
     </div>
@@ -136,7 +139,10 @@
       </div>
       <div class="top-chatbox-main">
         <% @chatboxes.each do |chatbox| %>
-        <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+        <div class="top-chatbox-name">
+          <span><%= image_tag("ATPLOGO.png") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+          <span><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</span>
+        </div>
         <p>大会期間: <%= chatbox.chatterm %></p>
         <% end %>
       </div>

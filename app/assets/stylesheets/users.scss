@@ -73,24 +73,28 @@ $green-highlight: #5f9ea0;
     }
   }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1023px) {
   .user-show-upper {
     margin-top: 40px;
     img {
       width: 80%;
-      height: 300px;
+      height: 150px;
       border-radius: 3%;
       display: block;
       margin: 0 auto;
     }
    }
+   .find-post1 {
+     width: 90%;
+     margin: 0 auto;
+   }
  }
- @media screen and (min-width: 1200px) {
+ @media screen and (min-width: 1024px) {
    .user-show-upper {
      margin-top: 40px;
      img {
        width: 70%;
-       height: 250px;
+       height: 200px;
        border-radius: 3%;
        display: block;
        margin: 0 auto;
@@ -190,8 +194,8 @@ $green-highlight: #5f9ea0;
 
      .user-post-label {
        display: flex;
-       width: 90%;
-       margin: 0 auto;
+       width: 85%;
+       margin: 20px auto;
        margin-top: 40px;
        border-bottom: 1px solid $gray-border-light;
        .user-post-count {
@@ -370,7 +374,7 @@ $green-highlight: #5f9ea0;
   }
 }
 
-input#user_password, input#user_password_confirmation {
+input#user_password, input#user_password_confirmation, input#user_current_password {
   width: 500px;
 }
 

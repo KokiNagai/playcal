@@ -287,6 +287,13 @@ $green-highlight: #5f9ea0;
       }
       .top-chatbox-main {
         margin-top: 30px;
+        .top-chatbox-name {
+          display: flex;
+        }
+        .fa {
+          margin: 0 5px 0 20px;
+          color: $gray-medium-dark;
+        }
         span {
           font-size: 1.6rem;
           img {
@@ -812,14 +819,21 @@ $green-highlight: #5f9ea0;
     }
     .top-chatbox-main {
       margin-top: 30px;
-      span {
-        font-size: 1.6rem;
-        img {
-          width: 25px;
-          height: 19px;
-          margin-right: 13px;
-          border-radius: 0%;
-          object-fit: cover;
+      .top-chatbox-name {
+        display: flex;
+        span {
+          font-size: 1.6rem;
+          .fa {
+            margin: 0 5px 0 20px;
+            color: $gray-medium-dark;
+          }
+          img {
+            width: 25px;
+            height: 19px;
+            margin-right: 13px;
+            border-radius: 0%;
+            object-fit: cover;
+          }
         }
       }
       p {
