@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/about', to: 'normals#about'
   get '/setting', to: 'normals#setting'
   get '/mail_confirm', to: "normals#after_mail"
+  get '/message', to: "normals#message"
 
   get '/inquiry/confirm', to: "contacts#inquiry"
 
@@ -21,9 +22,6 @@ Rails.application.routes.draw do
 
   get '/posting', to: 'posts#posting'
   get '/posts/:id/post_end', to: 'posts#post_end'
-
-  get '/inbox', to: 'normals#inbox'
-  get '/outbox', to: 'normals#outbox'
 
   post "/likes/:post_id/create", to: 'likes#create'
   post "/likes/:post_id/destroy", to: 'likes#destroy'

@@ -25,6 +25,9 @@ class NormalsController < ApplicationController
     @comments = current_user.comments
   end
 
+  def message
+  end 
+
   def inbox
     @post = current_user.posts.build
     @posts = current_user.posts

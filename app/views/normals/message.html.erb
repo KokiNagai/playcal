@@ -1,0 +1,55 @@
+<div class="row row-0">
+  <div class="col-md-8 col-sm-12">
+    <div class="user-message">
+      <div class="user-message-title">
+        <h1><i class="fa fa-envelope"></i>メッセージボックス</h1>
+      </div>
+      <div class="user-message-count">
+        <span><i class="fa fa-commenting"></i><%= Room.where(user_id: current_user.id).or(Room.where(to_id: current_user.id)).order(updated_at: :desc).count %>件</span>
+      </div>
+      <% Room.where(user_id: current_user.id).or(Room.where(to_id: current_user.id)).order(updated_at: :desc).each do |room| %>
+      <% if room.present? && room.comments.present? %>
+      <div class="user-show-post-main">
+        <div class="user-show-post-flex">
+          <div class="user-show-post-picture">
+            <% if room.comments.first.user.picture.present? && room.post.user == current_user %>
+            <p><%= image_tag(room.comments.first.user.picture_url, class: "post-show-picture" ) %></p>
+            <% elsif room.comments.first.user.picture.nil? && room.post.user == current_user %>
+            <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+            <% elsif room.post.user.picture.present? && room.post.user != current_user %>
+            <p><%= image_tag(room.post.user.picture_url, class: "post-show-picture" ) %></p>
+            <% elsif room.post.user.picture.nil? && room.post.user != current_user %>
+            <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
+            <% end %>
+          </div>
+          <div class="user-show-post-title">
+            <h2><i class="fa fa-commenting-o"></i><%= link_to(room.comments.last.body.truncate(20),  room, :style=>"font-size: 1.6rem; color: #5f9ea0; font-weight: 500;") %></h2>
+          </div>
+        </div>
+        <div class="user-message-post">
+          <span>「<%= room.post.title %>」</span>
+          <p>from <%= room.comments.last.user.name %></p>
+        </div>
+        <div class="user-show-post-under-wrapper">
+
+          <div class="user-show-post-under">
+              <span><%= time_ago_in_words(room.updated_at) %>前</span>
+          </div>
+        </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+  </div>
+  <div class="col-md-4 hidden-xs">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- playcal-side -->
+    <ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-5276826909376331"
+     data-ad-slot="1679934176"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+</div>
