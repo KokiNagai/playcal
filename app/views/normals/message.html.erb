@@ -4,7 +4,6 @@
         <h1><i class="fa fa-envelope"></i>メッセージボックス</h1>
       </div>
       <div class="user-message-count">
-        <span><i class="fa fa-commenting"></i><%= Room.where(user_id: current_user.id).or(Room.where(to_id: current_user.id)).order(updated_at: :desc).count %>件</span>
       </div>
       <% Room.where(user_id: current_user.id).or(Room.where(to_id: current_user.id)).order(updated_at: :desc).each do |room| %>
       <% if room.present? && room.comments.present? %>

@@ -234,6 +234,7 @@ $green-highlight: #5f9ea0;
      .user-show-post-main {
        padding: 13px 0 5px 0;
        border-bottom: 1px solid $gray-border-light;
+       border-left: 1px solid $gray-border-light;
        .user-show-post-flex {
          display: flex;
          margin-bottom: 10px;
