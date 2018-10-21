@@ -200,18 +200,20 @@ $green-highlight: #5f9ea0;
       border-bottom: 1px solid $gray-border-light;
       .user-post-count {
         text-align: center;
-        border-bottom: none;
-        background-color: $pink-borderbottom;
+        background-color: #eeeeee;
         border-radius: 5px 5px 0px 0px / 0px 0px 0px 0px;
         padding: 10px 15px 0 15px;
-        border-bottom: none;
+        border-top: 1px solid $gray-border-light;
+        border-left: 1px solid $gray-border-light;
         width: 150px;
+        color: $gray-medium-dark;
+        border-bottom: 4px solid $pink-hightlight;
         cursor: pointer;
         p {
           color: $gray-medium-light;
           font-size: 1.5rem;
           margin-bottom: 5px;
-          font-weight: 600;
+          font-weight: 500;
         }
       }
       .user-post-recrut {
@@ -221,14 +223,14 @@ $green-highlight: #5f9ea0;
         border-radius: 0px 0px 0px 0px / 5px 5px 0px 0px;
         padding: 10px 15px 0 15px;
         width: 150px;
-        border-bottom: none;
+        border-bottom: 4px solid $gray-border-light;
         cursor: pointer;
-      }
       p {
         color: $gray-medium-light;
         margin-bottom: 5px;
-        font-weight: 600;
+        font-weight: 500;
       }
+     }
     }
 
      .user-show-post-main {
@@ -297,7 +299,7 @@ $green-highlight: #5f9ea0;
        }
      }
 
-     .user-post-show-1, .user-post-show-1 {
+     .user-post-show-1, .user-post-show-2 {
        margin-left: 20px;
      }
 
@@ -669,18 +671,19 @@ input#edit-submit:active {
       border-bottom: 1px solid $gray-border-light;
       .user-post-count {
         text-align: center;
-        border-bottom: none;
-        background-color: $pink-borderbottom;
+        background-color: #eeeeee;
         border-radius: 5px 5px 0px 0px / 0px 0px 0px 0px;
         padding: 10px 15px 0 15px;
-        border-bottom: none;
+        border-top: 1px solid $gray-border-light;
         width: 150px;
+        color: $gray-medium-dark;
+        border-bottom: 4px solid $pink-hightlight;
         cursor: pointer;
         p {
           color: $gray-medium-light;
           font-size: 1.5rem;
           margin-bottom: 5px;
-          font-weight: 600;
+          font-weight: 500;
         }
       }
       .user-post-recrut {
@@ -690,14 +693,14 @@ input#edit-submit:active {
         border-radius: 0px 0px 0px 0px / 5px 5px 0px 0px;
         padding: 10px 15px 0 15px;
         width: 150px;
-        border-bottom: none;
+        border-bottom: 4px solid $gray-border-light;
         cursor: pointer;
-      }
       p {
         color: $gray-medium-light;
         margin-bottom: 5px;
-        font-weight: 600;
+        font-weight: 500;
       }
+     }
     }
 
     .user-post-show-2 {
