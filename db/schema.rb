@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_17_145904) do
+ActiveRecord::Schema.define(version: 2018_10_21_045330) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_10_17_145904) do
     t.string "chatname"
     t.string "chatterm"
     t.boolean "touropen"
+    t.string "tourgrade"
   end
 
   create_table "chats", force: :cascade do |t|

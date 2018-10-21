@@ -373,7 +373,6 @@ $green-highlight: #5f9ea0;
       .tour-now-wrapper {
         padding: 10px 0 30px 0;
         border-top: 1px dotted $gray-border-light;
-        border-bottom: 1px dotted $gray-border-light;
         margin-top: 60px;
         .tour-now {
           width: 90%;
@@ -384,41 +383,75 @@ $green-highlight: #5f9ea0;
             font-weight: 600;
             font-size: 2.0rem;
           }
+          .fa {
+            margin-left: 10px;
+          }
         }
         .top-chatbox-main-now {
-          width: 90%;
+          width: 60%;
           margin: 20px auto;
+          .tour-name-flex-wrapper-label {
+            border-bottom: 1px solid $gray-border-light;
+          }
+          .tour-name-flex-wrapper {
+            border-bottom: 1px solid $gray-border-light;
+            padding: 20px 10px 5px 10px;
+          }
           .tour-name-flex {
             display: flex;
             span {
-              font-size: 1.7rem;
+              font-size: 1.6rem;
+              font-weight: 600;
+            }
+            p  {
+              font-size: 1.5rem;
               color: $gray-medium-dark;
+              margin: 0px;
             }
             .fa {
               margin: 0 5px 0px 10px;
-              font-size: 1.6rem;
+              font-size: 1.5rem;
             }
             }
           img {
-            width: 25px;
-            height: 19px;
+            width: 27px;
+            height: 21px;
             margin-right: 13px;
             border-radius: 0%;
             object-fit: cover;
           }
-          p {
-            margin-top: 10px;
-            color: $gray-word;
-            text-align: right;
+          .tour-info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+            #tourgrade {
+              background-color: $pink-hightlight;
+              color: #fff;
+              font-weight: 400;
+              padding: 2px 5px 2px 5px;
+              border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+              font-size: 1.2rem;
+            }
+            #tourcalendar {
+              background-color: $gray-border-light;
+              color: #fff;
+              font-weight: 400;
+              padding: 2px 5px 2px 5px;
+              border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+              font-size: 1.2rem;
+            }
+            .fa {
+              margin-right: 5px;
+            }
           }
         }
       }
 
       .tour-close-wrapper {
-        margin-top: 80px;
-        padding: 10px 0 30px 0;
+        width: 60%;
+        margin: 20px auto;
+        padding-top: 20px;
         border-top: 1px dotted $gray-border-light;
-        border-bottom: 1px dotted $gray-border-light;
         .tour-close {
           width: 90%;
           margin: 30px auto;
@@ -428,41 +461,67 @@ $green-highlight: #5f9ea0;
             font-weight: 600;
             font-size: 2.0rem;
           }
+          .fa {
+            margin-left: 10px;
+          }
         }
-        .top-chatbox-main-close {
-          width: 90%;
-          margin: 20px auto;
-          .tour-name-flex {
-            margin-top: 50px;
-            display: flex;
-            span {
-              font-size: 1.7rem;
-            }
-            p {
-              margin: 0px;
-              font-size: 1.5rem;
-              color: $gray-medium-dark;
-            }
-            .fa {
-              margin: 0 5px 0px 10px;
-              font-size: 1.5rem;
-            }
-            }
-          img {
-            width: 25px;
-            height: 19px;
-            margin-right: 13px;
-            border-radius: 0%;
-            object-fit: cover;
+        .tour-name-flex-wrapper-label {
+          border-bottom: 1px solid $gray-border-light;
+        }
+        .tour-name-flex-wrapper {
+          border-bottom: 1px solid $gray-border-light;
+          padding: 20px 10px 5px 20px;
+        }
+        .tour-name-flex {
+          display: flex;
+          span {
+            font-size: 1.6rem;
+            font-weight: 600;
           }
-          p {
-            margin-top: 10px;
-            color: $gray-word;
-            text-align: right;
+          p  {
+            font-size: 1.5rem;
+            color: $gray-medium-dark;
+            margin: 0px;
           }
-         }
+          .fa {
+            margin: 0 5px 0px 10px;
+            font-size: 1.5rem;
+          }
+          }
+        img {
+          width: 27px;
+          height: 21px;
+          margin-right: 13px;
+          border-radius: 0%;
+          object-fit: cover;
+        }
+        .tour-info {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 25px;
+          #tourgrade {
+            background-color: $pink-hightlight;
+            color: #fff;
+            font-weight: 500;
+            padding: 2px 5px 2px 5px;
+            border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+            font-size: 1.2rem;
+          }
+          #tourcalendar {
+            background-color: $gray-border-light;
+            color: #fff;
+            font-weight: 600;
+            padding: 2px 5px 2px 5px;
+            border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+            font-size: 1.2rem;
+          }
+          .fa {
+            margin-right: 5px;
+        }
       }
     }
+    }
+
 
     .atp-schedule {
       margin-top: 100px;
@@ -908,7 +967,6 @@ $green-highlight: #5f9ea0;
     .tour-now-wrapper {
       padding: 10px 0 30px 0;
       border-top: 1px dotted $gray-border-light;
-      border-bottom: 1px dotted $gray-border-light;
       margin-top: 60px;
       .tour-now {
         width: 90%;
@@ -919,14 +977,25 @@ $green-highlight: #5f9ea0;
           font-weight: 600;
           font-size: 2.0rem;
         }
+        .fa {
+          margin-left: 10px;
+        }
       }
       .top-chatbox-main-now {
-        width: 90%;
+        width: 100%;
         margin: 20px auto;
+        .tour-name-flex-wrapper-label {
+          border-bottom: 1px solid $gray-border-light;
+        }
+        .tour-name-flex-wrapper {
+          border-bottom: 1px solid $gray-border-light;
+          padding: 20px 10px 5px 20px;
+        }
         .tour-name-flex {
           display: flex;
           span {
-            font-size: 1.7rem;
+            font-size: 1.6rem;
+            font-weight: 600;
           }
           p  {
             font-size: 1.5rem;
@@ -939,25 +1008,44 @@ $green-highlight: #5f9ea0;
           }
           }
         img {
-          width: 25px;
-          height: 19px;
+          width: 27px;
+          height: 21px;
           margin-right: 13px;
           border-radius: 0%;
           object-fit: cover;
         }
-        p {
-          margin-top: 10px;
-          color: $gray-word;
-          text-align: right;
+        .tour-info {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 25px;
+          #tourgrade {
+            background-color: $pink-hightlight;
+            color: #fff;
+            font-weight: 400;
+            padding: 2px 5px 2px 5px;
+            border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+            font-size: 1.2rem;
+          }
+          #tourcalendar {
+            background-color: $gray-border-light;
+            color: #fff;
+            font-weight: 400;
+            padding: 2px 5px 2px 5px;
+            border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+            font-size: 1.2rem;
+          }
+          .fa {
+            margin-right: 5px;
+          }
         }
       }
     }
 
     .tour-close-wrapper {
-      margin-top: 80px;
-      padding: 10px 0 30px 0;
+      width: 100%;
+      margin: 20px auto;
+      padding-top: 20px;
       border-top: 1px dotted $gray-border-light;
-      border-bottom: 1px dotted $gray-border-light;
       .tour-close {
         width: 90%;
         margin: 30px auto;
@@ -967,35 +1055,65 @@ $green-highlight: #5f9ea0;
           font-weight: 600;
           font-size: 2.0rem;
         }
+        .fa {
+          margin-left: 10px;
+        }
       }
-      .top-chatbox-main-close {
-        width: 90%;
-        margin: 20px auto;
-        .tour-name-flex {
-          margin-top: 50px;
-          display: flex;
-            span {
-              font-size: 1.7rem;
-            }
-            .fa {
-              margin: 0 5px 0px 10px;
-              font-size: 1.6rem;
-            }
-          }
-        img {
-          width: 25px;
-          height: 19px;
-          margin-right: 13px;
-          border-radius: 0%;
-          object-fit: cover;
+      .tour-name-flex-wrapper-label {
+        border-bottom: 1px solid $gray-border-light;
+      }
+      .tour-name-flex-wrapper {
+        border-bottom: 1px solid $gray-border-light;
+        padding: 20px 10px 5px 20px;
+      }
+      .tour-name-flex {
+        display: flex;
+        span {
+          font-size: 1.6rem;
+          font-weight: 600;
         }
-        p {
-          margin-top: 10px;
-          color: $gray-word;
-          text-align: right;
+        p  {
+          font-size: 1.5rem;
+          color: $gray-medium-dark;
+          margin: 0px;
         }
-       }
+        .fa {
+          margin: 0 5px 0px 10px;
+          font-size: 1.5rem;
+        }
+        }
+      img {
+        width: 27px;
+        height: 21px;
+        margin-right: 13px;
+        border-radius: 0%;
+        object-fit: cover;
+      }
+      .tour-info {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 25px;
+        #tourgrade {
+          background-color: $pink-hightlight;
+          color: #fff;
+          font-weight: 500;
+          padding: 2px 5px 2px 5px;
+          border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+          font-size: 1.2rem;
+        }
+        #tourcalendar {
+          background-color: $gray-border-light;
+          color: #fff;
+          font-weight: 600;
+          padding: 2px 5px 2px 5px;
+          border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+          font-size: 1.2rem;
+        }
+        .fa {
+          margin-right: 5px;
+      }
     }
+  }
   }
 
   .atp-schedule {
