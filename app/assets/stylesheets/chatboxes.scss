@@ -422,8 +422,8 @@ $green-highlight: #5f9ea0;
           }
           .tour-info {
             display: flex;
-            justify-content: space-around;
             margin-top: 25px;
+            margin-left: 50px;
             #tourgrade {
               background-color: $pink-hightlight;
               color: #fff;
@@ -431,6 +431,7 @@ $green-highlight: #5f9ea0;
               padding: 2px 5px 2px 5px;
               border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
               font-size: 1.2rem;
+              margin-right: 20px;
             }
             #tourcalendar {
               background-color: $gray-border-light;
@@ -497,8 +498,8 @@ $green-highlight: #5f9ea0;
         }
         .tour-info {
           display: flex;
-          justify-content: space-around;
           margin-top: 25px;
+          margin-left: 50px;
           #tourgrade {
             background-color: $pink-hightlight;
             color: #fff;
@@ -506,6 +507,7 @@ $green-highlight: #5f9ea0;
             padding: 2px 5px 2px 5px;
             border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
             font-size: 1.2rem;
+            margin-right: 20px;
           }
           #tourcalendar {
             background-color: $gray-border-light;
@@ -927,7 +929,7 @@ $green-highlight: #5f9ea0;
     }
   }
   .top-chatbox-bottom {
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: right;
     p {
       text-align: center;
@@ -1016,8 +1018,8 @@ $green-highlight: #5f9ea0;
         }
         .tour-info {
           display: flex;
-          justify-content: space-around;
           margin-top: 25px;
+          margin-left: 50px;
           #tourgrade {
             background-color: $pink-hightlight;
             color: #fff;
@@ -1025,6 +1027,7 @@ $green-highlight: #5f9ea0;
             padding: 2px 5px 2px 5px;
             border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
             font-size: 1.2rem;
+            margin-right: 20px;
           }
           #tourcalendar {
             background-color: $gray-border-light;
@@ -1091,8 +1094,8 @@ $green-highlight: #5f9ea0;
       }
       .tour-info {
         display: flex;
-        justify-content: space-around;
         margin-top: 25px;
+        margin-left: 50px;
         #tourgrade {
           background-color: $pink-hightlight;
           color: #fff;
@@ -1100,6 +1103,7 @@ $green-highlight: #5f9ea0;
           padding: 2px 5px 2px 5px;
           border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
           font-size: 1.2rem;
+          margin-right: 20px;
         }
         #tourcalendar {
           background-color: $gray-border-light;

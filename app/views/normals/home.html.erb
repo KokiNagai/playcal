@@ -57,18 +57,31 @@
     <h2 class="visible-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 3rem; font-weight: 600;" %></h2>
     <h2 class="hidden-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 4rem; font-weight: 600;" %></h2>
   </div>
-  <div class="top-chatbox-under">
-    <div class="top-chatbox-now">
-      <p><i class="fa fa-comments-o"></i>現在オープン中のATPワールドツアーチャット</p>
-    </div>
-    <div class="top-chatbox-main">
-      <% @chatboxes.each do |chatbox| %>
-      <div class="top-chatbox-name">
-        <span><%= image_tag("ATPLOGO.png", :alt => "探す写真") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
-        <span><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</span>
+  <div class="tour-wrapper">
+    <div class="tour-now-wrapper">
+      <div class="tour-now">
+        <p>現在オープン中のATPワールドツアー・チャットカフェ<i class="fa fa-coffee"></i></p>
       </div>
-      <p>大会期間: <%= chatbox.chatterm %></p>
-      <% end %>
+      <div class="top-chatbox-main-now">
+        <div class="tour-name-flex-wrapper-label">
+          </div>
+        <% if @chatboxes.present? %>
+        <% @chatboxes.each do |chatbox| %>
+          <div class="tour-name-flex-wrapper">
+            <div class="tour-name-flex">
+              <span><%= image_tag("ATPLOGO.png", :alt => "テニスの試合の写真") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+              <p><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</p>
+            </div>
+            <div class="tour-info">
+              <span id="tourgrade"><i class="fa fa-diamond"></i><%= chatbox.tourgrade %></span>
+              <span id="tourcalendar"><i class="fa fa-calendar"></i><%= chatbox.chatterm %></span>
+            </div>
+          </div>
+         <% end %>
+        <% else %>
+        <p>現在開催中のツアーはありません</p>
+        <% end %>
+      </div>
     </div>
   </div>
   <div class="top-chatbox-bottom">
@@ -145,20 +158,33 @@
       <h2 class="hidden-xs"><i class="fa fa-coffee"></i><%= link_to 'ATPワールドツアーチャットカフェ', "/tourlists", :style=>"color: white; font-size: 4rem; font-weight: 600;" %></h2>
 
     </div>
-    <div class="top-chatbox-under">
-      <div class="top-chatbox-now">
-        <p><i class="fa fa-comments-o"></i>現在オープン中のATPチャットカフェ</p>
+  <div class="tour-wrapper">
+    <div class="tour-now-wrapper">
+      <div class="tour-now">
+        <p>現在オープン中のATPワールドツアー・チャットカフェ<i class="fa fa-coffee"></i></p>
       </div>
-      <div class="top-chatbox-main">
+      <div class="top-chatbox-main-now">
+        <div class="tour-name-flex-wrapper-label">
+          </div>
+        <% if @chatboxes.present? %>
         <% @chatboxes.each do |chatbox| %>
-        <div class="top-chatbox-name">
-          <span><%= image_tag("ATPLOGO.png", :alt => "ATPロゴ") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
-          <span><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</span>
-        </div>
-        <p>大会期間: <%= chatbox.chatterm %></p>
+          <div class="tour-name-flex-wrapper">
+            <div class="tour-name-flex">
+              <span><%= image_tag("ATPLOGO.png", :alt => "テニスの試合の写真") %><%= link_to(chatbox.chatname, "/#{chatbox.chatname}", style: "color: #5f9ea0;") %></span>
+              <p><i class="fa fa-comments-o"></i><%= chatbox.chats.count %>件</p>
+            </div>
+            <div class="tour-info">
+              <span id="tourgrade"><i class="fa fa-diamond"></i><%= chatbox.tourgrade %></span>
+              <span id="tourcalendar"><i class="fa fa-calendar"></i><%= chatbox.chatterm %></span>
+            </div>
+          </div>
+         <% end %>
+        <% else %>
+        <p>現在開催中のツアーはありません</p>
         <% end %>
       </div>
     </div>
+  </div>
     <div class="top-chatbox-bottom">
       <p><%= link_to "過去の大会や開催予定の大会はこちら", "/tourlists", style: "color: #ff6666;" %></p>
     </div>
