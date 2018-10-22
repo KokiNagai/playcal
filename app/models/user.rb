@@ -6,6 +6,7 @@ class User < ApplicationRecord
     has_many :likes, dependent: :destroy
     has_many :reports, dependent: :destroy
     has_many :chats, dependent: :destroy
+    has_many :goods, dependent: :destroy
 
     has_many :from_comments, class_name: "Comment", foreign_key: "from_id", dependent: :destroy
     has_many :to_comments, class_name: "Comment", foreign_key: "to_id", dependent: :destroy
