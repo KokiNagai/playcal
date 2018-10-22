@@ -4,7 +4,7 @@
     <%= link_to nongood_path(chat_id: chat.id ,id: chat.goods[0].id), method: :delete, remote: true do %>
           <div class="nongood">
             <i class="fa fa-thumbs-up" id="good"></i>
-            <% if chat.goods_count > 0 %>
+            <% if chat.goods_count.to_i > 0 %>
               <span><%= chat.goods_count %></span>
               <% end %>
           </div>
@@ -13,7 +13,7 @@
         <%= link_to good_path(chat.id), method: :post, remote: true do %>
         <div class="good">
           <i class="fa fa-thumbs-up" id="nongood"></i></i>
-          <% if chat.goods_count > 0 %>
+          <% if chat.goods_count.to_i > 0 %>
             <span><%= chat.goods_count %></span>
             <% end %>
         </div>
