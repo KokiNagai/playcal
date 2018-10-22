@@ -1,77 +1,78 @@
 <div class="chatbox-wrapper">
-  <div class="row row-0">
-    <div class="chatbox-prewrapper col-md-8 col-sm-12">
-      <div class="chatbox-main">
-        <div class="chatbox-open">
-          <% if @chatbox.touropen == false %>
-          <p>カフェオープン中</p>
-          <% end %>
-        </div>
-        <div class="chatbox-open1">
-          <% if @chatbox.touropen == true %>
-          <p>大会終了</p>
-          <% end %>
-        </div>
-        <div class="chatbox-title">
-          <span><%= image_tag("ATPLOGO.png")%></span>
-          <h1><%= @chatbox.chatname %></h1>
-        </div>
-        <div class="chatbox-term">
-          <p>大会期間: <%= @chatbox.chatterm %></p>
-        </div>
-        <% if user_signed_in? %>
-        <div class="chatbox-count">
-          <p><%= @chatbox.chats.count %>件のコメント</p>
-        </div>
-        <% if @chats.present? %>
-        <% @chats.each do |chat| %>
-        <div class="chatbox-content-wrapper">
-          <div class="chatbox-content">
-            <% if chat.user.picture.present? %>
-            <div class="chat-user-picture">
-              <p><%= image_tag(chat.user.picture_url, :id => "chat-user-picuture", :alt => "ユーザーの写真") %></p>
-              </div>
-            <% else %>
-            <div class="chat-user-picture">
-            <p><%= image_tag('blank-profile-picture-973460_1280.png', :id => "chat-user-picuture", :alt => "ユーザーの写真") %></p>
-            </div>
-            <% end %>
-
-            <div class="chat-user-content">
-              <p id="chatbox-content-Q"><%= chat.text %></p>
-            </div>
-          </div>
-          <div class="chat-user-name">
-            <p><%= chat.user.name %></p>
-          </div>
-          <div class="chat-time-good">
-            <div class="chatbox-good">
-            </div>
-            <div class="chatbox-time">
-            <p><%= time_ago_in_words(chat.created_at) %>前</p>
-            </div>
-          </div>
-        </div>
-        <% end  %>
-        <% end %>
-        <% else %>
-        <div class="chat-form-nonlogin">
-          <h2>登録またはログインが必要です</h2>
-          <p id="chat-form-nonlogin1"><%= link_to('ログインはこちらから', new_user_session_path, style: "color: #5f9ea0;") %></p>
-          <p id="chat-form-nonlogin2"><%= link_to('新規登録はこちらから', new_user_registration_path, style: "color: #5f9ea0;") %></p>
-        </div>
+  <div class="chatbox-prewrapper">
+    <div class="chatbox-main">
+      <div class="chatbox-open">
+        <% if @chatbox.touropen == false %>
+        <p>カフェオープン中</p>
         <% end %>
       </div>
+      <div class="chatbox-open1">
+        <% if @chatbox.touropen == true %>
+        <p>大会終了</p>
+        <% end %>
+      </div>
+      <div class="chatbox-title">
+        <span><%= image_tag("ATPLOGO.png")%></span>
+        <h1><%= @chatbox.chatname %></h1>
+      </div>
+      <div class="chatbox-term">
+        <p>大会期間: <%= @chatbox.chatterm %></p>
+      </div>
       <% if user_signed_in? %>
-      <div class="render-chat">
-        <div class="render-chat-title">
-          <p><i class="fa fa-pencil-square-o"></i>コメントを書く</p>
+      <div class="chatbox-count">
+        <p><%= @chatbox.chats.count %>件のコメント</p>
+      </div>
+      <% if @chats.present? %>
+      <% @chats.each.with_index do |chat, index| %>
+      <div class="chatbox-content-wrapper">
+        <div class="chatbox-content">
+          <% if chat.user.picture.present? %>
+          <div class="chat-user-picture">
+            <p><%= image_tag(chat.user.picture_url, :id => "chat-user-picuture", :alt => "ユーザーの写真") %></p>
+            </div>
+          <% else %>
+          <div class="chat-user-picture">
+          <p><%= image_tag('blank-profile-picture-973460_1280.png', :id => "chat-user-picuture", :alt => "ユーザーの写真") %></p>
+          </div>
+          <% end %>
+
+          <div class="chat-user-content">
+            <p id="chatbox-content-Q"><%= chat.text %></p>
+          </div>
         </div>
-        <%= render 'chatboxes/chat' %>
+        <div class="chat-user-name">
+          <p><%= chat.user.name %></p>
+        </div>
+        <div class="chat-time-good">
+          <div id="goods_buttons_<%= chat.id %>">
+          <%= render partial: 'goods/good_links', locals: { chat: chat, goods: @goods} %>
+        </div>
+          <div class="chatbox-time">
+          <p><%= time_ago_in_words(chat.created_at) %>前</p>
+          </div>
+        </div>
+      </div>
+      <% end  %>
+      <% end %>
+      <% else %>
+      <div class="chat-form-nonlogin">
+        <h2>登録またはログインが必要です</h2>
+        <p id="chat-form-nonlogin1"><%= link_to('ログインはこちらから', new_user_session_path, style: "color: #5f9ea0;") %></p>
+        <p id="chat-form-nonlogin2"><%= link_to('新規登録はこちらから', new_user_registration_path, style: "color: #5f9ea0;") %></p>
       </div>
       <% end %>
     </div>
-  <div class="col-md-3 hidden-xs">
+    <% if user_signed_in? %>
+    <div class="render-chat">
+      <div class="render-chat-title">
+        <p><i class="fa fa-pencil-square-o"></i>コメントを書く</p>
+      </div>
+      <%= render 'chatboxes/chat' %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-5 hidden-xs">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- playcal-side -->
 <ins class="adsbygoogle"
@@ -83,7 +84,7 @@
 </script>
   </div>
   </div>
-</div>
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- playcal-foot -->
 <ins class="adsbygoogle"
