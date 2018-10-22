@@ -15,6 +15,10 @@ $green-highlight: #5f9ea0;
 // PC,タブレット用画面==========================================
 
 @media only screen and (min-width: 768px) {
+
+  .chatbox-wrapper {
+    display: flex;
+  }
   .chatbox-open {
     text-align: center;
     margin: 20px 10px 30px 10px;
@@ -174,6 +178,20 @@ $green-highlight: #5f9ea0;
       margin-left: 15%;
       font-size: 1.1rem;
       color: $gray-medium-light;
+    }
+
+    .chat-time-good {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 15%;
+      margin-top: 10px;
+      #good {
+        font-size: 1.7rem;
+        color: $pink-hightlight;
+      }
+      #nongood {
+        font-size: 1.7rem;
+      }
     }
 
     .chatbox-time {
@@ -752,7 +770,7 @@ $green-highlight: #5f9ea0;
     }
     .chat-user-picture {
       width: 10%;
-      margin: 0 10px 0 10px;
+      margin: 0 10px 0 13px;
     }
     .chat-user-content {
       width: 80%;
@@ -769,7 +787,22 @@ $green-highlight: #5f9ea0;
     margin-left: 17%;
     font-size: 1.4rem;
     color: $gray-medium-light;
+  }
 
+  .chat-time-good {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 17%;
+    margin-top: 10px;
+    #good {
+      font-size: 1.7rem;
+      color: $pink-hightlight;
+      opacity: 0.9;
+    }
+    #nongood {
+      font-size: 1.7rem;
+      opacity: 0.7;
+    }
   }
 
   .chatbox-time {

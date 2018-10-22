@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'goods/create'
+  get 'goods/destroy'
   get 'notifications/link_through'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'normals#home'
@@ -25,6 +27,9 @@ Rails.application.routes.draw do
 
   post "/likes/:post_id/create", to: 'likes#create'
   post "/likes/:post_id/destroy", to: 'likes#destroy'
+
+  post   '/good/:chat_id' => 'goods#create',   as: 'good'
+  delete '/good/:chat_id' => 'goods#destroy', as: 'nongood'
 
   post "/reports", to: "report#create"
 

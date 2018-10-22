@@ -1,0 +1,17 @@
+<div id="good-link-#{chat.id}">
+  <% if current_user.goods.find_by(chat_id: chat.id) %>
+    <%= link_to nongood_path(chat_id: chat.id ,id: chat.goods[0].id), method: :delete, remote: true do %>
+          <div class="nongood">
+            <i class="fa fa-thumbs-up" id="good"></i>
+              <span><%= chat.goods_count %></span>
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to good_path(chat.id), method: :post, remote: true do %>
+        <div class="good">
+          <i class="fa fa-thumbs-up" id="nongood"></i></i>
+            <span><%= chat.goods_count %></span>
+        </div>
+        <% end %>
+  <% end %>
+</div>
