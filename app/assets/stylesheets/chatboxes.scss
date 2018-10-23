@@ -212,7 +212,7 @@ $green-highlight: #5f9ea0;
         margin: 20px auto;
       }
       #chat-form-submit {
-        margin-left: 200px;
+        margin-left: 300px;
         background-color: $green-logo-color;
         border: none;
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
@@ -227,11 +227,13 @@ $green-highlight: #5f9ea0;
     #chatform {
       width: 400px;
       height: 50px;
-      padding: 2px 10px 3px 10px;
+      padding: 10px;
       border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
-      background-color: #f2f2f2;
-      margin-left: 50px;
+      background-color: #f8f8f8;
+      margin-left: 200px;
       color: $gray-medium-dark;
+      border: 1px solid $gray-border-light;
+      box-shadow: none;
     }
     .render-chat {
       border-top: 1px solid $gray-border-light;
@@ -241,7 +243,7 @@ $green-highlight: #5f9ea0;
         margin-right: 10px;
       }
       p {
-        margin: 30px 0 0 10px;
+        margin: 30px 0 0 50px;
         font-size: 1.5rem;
         color: $gray-medium-dark;
       }
@@ -818,12 +820,18 @@ $green-highlight: #5f9ea0;
   .chat-form-area {
     width: 100%;
     margin: 40px auto;
+    textarea#chatform {
+      border: 1px solid $gray-border-light;
+      padding: 10px;
+      box-shadow: none;
+
+    }
     .chat-form-submit {
       width: 300px;
       margin: 20px auto;
     }
     #chat-form-submit {
-      margin-left: 200px;
+      margin-left: 230px;
       background-color: $green-logo-color;
       border: none;
       box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
@@ -838,9 +846,11 @@ $green-highlight: #5f9ea0;
   #chatform {
     width: 300px;
     height: 60px;
-    padding: 2px 10px 3px 10px;
+    border: 1px solid $gray-border-light;
+    padding: 10px;
+    box-shadow: none;
     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
-    background-color: #f2f2f2;
+    background-color: #f8f8f8;
     margin: 0 auto;
     color: $gray-medium-dark;
   }
