@@ -222,50 +222,87 @@ footer {
 }
 
 // about(PC,タブレット)=============================
-.about-main {
-  margin-top: 40px;
-  .about-title h1 {
-    display: inline-block;
-    border-bottom: 4px solid $green-highlight;
-    font-size: 27px;
-    font-weight: 600;
-    color: $gray-medium-dark;
-  }
-  .about-explain p {
-    color: $gray-word;
-    margin-top: 10px;
-    font-size: 18px;
-
-  }
-  .about-question {
-    margin-top: 100px;
-    h2 {
-      font-size: 20px;
+.about-top-wrapper {
+  background: #56ab2f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: auto;
+  padding-bottom: 50px;
+  .about-top-title {
+    margin-top: 50px;
+    h1 {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff;
+      font-size: 5rem;
       font-weight: 600;
-      margin-top: 60px;
-      color: $gray-medium-dark;
-      display: inline-block;
-      border-bottom: 2px solid $green-highlight;
-      i {
-        border-bottom: 4px solid #fff;
-        margin-right: 10px;
-      }
     }
-    p {
-      color: $gray-medium-light;
-      font-size: 18px !important;
-      line-height: 27px !important;
-      letter-spacing: normal !important;
-      i {
-        font-size: 20px;
-        color: $gray-medium-dark;
-        font-weight: 600;
-        margin-right: 10px;
-      }
+    h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin: 10px auto;
+      text-align: center;
     }
   }
+  .about-top-list {
+    display: flex;
+    .about-top-list1 {
+      margin-top: 80px;
+      text-align: center;
+      .fa {
+        color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 5rem;
+        text-align: center;
+      }
+      p {
+        text-align: left;
+        font-size: 1.5rem;
+        color: #fff;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+    .about-top-list2 {
+      margin-top: 80px;
+      text-align: center;
+      .fa {
+        color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 5rem;
+        text-align: center;
+      }
+      p {
+        text-align: left;
+        font-size: 1.5rem;
+        color: #fff;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+    .about-top-list3 {
+      margin-top: 80px;
+      text-align: center;
+      .fa {
+        color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 5rem;
+        text-align: center;
+      }
+      p {
+        text-align: left;
+        font-size: 1.5rem;
+        color: #fff;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+ }
 }
-
 
 // ログイン後のホーム(タブレット、PC用)=====================
 
@@ -1060,54 +1097,87 @@ h1 {
 
 // about(スマホ)=============================
 
-.about-main {
-  margin-top: 40px;
-  width: 95%;
-  margin: 0 auto;
-  .about-title h1 {
-    display: inline-block;
-    border-bottom: 4px solid $green-highlight;
-    font-size: 20px;
-    font-weight: 600;
-    color: $gray-medium-dark;
-  }
-  .about-explain p {
-    color: $gray-word;
-    margin-top: 10px;
-    font-size: 14px;
-    width: 90%;
-  }
-  .about-question {
-    margin-top: 70px;
-    h2 {
-      font-size: 15px;
+.about-top-wrapper {
+  background: #56ab2f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: auto;
+  padding-bottom: 50px;
+  .about-top-title {
+    margin-top: 50px;
+    h1 {
+      text-align: left;
+      margin: 0px 0 0 30px;
+      color: #fff;
+      font-size: 5rem;
       font-weight: 600;
-      margin-top: 60px;
-      color: $gray-medium-dark;
-      display: inline-block;
-      border-bottom: 2px solid $green-highlight;
-      padding-bottom: 5px;
-      i {
-        border-bottom: 4px solid #fff;
-        margin-right: 10px;
-      }
     }
-    p {
-      color: $gray-medium-light;
-      font-size: 14px !important;
-      line-height: 27px !important;
-      letter-spacing: normal !important;
-      width: 90%;
-      margin: 0 auto;
-      i {
-        font-size: 14px;
-        color: $gray-medium-dark;
-        font-weight: 600;
-        margin-right: 10px;
-      }
+    h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin: 10px auto;
+      text-align: center;
     }
   }
+  .about-top-list {
+    .about-top-list1 {
+      margin-top: 80px;
+      text-align: center;
+      .fa {
+        color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 5rem;
+        text-align: center;
+      }
+      p {
+        text-align: left;
+        font-size: 1.5rem;
+        color: #fff;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+    .about-top-list2 {
+      margin-top: 130px;
+      text-align: center;
+      .fa {
+        color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 5rem;
+        text-align: center;
+      }
+      p {
+        text-align: left;
+        font-size: 1.5rem;
+        color: #fff;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+    .about-top-list3 {
+      margin-top: 130px;
+      text-align: center;
+      .fa {
+        color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 5rem;
+        text-align: center;
+      }
+      p {
+        text-align: left;
+        font-size: 1.5rem;
+        color: #fff;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+ }
 }
+
+
  // ログイン後のホーム画面(スマホ)============
 
  .home-title {
