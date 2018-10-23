@@ -8,6 +8,7 @@
       <h2>パスワードの再発行</h2>
 
       <%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
         <%= f.hidden_field :reset_password_token %>
 
         <div class="password-edit">

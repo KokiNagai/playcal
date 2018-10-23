@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'goods/create'
-  get 'goods/destroy'
   get 'notifications/link_through'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'normals#home'

@@ -7,6 +7,7 @@
     <div class="email-sent-main">
       <h2>パスワードの再発行</h2>
       <%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
 
     <div class="email">
       <%= f.email_field :email, autofocus: true, placeholder: "メールアドレス", hide_label: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>

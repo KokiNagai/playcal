@@ -23,6 +23,9 @@ class ApplicationController < ActionController::Base
       user_path(current_user)
     end
 
+    def after_edit_user_password_path(resource)
+      new_user_session_path
+    end
 
 
     protected

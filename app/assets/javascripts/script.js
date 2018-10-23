@@ -46,21 +46,19 @@ $(function() {
   $('.user-post-recrut').fastClick(function() {
     $('.user-post-show-2').show();
     $('.user-post-show-1').hide();
-    $('.user-post-recrut').css('background-color', '#eeeeee');
-    $('.user-post-recrut').css('border-bottom', '4px solid #ff6666');
-    $('.user-post-count').css('background-color', '#fff');
-    $('.user-post-count').css('border-bottom', '4px solid #cfcfcf');
-    $('.user-post-count').css('border-top', '1px solid #cfcfcf');
+    $('.user-post-recrut').css('border-bottom', '4px solid #9cd75b');
+    $('.user-post-recrut p').css('color', '#9cd75b');
+    $('.user-post-count p').css('color', '#919191');
+    $('.user-post-count').css('border-bottom', 'none');
   });
 
   $('.user-post-count').fastClick(function() {
     $('.user-post-show-2').hide();
     $('.user-post-show-1').show();
-    $('.user-post-count').css('background-color', '#eeeeee');
-    $('.user-post-count').css('border-bottom', '4px solid #ff6666');
-    $('.user-post-recrut').css('background-color', '#fff');
-    $('.user-post-recrut').css('border-bottom', '4px solid #cfcfcf');
-    $('.user-post-recrut').css('border-top', '1px solid #cfcfcf');
+    $('.user-post-count').css('border-bottom', '4px solid #9cd75b');
+    $('.user-post-count p').css('color', '#9cd75b');
+    $('.user-post-recrut p').css('color', '#919191');
+    $('.user-post-recrut').css('border-bottom', 'none');
   });
 
 });
