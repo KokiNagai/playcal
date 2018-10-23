@@ -788,22 +788,6 @@ input#edit-submit:active {
       text-align: center;
       margin: 1.5em 0;
     }
-    h1:before {
-      content: "";
-      position: absolute;
-      top: -8px;
-      left: 50%;
-      width: 150px;
-      height: 65px;
-      border-radius: 50%;
-      border: 5px solid $green-logo-color;
-      border-left-color: transparent;
-      border-right-color: transparent;
-      -moz-transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
-    }
     h2 {
       font-weight: 600;
       font-size: 17px;

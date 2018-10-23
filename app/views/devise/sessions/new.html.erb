@@ -1,6 +1,8 @@
 <div class="login-wrapper">
       <div class="login-main">
-        <h2>ログイン</h2>
+        <div class="login-title">
+          <h2>ログイン</h2>
+        </div>
         <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <h3><%= flash[:alert] %></h3>
 

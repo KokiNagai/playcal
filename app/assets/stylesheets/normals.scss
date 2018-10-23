@@ -1484,12 +1484,20 @@ h1 {
 // ログインモーダル(スマホ)==============
 
 .login-main {
-  h2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: $gray-medium-dark;
-    text-align: center;
-    margin: 40px 0px 40px 0px;
+  .login-title {
+    margin: 40px 0 40px 0;
+    h2 {
+      height: 35px;
+      border-left: 4px solid $green-logo-color;
+      font-size: 2rem;
+      font-weight: 600;
+      color: $green-logo-color;
+      text-align: left;
+      width: 80%;
+      padding: 10px 0 10px 35px;
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
   h3 {
     width: 80%;
