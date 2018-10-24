@@ -36,7 +36,7 @@
           <% end %>
 
           <div class="chat-user-content">
-            <p id="chatbox-content-Q"><%= chat.text %></p>
+            <p id="chatbox-content-Q"><%= simple_format(chat.text) %></p>
           </div>
         </div>
         <div class="chat-user-name">

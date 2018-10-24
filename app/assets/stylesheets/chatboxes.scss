@@ -395,16 +395,21 @@ $green-highlight: #5f9ea0;
         border-top: 1px dotted $gray-border-light;
         margin-top: 60px;
         .tour-now {
-          width: 90%;
+          width: 300px;
           margin: 30px auto;
+          display: flex;
           p {
             text-align: center;
             color: $pink-hightlight;
             font-weight: 600;
             font-size: 2.0rem;
+            margin-top: 10px;
           }
-          .fa {
+          img {
             margin-left: 10px;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
           }
         }
         .top-chatbox-main-now {
@@ -415,7 +420,7 @@ $green-highlight: #5f9ea0;
           }
           .tour-name-flex-wrapper {
             border-bottom: 1px solid $gray-border-light;
-            padding: 20px 10px 5px 10px;
+            padding: 20px 10px 10px 10px;
           }
           .tour-name-flex {
             display: flex;
@@ -491,7 +496,7 @@ $green-highlight: #5f9ea0;
         }
         .tour-name-flex-wrapper {
           border-bottom: 1px solid $gray-border-light;
-          padding: 20px 10px 5px 20px;
+          padding: 20px 10px 10px 20px;
         }
         .tour-name-flex {
           display: flex;
@@ -998,7 +1003,7 @@ $green-highlight: #5f9ea0;
         color: #d8a373;
         font-size: 2.5rem;
         line-height: 1.5em;
-        margin-bottom: 15px;
+        margin: 30px 0 30px 0;
       }
       .fa {
         margin-right: 10px;
@@ -1011,19 +1016,25 @@ $green-highlight: #5f9ea0;
     }
     .tour-now-wrapper {
       padding: 10px 0 30px 0;
-      border-top: 1px dotted $gray-border-light;
       margin-top: 60px;
       .tour-now {
-        width: 90%;
+        width: 240px;
         margin: 30px auto;
+        display: flex;
         p {
           text-align: center;
           color: $pink-hightlight;
           font-weight: 600;
           font-size: 2.0rem;
+          margin-top: 10px;
+          margin-bottom: 0;
+          height: 30px;
+
         }
-        .fa {
-          margin-left: 10px;
+        img {
+          margin-right: 10px;
+          width: 50px;
+          height: 50px;
         }
       }
       .top-chatbox-main-now {
@@ -1034,7 +1045,7 @@ $green-highlight: #5f9ea0;
         }
         .tour-name-flex-wrapper {
           border-bottom: 1px solid $gray-border-light;
-          padding: 20px 10px 5px 20px;
+          padding: 20px 10px 10px 20px;
         }
         .tour-name-flex {
           display: flex;
@@ -1110,7 +1121,7 @@ $green-highlight: #5f9ea0;
       }
       .tour-name-flex-wrapper {
         border-bottom: 1px solid $gray-border-light;
-        padding: 20px 10px 5px 20px;
+        padding: 20px 10px 10px 20px;
       }
       .tour-name-flex {
         display: flex;
