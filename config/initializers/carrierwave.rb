@@ -9,7 +9,8 @@ CarrierWave.configure do |config|
       region:                  'ap-northeast-1'
      }
        config.fog_directory = 'playcal-picture'
-       config.asset_host = 'your-bucket-url'
+       
+       config.cache_storage = :fog
 
      when 'staging'
       config.fog_credentials = {
