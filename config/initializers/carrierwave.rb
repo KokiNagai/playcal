@@ -9,7 +9,7 @@ CarrierWave.configure do |config|
       region:                  'ap-northeast-1'
      }
        config.fog_directory = 'playcal-picture'
-       
+
        config.cache_storage = :fog
 
      when 'staging'
