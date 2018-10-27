@@ -14,11 +14,7 @@ Rails.application.routes.draw do
   get 'login' => 'users/sessions#new', as: :new_user_session
   post 'login' => 'users/sessions#create', as: :user_session
   delete 'logout' => 'users/sessions#destroy', as: :destroy_user_session
-  get 'signup' => 'users/registrations#new', as: :new_user_registration
-  post 'signup' => 'users/registrations#create'
   delete 'signout' => 'users/registrations#destroy', as: :destroy_user_registration
-  get 'edit' => 'users/registrations#edit', as: :edit_user_registration
-  put 'edit' => 'users/registrations#update'
   get 'confirm_email', to: 'users/registrations#confirm_email'
   get 'edit_confirmation', to: 'users/registrations#edit_confirmation'
 end
