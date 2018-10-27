@@ -216,7 +216,7 @@ Devise.setup do |config|
   config.reset_password_within = 3.hours
 
 
-      config.omniauth :facebook, '2262468903996625', '5e20dc9bafce0a40a62c581752976b112', scope: 'email', info_fields: 'email,name'
+config.omniauth :facebook, '2262468903996625', '5e20dc9bafce0a40a62c581752976b11', scope: 'email', info_fields: 'email,name'
 
 config.scoped_views = true
 
