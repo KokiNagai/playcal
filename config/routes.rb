@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
 
-  devise_scope :user do
+  devise_scope :users do
   get 'login' => 'users/sessions#new', as: :new_user_session
   post 'login' => 'users/sessions#create', as: :user_session
   delete 'logout' => 'users/sessions#destroy', as: :destroy_user_session
