@@ -11,7 +11,7 @@ end
 
 private
 
-ef new_user
+def new_user
   if user_signed_in?
   unless current_user.gender.present?
   redirect_to edit_user_registration_path
@@ -19,6 +19,5 @@ ef new_user
 end
 end
 end
-
 
 end
