@@ -4,21 +4,23 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'normals#home'
   devise_for :users, skip: [:sessions, :registrations], controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations',
-    passwords: 'users/passwords',
-    omniauth_callbacks: 'users/omniauth_callbacks'
+    sessions: 'sessions',
+    registrations: 'registrations',
+    passwords: 'passwords',
+    omniauth_callbacks: 'omniauth_callbacks'
   }
 
-  devise_scope :users do
-  get 'login' => 'users/sessions#new', as: :new_user_session
-  post 'login' => 'users/sessions#create', as: :user_session
-  delete 'logout' => 'users/sessions#destroy', as: :destroy_user_session
-  get 'signup' => 'users/registrations#new', as: :new_user_registration
-  post 'signup' => 'users/registrations#create'
-  delete 'signout' => 'users/registrations#destroy', as: :destroy_user_registration
-  get 'confirm_email', to: 'users/registrations#confirm_email'
-  get 'edit_confirmation', to: 'users/registrations#edit_confirmation'
+  devise_scope :user do
+  get 'login' => 'sessions#new', as: :new_user_session
+  post 'login' => 'sessions#create', as: :user_session
+  delete 'logout' => 'sessions#destroy', as: :destroy_user_session
+  get 'signup' => 'registrations#new', as: :new_user_registration
+  post 'signup' => 'registrations#create'
+  delete 'signout' => 'registrations#destroy', as: :destroy_user_registration
+  get 'edit' => 'registrations#edit', as: :edit_user_registration
+  post 'edit' => 'registrations#update'
+  get 'confirm_email', to: 'registrations#confirm_email'
+  get 'edit_confirmation', to: 'registrations#edit_confirmation'
 end
 
 

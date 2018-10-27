@@ -1,6 +1,6 @@
 <% set_meta_tags title: "プロフィールを編集する", noindex: true %>
 <div class="edit-user-wapper">
-  <%= bootstrap_form_for(resource, as: resource_name, url: user_registration_path, html: { method: :patch }) do |f| %>
+  <%= bootstrap_form_for(resource, as: resource_name, url: edit_path, html: { method: :post }) do |f| %>
   <div class="edit-user-main">
     <% if current_user.gender.present? %>
     <div class="edit-user-title">
