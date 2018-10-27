@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create, :destroy]
   before_action :correct_params, only: [:show]
+  before_action :new_user
 
   def show
     @post = current_user.posts.build
@@ -42,5 +43,15 @@ class RoomsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def new_user
+    if user_signed_in?
+    unless current_user.gender.present?
+    redirect_to edit_path
+    flash[:alert] = "※ プロフィールの編集を完了してください。"
+  end
+  end
+  end
+
 
 end

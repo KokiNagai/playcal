@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:create, :new, :destroy]
   after_action :create_notifications, only: [:create]
+  before_action :new_user
 
 
   def show
@@ -50,4 +51,14 @@ class CommentsController < ApplicationController
       Notification.create(user_id: @post.user.id, notified_by_id: current_user.id, post_id: @post.id, notified_type: 'コメント')
     end
   end
+
+  def new_user
+    if user_signed_in?
+    unless current_user.gender.present?
+    redirect_to edit_path
+    flash[:alert] = "※ プロフィールの編集を完了してください。"
+  end
+  end
+  end
+
 end

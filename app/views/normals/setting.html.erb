@@ -5,7 +5,7 @@
   </div>
   <div class="setting-list">
     <p><i class="fa fa-edit"></i><%= link_to 'プロフィールを編集する', edit_user_registration_path %></p>
-    <p><i class="fa fa-trash-o"></i><%= link_to '退会', user_registration_path, method: :delete, data: {confirm: '退会しますか？'} %></p>
+    <p><i class="fa fa-trash-o"></i><%= link_to '退会', destroy_user_registration_path, method: :delete, data: {confirm: '退会しますか？'} %></p>
   </div>
 </div>
 

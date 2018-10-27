@@ -143,6 +143,18 @@ $green-highlight: #5f9ea0;
          }
        }
      }
+     .user-show-right-tag {
+       margin-top: 30px;
+       text-align: center;
+       padding: 20px 0 0px 0;
+       h3 {
+         font-size: 2rem;
+         color: $gray-medium-light;
+         font-weight: 600;
+         margin: 0px;
+       }
+     }
+
      .user-show-right-upper {
        border: 1px solid $gray-border-light;
        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
@@ -300,6 +312,32 @@ $green-highlight: #5f9ea0;
 
 // ユーザー編集ページと新規登録画面(タブレット、PC用)======================//
 
+.edit-user-wrapper1 {
+  display: flex;
+  flex-direction: column;
+  .facebook-signup {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #305097;
+    padding: 5px 0 5px 0;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #305097;
+    p {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    .fa {
+      color: #fff;
+      margin-right: 10px;
+      font-size: 1.5rem;
+      border: none;
+    }
+  }
+}
+
 .edit-user-main {
   small {
     margin-left: 10px;
@@ -319,14 +357,15 @@ $green-highlight: #5f9ea0;
   text-align: center;
   margin-top: 50px;
   h1 {
-    font-weight: 600;
+    text-align: center;
+    font-weight: 500;
     font-size: 30px;
-    color: $green-logo-color;
+    color: $gray-medium-dark;
   }
   h2 {
-    font-weight: 600;
-    font-size: 25px;
-    color: $green-logo-color;
+    font-weight: 500;
+    font-size: 20px;
+    color: $gray-medium-dark;
   }
   .fa {
     margin-right: 10px;
@@ -335,6 +374,36 @@ $green-highlight: #5f9ea0;
     border: none;
   }
 }
+
+.edit-user-title-after {
+  margin: 40px;
+  h1 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    color: $green-logo-color;
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  p {
+    margin: 20px auto;
+    width: 75%;
+    color: $gray-medium-dark;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+
+.edit-user-after-alert {
+  width:80%;
+  margin: 0 auto;
+  h3 {
+    text-align: center;
+    color: $pink-hightlight;
+    font-size: 1.5rem;
+  }
+}
+
 
 .name-edit {
   margin-top: 0px;
@@ -427,7 +496,7 @@ $green-highlight: #5f9ea0;
 .password-edit, .password_confirmation-edit {
   margin-left: 95px;
   label {
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 10px;
     color: $gray-medium-dark;
     font-size: 13px;
@@ -460,11 +529,11 @@ p {
 
 input#edit-submit {
   display: block;
-  margin-top: 40px;
-  margin-left: 155px;
-  width: 400px;
+  margin: 30px auto;
+  width: 500px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
   border-bottom: solid 3px $green-logo-color;
+  border: none;
   background-color: $green-logo-color;
 }
 input#edit-submit:active {
@@ -493,9 +562,7 @@ input#edit-submit:active {
     color: #ffe259;
   }
 }
-
 }
-
 
 // スマホ用画面================================================================
 
@@ -758,6 +825,31 @@ input#edit-submit:active {
 
 
   // sign_up_fotm / edit-form(スマホ)======================
+  .edit-user-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    .facebook-signup {
+      width: 80%;
+      margin: 40px auto;
+      text-align: center;
+      background-color: #305097;
+      padding: 5px 0 5px 0;
+      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+      border-bottom: solid 3px #305097;
+      p {
+        color: #fff;
+        font-size: 1.5rem;
+        margin: 0;
+      }
+      .fa {
+        color: #fff;
+        margin-right: 10px;
+        font-size: 1.5rem;
+        border: none;
+      }
+    }
+  }
 
   .edit-user-main {
     small {
@@ -783,10 +875,10 @@ input#edit-submit:active {
       color: $green-highlight;
       position: relative;
       color: $green-logo-color;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       padding: 10px 0;
       text-align: center;
-      margin: 1.5em 0;
+      margin: 1.2em 0;
     }
     h2 {
       font-weight: 600;
@@ -798,6 +890,37 @@ input#edit-submit:active {
         color: $green-logo-color;
         border: none;
       }
+    }
+  }
+
+  .edit-user-after-alert {
+    width:87%;
+    margin: 0 auto;
+    h3 {
+      text-align: center;
+      color: $pink-hightlight;
+      font-size: 1.4rem;
+    }
+  }
+
+  .edit-user-title-after {
+    margin: 40px 0 40px 0;
+    text-align: center;
+    h1 {
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      text-align: left;
+      color: $green-logo-color;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 20px auto;
+      width: 85%;
+      color: $gray-medium-dark;
+      font-size: 1.5rem;
+      text-align: left;
     }
   }
 
@@ -855,7 +978,7 @@ input#edit-submit:active {
     margin: 0 auto;
     width: 300px;
     label {
-      margin-top: 30px;
+      margin-top: 10px;
       margin-bottom: 10px;
       color: $gray-medium-dark;
       font-size: 13px;
@@ -898,7 +1021,7 @@ input#edit-submit:active {
     margin: 0 auto;
     width: 300px;
     label {
-      margin-top: 30px;
+      margin-top: 10px;
       margin-bottom: 10px;
       color: $gray-medium-dark;
       font-size: 13px;
@@ -940,6 +1063,14 @@ input#edit-submit:active {
     color: $green-logo-color;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
     border-bottom: none;
+  }
+
+  #error_explanation ul {
+    padding: 0px;
+    li {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 
  // like(スマホ)================================

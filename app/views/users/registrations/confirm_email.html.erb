@@ -1,0 +1,13 @@
+<div class="mail-confirm-wrapper">
+  <div class="mail-confirm-title">
+    <h1>認証メールを送信しました。</h1>
+    <h2>送信先のメールに記載されているリンクから登録を完了させてください。</h2>
+  </div>
+  <div class="mail-confirm-sub">
+    <p>※ 迷惑メールフォルダに送信されている可能性があるため、届かない場合は迷惑メールフォルダもご確認ください。</p>
+  </div>
+  <div class="mail-confirm-resend">
+    <p>アカウント登録メールが来ませんか？</p>
+    <p id="mail-confirm-resend-list"><%= link_to "アカウント登録メールの再送はこちらから", new_confirmation_path(resource_name), id: "login-under-signup" %></p>
+  </div>
+</div>

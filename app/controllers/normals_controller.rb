@@ -1,5 +1,6 @@
 class NormalsController < ApplicationController
   before_action :authenticate_user!, only: [:inbox, :outbox]
+  before_action :new_user
 
 
   def home
@@ -26,7 +27,7 @@ class NormalsController < ApplicationController
   end
 
   def message
-  end 
+  end
 
   def inbox
     @post = current_user.posts.build
@@ -250,6 +251,7 @@ else
 end
 
 
+
 private
   def search_params
     params.require(:q).permit(:gender_eq,  :playday_gteq, :playday_lteq, :prefecture_eq, :style_eq, :city_cont)
@@ -278,6 +280,16 @@ end
 def prefecture_params
     params.require(:q).permit(:prefecture_eq)
 end
+
+def new_user
+  if user_signed_in?
+  unless current_user.gender.present?
+  redirect_to edit_path
+  flash[:alert] = "※ プロフィールの編集を完了してください。"
+end
+end
+end
+
 
 
 

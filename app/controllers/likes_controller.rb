@@ -1,5 +1,6 @@
 class LikesController < ApplicationController
   before_action :authenticate_user!, only: [:create, :destroy]
+  before_action :new_user
 
   def create
     @like = Like.new(user_id: current_user.id, post_id: params[:post_id])
@@ -14,4 +15,14 @@ class LikesController < ApplicationController
       redirect_to("/posts/#{params[:post_id]}")
     end
   end
+
+  def new_user
+    if user_signed_in?
+    unless current_user.gender.present?
+    redirect_to edit_path
+    flash[:alert] = "※ プロフィールの編集を完了してください。"
+  end
+  end
+  end
+
 end

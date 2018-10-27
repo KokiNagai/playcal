@@ -5,8 +5,8 @@
         <ul class="nav navbar-nav navbar-right">
           <ul class="nonloggedin-right">
             <% if user_signed_in? %>
+            <% if current_user.gender.present? %>
             <% if current_user.picture.present? %>
-
             <li class="hidden-xs"><%= image_tag(current_user.picture_url, :class => "header-picture") %></li>
             <% else %>
             <li class="hidden-xs"><%= image_tag('blank-profile-picture-973460_1280.png', :class => "header-picture") %></li>
@@ -56,21 +56,26 @@
                     <p><i class="fa fa-navicon fa-1.5x down-color"  id="dropdown-fontawesome" ontouchstart=""></i></p>
                       <%= render 'layouts/dropdown' %>
                   </div>
-
+                  <% end %>
             <% else %>
             <li  class="hidden-xs"><%= link_to "ホーム", root_path, id: "sub" %></li>
             <li  class="hidden-xs"><%= link_to "登録", new_user_registration_path, id: "sub" %></li>
             <li  class="hidden-xs"><%= link_to "ログイン", new_user_session_path, id: "sub" %></li>
-
             <div class="smartphone-dropdown visible-xs">
                 <p><i class="fa fa-navicon fa-1.5x down-color"  id="dropdown-fontawesome"></i></p>
                 <%= render 'layouts/dropdown' %>
               </div>
-
+            <% end %>
+            <% if user_signed_in? %>
+            <% if current_user.gender.nil? %>
+            <li class="hidden-xs"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, style: "color: #4c4c4c; font-weight: 600;" %></li>
+              <div class="smartphone-dropdown visible-xs">
+                <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete, style: "color: #4c4c4c; font-weight: 600;" %></p>
+              </div>
+            <% end %>
             <% end %>
             </ul>
           </ul>
         </nav>
       </div>
-
     </header>

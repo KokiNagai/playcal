@@ -1,0 +1,47 @@
+<% set_meta_tags title: "新規登録", noindex: true %>
+<div class="edit-user-wrapper1">
+  <%= bootstrap_form_for(resource, as: resource_name, url: signup_path) do |f| %>
+  <div class="edit-user-main">
+    <div class="edit-user-title">
+      <h1>Playcalへようこそ!</h1>
+      <h2>登録をしてさっそく始めよう</h2>
+    </div>
+    <div class="edit-user-flex">
+      <div class="edit-user-main-under">
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <div class="email-edit">
+          <%= f.label :メールアドレス %>
+          <%= f.email_field :email, id: "email-edit", hide_label: true, placeholder: "メールアドレス" %>
+        </div>
+
+        <div class="password-edit">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <span>(<%= @minimum_password_length %>字以上)</span>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password", hide_label: true, placeholder: "パスワード"  %>
+        </div>
+
+        <div class="password_confirmation-edit">
+          <%= f.label :パスワードの確認 %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", hide_label: true, placeholder: "パスワードの確認"  %>
+        </div>
+
+        <div class="edit-submit">
+          <%= f.submit "認証メール送信する", class: "btn btn-success", id: "edit-submit" %>
+          <p>※ メールの送信には時間がかかる可能性がありますのでご了承ください</p>
+          </div>
+
+        </div>
+        <div class="facebook-signup">
+          <%= link_to user_facebook_omniauth_authorize_path do %>
+          <p><i class="fa fa-facebook-f"></i>Facebookアカウントで登録する</p>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+  <%= render "devise/shared/links" %>

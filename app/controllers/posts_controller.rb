@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
     before_action :authenticate_user!, only: [:create, :destroy, :show, :posting]
     before_action :correct_user, only: [:destroy]
+    before_action :new_user
 
 
     def show
@@ -55,6 +56,14 @@ class PostsController < ApplicationController
       end
     end
 
+    def new_user
+      if user_signed_in?
+      unless current_user.gender.present?
+      redirect_to edit_path
+      flash[:alert] = "※ プロフィールの編集を完了してください。"
+    end
+    end
+    end
 
 
 end

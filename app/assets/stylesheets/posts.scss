@@ -147,14 +147,15 @@ span.picture {
    height: 180px;
  }
  .submit {
-   margin-left: 180px;
+   margin-left: 200px;
  }
  #posting-submit {
-   width: 200px;
+   width: 400px;
    background-color: $green-logo-color;
    border: none;
    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
    border-bottom: solid 3px $green-logo-color;
+
  }
 
  #posting-submit:active {
@@ -641,7 +642,7 @@ button#post-message-submit:active {
    #posting-submit {
      margin: 0 auto;
      display: block;
-     width: 200px;
+     width: 300px;
      background-color: $green-logo-color;
      border: none;
      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);

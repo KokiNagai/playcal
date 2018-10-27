@@ -1,0 +1,170 @@
+<% set_meta_tags title: "プロフィールを編集する", noindex: true %>
+<div class="edit-user-wapper">
+  <%= bootstrap_form_for(resource, as: resource_name, url: edit_path, html: { method: :put }) do |f| %>
+  <div class="edit-user-main">
+    <% if current_user.gender.present? %>
+    <div class="edit-user-title">
+      <h2><i class="fa fa-pencil-square-o"></i>プロフィールを編集する</h2>
+    </div>
+    <% else %>
+    <div class="edit-user-title-after">
+      <h1>Playcalへようこそ！</h1>
+      <p>プロフィールを完成させよう！</p>
+    </div>
+    <div class="edit-user-after-alert">
+      <h3><%= flash[:alert] %></h3>
+    </div>
+    <% end %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <div class="picture-edit">
+      <%= f.label :プロフィール画像 %>
+      <%= f.file_field :picture, hide_label: true %>
+    </div>
+
+      <div class="name-edit">
+        <%= f.label :名前 %><i>必須</i><span>　(20字以内)</span>
+        <%= f.text_field :name, id: "name-edit", hide_label: true %>
+      </div>
+
+       <div class="birth-date-edit">
+         <%= f.label :生年月日 %><i>必須</i>
+         <%= f.date_select(
+                 :birth_date,
+                 use_month_numbers: true,
+                 start_year:     1930,
+                 end_year:       (Time.now.year - 18),
+                 default:        Date.new(1989, 1, 1),
+                 hide_label: true,
+                 date_separator: '/', id: "birth-date-edit") %>
+         </div>
+
+        <div class="email-edit">
+         <%= f.label :メールアドレス %><i>必須</i>
+         <%= f.email_field :email, id: "email-edit", hide_label: true %>
+       </div>
+
+       <div class="name-edit">
+         <%= f.label :性別 %><small></small><i>必須</i>
+         <%= f.select :gender, [['男性', '男性'], ['女性','女性']], {include_blank: '選択してください', hide_label: true}, id: "name-edit" %>
+       </div>
+
+        <div class="prefecture-edit">
+         <%= f.label :住んでいる都道府県 %><i>必須</i>
+        <%= f.select :live , [
+          ['北海道地方', [
+              ['北海道',   '北海道'],
+            ]
+          ],
+          ['東北地方', [
+              ['青森県',    '青森県'],
+              ['岩手県',   '岩手県'],
+              ['宮城県',   '宮城県'],
+              ['秋田県',   '秋田県'],
+              ['山形県',   '山形県'],
+              ['福島県',   '福島県'],
+            ]
+          ],
+          ['関東地方', [
+              ['茨城県',    '茨城県'],
+              ['栃木県',   '栃木県'],
+              ['群馬県',   '群馬県'],
+              ['埼玉県',   '埼玉県'],
+              ['千葉県',   '千葉県'],
+              ['東京都',   '東京都'],
+              ['神奈川県',   '神奈川県'],
+            ]
+          ],
+          ['中部地方', [
+              ['新潟県',    '新潟県'],
+              ['富山県',   '富山県'],
+              ['石川県',   '石川県'],
+              ['福井県',   '福井県'],
+              ['山梨県',   '山梨県'],
+              ['長野県',   '長野県'],
+              ['岐阜県',   '岐阜県'],
+              ['静岡県',   '静岡県'],
+              ['愛知県',   '愛知県'],
+            ]
+          ],
+          ['近畿地方', [
+              ['三重県',    '三重県'],
+              ['滋賀県',   '滋賀県'],
+              ['京都府',   '京都府'],
+              ['大阪府',   '大阪府'],
+              ['兵庫県',   '兵庫県'],
+              ['奈良県',   '奈良県'],
+              ['和歌山県',   '和歌山県'],
+            ]
+          ],
+          ['中国地方', [
+              ['鳥取県',    '鳥取県'],
+              ['島根県',   '島根県'],
+              ['岡山県',   '岡山県'],
+              ['広島県',   '広島県'],
+              ['山口県',   '山口県'],
+            ]
+          ],
+          ['四国地方', [
+              ['徳島県',    '徳島県'],
+              ['香川県',   '香川県'],
+              ['愛媛県',   '愛媛県'],
+              ['高知県',   '高知県'],
+            ]
+          ],
+          ['九州地方', [
+              ['福岡県',    '福岡県'],
+              ['佐賀県',   '佐賀県'],
+              ['長崎県',   '長崎県'],
+              ['熊本県',   '熊本県'],
+              ['大分県',   '大分県'],
+              ['宮崎県',   '宮崎県'],
+              ['鹿児島県',   '鹿児島県'],
+            ]
+          ],
+          ['沖縄地方', [
+              ['沖縄県',    '沖縄県'],
+            ]
+          ],
+          ], {include_blank: '選択してください', hide_label: true}, id: 'prefecture-edit' %></div>
+
+          <div class="prefecture-edit">
+            <%= f.label :テニス歴 %>
+            <%= f.select :history, [['1年未満', '1年未満'], ['1年~5年', '1年~5年'],
+             ['5年~10年', '5年~10年'], ['10年以上', '10年以上']], {include_blank: '選択してください', hide_label: true},
+              id: 'prefecture-edit' %>
+          </div>
+
+       <div class="introduction-edit">
+        <%= f.label :プロフィール %><small>(200字以内)</small>
+        <%= f.text_area :introduction, id: "introduction-edit", class: "edit-introduction-area", hide_label: true, placeholder: "自己紹介を詳しく書くと、募集の際に人が集まりやすくなります。"%>
+      </div>
+
+      <% if current_user.gender.nil? && current_user.uid.present? %>
+      <div class="password-edit">
+        <%= f.label :password %><i>必須</i>
+        <% if @minimum_password_length %>
+        <span>( <%= @minimum_password_length %>字以上 )</span>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", hide_label: true, placeholder: "パスワード"  %>
+      </div>
+
+      <div class="password_confirmation-edit">
+        <%= f.label :パスワードの確認 %><i>必須</i>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", hide_label: true, placeholder: "パスワードの確認"  %>
+      </div>
+      <% end %>
+
+
+      <% if current_user.gender.present? %>
+      <div class="edit-submit">
+      <%= f.submit "編集を完了する", class: "btn btn-success", id: "edit-submit" %>
+    </div>
+    <% else %>
+    <div class="edit-submit">
+    <%= f.submit "登録を完了する", class: "btn btn-success", id: "edit-submit" %>
+  </div>
+  <% end %>
+  </div>
+  <% end %>
+</div>

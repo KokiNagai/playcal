@@ -22,7 +22,11 @@ gem 'devise'
 
 gem 'meta-tags'
 
+gem 'omniauth'
+
 gem 'omniauth-twitter'
+
+gem 'omniauth-facebook'
 
 gem 'less-rails'
 

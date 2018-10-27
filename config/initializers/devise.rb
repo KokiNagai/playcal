@@ -215,6 +215,15 @@ Devise.setup do |config|
   # change their passwords.
   config.reset_password_within = 3.hours
 
+
+  if Rails.env.production?
+    config.omniauth :facebook, '2262468903996625', '5e20dc9bafce0a40a62c581752976b112', scope: 'email', info_fields: 'email,name'
+  elsif Rails.env.staging?
+  config.omniauth :facebook, '715317978849898', '0cc27a253eaec89546c1168a4acae052', scope: 'email', info_fields: 'email,name'
+else
+config.omniauth :facebook, '715317978849898', '0cc27a253eaec89546c1168a4acae052', scope: 'email', info_fields: 'email,name'
+end
+
   # When set to false, does not sign a user in automatically after their password is
   # reset. Defaults to true, so a user is signed in automatically after a reset.
   # config.sign_in_after_reset_password = true

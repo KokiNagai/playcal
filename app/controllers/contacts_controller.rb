@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  before_action :new_user
+
   def new
     @contact = Contact.new
   end
@@ -22,5 +24,14 @@ class ContactsController < ApplicationController
     private
     def contact_params
       params.require(:contact).permit(:email, :message)
+    end
+
+    def new_user
+      if user_signed_in?
+      unless current_user.gender.present?
+      redirect_to edit_path
+      flash[:alert] = "※ プロフィールの編集を完了してください。"
+    end
+    end
     end
 end

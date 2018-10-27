@@ -307,6 +307,46 @@ footer {
  }
 }
 
+// メール送信後パーシャル(PC, タブレット)======================
+
+.mail-confirm-wrapper {
+  margin: 40px 0 40px 0;
+  .mail-confirm-title {
+    width: 90%;
+    margin: 0 auto;
+    h1 {
+      color: $green-highlight;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    h2 {
+      color: $green-highlight;
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+  }
+    .mail-confirm-sub {
+      width: 90%;
+      margin: 40px auto;
+      p {
+      color: $gray-medium-dark;
+      font-size: 1.3rem;
+    }
+  }
+  .mail-confirm-resend {
+    width: 90%;
+    margin: 40px auto;
+    p {
+      color: $gray-medium-dark;
+      font-size:  1.5rem;
+    }
+    #login-under-signup {
+      color: $green-highlight;
+      font-size: 1.4rem;
+    }
+  }
+}
+
 // ログイン後のホーム(タブレット、PC用)=====================
 
 .home-title {
@@ -411,8 +451,8 @@ h1 {
 
 
  .top-user-prefecture {
-   width: 300px;
-   margin: 30px auto;
+   width: 330px;
+   margin: 50px auto;
    position: relative;
    padding: 2em 0.7em;
    background: $pink-borderbottom;
@@ -707,29 +747,51 @@ h1 {
       width: 500px;
     }
   }
-    input#login-submit {
-      margin: 30px auto;
-      width: 500px;
-      display: block;
-      background-color: $green-logo-color;
+
+  .facebook-signup {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #305097;
+    padding: 5px 0 5px 0;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #305097;
+    p {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    .fa {
+      color: #fff;
+      margin-right: 10px;
+      font-size: 1.5rem;
       border: none;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-      border-bottom: solid 3px $green-logo-color;
     }
-
-    input#login-submit:active {
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      border-bottom: none;
-    }
-
-
-    .login-under {
-     text-align: center;
-     #login-under-signup {
-       color: $green-highlight;
   }
+
+  input#login-submit {
+    margin: 30px auto;
+    width: 500px;
+    display: block;
+    background-color: $green-logo-color;
+    border: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px $green-logo-color;
+  }
+  input#login-submit:active {
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+  }
+  .login-under {
+    margin-left: 10%;
+   width: 600px;
+   #login-under-signup {
+     color: $green-highlight;
+   }
  }
 }
+
 .fa-times {
   position: absolute;
   top: 12px;
@@ -1194,6 +1256,46 @@ h1 {
  }
 }
 
+// メール送信後のパーシャル(スマホ)=======================
+
+.mail-confirm-wrapper {
+  margin: 40px 0 10px 0;
+  .mail-confirm-title {
+    width: 90%;
+    margin: 0 auto;
+    h1 {
+      color: $green-highlight;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    h2 {
+      color: $green-highlight;
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+  }
+    .mail-confirm-sub {
+      width: 90%;
+      margin: 40px auto;
+      p {
+      color: $gray-medium-dark;
+      font-size: 1.3rem;
+    }
+  }
+  .mail-confirm-resend {
+    width: 90%;
+    margin: 40px auto;
+    p {
+      color: $gray-medium-dark;
+      font-size:  1.5rem;
+    }
+    #login-under-signup {
+      color: $green-highlight;
+      font-size: 1.4rem;
+    }
+  }
+}
+
 
  // ログイン後のホーム画面(スマホ)============
 
@@ -1585,6 +1687,27 @@ h1 {
       padding: 10px 0 10px 35px;
       display: table-cell;
       vertical-align: middle;
+    }
+  }
+  .facebook-signup {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #305097;
+    padding: 5px 0 5px 0;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #305097;
+    p {
+      color: #fff;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    .fa {
+      color: #fff;
+      margin-right: 10px;
+      font-size: 1.6rem;
+      border: none;
     }
   }
   h3 {

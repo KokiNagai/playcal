@@ -15,13 +15,6 @@ class ApplicationController < ActionController::Base
    redirect_to "#{request.protocol}#{FQDN}#{port}#{request.path}", status: :moved_permanently
   end
 
-  def after_sign_in_path_for(resource)
-    user_path(current_user)
-  end
-
-    def after_update_path_for(resource)
-      user_path(current_user)
-    end
 
     def after_edit_user_password_path(resource)
       new_user_session_path
@@ -31,16 +24,10 @@ class ApplicationController < ActionController::Base
     protected
 
     def configure_permitted_parameters
-      added_attrs = [:name, :birth_date, :picture, :live, :gender]
-      added_attrs2 = [:live, :name, :birth_date, :introduction, :picture, :history]
-      devise_parameter_sanitizer.permit(:sign_up, keys:  added_attrs)
+      added_attrs2 = [:live, :name, :birth_date, :introduction, :picture, :history, :gender]
       devise_parameter_sanitizer.permit(:account_update, keys: added_attrs2)
     end
 
-    def logged_in_user
-      unless logged_in?
-        store_location
-        redirect_to login_url
-      end
-    end
+
+
 end
