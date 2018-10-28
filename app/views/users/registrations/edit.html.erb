@@ -1,6 +1,6 @@
 <% set_meta_tags title: "プロフィールを編集する", noindex: true %>
 <div class="edit-user-wapper">
-  <%= bootstrap_form_for(resource, as: resource_name, url: edit_path, html: { method: :post }) do |f| %>
+  <%= bootstrap_form_for(resource, as: resource_name, url: edit_path, html: { method: :put }) do |f| %>
   <div class="edit-user-main">
     <% if current_user.gender.present? %>
     <div class="edit-user-title">
@@ -13,6 +13,7 @@
     </div>
     <div class="edit-user-after-alert">
       <h3><%= flash[:alert] %></h3>
+      <%= render 'shared/error_messages', object: f.object %>
     </div>
     <% end %>
     <%= render 'shared/error_messages', object: f.object %>

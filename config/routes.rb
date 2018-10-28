@@ -11,14 +11,14 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
+  get 'edit' => 'registrations#edit', as: :edit_user_registration
+  put 'edit' => 'registrations#update'
   get 'login' => 'sessions#new', as: :new_user_session
   post 'login' => 'sessions#create', as: :user_session
   delete 'logout' => 'sessions#destroy', as: :destroy_user_session
   get 'signup' => 'registrations#new', as: :new_user_registration
   post 'signup' => 'registrations#create'
   delete 'signout' => 'registrations#destroy', as: :destroy_user_registration
-  get 'edit' => 'registrations#edit', as: :edit_user_registration
-  post 'edit' => 'registrations#update'
   get 'confirm_email', to: 'registrations#confirm_email'
   get 'edit_confirmation', to: 'registrations#edit_confirmation'
 end

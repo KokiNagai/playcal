@@ -19,7 +19,7 @@ class User < ApplicationRecord
    validates :introduction, length: {maximum: 200}
 
    with_options on: :update do
-   validates :name, presence: true, length: {maximum: 20}
+   validates :name, presence: true, length: {maximum: 20}, uniqueness: true
    validates :live, presence: true
    validates :password, presence: true, length: { minimum: 7 }, unless: :snslogin_edit1
    validates :password, presence: true, length: { minimum: 7 }, allow_nil: true, unless: :snslogin_edit
