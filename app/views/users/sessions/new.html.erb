@@ -29,6 +29,12 @@
       <% end %>
     </div>
 
+    <div class="google-signup">
+      <%= link_to user_google_oauth2_omniauth_authorize_path do %>
+      <p><i class="fa fa-google"></i>Googleアカウントでログインする</p>
+      <% end %>
+    </div>
+
       <div class="login-under">
         <p>アカウントをお持ちでないですか?</p>
         <p id="login-under-list"><%= link_to "登録はこちら", new_user_registration_path, id: "login-under-signup" %></p>

@@ -40,7 +40,9 @@ class User < ApplicationRecord
    def self.find_for_oauth(auth)
    user = User.where(uid: auth.uid, provider: auth.provider, email: auth.info.email).first
    user1 = User.where(uid: nil, provider: nil, email: auth.info.email).first
-   if !user && !user1
+   user2 = User.where.not(uid: nil, provider: nil).where(email: auth.info.email).first
+
+   if !user && !user1 && !user2
      user = User.new(
        uid:      auth.uid,
        provider: auth.provider,
@@ -50,7 +52,7 @@ class User < ApplicationRecord
      )
      user.skip_confirmation!
      user.save
-   elsif user1
+   elsif user1 || user2
      user = User.where(email: auth.info.email).first
      user.update(uid: auth.uid, provider: auth.provider)
    end

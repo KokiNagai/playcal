@@ -39,6 +39,12 @@
           <p><i class="fa fa-facebook-f"></i>Facebookアカウントで登録する</p>
           <% end %>
         </div>
+
+        <div class="google-signup">
+          <%= link_to user_google_oauth2_omniauth_authorize_path do %>
+          <p><i class="fa fa-google"></i>Googleアカウントで登録する</p>
+          <% end %>
+        </div>
       </div>
 
     </div>
