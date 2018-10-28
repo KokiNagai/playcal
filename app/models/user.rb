@@ -2,7 +2,7 @@ class User < ApplicationRecord
     has_many :posts, dependent: :destroy
     has_many :comments, dependent: :destroy
     has_many :rooms, dependent: :destroy
-    has_many :notifications, dependent: :destroy
+    has_many :notifications, dependent: :delete_all
     has_many :likes, dependent: :destroy
     has_many :reports, dependent: :destroy
     has_many :chats, dependent: :destroy
