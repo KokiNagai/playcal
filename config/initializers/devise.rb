@@ -217,7 +217,6 @@ Devise.setup do |config|
 
 
 config.omniauth :facebook, '2262468903996625', '5e20dc9bafce0a40a62c581752976b11', scope: 'email', info_fields: 'email,name'
-
 config.scoped_views = true
 
   # When set to false, does not sign a user in automatically after their password is
