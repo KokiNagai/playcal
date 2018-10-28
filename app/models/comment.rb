@@ -2,5 +2,5 @@ class Comment < ApplicationRecord
     belongs_to :user
     belongs_to :post
     belongs_to :room
-    has_many :notifications
+    has_many :notifications, dependent: :destroy
 end
