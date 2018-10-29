@@ -2,15 +2,16 @@
   <div class="chatbox-prewrapper">
     <div class="chatbox-main">
       <div class="chatbox-open">
-        <% if @chatbox.touropen == true %>
+        <% if @chatbox.touropen == true && @chatbox.chatname != "総合テニスチャットカフェ" %>
         <p>カフェオープン中</p>
         <% end %>
       </div>
       <div class="chatbox-open1">
-        <% if @chatbox.touropen == false %>
+        <% if @chatbox.touropen == false && @chatbox.chatname != "総合テニスチャットカフェ" %>
         <p>大会終了</p>
         <% end %>
       </div>
+      <% if @chatbox.chatname != "総合テニスチャットカフェ" %>
       <div class="chatbox-title">
         <span><%= image_tag("ATPLOGO.png")%></span>
         <h1><%= @chatbox.chatname %></h1>
@@ -18,6 +19,14 @@
       <div class="chatbox-term">
         <p>大会期間: <%= @chatbox.chatterm %></p>
       </div>
+      <% elsif @chatbox.chatname == "総合テニスチャットカフェ" %>
+      <div class="chatbox-title">
+        <span><%= image_tag("tennisball.png")%></span>
+        <h1>なんでもテニスチャットカフェ1</h1>
+      </div>
+      <div class="chatbox-term">
+      </div>
+      <% end %>
       <div class="chatbox-count">
         <p><%= @chatbox.chats.count %>件のコメント</p>
       </div>
