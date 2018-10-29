@@ -12,7 +12,7 @@ class NormalsController < ApplicationController
     @user = User.find_by(name: params[:name])
     @chatboxes = Chatbox.where(touropen: true).where.not(chatname: "総合テニスチャットカフェ").limit(5)
     @posts = Post.where(prefecture: current_user.live)
-    @posts2 = Post.where(term: false).where(playday: Date.today.strftime(date_format).to_i..Float::INFINITY).order("RANDOM()").limit(6)
+    @posts2 = Post.where(term: true).where(playday: Date.today.strftime(date_format).to_i..Float::INFINITY).order("RANDOM()").limit(6)
   end
   end
 

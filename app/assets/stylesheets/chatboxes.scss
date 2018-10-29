@@ -18,6 +18,10 @@ $green-highlight: #5f9ea0;
 
   .chatbox-wrapper {
     display: flex;
+    justify-content: space-around;
+    .chatbox-prewrapper {
+      width: 70%;
+    }
   }
   .chatbox-open {
     text-align: center;
@@ -104,7 +108,7 @@ $green-highlight: #5f9ea0;
 
 
     .chatbox-title {
-      width: 300px;
+      width: 500px;
       margin: 0px auto;
       display: flex;
       h1 {

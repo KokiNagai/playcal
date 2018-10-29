@@ -65,7 +65,9 @@
             <%= link_to post.user.name.truncate(8), post.user, class: "find-user-name" %>
           </div>
           <div class="find-post-detail">
-            <%= link_to "詳細を見る", post, id: "find-post-detail" %>
+            <%= link_to post, id: "find-post-detail" do %>
+             <span><i class="fa fa-search"></i>詳細を見る</span>
+             <% end %>
           </div>
       </div>
       <div class="find-post-under">

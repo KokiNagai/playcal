@@ -18,7 +18,11 @@ $green-highlight: #5f9ea0;
 // タブレット、PC用画面=====================================================
 @media only screen and (min-width: 768px) {
 
-// inbox(メッセージがある場合)(タブレット、PC用)==================================
+// メッセージ(タブレット、PC用)==================================
+.user-message-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
 .user-message {
   margin-left: 100px;
   .user-show-post-main {
@@ -94,9 +98,6 @@ $green-highlight: #5f9ea0;
   .user-show-post-title {
     margin: 0px;
   }
-}
-.user-message-wrapper {
-  display: flex;
 }
 
 // room-under(タブレット、PC用)============================
