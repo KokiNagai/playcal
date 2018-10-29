@@ -662,6 +662,9 @@ $green-highlight: #5f9ea0;
 
     .atp-schedule {
       margin-top: 100px;
+      .atp-schedule-main {
+        margin-bottom: 30px;
+      }
       .atp-schedule-title {
         width: 90%;
         margin: 40px auto;
@@ -1346,6 +1349,9 @@ $green-highlight: #5f9ea0;
     margin-top: 100px;
     background-color: #fff;
     padding: 40px 0 40px 0;
+    .atp-schedule-main {
+      margin-bottom: 40px;
+    }
     .atp-schedule-title {
       width: 90%;
       margin: 0px auto;
