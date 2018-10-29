@@ -13,7 +13,7 @@
       </div>
       <% if @chatbox.chatname != "総合テニスチャットカフェ" %>
       <div class="chatbox-title">
-        <span><%= image_tag("ATPLOGO.png")%></span>
+        <span><%= image_tag(@chatbox.tourlogo) if @chatbox.tourlogo.present? %></span>
         <h1><%= @chatbox.chatname %></h1>
       </div>
       <div class="chatbox-term">
