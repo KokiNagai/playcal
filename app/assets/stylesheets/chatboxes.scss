@@ -197,6 +197,12 @@ $green-highlight: #5f9ea0;
         font-size: 1.7rem;
       }
     }
+    #good:hover, #nongood:hover {
+      background-color: none;
+      border-bottom: none;
+      opacity: 0.7;
+      color: none;
+    }
 
     .chatbox-time {
       text-align: right;
@@ -929,6 +935,12 @@ $green-highlight: #5f9ea0;
       font-size: 1.6rem;
       opacity: 0.5;
     }
+  }
+  #good:hover, #nongood:hover {
+    background-color: none;
+    border-bottom: none;
+    opacity: 0.7;
+    color: none;
   }
 
   .chatbox-time {
