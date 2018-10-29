@@ -255,6 +255,8 @@ $green-highlight: #5f9ea0;
       .top-chatbox-title {
         text-align: center;
         position: relative;
+        background-color: rgba(0,0,0,0.5);
+        display: inline-block;
         h2 {
           font-size: 1.8rem;
           font-weight: 600;
@@ -269,12 +271,15 @@ $green-highlight: #5f9ea0;
           height: 300px;
           object-fit: cover;
           border-radius: 0%;
+          opacity: 0.6;
+          display: block;
         }
         h2 {
           position: absolute;
           top: 34%;
           left: 50%;
           width: 600px;
+          font-size: 3rem;
           -ms-transform: translate(-50%,-50%);
           -webkit-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
@@ -990,11 +995,6 @@ $green-highlight: #5f9ea0;
       position: relative;
       background-color: rgba(0,0,0,0.5);
       display: inline-block;
-      h2 {
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: $gray-medium-dark;
-      }
       .fa {
         margin-right: 10px;
         font-size: 3rem;
@@ -1009,9 +1009,10 @@ $green-highlight: #5f9ea0;
       }
       h2 {
         position: absolute;
-        top: 60%;
+        top: 40%;
         left: 50%;
         width: 310px;
+        font-size: 2rem;
         -ms-transform: translate(-50%,-50%);
         -webkit-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
