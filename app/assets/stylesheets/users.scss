@@ -187,6 +187,7 @@ $green-highlight: #5f9ea0;
        }
        .fa {
          margin-right: 10px;
+         margin-left: 10px;
        }
      }
 
@@ -206,7 +207,7 @@ $green-highlight: #5f9ea0;
 
     .user-post-label {
       display: flex;
-      margin: 0 auto;
+      width: 90%;
       margin-top: 40px;
       margin-left: 20px;
       border-bottom: 1px solid $gray-border-light;
@@ -241,6 +242,7 @@ $green-highlight: #5f9ea0;
        padding: 13px 0 5px 0;
        border-bottom: 1px solid $gray-border-light;
        border-left: 1px solid $gray-border-light;
+       border-right: 1px solid $gray-border-light;
        .user-show-post-flex {
          display: flex;
          margin-bottom: 10px;
@@ -305,6 +307,7 @@ $green-highlight: #5f9ea0;
 
      .user-post-show-1, .user-post-show-2 {
        margin-left: 20px;
+       width: 90%;
      }
 
 
@@ -630,9 +633,16 @@ input#edit-submit:active {
 
   // show(スマホ)====================================
 
+  .wrapper-user {
+    background-color: #f7f7f7;
+    .user-info {
+      background-color: #fff;
+    }
+  }
+
   .user-show-upper {
      text-align: center;
-     margin-top: 40px;
+     padding-top: 40px;
    img {
      width: 210px;
      height: 210px;
@@ -685,14 +695,17 @@ input#edit-submit:active {
 
      .user-show-right-tag {
        margin-top: 30px;
-       text-align: center;
+       text-align: left;
        border-top: 1px solid $gray-border-light;
-       padding: 20px 0 0px 0;
+       border-bottom: 1px solid $gray-border-light;
+       padding: 10px 0 10px 0;
+       background-color: #fff;
        h3 {
          font-size: 1.6rem;
          color: $gray-medium-light;
          font-weight: 600;
          margin: 0px;
+         margin-left: 30px;
        }
      }
 
@@ -700,6 +713,7 @@ input#edit-submit:active {
        border-bottom: 1px solid $gray-border-light;
        padding: 5px 12px 5px 12px;
        margin: 0px auto;
+       background-color: #fff;
        .upper-user-sent {
          border-bottom: 1px dotted $gray-border-light;
          h2 {
@@ -747,7 +761,9 @@ input#edit-submit:active {
       display: flex;
       margin: 0 auto;
       margin-top: 40px;
+      border-top: 1px solid $gray-border-light;
       border-bottom: 1px solid $gray-border-light;
+      background-color: #fff;
       .user-post-count {
         text-align: center;
         padding: 10px 15px 0 15px;
@@ -782,6 +798,7 @@ input#edit-submit:active {
     .user-show-post-main {
       padding: 13px 0 5px 0;
       border-bottom: 1px solid $gray-border-light;
+      background-color: #fff;
       .user-show-post-flex {
         display: flex;
         margin-bottom: 10px;

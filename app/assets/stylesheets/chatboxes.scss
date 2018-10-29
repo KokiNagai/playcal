@@ -367,43 +367,65 @@ $green-highlight: #5f9ea0;
       }
     }
 
+    // tourlists(PC)==================================
+
 
 
     .tour-wrapper {
       .tour-wrapper-title {
-        width: 90%;
-        margin: 40px auto;
+        position: relative;
+        background-color: rgba(0,0,0,0.5);
+        display: inline-block;
         h1 {
+          position: absolute;
+          top:  10%;
+          left: 9%;
+          text-align: center;
+          font-weight: 900;
+          color: #fff;
+          font-size: 5rem;
+          line-height: 1.5em;
+          margin: 30px 0 30px 0;
+          font-family: 'Courier';
+        }
+        p {
+          position: absolute;
+          top:  50%;
+          left: 20%;
           text-align: center;
           font-weight: 600;
-          color: #d8a373;
+          color: #fff;
           font-size: 2.5rem;
           line-height: 1.5em;
-          margin-bottom: 15px;
+          margin: 30px 0 30px 0;
         }
         .fa {
           margin-right: 10px;
         }
-        p {
-          color: $gray-medium-dark;
-          font-size: 1.3rem;
-          margin-top: 20px;
-        }
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 0%;
+        opacity: 0.6;    /* カラーフィルタ効果の度合いを指定(※) */
+        display: block;
       }
+    }
       .tour-now-wrapper {
-        padding: 10px 0 30px 0;
-        border-top: 1px dotted $gray-border-light;
+        padding: 10px 0 10px 0;
         margin-top: 60px;
         .tour-now {
-          width: 300px;
-          margin: 30px auto;
+          width: 610px;
+          margin: 0px auto;
           display: flex;
+          background-color: #c49a6a;
           p {
-            text-align: center;
-            color: $pink-hightlight;
+            padding-left: 10px;
+            margin: 5px 0 5px 0;
+            text-align: left;
+            color: #fff;
             font-weight: 600;
             font-size: 2.0rem;
-            margin-top: 10px;
           }
           img {
             margin-left: 10px;
@@ -414,7 +436,7 @@ $green-highlight: #5f9ea0;
         }
         .top-chatbox-main-now {
           width: 60%;
-          margin: 20px auto;
+          margin: 0px auto;
           .tour-name-flex-wrapper-label {
             border-bottom: 1px solid $gray-border-light;
           }
@@ -474,16 +496,20 @@ $green-highlight: #5f9ea0;
       }
 
       .tour-close-wrapper {
-        width: 60%;
-        margin: 20px auto;
-        padding-top: 20px;
-        border-top: 1px dotted $gray-border-light;
+        width: 610px;
+        margin: 0px auto;
+        padding-top: 40px;
         .tour-close {
-          width: 90%;
-          margin: 30px auto;
+          width: 610px;
+          margin: 0px auto;
+          background-color: #c49a6a;
+          display: flex;
+          margin: 0;
           p {
-            text-align: center;
-            color: $gray-medium-dark;
+            padding-left: 10px;
+            margin: 5px 0 5px 0;
+            text-align: left;
+            color: #fff;
             font-weight: 600;
             font-size: 2.0rem;
           }
@@ -496,7 +522,7 @@ $green-highlight: #5f9ea0;
         }
         .tour-name-flex-wrapper {
           border-bottom: 1px solid $gray-border-light;
-          padding: 20px 10px 10px 20px;
+          padding: 20px 10px 10px 10px;
         }
         .tour-name-flex {
           display: flex;
@@ -546,8 +572,83 @@ $green-highlight: #5f9ea0;
             margin-right: 5px;
         }
       }
-    }
-    }
+     }
+     .tour-chat-compre-wrapper {
+       width: 610px;
+       margin: 0px auto;
+       padding-top: 40px;
+       .tour-chat-compre {
+         width: 610px;
+         display: flex;
+         background-color: #c49a6a;
+         margin: 0;
+         p {
+           padding-left: 10px;
+           text-align: left;
+           margin: 5px 0 5px 0;
+           color: #fff;
+           font-weight: 600;
+           font-size: 2.0rem;
+         }
+       }
+       .tour-name-flex-wrapper-label {
+         border-bottom: 1px solid $gray-border-light;
+       }
+       .tour-name-flex-wrapper {
+         border-bottom: 1px solid $gray-border-light;
+         padding: 30px 10px 20px 10px;
+       }
+       .tour-name-flex {
+         display: flex;
+         span {
+           font-size: 1.6rem;
+           font-weight: 600;
+           color: $green-highlight;
+         }
+         p  {
+           font-size: 1.5rem;
+           color: $gray-medium-dark;
+           margin: 0px;
+         }
+         .fa {
+           margin: 0 5px 0px 10px;
+           font-size: 1.5rem;
+         }
+         }
+       img {
+         width: 27px;
+         height: 21px;
+         margin-right: 13px;
+         border-radius: 0%;
+         object-fit: cover;
+       }
+       .tour-info {
+         display: flex;
+         margin-top: 25px;
+         margin-left: 20px;
+         #tourgrade {
+           background-color: $pink-hightlight;
+           color: #fff;
+           font-weight: 500;
+           padding: 2px 5px 2px 5px;
+           border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+           font-size: 1.1rem;
+           margin-right: 20px;
+         }
+         #tourcalendar {
+           background-color: $gray-border-light;
+           color: #fff;
+           font-weight: 600;
+           padding: 2px 5px 2px 5px;
+           border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+           font-size: 1.1rem;
+         }
+         .fa {
+           margin-right: 5px;
+       }
+     }
+     }
+  }
 
 
     .atp-schedule {
@@ -623,11 +724,17 @@ $green-highlight: #5f9ea0;
         background-color: #ffbc7a;
       }
     }
+    .tourchat-explanation {
+      width: 90%;
+      color: $gray-medium-dark;
+      margin: 70px auto;
+      text-align: center;
+    }
 }
 
 // スマホ用画面==================================================
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
   // chatbox(スマホ)===================================
 
@@ -881,6 +988,8 @@ $green-highlight: #5f9ea0;
     .top-chatbox-title {
       text-align: center;
       position: relative;
+      background-color: rgba(0,0,0,0.5);
+      display: inline-block;
       h2 {
         font-size: 1.8rem;
         font-weight: 600;
@@ -892,13 +1001,15 @@ $green-highlight: #5f9ea0;
       }
       img {
         width: 100%;
-        height: 300px;
+        height: 200px;
         object-fit: cover;
         border-radius: 0%;
+        opacity: 0.6;
+        display: block;
       }
       h2 {
         position: absolute;
-        top: 34%;
+        top: 60%;
         left: 50%;
         width: 310px;
         -ms-transform: translate(-50%,-50%);
@@ -906,53 +1017,11 @@ $green-highlight: #5f9ea0;
         transform: translate(-50%,-50%);
         margin:0;
         color: #fff;
-        font-size: 40px;
         font-weight: 600;
         cursor: pointer;
     }
   }
-    .top-chatbox-under {
-      width: 90%;
-      margin: 0 auto;
-    }
-    .top-chatbox-now {
-      margin-top: 40px;
-      text-align: center;
-      p {
-        color: $pink-hightlight;
-        font-weight: 600;
-        font-size: 1.5rem;
-      }
-      .fa {
-        margin-right: 10px;
-        font-size: 1.8rem;
-      }
-    }
-    .top-chatbox-main {
-      margin-top: 30px;
-      .top-chatbox-name {
-        display: flex;
-        span {
-          font-size: 1.6rem;
-          .fa {
-            margin: 0 5px 0 20px;
-            color: $gray-medium-dark;
-          }
-          img {
-            width: 25px;
-            height: 19px;
-            margin-right: 13px;
-            border-radius: 0%;
-            object-fit: cover;
-          }
-        }
-      }
-      p {
-        font-size: 1.4rem;
-        margin: 10px 0 30px 30px;
-      }
-    }
-  }
+}
 
   .chat-form-nonlogin {
     margin-top: 20px;
@@ -994,75 +1063,90 @@ $green-highlight: #5f9ea0;
   // tourlist(スマホ)========================================
 
   .tour-wrapper {
+    background-color: #f7f7f7;
     .tour-wrapper-title {
-      width: 90%;
-      margin: 40px auto;
+      position: relative;
+      background-color: rgba(0,0,0,0.5);
+      display: inline-block;
       h1 {
+        position: absolute;
+        top:  10%;
+        left: 4%;
+        text-align: center;
+        font-weight: 900;
+        color: #fff;
+        font-size: 2.5rem;
+        line-height: 1.5em;
+        margin: 30px 0 30px 0;
+        font-family: 'Courier';
+      }
+      p {
+        position: absolute;
+        top:  40%;
+        left: 14%;
         text-align: center;
         font-weight: 600;
-        color: #d8a373;
-        font-size: 2.5rem;
+        color: #fff;
+        font-size: 1.4rem;
         line-height: 1.5em;
         margin: 30px 0 30px 0;
       }
       .fa {
         margin-right: 10px;
       }
-      p {
-        color: $gray-medium-dark;
-        font-size: 1.3rem;
-        margin-top: 20px;
-      }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0%;
+      opacity: 0.6;
+      display: block;
     }
+  }
     .tour-now-wrapper {
-      padding: 10px 0 30px 0;
       margin-top: 60px;
+      background-color: #fff;
       .tour-now {
-        width: 240px;
-        margin: 30px auto;
-        display: flex;
+        background-color: #c49a6a;
         p {
-          text-align: center;
-          color: $pink-hightlight;
-          font-weight: 600;
+          padding-left: 10px;
+          text-align: left;
+          color: #fff;
+          font-weight: 400;
           font-size: 2.0rem;
           margin-top: 10px;
           margin-bottom: 0;
           height: 30px;
-
-        }
-        img {
-          margin-right: 10px;
-          width: 50px;
-          height: 50px;
         }
       }
       .top-chatbox-main-now {
         width: 100%;
-        margin: 20px auto;
+        margin: 0px auto;
         .tour-name-flex-wrapper-label {
           border-bottom: 1px solid $gray-border-light;
         }
         .tour-name-flex-wrapper {
           border-bottom: 1px solid $gray-border-light;
           padding: 20px 10px 10px 20px;
+          margin-bottom: 30px;
+          background-color: #fff;
         }
         .tour-name-flex {
           display: flex;
           span {
             font-size: 1.6rem;
-            font-weight: 600;
+            font-weight: 500;
           }
           p  {
             font-size: 1.5rem;
-            color: $gray-medium-dark;
+            color: $green-highlight;
             margin: 0px;
           }
           .fa {
-            margin: 0 5px 0px 10px;
-            font-size: 1.8rem;
+            margin: 0 5px 0px 15px;
+            font-size: 2rem;
           }
-          }
+        }
         img {
           width: 27px;
           height: 21px;
@@ -1100,21 +1184,22 @@ $green-highlight: #5f9ea0;
 
     .tour-close-wrapper {
       width: 100%;
-      margin: 20px auto;
-      padding-top: 20px;
-      border-top: 1px dotted $gray-border-light;
+      margin: 5px auto;
+      padding: 10px 0 30px 0;
       .tour-close {
-        width: 90%;
-        margin: 30px auto;
+        background-color: #c49a6a;
         p {
-          text-align: center;
-          color: $gray-medium-dark;
-          font-weight: 600;
+          padding-left: 10px;
+          text-align: left;
+          color: #fff;
+          font-weight: 400;
           font-size: 2.0rem;
+          margin-bottom: 0;
         }
-        .fa {
-          margin-left: 10px;
-        }
+      }
+      .top-chatbox-main-close {
+        width: 100%;
+        margin: 0px auto;
       }
       .tour-name-flex-wrapper-label {
         border-bottom: 1px solid $gray-border-light;
@@ -1122,21 +1207,22 @@ $green-highlight: #5f9ea0;
       .tour-name-flex-wrapper {
         border-bottom: 1px solid $gray-border-light;
         padding: 20px 10px 10px 20px;
+        background-color: #fff;
       }
       .tour-name-flex {
         display: flex;
         span {
           font-size: 1.6rem;
-          font-weight: 600;
+          font-weight: 500;
         }
         p  {
           font-size: 1.5rem;
-          color: $gray-medium-dark;
+          color: $green-highlight;
           margin: 0px;
         }
         .fa {
-          margin: 0 5px 0px 10px;
-          font-size: 1.5rem;
+          margin: 0 5px 0px 15px;
+          font-size: 2rem;
         }
         }
       img {
@@ -1171,19 +1257,99 @@ $green-highlight: #5f9ea0;
           margin-right: 5px;
       }
     }
+   }
+
+   .tour-chat-compre-wrapper {
+     width: 100%;
+     margin: 20px auto;
+     .tour-chat-compre {
+       background-color: #c49a6a;
+       p {
+         padding-left: 10px;
+         text-align: left;
+         color: #fff;
+         font-weight: 400;
+         font-size: 2.0rem;
+         margin-bottom: 0;
+       }
+     }
+     .top-chatbox-main-close {
+       width: 100%;
+       margin:0px auto;
+     }
+     .tour-name-flex-wrapper-label {
+       border-bottom: 1px solid $gray-border-light;
+     }
+     .tour-name-flex-wrapper {
+       border-bottom: 1px solid $gray-border-light;
+       padding: 20px 10px 10px 20px;
+       background-color: #fff;
+     }
+     .tour-name-flex {
+       display: flex;
+       span {
+         font-size: 1.6rem;
+         font-weight: 500;
+         color: $green-highlight;
+       }
+       p  {
+         font-size: 1.5rem;
+         color: $green-highlight;
+         margin: 0px;
+       }
+       .fa {
+         margin: 0 5px 0px 15px;
+         font-size: 2rem;
+       }
+       }
+     img {
+       width: 27px;
+       height: 21px;
+       margin-right: 13px;
+       border-radius: 0%;
+       object-fit: cover;
+     }
+     .tour-info {
+       display: flex;
+       margin-top: 25px;
+       margin-left: 20px;
+       #tourgrade {
+         background-color: $pink-hightlight;
+         color: #fff;
+         font-weight: 500;
+         padding: 2px 5px 2px 5px;
+         border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+         font-size: 1.1rem;
+         margin-right: 20px;
+       }
+       #tourcalendar {
+         background-color: $gray-border-light;
+         color: #fff;
+         font-weight: 600;
+         padding: 2px 5px 2px 5px;
+         border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+         font-size: 1.1rem;
+       }
+       .fa {
+         margin-right: 5px;
+     }
+   }
   }
-  }
+}
 
   .atp-schedule {
     margin-top: 100px;
+    background-color: #fff;
+    padding: 40px 0 40px 0;
     .atp-schedule-title {
       width: 90%;
-      margin: 40px auto;
+      margin: 0px auto;
       h2 {
         color: $gray-medium-dark;
         font-size: 2.0rem;
         text-align: center;
         font-weight: 600;
+        margin-bottom: 20px;
       }
     }
     .atp-schedule-title2 {
@@ -1242,6 +1408,11 @@ $green-highlight: #5f9ea0;
     #eleven {
       background-color: #ffbc7a;
     }
+  }
+  .tourchat-explanation {
+    width: 90%;
+    color: $gray-medium-dark;
+    margin: 40px auto;
   }
 
 }

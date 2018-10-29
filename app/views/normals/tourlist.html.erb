@@ -1,17 +1,18 @@
 <% set_meta_tags title: "ATPワールドツアー・チャットカフェ掲示板", description: "テニスが好きな人たちと一緒にプロの試合を応援し合おう！" %>
 <div class="tour-wrapper">
   <div class="tour-wrapper-title">
-    <h1><i class="fa fa-coffee"></i>ATPワールドツアー</br>チャットカフェ</h1>
-    <p>ATPワールドツアーチャットカフェはATPの試合を応援したり、試合経過を見たりできる掲示板です。</p>
-    <p>ATPワールドツアー・チャットカフェは、大会の数日前にオープンいたします。</p>
-    <p>オープンの日程に関しては下のATPワールド・ツアーの日程表を御覧ください。</p>
-    <p>※ ATP250以下の大会や、有名選手が出場しない大会に関してはオープンしませんのでご了承ください。</p>
+    <img src="assets/ATPCAFE3.jpg" alt="チャットカフェ">
+    <div class="tour-wrapper-img-bg">
+      <h1><i class="fa fa-coffee"></i>テニスチャットカフェ</h1>
+      <p>テニス好きな人達と試合を応援したり、</br>語りあおう。</p>
+    </div>
   </div>
+
   <div class="tour-now-wrapper">
     <div class="tour-now">
-      <span><%= image_tag('if_tennis_994003.png', :alt => "テニスの試合の写真") %></span>
-      <p>オープン中の大会</p>
+      <p>Open Now !</p>
     </div>
+
     <div class="top-chatbox-main-now">
       <div class="tour-name-flex-wrapper-label">
         </div>
@@ -33,9 +34,10 @@
       <% end %>
     </div>
   </div>
+
   <div class="tour-close-wrapper">
     <div class="tour-close">
-      <p>終了したATPワールドツアー<i class="fa fa-close"></i></p>
+      <p>Closed</p>
     </div>
     <div class="top-chatbox-main-close">
       <div class="tour-name-flex-wrapper-label">
@@ -52,6 +54,25 @@
         </div>
       </div>
       <% end %>
+    </div>
+  </div>
+
+  <div class="tour-chat-compre-wrapper">
+    <div class="tour-chat-compre">
+      <p>Always open</p>
+    </div>
+    <div class="top-chatbox-main-close">
+      <div class="tour-name-flex-wrapper-label">
+        </div>
+      <div class="tour-name-flex-wrapper">
+        <div class="tour-name-flex">
+          <% compre_cafe = Chatbox.find_by(chatname: "総合テニスチャットカフェ") %>
+          <%= link_to "/#{compre_cafe.chatname}" do %>
+          <span><%= image_tag("tennisball.png", :alt => "テニスの試合の写真") %>なんでもテニスチャットカフェ1</span>
+          <% end %>
+          <p><i class="fa fa-comments-o"></i><%= compre_cafe.chats.count %>件</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -224,5 +245,12 @@
     </table>
         </div>
       </div>
+    </div>
+
+    <div class="tourchat-explanation">
+      <p>ATPワールドツアーチャットカフェはATPの試合を応援したり、試合経過を見たりできる掲示板です。</p>
+      <p>ATPワールドツアー・チャットカフェは、大会の数日前にオープンいたします。</p>
+      <p>オープンの日程に関しては下のATPワールド・ツアーの日程表を御覧ください。</p>
+      <p>※ ATP250以下の大会や、有名選手が出場しない大会に関してはオープンしませんのでご了承ください。</p>
     </div>
 </div>
