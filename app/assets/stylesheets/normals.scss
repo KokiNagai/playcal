@@ -64,6 +64,18 @@ textarea {
   }
 }
 
+.facebook-signup p:active {
+  color: #305097;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.google-signup p:active {
+  color: #DD5144;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
 #error_explanation {
   width: 350px;
   margin: 30px auto;
@@ -1728,6 +1740,7 @@ h1 {
     p {
       width: 300px;
       margin: 10px auto;
+      text-align: left;
       color: #fff;
       font-size: 1.4rem;
       background-color: #305097;
@@ -1741,6 +1754,7 @@ h1 {
       margin-right: 10px;
       font-size: 1.6rem;
       border: none;
+      margin-left: 20px;
     }
   }
   .google-signup {
@@ -1749,6 +1763,7 @@ h1 {
     p {
       width: 300px;
       margin: 10px auto;
+      text-align: left;
       color: #fff;
       font-size: 1.4rem;
       background-color: #DD5144;
@@ -1762,6 +1777,7 @@ h1 {
       margin-right: 10px;
       font-size: 1.6rem;
       border: none;
+      margin-left: 20px;
     }
   }
   h3 {

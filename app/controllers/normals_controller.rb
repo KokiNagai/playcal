@@ -254,7 +254,7 @@ end
 
 private
   def search_params
-    params.require(:q).permit(:gender_eq,  :playday_gteq, :playday_lteq, :prefecture_eq, :style_eq, :city_cont)
+    params.require(:q).permit(:gender_eq,  :playday_gteq, :playday_lteq, :prefecture_eq, :style_in, :city_cont)
 end
 
 def city_params

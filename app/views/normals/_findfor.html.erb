@@ -6,13 +6,9 @@
         </div>
         <div class="search-main">
           <%= search_form_for(@q, url:search_path) do |f| %>
-
-          <h2><i class="fa fa-search"></i>検索条件</h2>
-
-
           <div class="JS-search-pref">
             <%= f.label :prefecture, "都道府県", id: "findfor-label" %></br class="visible-xs">
-            <%= f.select :prefecture_eq, options_for_select(@prefecture),  {:include_blank => ""}, {:id => "pref-search-select"} %>
+            <%= f.select :prefecture_eq, options_for_select(@prefecture),  {:include_blank => ""}, {:id => "pref-search-select", :class => 'form-control'} %>
           </div>
 
           <div class="JS-search-city">
@@ -20,12 +16,12 @@
            <%= f.text_field :city_cont, id: "form-control", class: "font-awesome", placeholder: "\uF002"  %>
           </div>
 
-
           <div class="JS-search-day">
             <div class="playday-select"><%= f.label :playday, "練習日", id: "findfor-label" %></br class="visible-xs">
              <%= raw sprintf(f.date_select(:playday_gteq, use_month_numbers: true, start_year:2018, #
           end_year: (Time.now.year),
           :include_blank => true,
+          :class => 'form-control',
           date_separator: '%s'),
               '年 ', '月 ') + '日' %></div>から</br class="visible-xs">
              <%= raw sprintf(f.date_select(:playday_lteq, use_month_numbers: true, start_year:2018, #
@@ -35,20 +31,36 @@
               '年 ', '月 ') + '日' %></br class="visible-xs">まで
           </div>
 
-            <div class="JS-search-gender">
-              <%= f.label :gender, "希望している性別", id: "findfor-label" %></br class="visible-xs">
-              <% @j = [["男性", "男性"], ["女性", "女性"], ["どちらの性別でもOK", "どちらの性別でもOK"]] %>
-              <%= f.select :gender_eq, options_for_select(@j),  {:include_blank => ""}, {:id => "gender-search-select"} %>
-            </div>
-
-
+          <div class="JS-search-style-label">
+            <span>練習内容</span>
+          </div>
           <div class="JS-search-style">
-            <%= f.label :style, "当日の練習内容", id: "findfor-label" %></br class="visible-xs">
-            <% @j = [["ラリー練習やボレー練習など", "ラリー練習やボレー練習など"],["シングルス", "シングルス"],
-                     ["ダブルス", "ダブルス"], ["なんでも良い", "なんでも良い"]] %>
-             <%= f.select :style_eq, options_for_select(@j), {:include_blank => ""}, {:id => "style-search-select"} %>
-           </div>
+            <%= f.radio_button :style_eq, "ラリーなど" %>
+            <%= f.label :style_eq, "ラリーなど", value: "ラリーなど" %>
 
+            <%= f.radio_button :style_eq, "シングルス" %>
+            <%= f.label :style_eq, "シングルス", value: "シングルス" %>
+
+            <%= f.radio_button :style_eq, "ダブルス" %>
+            <%= f.label :style_eq, "ダブルス", value: "ダブルス" %>
+
+            <%= f.radio_button :style_eq, "", checked: true %>
+            <%= f.label :style_eq, "すべて", value: "" %>
+          </div>
+        </br>
+          <div class="JS-search-gender-label">
+            <span>性別</span>
+          </div>
+          <div class="JS-search-gender">
+            <%= f.radio_button :gender_eq, "男性" %>
+            <%= f.label :gender_eq, "男性", value: "男性" %>
+
+            <%= f.radio_button :gender_eq, "女性" %>
+            <%= f.label :gender_eq, "女性", value: "女性" %>
+
+            <%= f.radio_button :gender_eq, "", checked: true %>
+            <%= f.label :gender_eq, "すべて", value: "" %>
+          </div>
 
            <div class="search-buttom">
              <%= button_tag sanitize('<i class="fa fa-search"></i> 適用'), :type => "submit", id: "search-submit" %>
@@ -56,6 +68,5 @@
         </div>
     </div>
   </div>
-
-      <% end %>
-    </div>
+  <% end %>
+</div>

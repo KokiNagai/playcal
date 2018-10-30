@@ -10,6 +10,7 @@ $green-logo-color: #9cd75b;
 $pink-hightlight: #ff6666;
 $pink-borderbottom: #ffd6d6;
 $green-highlight: #5f9ea0;
+$body-color: #f7f7f7;
 
 
 
@@ -394,7 +395,7 @@ $green-highlight: #5f9ea0;
   height: 30px;
   font-weight: 600;
   color: $gray-medium-dark;
-  border: 1px solid $gray-medium-dark;
+  border: 1px solid $gray-medium-light;
 }
 
 #gender-search-select {
@@ -431,25 +432,120 @@ $green-highlight: #5f9ea0;
   margin-top: 30px;
 }
 
+// JS-gender=================
+
+.JS-search-gender-label {
+  text-align: left;
+  width: 30%;
+  margin-left: 40px;
+  margin-top: 15px;
+  margin-bottom: 3px;
+  span {
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+}
+
 .JS-search-gender {
   text-align: left;
   margin-left: 40px;
-  margin-top: 30px;
 }
 
-.JS-search-style {
+.JS-search-gender input{
+  display: none;
+}
+
+.JS-search-gender label{
+  display: block;
+  float: left;
+  cursor: pointer;
+  width: 25%;
+  margin: 0;
+  margin-top: 5px;
+  padding: 8px 8px;
+  border-right: 1px solid $gray-border-light;
+  background: #ebebeb;
+  color: #555e64;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+  transition: .2s;
+}
+.JS-search-gender label:first-of-type{
+  border-radius: 5px 0 0 5px;
+}
+.JS-search-gender label:last-of-type{
+  border-right: 0px;
+  border-radius: 0 5px 5px 0;
+}
+.JS-search-gender input[type="radio"]:checked + label {
+  background-color: $green-logo-color;
+  color: #fff;
+}
+
+// JS-style=====================
+
+.JS-search-style-label {
   text-align: left;
   margin-left: 40px;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  span {
+    font-weight: 600;
+    color: $gray-medium-dark;
+  }
+}
+.JS-search-style {
+  margin-left: 40px;
+  text-align: left;
+}
+
+.JS-search-style input{
+  display: none;
+}
+
+.JS-search-style label{
+  display: block;
+  float: left;
+  cursor: pointer;
+  width: 23%;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 8px 8px;
+  border-right: 1px solid $gray-border-light;
+  background: #ebebeb;
+  color: #555e64;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+  transition: .2s;
+}
+.JS-search-style label:first-of-type{
+  border-radius: 5px 0 0 5px;
+}
+.JS-search-style label:last-of-type{
+  border-right: 0px;
+  border-radius: 0 5px 5px 0;
+}
+.JS-search-style input[type="radio"]:checked + label {
+  background-color: $green-logo-color;
+  color: #fff;
 }
 
 .search-main {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  select#pref-search-select {
+    width: 30%;
+  }
 }
 
 #search-submit {
   position: absolute;
-  top: 95%;
+  top: 90%;
   left: 80%;
   color: $green-highlight;
   font-size: 22px;
@@ -681,6 +777,7 @@ $green-highlight: #5f9ea0;
         box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px !important;
         list-style: none;
         height: 50px;
+        background-color: $body-color;
         li {
           float: left;
           margin-left: 10px;
@@ -691,7 +788,6 @@ $green-highlight: #5f9ea0;
         }
       }
 
-
       .upper-search-JS {
         margin-left: 20px;
       }
@@ -700,7 +796,7 @@ $green-highlight: #5f9ea0;
         position: absolute;
         top: 20%;
         left: 8%;
-        font-size: 12px !important;
+        font-size: 1.4rem !important;
         font-weight: 500;
         color: $gray-word;
         line-height: 18px !important;
@@ -709,8 +805,8 @@ $green-highlight: #5f9ea0;
         color: rgb(72, 72, 72) !important;
         padding-top: 6px !important;
         padding-bottom: 6px !important;
-        background: none !important;
-        border: 1px solid $gray-medium-light !important;
+        background-color: #fff !important;
+        border: 1px solid $gray-border-light !important;
         border-radius: 4px !important;
         cursor: pointer !important;
         display: inline-block !important;
@@ -852,11 +948,6 @@ $green-highlight: #5f9ea0;
         margin-left: 20px;
       }
 
-       #city-search-label {
-        margin-right: 7px;
-        color: #656565;
-      }
-
       #q_playday_gteq_1i,#q_playday_gteq_2i,#q_playday_gteq_3i,
       #q_playday_lteq_1i,#q_playday_lteq_2i,#q_playday_lteq_3i,
       #pref-search-select, #gender-search-select, #style-search-select {
@@ -866,15 +957,6 @@ $green-highlight: #5f9ea0;
         color: $gray-medium-dark;
         background-color: #fff;
         border: 1px solid $gray-medium-light;
-      }
-
-
-      #gender-search-select {
-        width: 60px;
-      }
-
-      #style-search-select {
-        width: 100px;
       }
 
       .search-modal h2 {
@@ -893,43 +975,138 @@ $green-highlight: #5f9ea0;
         font-size: 13px;
       }
 
+      .JS-search-pref {
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 30px;
+      }
+
       .JS-search-city {
         text-align: left;
-        margin-left: 40px;
+        margin-left: 20px;
         margin-top: 15px;
       }
 
       .JS-search-day {
         text-align: left;
-        margin-left: 40px;
+        margin-left: 20px;
         margin-top: 15px;
       }
 
-      .JS-search-pref {
+      // JS-gender=================
+
+      .JS-search-gender-label {
         text-align: left;
-        margin-left: 40px;
+        margin-left: 20px;
         margin-top: 15px;
+        margin-bottom: 3px;
+        span {
+          font-weight: 600;
+          color: $gray-medium-dark;
+        }
       }
 
       .JS-search-gender {
         text-align: left;
-        margin-left: 40px;
-        margin-top: 15px;
+        margin-left: 20px;
       }
 
-      .JS-search-style {
-        text-align: left;
-        margin-left: 40px;
-        margin-top: 15px;
+      .JS-search-gender input{
+      	display: none;
       }
+
+      .JS-search-gender label{
+        display: block;
+      	float: left;
+      	cursor: pointer;
+      	width: 25%;
+      	margin: 0;
+        margin-top: 5px;
+      	padding: 8px 8px;
+      	border-right: 1px solid $gray-border-light;
+      	background: #ebebeb;
+      	color: #555e64;
+      	font-size: 1.1rem;
+        font-weight: 600;
+      	text-align: center;
+      	line-height: 1;
+      	transition: .2s;
+      }
+      .JS-search-gender label:first-of-type{
+      	border-radius: 5px 0 0 5px;
+      }
+      .JS-search-gender label:last-of-type{
+      	border-right: 0px;
+      	border-radius: 0 5px 5px 0;
+      }
+      .JS-search-gender input[type="radio"]:checked + label {
+      	background-color: $green-logo-color;
+      	color: #fff;
+      }
+
+      // JS-style=====================
+
+      .JS-search-style-label {
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 3px;
+        span {
+          font-weight: 600;
+          color: $gray-medium-dark;
+        }
+      }
+      .JS-search-style {
+        margin-left: 20px;
+        text-align: left;
+      }
+
+      .JS-search-style input{
+      	display: none;
+      }
+
+      .JS-search-style label{
+        display: block;
+      	float: left;
+      	cursor: pointer;
+      	width: 25%;
+      	margin: 0;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      	padding: 8px 8px;
+      	border-right: 1px solid $gray-border-light;
+      	background: #ebebeb;
+      	color: #555e64;
+      	font-size: 1.1rem;
+        font-weight: 600;
+      	text-align: center;
+      	line-height: 1;
+      	transition: .2s;
+      }
+      .JS-search-style label:first-of-type{
+      	border-radius: 5px 0 0 5px;
+      }
+      .JS-search-style label:last-of-type{
+      	border-right: 0px;
+      	border-radius: 0 5px 5px 0;
+      }
+      .JS-search-style input[type="radio"]:checked + label {
+      	background-color: $green-logo-color;
+      	color: #fff;
+      }
+
 
       .search-main {
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        select#pref-search-select {
+          width: 30%;
+        }
       }
 
       #search-submit {
         position: absolute;
-        top: 98%;
+        top: 91%;
         left: 70%;
         color: $green-highlight;
         font-size: 18px;

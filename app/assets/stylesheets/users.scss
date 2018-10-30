@@ -362,6 +362,18 @@ $green-highlight: #5f9ea0;
   }
 }
 
+.facebook-signup p:active {
+  color: #305097;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.google-signup p:active {
+  color: #DD5144;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
 .edit-user-main {
   small {
     margin-left: 10px;
@@ -872,6 +884,7 @@ input#edit-submit:active {
       p {
         width: 80%;
         margin: 0px auto;
+        text-align: left;
         color: #fff;
         font-size: 1.5rem;
         background-color: #305097;
@@ -884,6 +897,7 @@ input#edit-submit:active {
         color: #fff;
         margin-right: 10px;
         font-size: 1.5rem;
+        margin-left: 20px;
         border: none;
       }
     }
@@ -894,6 +908,7 @@ input#edit-submit:active {
         width: 80%;
         margin: 0px auto;
         color: #fff;
+        text-align: left;
         font-size: 1.5rem;
         background-color: #DD5144;
         padding: 5px 0 5px 0;
@@ -905,9 +920,22 @@ input#edit-submit:active {
         color: #fff;
         margin-right: 10px;
         font-size: 1.5rem;
+        margin-left: 20px;
         border: none;
       }
     }
+  }
+
+  .facebook-signup p:active {
+    color: #305097;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+  }
+
+  .google-signup p:active {
+    color: #DD5144;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
   }
 
   .edit-user-main {
