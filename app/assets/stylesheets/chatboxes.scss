@@ -464,15 +464,16 @@ $green-highlight: #5f9ea0;
             span {
               font-size: 1.6rem;
               font-weight: 600;
+              color: $green-highlight;
             }
             p  {
               font-size: 1.5rem;
-              color: $gray-medium-dark;
+              color: $green-highlight;
               margin: 0px;
             }
             .fa {
               margin: 0 5px 0px 10px;
-              font-size: 1.5rem;
+              font-size: 2rem;
             }
             }
           img {
@@ -547,12 +548,12 @@ $green-highlight: #5f9ea0;
           }
           p  {
             font-size: 1.5rem;
-            color: $gray-medium-dark;
+            color: $green-highlight;
             margin: 0px;
           }
           .fa {
             margin: 0 5px 0px 10px;
-            font-size: 1.5rem;
+            font-size: 2rem;
           }
           }
         img {
@@ -622,12 +623,13 @@ $green-highlight: #5f9ea0;
          }
          p  {
            font-size: 1.5rem;
-           color: $gray-medium-dark;
+           color: $green-highlight;
            margin: 0px;
          }
          .fa {
            margin: 0 5px 0px 10px;
-           font-size: 1.5rem;
+           font-size: 2rem;
+
          }
          }
        img {
@@ -1082,6 +1084,10 @@ $green-highlight: #5f9ea0;
   }
 
   // tourlist(スマホ)========================================
+
+  #tour-name-flex-wrapper {
+    margin-bottom: 0;
+  }
 
   .tour-wrapper {
     background-color: #f7f7f7;
