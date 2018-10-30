@@ -804,7 +804,7 @@ $body-color: #f7f7f7;
         color: rgb(72, 72, 72) !important;
         padding-top: 6px !important;
         padding-bottom: 6px !important;
-        background-color: #fff !important;
+        background-color: $body-color !important;
         border: 1px solid $gray-border-light !important;
         border-radius: 4px !important;
         cursor: pointer !important;
@@ -822,9 +822,8 @@ $body-color: #f7f7f7;
       }
 
       .searched-info {
-        margin: 0 auto;
-        width: 90%;
-        margin-bottom: 15px;
+        padding: 0 20px 30px 20px;
+
         h3 {
           margin-top: 10px;
           font-size: 14px;
