@@ -777,7 +777,6 @@ $body-color: #f7f7f7;
         box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px !important;
         list-style: none;
         height: 50px;
-        background-color: $body-color;
         li {
           float: left;
           margin-left: 10px;
@@ -978,7 +977,7 @@ $body-color: #f7f7f7;
       .JS-search-pref {
         text-align: left;
         margin-left: 20px;
-        margin-top: 30px;
+        margin-top: 15px;
       }
 
       .JS-search-city {
@@ -1107,7 +1106,7 @@ $body-color: #f7f7f7;
       #search-submit {
         position: absolute;
         top: 91%;
-        left: 70%;
+        left: 73%;
         color: $green-highlight;
         font-size: 18px;
         font-weight: 600;
