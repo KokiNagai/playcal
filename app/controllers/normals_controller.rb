@@ -101,7 +101,7 @@ class NormalsController < ApplicationController
 
          @q = Post.where(term: true).search(params[:q])
          @posts = @q.result.paginate(page: params[:page], per_page: 10).order(created_at: :desc)
-end
+     end
 
 def search
   if user_signed_in?
@@ -254,7 +254,7 @@ end
 
 private
   def search_params
-    params.require(:q).permit(:gender_eq,  :playday_gteq, :playday_lteq, :prefecture_eq, :style_in, :city_cont)
+    params.require(:q).permit(:gender_eq,  :playday_gteq, :playday_lteq, :prefecture_eq, :style_eq, :city_cont)
 end
 
 def city_params
