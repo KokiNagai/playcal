@@ -598,10 +598,14 @@ button#post-message-submit:active {
     }
     p {
       font-size: 1.3rem;
-      width: 250px;
-      margin: 0 auto;
+      width: 300px;
+      margin: 10px auto;
       color: $gray-medium-light;
     }
+  }
+
+  #posting-text-count {
+    text-align: right;
   }
 
 

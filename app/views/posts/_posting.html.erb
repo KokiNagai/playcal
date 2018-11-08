@@ -140,7 +140,8 @@
 
                 <div class="content">
                   <div><%= f.label :募集内容の詳細, id: "posting-label" %></div></br class="visible-xs">
-                  <div><%= f.text_area :content, id: "content-field", placeholder: "(例)練習日や練習時間、練習場所など", hide_label: true %>
+                  <div><%= f.text_area :content, id: "content-field", placeholder: "(例)練習日や練習時間、練習場所など", hide_label: true, onKeyUp: "postingCount(value, 'posting-text-count')" %>
+                    <p id="posting-text-count">あと200字です</p>
                     <p>この欄には詳細な募集要項をお書きください。例えば、練習時間やラケットやボールの有無、相手の年齢、募集期間など。</p></div>
                 </div>
 
@@ -150,3 +151,9 @@
             </div>
             <% end %>
           </div>
+
+          <script>
+          function postingCount(text, el) {
+            document.getElementById(el).innerHTML = 'あと' + (200 - text.length) + '字です'
+          }
+          </script>
