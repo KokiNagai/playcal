@@ -6,8 +6,8 @@ class NormalsController < ApplicationController
   def home
     date_format = "%Y%m%d"
     @posts = Post.where(term: true).where(playday: Date.today.strftime(date_format).to_i..Float::INFINITY).order("RANDOM()").limit(6)
-    @chatboxes = Chatbox.where(touropen: true).where.not(chatname: "総合テニスチャットカフェ").limit(5)
-    if logged_in?
+    @chatboxes = Chatbox.where(touropen: true).where.not(tourgrade: nil).limit(5)
+    if user_signed_in?
     @post = current_user.posts.build
     @user = User.find_by(name: params[:name])
     @chatboxes = Chatbox.where(touropen: true).where.not(chatname: "総合テニスチャットカフェ").limit(5)
