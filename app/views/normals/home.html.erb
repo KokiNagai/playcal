@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 <div class="top-news">
 <span class="top-news-title">Playcal News</span>
-<p>2018年10月29日 - テニスチャットカフェに「パリ・マスターズ」カフェがオープンしました！</p>
+<p>2018年11月8日 - テニスチャットカフェに「ATPワールドツアー・ファイナルズ」カフェがオープンしました！</p>
 </div>
 
 <% if Post.where(prefecture: current_user.live).present? %>
@@ -78,6 +78,7 @@
             <span id="tourcalendar"><i class="fa fa-calendar"></i><%= chatbox.chatterm %></span>
           </div>
         </div>
+        <% end %>
         <div class="tour-name-flex-wrapper">
           <div class="tour-name-flex">
             <% compre_cafe = Chatbox.find_by(chatname: "総合テニスチャットカフェ") %>
@@ -87,7 +88,6 @@
             <p><i class="fa fa-comments-o"></i><%= compre_cafe.chats.count %>件</p>
           </div>
         </div>
-       <% end %>
       <% else %>
       <p>現在開催中のツアーはありません</p>
       <% end %>
