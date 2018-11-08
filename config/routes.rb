@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
   get 'edit' => 'registrations#edit', as: :edit_user_registration
-  put 'edit' => 'registrations#update'
+  post 'edit' => 'registrations#update'
   get 'login' => 'sessions#new', as: :new_user_session
   post 'login' => 'sessions#create', as: :user_session
   delete 'logout' => 'sessions#destroy', as: :destroy_user_session
