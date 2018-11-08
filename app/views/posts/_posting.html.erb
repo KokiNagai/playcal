@@ -155,5 +155,8 @@
           <script>
           function postingCount(text, el) {
             document.getElementById(el).innerHTML = 'あと' + (200 - text.length) + '字です'
+            if (text.length >= 180) {
+              document.getElementById(el).style.color = "red";
+            }
           }
           </script>
