@@ -11,13 +11,12 @@
             <% else %>
             <li class="hidden-xs"><%= image_tag('blank-profile-picture-973460_1280.png', :class => "header-picture") %></li>
             <% end %>
-            <li class="hidden-xs"><div class="header-name"><%= link_to current_user.name, current_user, id: "header-name" %></div></li>
-            <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "ホーム", root_path, id: "header-home" %></li>
-            <li style="color: white; font-size: 12px;" class="hidden-xs"><%= link_to "メッセージ", "/message", id: "header-message" %></li>
-
+            <li class="hidden-xs"><div class="header-name" id="header-lists-1" onmouseover="headerListOver(1)" onmouseout="headerListOut(1)"><%= link_to current_user.name, current_user, id: "header-name" %></div></li>
+            <li style="color: white; font-size: 12px;" class="hidden-xs" id="header-lists-2" onmouseover="headerListOver(2)" onmouseout="headerListOut(2)"><%= link_to "ホーム", root_path, id: "header-home" %></li>
+            <li style="color: white; font-size: 12px;" class="hidden-xs" id="header-lists-3" onmouseover="headerListOver(3)" onmouseout="headerListOut(3)"><%= link_to "メッセージ", "/message", id: "header-message" %></li>
 
             <li class="notification hidden-xs">
-              <div class="notification-bell JS-bell">
+              <div class="notification-bell JS-bell" id="header-lists-4" onmouseover="headerListOver(4)" onmouseout="headerListOut(4)">
                 <p><%= current_user.notifications.where(read: false).count %></span>
               </div>
               <%= render 'layouts/notification2' %>
