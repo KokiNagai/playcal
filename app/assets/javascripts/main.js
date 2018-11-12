@@ -3,9 +3,9 @@ $(function(){
     //ローディング処理
     $(document).ready(function(){
         $("#fakeloader").fakeLoader({
-            timeToHide: 1200,
+            timeToHide: 1500,
             spinner: "spinner3",
-            bgColor: "#1abc9c"
+            bgColor: "#9cd75b"
         });
     });
 
