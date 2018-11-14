@@ -151,13 +151,27 @@ $body-color: #f7f7f7;
      }
    }
    .find-post-detail {
-     margin-top: 10px;
-     margin-bottom: 10px;
+     border: 3px solid $pink-borderbottom;
+     padding: 2px 5px 2px 5px;
+     border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
+     width: 130px;
+     margin: 10px auto;
      text-align: center;
+     cursor: pointer;
      .fa {
        margin-right: 10px;
      }
+     &:hover {
+       background: $pink-borderbottom;
+       span {
+       color: #fff;
+     }
    }
+   a:hover {
+     border-bottom: none;
+     text-decoration: none;
+   }
+ }
 
    #find-post-detail:hover {
      border-bottom: 3px solid $pink-borderbottom;
@@ -717,15 +731,27 @@ $body-color: #f7f7f7;
      }
 
      .find-post-detail {
+       border: 3px solid $pink-borderbottom;
+       padding: 2px 7px 2px 7px;
+       border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
+       width: 130px;
        margin: 10px auto;
-       border-bottom: 3px solid $pink-borderbottom;
-       display: block;
-       width: 110px;
+       text-align: center;
+       cursor: pointer;
        .fa {
          margin-right: 10px;
        }
+       &:hover {
+         background: $pink-borderbottom;
+         span {
+         color: #fff;
+       }
      }
-
+     a:hover {
+       border-bottom: none;
+       text-decoration: none;
+     }
+   }
 
 
      .find-user-upper {
