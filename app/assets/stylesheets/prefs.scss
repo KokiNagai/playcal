@@ -741,13 +741,13 @@ $body-color: #f7f7f7;
        .fa {
          margin-right: 10px;
        }
-       &:hover {
+       &:active {
          background: $pink-borderbottom;
          span {
          color: #fff;
        }
      }
-     a:hover {
+     a:active {
        border-bottom: none;
        text-decoration: none;
      }
