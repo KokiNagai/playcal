@@ -1,9 +1,16 @@
 <div class="chat-wrapper">
-  <%= bootstrap_form_for(@chat) do |f| %>
+  <%= form_for(@chat) do |f| %>
   <%= f.hidden_field :chatbox_id, :value => @chatbox.id %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="chat-form-area">
-    <p><%= f.text_area :text, id: "chatform", hide_label: true, placeholder: "コメントを入力" %></p>
+    <div class="chat-flex">
+      <% if current_user.picture.present? %>
+      <p><%= image_tag(current_user.picture_url, class: "chat-user-picture" ) %></p>
+      <% else %>
+      <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "chat-user-picture" ) %></p>
+      <% end %>
+      <p><%= f.text_area :text, id: "chatform", hide_label: true, placeholder: "コメントする..." %></p>
+    </div>
     <div class="chat-form-submit">
         <%= f.submit "コメント", class: "btn btn-success", id: "chat-form-submit" %>
     </div>

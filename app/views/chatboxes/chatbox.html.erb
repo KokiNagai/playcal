@@ -65,9 +65,6 @@
     </div>
     <% if user_signed_in? %>
     <div class="render-chat">
-      <div class="render-chat-title">
-        <p><i class="fa fa-pencil-square-o"></i>コメントを書く</p>
-      </div>
       <%= render 'chatboxes/chat' %>
     </div>
     <% else %>

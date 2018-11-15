@@ -207,7 +207,7 @@
 
     .chat-form-area {
       width: 100%;
-      margin: 40px auto;
+      margin: 10px auto;
       .chat-form-submit {
         width: 300px;
         margin: 20px auto;
@@ -215,38 +215,39 @@
       #chat-form-submit {
         @include button(130px, $green-logo-color, 10px 15px 10px 15px);
         font-weight: 600;
-        margin-left: 300px;
-      }
-      #chat-form-submit:active {
-        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-        border-bottom: none;
-      }
-    }
-    #chatform {
-      width: 400px;
-      height: 50px;
-      padding: 10px;
-      border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
-      background-color: #f8f8f8;
-      margin-left: 200px;
-      color: $gray-medium-dark;
-      border: 1px solid $gray-border-light;
-      box-shadow: none;
-    }
-    .render-chat {
-      border-top: 1px solid $gray-border-light;
-    }
-    .render-chat-title {
-      .fa {
-        margin-right: 10px;
-      }
-      p {
-        margin: 30px 0 0 50px;
-        font-size: 1.5rem;
-        color: $gray-medium-dark;
+        margin-left: 350px;
       }
     }
 
+.chat-flex {
+  display: flex;
+  #chatform {
+    height: 50px;
+    padding: 10px;
+    color: $gray-medium-dark;
+  }
+  textarea#chatform {
+    border: transparent;
+    width: 650px;
+    &:focus {
+      outline: 0;
+      border-bottom: 1px solid $green-logo-color;
+    }
+  }
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+    margin:10px 10px 0 15px;
+  }
+}
+
+    .render-chat {
+      border-top: 1px solid $gray-border-light;
+    }
+
+
+// カフェの写真があるコンポーネント＝＝＝＝＝＝＝＝
     .top-chatbox-wrapper {
       width: 100%;
       margin: 60px auto;
@@ -945,34 +946,42 @@
 
   .chat-form-area {
     width: 100%;
-    margin: 40px auto;
-    textarea#chatform {
-      border: 1px solid $gray-border-light;
-      padding: 10px;
-      box-shadow: none;
-
-    }
+    margin-top: 10px;
+    position: relative;
     .chat-form-submit {
       width: 300px;
-      margin: 20px auto;
     }
     #chat-form-submit {
-      @include button(120px, $green-logo-color, 10px 15px 10px 15px);
-      margin-left: 55%;
+      @include button(120px, $green-logo-color, 5px 10px 5px 10px);
       font-weight: 600;
+      position: absolute;
+      right: 6%;
     }
   }
-  #chatform {
-    width: 300px;
-    height: 60px;
-    border: 1px solid $gray-border-light;
-    padding: 10px;
-    box-shadow: none;
-    border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
-    background-color: #f8f8f8;
-    margin: 0 auto;
-    color: $gray-medium-dark;
+
+  .chat-flex {
+    display: flex;
+    #chatform {
+      height: 50px;
+      padding: 10px;
+      color: $gray-medium-dark;
+    }
+    textarea#chatform {
+      border: transparent;
+      width: 250px;
+      &:focus {
+        outline: 0;
+        border-bottom: 1px solid $green-logo-color;
+      }
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 60%;
+      margin:10px 10px 0 15px;
+    }
   }
+
   .render-chat {
     border-top: 1px solid $gray-border-light;
     margin-bottom: 60px;
