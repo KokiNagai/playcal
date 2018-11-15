@@ -5,10 +5,19 @@
   // login(PC)============================
   .login-wrapper {
     background: $body-color;
+    #login-playcal {
+      font-weight: 600;
+      color: $gray-medium-dark;
+      width: 200px;
+      text-align: center;
+      margin: 40px auto;
+      margin-bottom: 0;
+      font-size: 2.5rem;
+    }
     .login-main {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       width: 400px;
-      margin: 10% auto;
+      margin: 5% auto;
       background: #fff;
       padding: 50px 20px 50px 20px;
       h1 {

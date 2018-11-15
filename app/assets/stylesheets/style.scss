@@ -1,0 +1,14 @@
+$pc: 1024px;
+$tab: 1023px;
+
+@mixin mediaPC {
+  @media screen and (min-width: $pc) {
+
+  }
+}
+
+@mixin mediaaTab {
+  @media screen and (max-width: $pc) {
+
+  }
+}
