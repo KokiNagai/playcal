@@ -2,10 +2,9 @@
 <% if user_signed_in? %>
 <div class="top-wrap">
   <div class="top-news">
-  <span class="top-news-title">Playcal News</span>
-  <p>2018年11月8日 - テニスチャットカフェに「ATPワールドツアー・ファイナルズ」カフェがオープンしました！</p>
+    <span class="top-news-title">Playcal News</span>
+    <p>2018年11月8日 - テニスチャットカフェに「ATPワールドツアー・ファイナルズ」カフェがオープンしました！</p>
   </div>
-
   <% if Post.where(prefecture: current_user.live).present? %>
   <div class="home-user-prefecture">
     <h2><%= current_user.name %>さんが住む都道府県の募集はこちら</h2>
@@ -24,15 +23,15 @@
       <h2>募集する</h2>
       <p>あなたのヒッティングパートナーやチームメンバーをここで募集してみよう。</p>
     </div>
-    <div class="home-section-link1">
-      <%= link_to posting_path do %>
-      <p>募集する</p>
-      <% end %>
-    </div>
-    <div class="home-section-2">
+  <div class="home-section-link1">
+    <%= link_to posting_path do %>
+    <p>募集する</p>
+    <% end %>
+  </div>
+  <div class="home-section-2">
       <%= image_tag('home-section2-picture.jpeg', :alt => "探す写真") %>
-      <h2>探す</h2>
-      <p>あなたが練習したい人や、試合をしたいパートナーをここで見つけよう。</p>
+       <h2>探す</h2>
+       <p>あなたが練習したい人や、試合をしたいパートナーをここで見つけよう。</p>
     </div>
     <div class="home-section-link2">
       <%= link_to find_path do %>
