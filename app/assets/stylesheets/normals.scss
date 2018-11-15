@@ -4,6 +4,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'colors';
+@import 'mixin';
 
 
 
@@ -57,16 +58,8 @@ textarea {
   }
 }
 
-.facebook-signup p:active {
-  color: #305097;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-  border-bottom: none;
-}
-
-.google-signup p:active {
-  color: #DD5144;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-  border-bottom: none;
+.close-cross {
+  text-align: right;
 }
 
 #will_paginate {
@@ -1024,7 +1017,6 @@ h1 {
  // フッター(スマホ)======================
 
  footer {
-   margin-top: 35px;
    padding-top: 30px;
    padding-bottom: 30px;
    border-top: 1px solid #dcdcdc;
@@ -1069,10 +1061,6 @@ h1 {
        }
      }
    }
-
-
-
-
  }
 
 // about(スマホ)=============================
@@ -1354,6 +1342,10 @@ h1 {
 
 // ログイン前ホーム画面(スマホ)==============
 
+.top-wrapper {
+  padding-bottom: 35px;
+}
+
 .top-section {
   position: relative;
   background-color: rgba(0,0,0,0.5);
@@ -1400,14 +1392,8 @@ h1 {
   &:hover {
     background: #fff;
     color: $green-logo-color;
-    border: 5px solid $green-logo-color;
   }
 }
-// .top-section p:active {
-//   background-color: #99ff66;
-//   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-//   border-bottom: none;
-// }
 
 .top-section img {
   height: 300px;
@@ -1554,14 +1540,13 @@ h1 {
     display: inline-block;
     font-weight: 600;
     color: #fff;
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
     padding: 5px 10px 5px 10px;
-    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-    background: #ff9966;  /* fallback for old browsers */
+    @include button(140px, #fff, 10px 15px 10px 15px);
+    background: #ff9966;
     background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
     background: linear-gradient(to right, #ff5e62, #ff9966);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-    border-bottom: solid 3px #ff9966;
   }
 }
 
@@ -1681,6 +1666,7 @@ inquiry-main {
 }
 
 .setting {
+  padding-bottom: 35px;
   .setting-title {
     text-align: center;
     h2 {

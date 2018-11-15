@@ -1,7 +1,8 @@
 <div class="login-wrapper">
+  <p id="login-playcal">Playcal</p>
   <div class="login-main">
     <div class="login-title">
-      <h2>ログイン</h2>
+      <h1>ログイン</h1>
     </div>
     <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <h3><%= flash[:alert] %></h3>

@@ -6,11 +6,12 @@
   .login-wrapper {
     background: $body-color;
     .login-main {
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       width: 400px;
       margin: 10% auto;
       background: #fff;
       padding: 50px 20px 50px 20px;
-      h2 {
+      h1 {
         font-size: 18px;
         font-weight: 600;
         color: $gray-medium-dark;
@@ -46,14 +47,9 @@
         font-size: 1.5rem;
       }
       input#login-submit {
+        @include button(300px, $green-logo-color, 10px 15px 10px 15px);
         margin: 30px auto;
-        width: 300px;
         display: block;
-        background-color: $green-logo-color;
-        border: none;
-        cursor: pointer;
-        padding: 10px 15px 10px 15px;
-        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
         &:hover {
           opacity: 0.8;
         }
@@ -82,6 +78,7 @@
   .new-wrapper {
     background: $body-color;
     .user-new-main {
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       width: 400px;
       margin: 10% auto;
       background: #fff;
@@ -122,13 +119,8 @@
       }
       input#new-submit {
         margin: 30px auto;
-        width: 300px;
         display: block;
-        background-color: $green-logo-color;
-        border: none;
-        cursor: pointer;
-        padding: 10px 15px 10px 15px;
-        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
+        @include button(300px, $green-logo-color, 10px 15px 10px 15px);
         &:hover {
           opacity: 0.8;
         }
@@ -251,12 +243,22 @@
 @media screen and (max-width: 767px) {
   .login-wrapper {
     background: $body-color;
+    #login-playcal {
+      font-weight: 600;
+      color: $gray-medium-dark;
+      width: 200px;
+      text-align: center;
+      margin: 40px auto;
+      margin-bottom: 0;
+      font-size: 2.5rem;
+    }
     .login-main {
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       width: 100%;
-      margin: 20% auto;
+      margin: 10% auto;
       background: #fff;
       padding: 50px 0px 50px 0px;
-      h2 {
+      h1 {
         font-size: 18px;
         font-weight: 600;
         color: $gray-medium-dark;
@@ -292,14 +294,9 @@
         font-size: 1.5rem;
       }
       input#login-submit {
+        @include button(300px, $green-logo-color, 10px 15px 10px 15px);
         margin: 30px auto;
-        width: 300px;
         display: block;
-        background-color: $green-logo-color;
-        border: none;
-        cursor: pointer;
-        padding: 10px 15px 10px 15px;
-        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
       }
       .login-under {
         margin-left: 20px;
@@ -316,6 +313,7 @@
   .new-wrapper {
     background: $body-color;
     .user-new-main {
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       width: 100%;
       margin: 10% auto;
       background: #fff;
@@ -352,17 +350,12 @@
         @include google(300px)
       }
       #new-submit {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
       input#new-submit {
+        @include button(300px, $green-logo-color, 10px 15px 10px 15px);
         margin: 30px auto;
-        width: 300px;
         display: block;
-        background-color: $green-logo-color;
-        border: none;
-        cursor: pointer;
-        padding: 10px 15px 10px 15px;
-        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
         &:hover {
           opacity: 0.8;
         }
@@ -457,13 +450,9 @@
   }
 
   input#edit-submit {
+    @include button(300px, $green-logo-color, 10px 15px 10px 15px);
     display: block;
     margin: 40px auto;
-    width: 300px;
-    padding: 10px 15px 10px 15px;
-    border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
-    border: none;
-    background-color: $green-logo-color;
   }
 
   input#edit-form:focus, select#edit-form:focus, textarea#edit-form:focus {

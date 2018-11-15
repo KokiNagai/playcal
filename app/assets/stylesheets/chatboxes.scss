@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'colors';
+@import 'mixin';
 
 // PC,タブレット用画面==========================================
 
@@ -194,7 +195,6 @@
       opacity: 0.7;
       color: none;
     }
-
     .chatbox-time {
       text-align: right;
       margin-right: 10px;
@@ -213,12 +213,9 @@
         margin: 20px auto;
       }
       #chat-form-submit {
-        margin-left: 300px;
-        background-color: $green-logo-color;
-        border: none;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-        border-bottom: solid 3px $green-logo-color;
+        @include button(130px, $green-logo-color, 10px 15px 10px 15px);
         font-weight: 600;
+        margin-left: 300px;
       }
       #chat-form-submit:active {
         box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
@@ -378,6 +375,7 @@
 
 
     .tour-wrapper {
+      padding-bottom: 35px;
       .tour-wrapper-title {
         position: relative;
         background-color: rgba(0,0,0,0.5);
@@ -961,16 +959,9 @@
       margin: 20px auto;
     }
     #chat-form-submit {
-      margin-left: 230px;
-      background-color: $green-logo-color;
-      border: none;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-      border-bottom: solid 3px $green-logo-color;
+      @include button(120px, $green-logo-color, 10px 15px 10px 15px);
+      margin-left: 55%;
       font-weight: 600;
-    }
-    #chat-form-submit:active {
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      border-bottom: none;
     }
   }
   #chatform {
@@ -1082,6 +1073,7 @@
 
   .tour-wrapper {
     background-color: #f7f7f7;
+    padding-bottom: 35px;
     .tour-wrapper-title {
       position: relative;
       background-color: rgba(0,0,0,0.5);

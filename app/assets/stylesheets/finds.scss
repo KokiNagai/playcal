@@ -46,6 +46,7 @@
   .find-wrapper {
     display: flex;
     flex-direction: column;
+    padding-bottom: 35px;
    }
    .side-find {
      margin-left: 40px;
@@ -635,6 +636,7 @@
     .find-wrapper {
       display: flex;
       flex-direction: column;
+      padding-bottom: 35px;
      }
      .side-find {
        margin-top: 50px;
@@ -725,7 +727,7 @@
 
      .find-post-detail {
        border: 3px solid $pink-borderbottom;
-       padding: 2px 7px 2px 7px;
+       padding: 2px 5px 2px 5px;
        border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
        width: 130px;
        margin: 10px auto;
@@ -734,18 +736,20 @@
        .fa {
          margin-right: 10px;
        }
-       &:active {
+       span {
+         color: $pink-borderbottom;
+       }
+       &:hover {
          background: $pink-borderbottom;
          span {
          color: #fff;
        }
      }
-     a:active {
+     a:hover {
        border-bottom: none;
        text-decoration: none;
      }
    }
-
 
      .find-user-upper {
        border-bottom: 1px solid $gray-border-light;

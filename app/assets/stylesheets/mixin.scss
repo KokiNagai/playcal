@@ -28,7 +28,7 @@
       width: $width;
       margin: 20px auto;
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       background-color: #DD5144;
       padding: 10px 15px 10px 15px;
       border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
@@ -39,7 +39,7 @@
     .fa {
       color: #fff;
       margin-right: 10px;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       border: none;
     }
 }
@@ -63,4 +63,13 @@
     .fa {
       margin-right: 10px;
     }
+}
+
+@mixin button($width, $bg, $pd) {
+  border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
+  width: $width;
+  background-color: $bg;
+  border: none;
+  cursor: pointer;
+  padding: $pd;
 }

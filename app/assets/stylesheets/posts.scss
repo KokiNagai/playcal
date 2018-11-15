@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'colors';
+@import 'mixin';
 
 
 // タブレット、PC用==========================================================
@@ -542,6 +543,10 @@ button#post-message-submit:active {
 
   /* posting_form(スマホ用)============================ */
 
+  .posting-wrapper {
+    padding-bottom: 35px;
+  }
+
   .posting-title h2 {
     font-size: 20px;
     font-weight: 600;
@@ -638,19 +643,10 @@ button#post-message-submit:active {
    #posting-submit {
      margin: 0 auto;
      display: block;
-     width: 300px;
-     background-color: $green-logo-color;
-     border: none;
-     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-     border-bottom: solid 3px $green-logo-color;
-   }
-   #posting-submit:active {
-     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-     border-bottom: none;
+     @include button(300px, $green-logo-color,  10px 15px 10px 15px);
    }
 
    span.help-block {
-
      margin-left: 62.5px;
    }
 
@@ -677,6 +673,7 @@ button#post-message-submit:active {
     margin: 0 auto;
     margin-top: 40px;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+    padding-bottom: 35px;
   }
 
   .post-recrut-label {
