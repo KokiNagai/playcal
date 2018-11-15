@@ -1,0 +1,489 @@
+@import 'colors';
+@import 'mixin';
+
+@media screen and (min-width: 768px) {
+  // login(PC)============================
+  .login-wrapper {
+    background: $body-color;
+    .login-main {
+      width: 400px;
+      margin: 10% auto;
+      background: #fff;
+      padding: 50px 20px 50px 20px;
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: $gray-medium-dark;
+        text-align: center;
+        margin: 40px 0px 40px 0px;
+      }
+      h3 {
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+        color: #e8383d;
+        font-size: 13px;
+      }
+      .login-form {
+        width: 300px;
+      }
+      #user_email, #user_password {
+        width: 300px;
+        margin: 0 auto;
+      }
+      .checkbox {
+        label {
+          margin-left: 40px;
+        }
+      }
+      .facebook-signup {
+        @include facebook(300px)
+      }
+      .google-signup {
+        @include google(300px)
+      }
+      #login-submit {
+        font-size: 1.5rem;
+      }
+      input#login-submit {
+        margin: 30px auto;
+        width: 300px;
+        display: block;
+        background-color: $green-logo-color;
+        border: none;
+        cursor: pointer;
+        padding: 10px 15px 10px 15px;
+        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .login-under {
+       margin-left: 10%;
+       width: 300px;
+       #login-under-signup {
+         color: $green-highlight;
+       }
+     }
+    }
+  }
+
+  #error_explanation {
+    width: 350px;
+    margin: 30px auto;
+  ul li {
+    list-style: none;
+    margin-top: 5px;
+    color: red;
+   }
+  }
+  // register(pc)=========================
+
+  .new-wrapper {
+    background: $body-color;
+    .user-new-main {
+      width: 400px;
+      margin: 10% auto;
+      background: #fff;
+      padding: 50px 20px 50px 20px;
+      .user-new-title {
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $gray-medium-dark;
+        text-align: center;
+        margin: 40px 0px 40px 0px;
+      }
+      h2 {
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+        color: $gray-medium-dark;
+        font-size: 13px;
+      }
+    }
+    label {
+      margin: 10px 0 0 30px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+      #new-form {
+        width: 300px;
+        margin: 5px auto;
+      }
+      .facebook-signup {
+        @include facebook(300px)
+      }
+      .google-signup {
+        @include google(300px)
+      }
+      #new-submit {
+        font-size: 1.5rem;
+      }
+      input#new-submit {
+        margin: 30px auto;
+        width: 300px;
+        display: block;
+        background-color: $green-logo-color;
+        border: none;
+        cursor: pointer;
+        padding: 10px 15px 10px 15px;
+        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .new-under {
+       margin-left: 10%;
+       width: 300px;
+       #login-under-signup {
+         color: $green-highlight;
+       }
+     }
+    }
+  }
+  // edit(PC)============================================
+
+  .edit-user-wrapper {
+    .edit-user-main {
+      small {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+      i {
+        border: 1px solid red;
+        padding: 5px;
+        font-size: 10px;
+        color: red;
+        margin-left: 10px;
+        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+      }
+    }
+    .edit-user-title {
+      text-align: center;
+      margin: 50px 0 30px 0;
+      h2 {
+        font-weight: 500;
+        font-size: 20px;
+        color: $gray-medium-dark;
+      }
+    }
+    .edit-user-title-after {
+      margin: 40px;
+      h1 {
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        color: $green-logo-color;
+        font-size: 4rem;
+        font-weight: 600;
+      }
+      p {
+        margin: 20px auto;
+        width: 75%;
+        color: $gray-medium-dark;
+        font-size: 1.5rem;
+        text-align: left;
+      }
+    }
+    .edit-user-after-alert {
+      width:80%;
+      margin: 0 auto;
+      h3 {
+        text-align: center;
+        color: $pink-hightlight;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .picture-edit, .name-edit, .birth-edit, .email-edit, .prefecture-edit,
+   .skill-edit {
+    @include edit_form(400px)
+  }
+
+  .introduction-edit {
+    #edit-form {
+      height: 200px;
+    }
+    @include edit_form(400px)
+  }
+
+  input#edit-submit {
+    display: block;
+    margin: 40px auto;
+    width: 400px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px $green-logo-color;
+    border: none;
+    background-color: $green-logo-color;
+    &:active {
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+      border-bottom: none;
+    }
+  }
+
+  input#edit-form:focus, select#edit-form:focus, textarea#edit-form:focus {
+    outline: 2px solid $green-logo-color;
+  }
+
+
+  .like-wrapper {
+    margin-top: 40px;
+    h2 {
+      text-align: left;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 60px;
+      color: $gray-medium-dark;
+      margin-left: 200px;
+    }
+    .fa {
+      margin-right: 10px;
+      color: #ffe259;
+    }
+  }
+}
+
+
+// スマホ==================================================
+
+@media screen and (max-width: 767px) {
+  .login-wrapper {
+    background: $body-color;
+    .login-main {
+      width: 100%;
+      margin: 20% auto;
+      background: #fff;
+      padding: 50px 0px 50px 0px;
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: $gray-medium-dark;
+        text-align: center;
+        margin: 20px 0px 40px 0px;
+      }
+      h3 {
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+        color: #e8383d;
+        font-size: 13px;
+      }
+      .checkbox {
+        label {
+          margin-left: 20px;
+        }
+      }
+      .login-form {
+        width: 300px;
+      }
+      #user_email, #user_password {
+        width: 300px;
+        margin: 0 auto;
+      }
+      .facebook-signup {
+        @include facebook(300px)
+      }
+      .google-signup {
+        @include google(300px)
+      }
+      #login-submit {
+        font-size: 1.5rem;
+      }
+      input#login-submit {
+        margin: 30px auto;
+        width: 300px;
+        display: block;
+        background-color: $green-logo-color;
+        border: none;
+        cursor: pointer;
+        padding: 10px 15px 10px 15px;
+        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
+      }
+      .login-under {
+        margin-left: 20px;
+       width: 250px;
+       #login-under-signup {
+         color: $green-highlight;
+       }
+     }
+    }
+  }
+
+  // register(iphone)=======================
+
+  .new-wrapper {
+    background: $body-color;
+    .user-new-main {
+      width: 100%;
+      margin: 10% auto;
+      background: #fff;
+      padding: 50px 20px 50px 20px;
+      .user-new-title {
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $gray-medium-dark;
+        text-align: center;
+        margin: 40px 0px 40px 0px;
+      }
+      h2 {
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+        color: $gray-medium-dark;
+        font-size: 13px;
+      }
+    }
+    label {
+      margin: 10px 0 0 30px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+      #new-form {
+        width: 300px;
+        margin: 5px auto;
+      }
+      .facebook-signup {
+        @include facebook(300px)
+      }
+      .google-signup {
+        @include google(300px)
+      }
+      #new-submit {
+        font-size: 1.3rem;
+      }
+      input#new-submit {
+        margin: 30px auto;
+        width: 300px;
+        display: block;
+        background-color: $green-logo-color;
+        border: none;
+        cursor: pointer;
+        padding: 10px 15px 10px 15px;
+        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .new-under {
+       width: 300px;
+       #login-under-signup {
+         color: $green-highlight;
+       }
+     }
+    }
+  }
+  // edit(スマホ)=========================================
+  .edit-user-wrapper {
+    .edit-user-main {
+      small {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+      i {
+        border: 1px solid red;
+        padding: 5px;
+        font-size: 10px;
+        color: red;
+        margin-left: 10px;
+        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+      }
+    }
+    .edit-user-title {
+      text-align: center;
+      margin: 50px 0 30px 0;
+      h2 {
+        font-weight: 500;
+        font-size: 2rem;
+        color: $gray-medium-dark;
+      }
+    }
+    .edit-user-title-after {
+      margin: 40px;
+      h1 {
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        color: $green-logo-color;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      p {
+        margin: 20px auto;
+        width: 75%;
+        color: $gray-medium-dark;
+        font-size: 1.5rem;
+        text-align: left;
+      }
+    }
+    .edit-user-after-alert {
+      width: 80%;
+      margin: 0 auto;
+      h3 {
+        text-align: center;
+        color: $pink-hightlight;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  #error_explanation {
+    width: 300px;
+    margin: 30px auto;
+  ul li {
+    list-style: none;
+    margin-top: 5px;
+    color: red;
+   }
+  }
+
+  .alert-danger {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .picture-edit, .name-edit, .birth-edit, .email-edit, .prefecture-edit,
+   .skill-edit {
+    @include edit_form(300px)
+  }
+
+  .introduction-edit {
+    #edit-form {
+      height: 200px;
+    }
+    @include edit_form(300px)
+  }
+
+  input#edit-submit {
+    display: block;
+    margin: 40px auto;
+    width: 300px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
+    border: none;
+    background-color: $green-logo-color;
+  }
+
+  input#edit-form:focus, select#edit-form:focus, textarea#edit-form:focus {
+    outline: 2px solid $green-logo-color;
+  }
+
+
+  .like-wrapper {
+    margin-top: 40px;
+    h2 {
+      text-align: left;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 60px;
+      color: $gray-medium-dark;
+      margin-left: 200px;
+    }
+    .fa {
+      margin-right: 10px;
+      color: #ffe259;
+    }
+  }
+}

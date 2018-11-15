@@ -1,17 +1,7 @@
 // Place all the styles related to the Prefs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-$gray-medium-light: #919191;
-$gray-medium-dark: #4c4c4c;
-$gray-border-light: #cfcfcf;
-$gray-word: #919191;
-$green-logo-color: #9cd75b;
-$pink-hightlight: #ff6666;
-$pink-borderbottom: #ffd6d6;
-$green-highlight: #5f9ea0;
-$body-color: #f7f7f7;
-
+@import 'colors';
 
 
 
@@ -160,6 +150,9 @@ $body-color: #f7f7f7;
      cursor: pointer;
      .fa {
        margin-right: 10px;
+     }
+     span {
+       color: $pink-borderbottom;
      }
      &:hover {
        background: $pink-borderbottom;

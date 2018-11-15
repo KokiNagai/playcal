@@ -1,53 +1,47 @@
 <% set_meta_tags title: "新規登録", noindex: true %>
-<div class="edit-user-wrapper1">
+<div class="new-wrapper">
   <%= bootstrap_form_for(resource, as: resource_name, url: signup_path) do |f| %>
-  <div class="edit-user-main">
-    <div class="edit-user-title">
+  <div class="user-new-main">
+    <div class="user-new-title">
       <h1>Playcalへようこそ!</h1>
       <h2>登録をしてさっそく始めよう</h2>
     </div>
-    <div class="edit-user-flex">
-      <div class="edit-user-main-under">
-        <%= render 'shared/error_messages', object: f.object %>
-
-        <div class="email-edit">
-          <%= f.label :メールアドレス %>
-          <%= f.email_field :email, id: "email-edit", hide_label: true, placeholder: "メールアドレス" %>
-        </div>
-
-        <div class="password-edit">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-          <span>(<%= @minimum_password_length %>字以上)</span>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password", hide_label: true, placeholder: "パスワード"  %>
-        </div>
-
-        <div class="password_confirmation-edit">
-          <%= f.label :パスワードの確認 %>
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", hide_label: true, placeholder: "パスワードの確認"  %>
-        </div>
-
-        <div class="edit-submit">
-          <%= f.submit "認証メール送信する", class: "btn btn-success", id: "edit-submit" %>
-          <p>※ メールの送信には時間がかかる可能性がありますのでご了承ください</p>
-          </div>
-
-        </div>
-        <div class="facebook-signup">
-          <%= link_to user_facebook_omniauth_authorize_path do %>
-          <p><i class="fa fa-facebook-f"></i>Facebookアカウントで登録する</p>
-          <% end %>
-        </div>
-
-        <div class="google-signup">
-          <%= link_to user_google_oauth2_omniauth_authorize_path do %>
-          <p><i class="fa fa-google"></i>Googleアカウントで登録する</p>
-          <% end %>
-        </div>
-      </div>
-
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="new-email">
+      <%= f.label :メールアドレス %>
+      <%= f.email_field :email, id: "new-form", hide_label: true, placeholder: "メールアドレス" %>
     </div>
+
+    <div class="new-password">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <span style="font-size: 1rem; color: #4c4c4c;">(<%= @minimum_password_length %>字以上)</span>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", hide_label: true, placeholder: "パスワード", id: "new-form"  %>
+    </div>
+
+    <div class="new-password_confirmation">
+      <%= f.label :パスワードの確認 %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", hide_label: true, placeholder: "パスワードの確認", id: "new-form"  %>
+    </div>
+    <div class="new-submit">
+      <%= f.submit "認証メール送信する", class: "btn btn-success", id: "new-submit" %>
+      <p>※ メールの送信には時間がかかる可能性がありますのでご了承ください</p>
+    </div>
+  <div class="facebook-signup">
+    <%= link_to user_facebook_omniauth_authorize_path do %>
+    <p><i class="fa fa-facebook-f"></i>Facebookアカウントで登録する</p>
     <% end %>
   </div>
-  <%= render "devise/shared/links" %>
+
+  <div class="google-signup">
+    <%= link_to user_google_oauth2_omniauth_authorize_path do %>
+    <p><i class="fa fa-google"></i>Googleアカウントで登録する</p>
+    <% end %>
+  </div>
+  <div class="new-under">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
+</div>
+<% end %>

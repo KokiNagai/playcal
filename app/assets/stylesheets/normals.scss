@@ -3,15 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'colors';
 
-$gray-medium-light: #a0a0a0;
-$gray-medium-dark: #4c4c4c;
-$gray-border-light: #cfcfcf;
-$gray-word: #919191;
-$green-logo-color: #9cd75b;
-$pink-hightlight: #ff6666;
-$pink-borderbottom: #ffd6d6;
-$green-highlight: #5f9ea0;
+
 
 html,body{margin:0;padding:0;}
 
@@ -43,11 +37,9 @@ a {
     color: #535353;
     text-decoration: none;
   }
-  // &:hover {
-  //   background-color: #e5ffcc;
-  //   opacity: 0.7;
-  //   color: $green-highlight;
-  // }
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 textarea {
@@ -75,16 +67,6 @@ textarea {
   color: #DD5144;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
   border-bottom: none;
-}
-
-#error_explanation {
-  width: 350px;
-  margin: 30px auto;
-ul li {
-  list-style: none;
-  margin-top: 5px;
-  color: red;
- }
 }
 
 #will_paginate {
@@ -201,6 +183,7 @@ header {
 .down-color {
   color: #666666;
 }
+
 
 /* フッター(タブレット、PC用画面)=================================== */
 footer {
@@ -525,16 +508,15 @@ h1 {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   margin:0;
-  padding: 10px 37px 10px 37px;
+  padding: 10px 34px 10px 34px;
   color: #fff;
-  font-size: 27px;
+  font-size: 25px;
   border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
   background-color: $green-logo-color;
   cursor: pointer;
   &:hover {
     background: #fff;
     color: $green-logo-color;
-    border: 5px solid $green-logo-color;
   }
 }
 
@@ -701,137 +683,6 @@ h1 {
 #will_paginate1 {
   margin-left: 400px;
 }
-
-
-
-
-// ログインモーダル(タブレットPC用)================
-
-.login-modal-wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
-  display: none;
-}
-
-
-.modals {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  right: 10%;
-  background-color: #f5f5f5;
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  border-radius: 10px;
-  width: auto;
-  height: auto;
-  text-align: center;
-}
-
-.login-main {
-  h2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: $gray-medium-dark;
-    text-align: center;
-    margin: 40px 0px 40px 0px;
-  }
-  h3 {
-    width: 80%;
-    margin: 30px auto;
-    text-align: center;
-    color: #e8383d;
-    font-size: 13px;
-  }
-  .login-mail, .login-password {
-    width: 500px;
-    margin: 0 auto;
-    .login-form {
-      width: 500px;
-    }
-  }
-
-  .facebook-signup {
-    margin-top: 40px;
-    text-align: center;
-
-    p {
-      width: 500px;
-      margin: 10px auto;
-      color: #fff;
-      font-size: 1.5rem;
-      background-color: #305097;
-      padding: 5px 0 5px 0;
-      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-      border-bottom: solid 3px #305097;
-    }
-    .fa {
-      color: #fff;
-      margin-right: 10px;
-      font-size: 1.5rem;
-      border: none;
-    }
-  }
-  .google-signup {
-    margin-bottom: 50px;
-    text-align: center;
-    p {
-      width: 500px;
-      margin: 20px auto;
-      color: #fff;
-      font-size: 1.5rem;
-      background-color: #DD5144;
-      padding: 5px 0 5px 0;
-      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-      border-bottom: solid 3px #DD5144;
-    }
-    .fa {
-      color: #fff;
-      margin-right: 10px;
-      font-size: 1.5rem;
-      border: none;
-    }
-  }
-
-  input#login-submit {
-    margin: 30px auto;
-    width: 500px;
-    display: block;
-    background-color: $green-logo-color;
-    border: none;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-    border-bottom: solid 3px $green-logo-color;
-  }
-  input#login-submit:active {
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-    border-bottom: none;
-  }
-  .login-under {
-    margin-left: 10%;
-   width: 600px;
-   #login-under-signup {
-     color: $green-highlight;
-   }
- }
-}
-
-.fa-times {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  color: rgba(128, 128, 128, 0.46);
-  cursor: pointer;
-}
-
 
 // メール送信(PC、タブレット)==========================
 .email-sent-main {
@@ -1722,131 +1573,6 @@ h1 {
 #will_paginate1 {
   margin-left: 80px;
 }
-
-// ログインモーダル(スマホ)==============
-
-.login-main {
-  .login-title {
-    margin: 40px 0 40px 0;
-    h2 {
-      height: 35px;
-      border-left: 4px solid $green-logo-color;
-      font-size: 2rem;
-      font-weight: 600;
-      color: $green-logo-color;
-      text-align: left;
-      width: 80%;
-      padding: 10px 0 10px 35px;
-      display: table-cell;
-      vertical-align: middle;
-    }
-  }
-  .facebook-signup {
-    margin-top: 40px;
-    text-align: center;
-    p {
-      width: 300px;
-      margin: 10px auto;
-      text-align: left;
-      color: #fff;
-      font-size: 1.4rem;
-      background-color: #305097;
-      padding: 5px 0 5px 0;
-      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-      border-bottom: solid 3px #305097;
-    }
-    .fa {
-      color: #fff;
-      margin-right: 10px;
-      font-size: 1.6rem;
-      border: none;
-      margin-left: 20px;
-    }
-  }
-  .google-signup {
-    margin-bottom: 50px;
-    text-align: center;
-    p {
-      width: 300px;
-      margin: 10px auto;
-      text-align: left;
-      color: #fff;
-      font-size: 1.4rem;
-      background-color: #DD5144;
-      padding: 5px 0 5px 0;
-      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-      border-bottom: solid 3px #DD5144;
-    }
-    .fa {
-      color: #fff;
-      margin-right: 10px;
-      font-size: 1.6rem;
-      border: none;
-      margin-left: 20px;
-    }
-  }
-  h3 {
-    width: 80%;
-    margin: 30px auto;
-    text-align: center;
-    color: #e8383d;
-    font-size: 13px;
-  }
-  .login-mail, .login-password {
-    width: 300px;
-    margin: 0 auto;
-    #login-form {
-      width: 300px;
-    }
-  }
-    input#login-submit {
-      margin: 30px auto;
-      width: 300px;
-      display: block;
-      background-color: $green-logo-color;
-      border: none;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-      border-bottom: solid 3px $green-logo-color;
-      font-weight: 600;
-    }
-
-    input#login-submit:active {
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      border-bottom: none;
-    }
-
-    .login-under {
-      margin-top: 90px;
-     #login-under-signup {
-       color: $green-highlight;
-       margin-bottom: 10px;
-     }
-     p {
-       font-size: 13px;
-       margin-bottom: 5px;
-        width: 300px;
-        margin-left: 33px;
-     }
-     p #login-under-link {
-       font-size: 10px;
-     }
-     #login-under-list {
-       margin-bottom: 10px;
-     }
-  }
-}
-.fa-times {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  color: rgba(128, 128, 128, 0.46);
-  cursor: pointer;
-}
-
-
-
 // メール送信(スマホ)=======================
 .email-sent-main {
   h2 {

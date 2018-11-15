@@ -1,10 +1,13 @@
 <% set_meta_tags title: "プロフィールを編集する", noindex: true %>
-<div class="edit-user-wapper">
+<div class="edit-user-wrapper">
   <%= bootstrap_form_for(resource, as: resource_name, url: edit_path, html: { method: :put }) do |f| %>
   <div class="edit-user-main">
     <% if current_user.gender.present? %>
     <div class="edit-user-title">
-      <h2><i class="fa fa-pencil-square-o"></i>プロフィールを編集する</h2>
+      <h2>プロフィールを編集する</h2>
+    </div>
+    <div class="edit-user-after-alert">
+      <%= render 'shared/error_messages', object: f.object %>
     </div>
     <% else %>
     <div class="edit-user-title-after">
@@ -19,34 +22,34 @@
 
     <div class="picture-edit">
       <%= f.label :プロフィール画像 %>
-      <%= f.file_field :picture, hide_label: true %>
+      <%= f.file_field :picture, id: "edit-form", hide_label: true %>
     </div>
 
       <div class="name-edit">
-        <%= f.label :名前 %><i>必須</i><span>　(20字以内)</span>
-        <%= f.text_field :name, id: "name-edit", hide_label: true %>
+        <%= f.label :名前 %><i>必須</i> <small>(20字以内)</small>
+        <%= f.text_field :name, id: "edit-form", hide_label: true %>
       </div>
 
-       <div class="birth-date-edit">
+       <div class="birth-edit">
          <%= f.label :生年月日 %><i>必須</i>
          <%= f.date_select(
                  :birth_date,
                  use_month_numbers: true,
-                 start_year:     1930,
-                 end_year:       (Time.now.year - 18),
+                 start_year:     1940,
+                 end_year:       (Time.now.year - 10),
                  default:        Date.new(1989, 1, 1),
                  hide_label: true,
-                 date_separator: '/', id: "birth-date-edit") %>
+                 date_separator: '/', id: "edit-form") %>
          </div>
 
         <div class="email-edit">
          <%= f.label :メールアドレス %><i>必須</i>
-         <%= f.email_field :email, id: "email-edit", hide_label: true %>
+         <%= f.email_field :email, id: "edit-form", hide_label: true %>
        </div>
 
        <div class="name-edit">
-         <%= f.label :性別 %><small></small><i>必須</i>
-         <%= f.select :gender, [['男性', '男性'], ['女性','女性']], {include_blank: '選択してください', hide_label: true}, id: "name-edit" %>
+         <%= f.label :性別 %><i>必須</i>
+         <%= f.select :gender, [['男性', '男性'], ['女性','女性']], {include_blank: '選択してください', hide_label: true}, id: "edit-form" %>
        </div>
 
         <div class="prefecture-edit">
@@ -126,18 +129,19 @@
               ['沖縄県',    '沖縄県'],
             ]
           ],
-          ], {include_blank: '選択してください', hide_label: true}, id: 'prefecture-edit' %></div>
+          ], {include_blank: '選択してください', hide_label: true}, id: 'edit-form' %></div>
 
-          <div class="prefecture-edit">
+          <div class="skill-edit">
             <%= f.label :テニス歴 %>
             <%= f.select :history, [['1年未満', '1年未満'], ['1年~5年', '1年~5年'],
              ['5年~10年', '5年~10年'], ['10年以上', '10年以上']], {include_blank: '選択してください', hide_label: true},
-              id: 'prefecture-edit' %>
+              id: 'edit-form' %>
           </div>
 
        <div class="introduction-edit">
         <%= f.label :プロフィール %><small>(200字以内)</small>
-        <%= f.text_area :introduction, id: "introduction-edit", class: "edit-introduction-area", hide_label: true, placeholder: "自己紹介を詳しく書くと、募集の際に人が集まりやすくなります。"%>
+        <%= f.text_area :introduction, id: "edit-form", class: "edit-introduction-area", hide_label: true, placeholder: "自己紹介を詳しく書くと、募集の際に人が集まりやすくなります。", onKeyUp: "postingCount(value, 'posting-text-count')" %>
+        <p id="posting-text-count">あと200字です</p>
       </div>
 
       <% if current_user.gender.nil? && current_user.uid.present? %>
@@ -146,12 +150,12 @@
         <% if @minimum_password_length %>
         <span>( <%= @minimum_password_length %>字以上 )</span>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password", hide_label: true, placeholder: "パスワード"  %>
+        <%= f.password_field :password, autocomplete: "new-password", id: "edit-form", hide_label: true, placeholder: "パスワード"  %>
       </div>
 
       <div class="password_confirmation-edit">
         <%= f.label :パスワードの確認 %><i>必須</i>
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", hide_label: true, placeholder: "パスワードの確認"  %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", id: "edit-form", hide_label: true, placeholder: "パスワードの確認"  %>
       </div>
       <% end %>
 
@@ -168,3 +172,12 @@
   </div>
   <% end %>
 </div>
+
+<script>
+function postingCount(text, el) {
+  document.getElementById(el).innerHTML = 'あと' + (200 - text.length) + '字です'
+  if (text.length >= 180) {
+    document.getElementById(el).style.color = "red";
+  }
+}
+</script>
