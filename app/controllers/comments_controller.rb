@@ -19,6 +19,8 @@ class CommentsController < ApplicationController
     @comment.room.touch
     if @comment.save
       redirect_to request.referrer || root_url
+    else 
+        redirect_to request.referrer || root_url
     end
 
   end
