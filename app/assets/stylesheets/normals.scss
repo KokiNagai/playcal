@@ -403,6 +403,7 @@ footer {
 .inquiry-main {
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 35px;
 }
 
 .inquiry-title h1 {
@@ -428,6 +429,7 @@ footer {
 }
 
 .inquiry-confirm {
+  padding-bottom: 35px;
   h2 {
     font-size: 20px;
     font-weight: 600;
@@ -735,6 +737,7 @@ footer {
 // about(スマホ)=============================
 
 .about-top-wrapper {
+  padding-bottom: 35px;
   background: #56ab2f;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -818,6 +821,7 @@ footer {
 
 .mail-confirm-wrapper {
   margin: 40px 0 10px 0;
+  padding-bottom: 35px;
   .mail-confirm-title {
     width: 90%;
     margin: 0 auto;
@@ -899,9 +903,11 @@ footer {
 .link-info a:hover {
   border-bottom: 2px solid $green-highlight;
 }
-inquiry-main {
+
+.inquiry-main {
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 35px;
 }
 
 .inquiry-title h1 {
@@ -929,6 +935,7 @@ inquiry-main {
 }
 
 .inquiry-confirm {
+  padding-bottom: 35px;
   h2 {
     font-size: 20px;
     font-weight: 600;
