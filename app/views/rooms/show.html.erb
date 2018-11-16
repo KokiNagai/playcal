@@ -1,101 +1,105 @@
 <% set_meta_tags title: "メッセージ", noindex: true %>
 <div class="room-wrapper">
-  <div class="post-show-wrapper">
-    <div class="post-show-upper">
-      <div class="post-show-user">
-        <% if @room.post.user.picture.present? %>
-        <p><%= image_tag(@room.post.user.picture_url, class: "post-showr-picture", :alt => "ユーザーの写真" ) %></p>
-        <% else %>
-        <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture", :alt => "ユーザーの写真" ) %></p>
-        <% end %>
-        <p><%= link_to(@room.post.user.name.truncate(8), @room.post.user) %></p>
+  <div class="col-md-4 col-sm-12">
+    <div class="room-post-wrapper">
+      <div class="room-post-ribbon">
+        <span class="ribbon1">投稿</span>
       </div>
-      <div class="post-show-title">
-        <p><%= @room.post.title %></p>
-      </div>
-    </div>
-    <div class="post-show-under-title">
-      <h2>基本情報</h2>
-    </div>
-    <div class="post-show-under">
-      <div class="post-show-under-left">
-        <p><label>都道府県</label></br class="visible-xs"><%= @room.post.prefecture %></p>
-        <p><label>地域名の詳細</label></br class="visible-xs"><%= @room.post.city %></p>
-        <p><label>希望する技術レベル</label></br class="visible-xs"><%= @room.post.skill %></p>
-      </div>
-      <div class="post-show-under-right">
-        <p><label>練習希望日</label></br class="visible-xs"><%= @room.post.playday %></p>
-        <p><label>希望する性別</label></br class="visible-xs"><%= @room.post.gender %></p>
-        <p><label>希望する人数</label></br class="visible-xs"><%= @room.post.member %></p>
-        <p><label>練習の内容</label></br class="visible-xs"><%= @room.post.style %></p>
-      </div>
-    </div>
-    <div class="post-show-under-title">
-      <h2>募集内容の詳細</h2>
-    </div>
-    <div class="post-show-under-content">
-      <p><%= @room.post.content %></p>
-    </div>
-  </div>
-
-
-<div class="room-under">
-  <div class="room-side-wrapper col-md-4 hidden-xs">
-
-  </div>
-
-  <div class="room-show-wrapper col-md-8 col-sm-12">
-    <div class="room-show-main">
-        <div class="room-show-alert">
-          <h2><i class="fa fa-flag-o"></i>投稿に関する注意</h2>
-          <h3>練習場所の詳細や、詳しい日時などをこの場で確認しましょう。
-            また、他のSNS等への連絡を誘致するような文章は禁止されています。そのような行為を受けましたら、<%= link_to 'こちら', new_contacts_path %>でお知らせください。</h3>
-        </div>
-      <% @comments.each do |comment| %>
-      <% if comment.user == current_user %>
-      <div class="room-comment-main1">
-        <% end %>
-        <% if comment.user != current_user %>
-        <div class="room-comment-main2">
+      <div class="room-post-upper">
+        <div class="room-post-user">
+          <% if @room.post.user.picture.present? %>
+          <%= image_tag(@room.post.user.picture_url, class: "post-showr-picture", :alt => "ユーザーの写真" ) %>
+          <% else %>
+          <%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture", :alt => "ユーザーの写真" ) %>
           <% end %>
-      <div class="room-comment-all">
-        <div class="inbox-user-main">
-         <div class="room-user-picture">
-           <% if comment.user.picture.present? %>
-           <%= image_tag(comment.user.picture_url, :alt => "ユーザーの写真") %>
-           <% else %>
-           <%= image_tag('blank-profile-picture-973460_1280.png', :alt => "ユーザーの写真") %>
-           <% end %>
-         </div>
-        <div class="room-user-name">
-          <% if comment.user != current_user %>
-         <strong><%= comment.user.name %></strong>
-         <% end %>
-       </div>
-       </div>
+          <p><%= link_to(@room.post.user.name.truncate(20), @room.post.user) %></p>
+        </div>
+        <div class="room-post-title">
+          <p><%= @room.post.title %></p>
+        </div>
+      </div>
+      <div class="room-post-under-title">
+        <p>基本情報</p>
+      </div>
+      <div class="room-post-under">
+        <div class="room-post-under-left">
+          <p><label>都道府県</label></br class="visible-xs"><%= @room.post.prefecture %></p>
+          <p><label>地域名の詳細</label></br class="visible-xs"><%= @room.post.city %></p>
+          <p><label>希望する技術レベル</label></br class="visible-xs"><%= @room.post.skill %></p>
+        </div>
+        <div class="room-post-unser-right">
+          <p><label>練習希望日</label></br class="visible-xs"><%= @room.post.playday %></p>
+          <p><label>希望する性別</label></br class="visible-xs"><%= @room.post.gender %></p>
+          <p><label>希望する人数</label></br class="visible-xs"><%= @room.post.member %></p>
+          <p><label>練習の内容</label></br class="visible-xs"><%= @room.post.style %></p>
+        </div>
+      </div>
+      <div class="room-post-content-title">
+        <p>募集内容の詳細</p>
+      </div>
+      <div class="room-post-under-content">
+        <p><%= @room.post.content %></p>
+      </div>
+    </div>
+  </div>
 
-       <div class="room-comment">
-        <div class="room-comment-body">
-         <p><%= comment.body %></p>
+<div class="col-md-8 col-sm-12">
+  <div class="room-comment-wrapper">
+    <div class="room-show-wrapper">
+      <div class="room-show-main">
+          <div class="room-show-alert">
+            <h2><i class="fa fa-flag-o"></i>投稿に関する注意</h2>
+            <h3>練習場所の詳細や、詳しい日時などをこの場で確認しましょう。</br>
+              また、他のSNS等への連絡を誘致するような文章は禁止されています。そのような行為を受けましたら、</br>
+              <%= link_to 'こちら', new_contacts_path %>でお知らせください。</h3>
+          </div>
+
+          <div class="message-start">
+            メッセージはここから
+          </div>
+
+          <div class="room-comment-wrap">
+            <% @comments.each do |comment| %>
+            <% if comment.user == current_user %>
+            <div class="room-comment-wrap1">
+              <% elsif comment.user != current_user %>
+              <div class="room-comment-wrap2">
+              <% end %>
+              <div class="comment-contents">
+                <% if comment.user != current_user %>
+                <div class="room-user-picture">
+                  <% if comment.user.picture.present? %>
+                  <%= image_tag(comment.user.picture_url, :alt => "ユーザーの写真") %>
+                  <% else %>
+                  <%= image_tag('blank-profile-picture-973460_1280.png', :alt => "ユーザーの写真") %>
+                  <% end %>
+                </div>
+                <% end %>
+                <div class="room-comment-text">
+                  <span><%= comment.body %></span>
+                </div>
+              </div>
+          </div>
+          <% end %>
+          <div class="room-comment-box">
+            <%= render 'comments/form' %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-      <% end %>
-      <div class="room-comment-box">
-         <%= render 'comments/form' %>
-      </div>
-      </div>
+
+
+    <div class="room-report">
+      <p id="room-report"><i class="fa fa-flag-o"></i>通報する</p>
+      <%= render 'report/report' %>
     </div>
+    <div class="room-destroy">
+      <%= link_to "/rooms/#{@room.id}",
+       data: {confirm: "相手とのメッセージのやり取りを打ち切りますか？", method: :delete} do  %>
+      <p><i class="fa fa-cut"></i>メッセージのやり取りを打ち切る</p>
+      <% end %>
+    </div>
+
   </div>
-  <div class="room-report">
-    <p id="room-report"><i class="fa fa-flag-o"></i>通報する</p>
-    <%= render 'report/report' %>
-  </div>
-  <div class="room-destroy">
-    <%= link_to "/rooms/#{@room.id}",
-     data: {confirm: "相手とのメッセージのやり取りを打ち切りますか？", method: :delete} do  %>
-    <p><i class="fa fa-cut"></i>メッセージのやり取りを打ち切る</p>
-    <% end %>
-  </div>
- </div>
+</div>
+</div>

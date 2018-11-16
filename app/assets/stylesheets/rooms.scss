@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'colors';
+@import 'style';
+@import 'mixin';
 
 .inbox-wrapper {
   margin-bottom: 100px;
@@ -62,6 +64,7 @@
     flex-direction: column;
     img {
       margin-left: 33px;
+      object-fit: cover;
     }
     span {
       text-align: center;
@@ -92,132 +95,14 @@
   }
 }
 
-// room-under(タブレット、PC用)============================
-.room-under {
-  display: flex;
-  justify-content: space-around;
-}
-
-// room-side(タブレット、PC用)=============================
-.room-side-wrapper {
-  margin-top: 50px;
-  border-right: 1px solid #cfcfcf;
-}
-
-.room-side-title {
-  h1 {
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #4c4c4c;
-  }
-  h2 {
-    font-size: 20px;
-  }
-  h2, h3, p {
-    margin-bottom: 5px;
-  }
-  img {
-    width: 140px;
-    height: 140px;
-    border-radius: 20%;
-  }
-}
-
-.room-side-image {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.side-post-info {
-  font-size: 15px;
-  font-weight: 500;
-  border-bottom: 1px solid #cfcfcf;
-  margin-bottom: 20px;
-  h3 {
-    color: #b3b3b3;
-    font-size: 18px;
-    margin-bottom: 20px;
-    display: inline-block;
-  }
-  h2 {
-    margin-bottom: 30px;
-    font-size: 20px;
-  }
-  p {
-    margin-bottom: 10px;
-  }
-.fa {
-  margin-right: 15px;
- }
-}
-
-.side-post-title {
-  margin-bottom: 20px;
-p {
-  font-size: 20px;
-  font-weight: 600;
- }
-}
-
-.side-post-main {
-  margin-left: 20px;
-}
-
-.side-detail-comment {
-  p {
-  display: inline-block;
-  color: #b3b3b3;
- }
- h3 {
-   font-size: 17px;
- }
-}
-
-
 // 共通room-comment(タブレット、PC用)======================
-.room-post .find-main {
-  border-bottom: 1px solid $gray-border-light;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-.room-under {
-  margin-top: 50px;
-}
-
-.room-show-main {
-  padding: 20px 10px;
-  margin: 0px 0px 20px 0px;
-  font-size: 14px;
-}
-
-.room-comment-all {
-  margin-bottom: 40px;
-}
-
-.room-comment-all {
-  display: flex;
-  flex-direction: row;
-}
-
-.room-comment-main1 .inbox-user-main img, .room-comment-main2 .inbox-user-main img,{
-    width: 70px;
-    height: 70px;
-    border-radius: 60%;
-}
-
-.room-user-name {
-  text-align: center;
-}
 
 .room-show-alert {
-  position: relative;
-  left: 23%;
-  padding: 10px;
-  border: 1px solid #cfcfcf;
-  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-  display: inline-block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid $gray-border-light;
+  border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
   margin-bottom: 50px;
   h2 {
     font-size: 16px;
@@ -231,181 +116,33 @@ p {
     text-align: left;
     display: inline-block;
     font-size: 14px;
-    width: 400px;
     color: $gray-medium-light;
+    a {
+      color: red;
+    }
   }
 }
 
-// room-comment-main1(current_user側)(タブレット、PC用)=====================
-
-.room-comment-main1 {
-  width: 100%;
-  overflow: hidden;
-  margin: 20px 20px 0 0;
-  .room-comment-all {
-    float: right;
-  }
-}
-
-.room-comment-main1 .room-user-name, .room-comment-main1 .room-user-picture {
-  position: relative;
-  left: 83%;
-}
-
-.room-comment-main1 .inbox-user-main {
-  position: relative;
-  right: 100%;
-  margin-right: 20px;
-}
-
-.room-comment-main1 .room-comment {
-  position: absolute;
-  right: 35%;
-}
-
-.room-comment-main1 .room-comment-body {
-  position: relative;
-  left: 30%;
-  padding: 20px;
-  width: 200px;
-  max-width: 250px;
-  height: 120px;
-  border-radius: 5px 0px 5px 5px / 5px 0px 5px 5px;
-  border: 1px solid #cfcfcf;
-  background: #fff;
-  p {
-    text-align: left;
-  }
-}
-
-
-.room-comment-main1 .room-comment-body:before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  right: -50px;
-  top: -1px;
-  border-left: 25px solid #cfcfcf;
-  border-top: 25px solid #cfcfcf;
-  border-bottom: 25px solid transparent;
-  border-right: 25px solid transparent;
-}
-
-.room-comment-main1 .room-comment-body:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  right: -48px;
-  top: 0px;
-  border-left: 25px solid #fff;
-  border-top: 25px solid #fff;
-  border-bottom: 25px solid transparent;
-  border-right: 25px solid transparent;
-}
-
-
-// room-comment-main2(other_user側)(タブレットPC用)=========================
-
-.room-comment-main2 {
-  width: 100%;
-  margin: 20px 20px 0 0;
-  overflow: hidden;
-}
-
-.room-comment-main2 .inbox-user-main {
- position: relative;
- left: 7%;
-}
-
-.room-comment-main2 .room-comment {
-  position: absolute;
-  left: 20%;
-}
-
-
-.room-comment-main2 .room-comment-body {
-    position: relative;
-    left: 20%;
-    padding: 20px;
-    max-width: 300px;
-    width: 200px;
-    height: 120px;
-    border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
-    border: 1px solid #cfcfcf;
-    background: #fff;
-}
-
-.room-comment-main2 .room-comment-body:before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  left: -50px;
-  top: -1px;
-  border-right: 25px solid #cfcfcf;
-  border-top: 25px solid #cfcfcf;
-  border-bottom: 25px solid transparent;
-  border-left: 25px solid transparent;
-}
-
-.room-comment-main2 .room-comment-body:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  left: -48px;
-  top: 0px;
-  border-right: 25px solid #fff;
-  border-top: 25px solid #fff;
-  border-bottom: 25px solid transparent;
-  border-left: 25px solid transparent;
-}
-
-// comment-form(タブレット、PC用)=========================
-.room-comment-box {
-  margin-top: 40px;
-  border-top: 1px solid #cfcfcf;
-}
-
-.comment-form-main {
+.message-start {
+  width: 80%;
+  margin: 100px auto;
   text-align: center;
-}
-
-textarea#comment-text {
-  border-color: #cfcfcf;
-  margin-top: 30px;
-  height: 110px;
-  width: 450px;
-}
-
-#comment-label {
-  margin-top: 20px;
-}
-
-.actions {
-  float: right;
-  margin: 40px 0 0 70px;
-  input {
-    background-color: $green-logo-color;
-    border: none;
-    font-weight: 600;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-    border-bottom: solid 3px $green-logo-color;
+  display: flex;
+  align-items: center;
+  color: $gray-medium-light;
+  &:before, &:after {
+    border-top: 1px solid;
+    content: "";
+    flex-grow: 1;
   }
- }
-
- .actions {
-   input:active {
-     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-     border-bottom: none;
-   }
+  &:before {
+    margin-right: 10px
   }
+  &:after {
+    margin-left: 10px;
+  }
+}
+
 
  .room-destroy {
    padding: 15px 0 15px 0;
@@ -414,7 +151,7 @@ textarea#comment-text {
    border-bottom: 1px solid $gray-border-light;
    p {
      margin: 0 auto;
-     width: 240px;
+     width: 300px;
      text-align: center;
      color: #ea5550;
      font-weight: 600;
@@ -426,12 +163,12 @@ textarea#comment-text {
  }
  .room-report {
    padding: 10px 0 10px 0;
-   margin-top: 80px;
+   margin-top: 150px;
    vertical-align: middle;
    border-top: 1px solid $gray-border-light;
    p {
      margin: 0 auto;
-     width: 240px;
+     width: 300px;
      text-align: center;
      color: #ea5550;
      font-weight: 600;
@@ -500,6 +237,292 @@ textarea#comment-text {
    padding: 5px 12px 5px 12px;
  }
 }
+
+// room-comment-main1(current_user側)(タブレット、PC用)=====================
+
+.room-post-ribbon {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 89px;
+  height: 91px;
+  overflow: hidden;
+  .ribbon1 {
+    display: inline-block;
+    position: absolute;
+    padding: 7px 0;
+    left: -23px;
+    top: 22px;
+    width: 160px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 16px;
+    background: $pink-borderbottom;
+    color: #fff;
+    letter-spacing: 0.05em;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    &:after, &:before {
+      position: absolute;
+      content: "";
+      border-top: 4px solid #b2751b;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      bottom: -4px;
+    }
+    &:before {
+      left: 14px;
+    }
+    &:after {
+      right: 18px;
+    }
+  }
+}
+
+.room-wrapper {
+  .room-post-wrapper {
+    border: 1px solid $gray-border-light;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    margin: 50px 0 0 20px;
+    padding: 20px;
+    position: relative;
+    .room-post-upper {
+      margin-top: 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $gray-border-light;
+      .room-post-user {
+        width: 150px;
+        margin: 0 auto;
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 60%;
+          object-fit: cover;
+        }
+        p {
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+      .room-post-title {
+        margin: 20px 0 0 0;
+        p {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $gray-medium-dark;
+        }
+      }
+    }
+
+    .room-post-under-title {
+      text-align: center;
+      padding: 15px 0 15px 0;
+      border-bottom: 1px solid $gray-border-light;
+      p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $gray-medium-dark;
+        margin: 0;
+      }
+    }
+
+    .room-post-under {
+      @include mediaIpad {display: flex; justify-content: space-around;};
+      margin: 20px 0 0 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $gray-border-light;
+      label {
+        margin: 0;
+        color: $gray-medium-dark;
+      }
+      p {
+        font-weight: 300;
+        color: $gray-medium-light;
+      }
+    }
+
+    .room-post-content-title {
+      padding: 15px 0 15px 0;
+      border-bottom: 1px solid $gray-border-light;
+      text-align: center;
+      p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $gray-medium-dark;
+        margin: 0;
+      }
+    }
+
+    .room-post-under-content {
+      padding: 15px 0 15px 0;
+      p {
+        color: $gray-medium-dark;
+      }
+    }
+  }
+}
+
+// room-comment-body(PC)==============================================
+
+.room-comment-wrapper {
+  margin-top: 50px;
+}
+
+.room-comment-wrap1 {
+  margin: 40px 40px 40px 0;
+  .room-comment-text {
+    width: 200px;
+    min-height: 80px;
+    margin-left: auto;
+    padding: 15px;
+    border: 1px solid $gray-border-light;
+    border-radius: 0px 0px 5px 5px / 5px 5px 5px 5px;
+    position: relative;
+    span {
+      color: $gray-medium-dark;
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      right: -40px;
+      top: -1px;
+      border-left: 20px solid #cfcfcf;
+      border-top: 20px solid #cfcfcf;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid transparent;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      right: -38px;
+      top: 0px;
+      border-left: 20px solid #fff;
+      border-top: 20px solid #fff;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid transparent;
+    }
+  }
+}
+
+.comment-contents {
+  display: flex;
+}
+
+.room-comment-wrap2 {
+  margin: 40px 0 40px 40px;
+  .room-comment-text {
+    position: relative;
+    width: 200px;
+    min-height: 80px;
+    margin-left: 50px;
+    margin-right: auto;
+    padding: 15px;
+    border: 1px solid $gray-border-light;
+    border-radius: 0px 0px 5px 5px / 5px 5px 5px 5px;
+    span {
+      color: $gray-medium-dark;
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      left: -40px;
+      top: -1px;
+      border-left: 20px solid transparent;
+      border-top: 20px solid $gray-border-light;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid $gray-border-light;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      left: -38px;
+      top: 0px;
+      border-left: 20px solid transparent;
+      border-top: 20px solid #fff;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid #fff;
+    }
+  }
+  .room-user-picture {
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 60%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+// comment-form(タブレット、PC用)=========================
+
+.room-comment-form-wrap {
+  padding-top: 20px;
+  border-top: 1px solid $gray-border-light;
+  .room-comment-form {
+    display: flex;
+    .room-comment-user {
+      margin-right: 30px;
+      margin-left: 30px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 60%;
+        object-fit: cover;
+      }
+    }
+    textarea#comment-text {
+      @include mediaIpad {width: 600px;};
+      width: 500px;
+      height: 100px;
+      padding: 10px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border: transparent;
+      &:focus {
+        outline: 1px solid $green-logo-color;
+      }
+      &::placeholder {
+        color: $gray-medium-light;
+      }
+    }
+  }
+  .room-comment-submit {
+    width: 120px;
+    margin-left: auto;
+    margin-right: 30px;
+    #room-comment-submit {
+      @include button(110px, $green-logo-color, 10px 15px 10px 15px);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+
+
+
 
 // スマホ用画面=================================================================
 
@@ -545,6 +568,7 @@ textarea#comment-text {
     flex-direction: column;
     img {
       margin-left: 22px;
+      object-fit: cover;
     }
     span {
       text-align: center;
@@ -585,139 +609,17 @@ textarea#comment-text {
       .margin-right: 10px;
     }
   }
-  }
-}
-
-
-// inbox-side(スマホ用)==================================
-
-
-// room-under(スマホ用)============================
-.room-under {
-  display: flex;
-  justify-content: space-around;
-}
-
-// room-side(スマホ用)=============================
-.room-side-wrapper {
-  margin-top: 50px;
-  border-right: 1px solid #cfcfcf;
-}
-
-.room-side-title {
-  h1 {
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #4c4c4c;
-  }
-  h2 {
-    font-size: 20px;
-  }
-  h2, h3, p {
-    margin-bottom: 5px;
-  }
-  img {
-    width: 140px;
-    height: 140px;
-    border-radius: 20%;
-  }
-}
-
-.room-side-image {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.side-post-info {
-  font-size: 15px;
-  font-weight: 500;
-  border-bottom: 1px solid #cfcfcf;
-  margin-bottom: 20px;
-  h3 {
-    color: #b3b3b3;
-    font-size: 18px;
-    margin-bottom: 20px;
-    display: inline-block;
-  }
-  h2 {
-    margin-bottom: 30px;
-    font-size: 20px;
-  }
-  p {
-    margin-bottom: 10px;
-  }
-.fa {
-  margin-right: 15px;
  }
 }
 
-.side-post-title {
-  margin-bottom: 20px;
-p {
-  font-size: 20px;
-  font-weight: 600;
- }
-}
-
-.side-post-main {
-  margin-left: 20px;
-}
-
-.side-detail-comment {
-  p {
-  display: inline-block;
-  color: #b3b3b3;
- }
- h3 {
-   font-size: 17px;
- }
-}
-
-
-// 共通room-comment(スマホ用)======================
-.room-post .find-main {
-  border-bottom: 1px solid $gray-border-light;
-}
-.room-under {
-  margin-top: 50px;
-}
-
-.room-show-main {
-  font-size: 14px;
-}
-
-.room-comment-all {
-  margin-bottom: 40px;
-}
-
-.room-comment-all {
-  display: flex;
-  flex-direction: row;
-}
-
-.room-comment-main1 .inbox-user-main img, .room-comment-main2 .inbox-user-main img,{
-    width: 50px;
-    height: 50px;
-    border-radius: 60%;
-}
-
-.room-user-name {
-  text-align: center;
-  strong {
-    font-size: 13px;
-    font-weight: 500;
-    color: $gray-word;
-  }
-}
+// 共通room-comment(タブレット、PC用)======================
 
 .room-show-alert {
-  position: relative;
-  padding: 10px;
-  border: 1px solid #cfcfcf;
-  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-  display: inline-block;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid $gray-border-light;
+  border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
   margin-bottom: 50px;
   h2 {
     font-size: 16px;
@@ -731,192 +633,42 @@ p {
     text-align: left;
     display: inline-block;
     font-size: 14px;
-    width: 90%;
     color: $gray-medium-light;
-  }
-}
-
-// room-comment-main1(current_user側)(スマホ用)=====================
-
-.room-comment-main1 {
-  width: 100%;
-  overflow: hidden;
-  margin: 40px 20px 60px 0;
-  .room-comment-all {
-    float: right;
-  }
-}
-
-.room-comment-main1 .room-user-name, .room-comment-main1 .room-user-picture {
-  position: relative;
-  right: -120%;
-}
-
-.room-comment-main1 .inbox-user-main {
-  position: relative;
-  right: 100%;
-  margin-right: 7px;
-}
-
-.room-comment-main1 .room-comment {
-  position: absolute;
-  right: 35%;
-}
-
-.room-comment-main1 .room-comment-body {
-  position: relative;
-  left: -20%;
-  padding: 10px;
-  width: 160px;
-  height: 120px;
-  border-radius: 5px 0px 5px 5px / 5px 0px 5px 5px;
-  border: 1px solid #cfcfcf;
-  background: #fff;
-  p {
-    text-align: left;
-    font-size: 1.2rem;
-  }
-}
-
-
-.room-comment-main1 .room-comment-body:before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  right: -50px;
-  top: -1px;
-  border-left: 25px solid #cfcfcf;
-  border-top: 25px solid #cfcfcf;
-  border-bottom: 25px solid transparent;
-  border-right: 25px solid transparent;
-}
-
-.room-comment-main1 .room-comment-body:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  right: -48px;
-  top: 0px;
-  border-left: 25px solid #fff;
-  border-top: 25px solid #fff;
-  border-bottom: 25px solid transparent;
-  border-right: 25px solid transparent;
-}
-
-
-// room-comment-main2(other_user側)(スマホ用)=========================
-
-.room-comment-main2 {
-  width: 100%;
-  margin: 40px 40px 40px 0;
-  overflow: hidden;
-}
-
-.room-comment-main2 .inbox-user-main {
- position: relative;
- left: 2%;
-}
-
-.room-comment-main2 .room-comment {
-  position: absolute;
-  left: 20%;
-}
-
-
-.room-comment-main2 .room-comment-body {
-    position: relative;
-    left: 45%;
-    padding: 10px;
-    width: 160px;
-    height: 120px;
-    border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
-    border: 1px solid #cfcfcf;
-    background: #fff;
-    p {
-      font-size: 1.2rem;
+    a {
+      color: red;
     }
+  }
 }
 
-.room-comment-main2 .room-comment-body:before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  left: -50px;
-  top: -1px;
-  border-right: 25px solid #cfcfcf;
-  border-top: 25px solid #cfcfcf;
-  border-bottom: 25px solid transparent;
-  border-left: 25px solid transparent;
-}
-
-.room-comment-main2 .room-comment-body:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  left: -48px;
-  top: 0px;
-  border-right: 25px solid #fff;
-  border-top: 25px solid #fff;
-  border-bottom: 25px solid transparent;
-  border-left: 25px solid transparent;
-}
-
-// comment-form(スマホ用)=========================
-.room-comment-box {
-  margin-top: 60px;
-  border-top: 1px solid #cfcfcf;
-}
-
-.comment-form-main {
-  text-align: center;
-}
-
-textarea#comment-text {
-  border-color: #cfcfcf;
-  padding: 10px;
-  margin-top: 30px;
-  height: 110px;
+.message-start {
   width: 90%;
+  margin: 100px auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: $gray-medium-light;
+  &:before, &:after {
+    border-top: 1px solid;
+    content: "";
+    flex-grow: 1;
+  }
+  &:before {
+    margin-right: 10px
+  }
+  &:after {
+    margin-left: 10px;
+  }
 }
 
-#comment-label {
-  margin-top: 20px;
-}
-
-.actions {
-  float: right;
-  margin: 40px 0 0 70px;
-  input {
-    background-color: $green-logo-color;
-    border: none;
-    font-weight: 600;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-    border-bottom: solid 3px $green-logo-color;
-  }
- }
- .actions {
-   input:active {
-     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-     border-bottom: none;
-   }
-  }
 
  .room-destroy {
-   padding: 10px 0 10px 0;
+   padding: 15px 0 15px 0;
    vertical-align: middle;
    border-top: 1px solid $gray-border-light;
    border-bottom: 1px solid $gray-border-light;
    p {
      margin: 0 auto;
-     width: 240px;
+     width: 300px;
      text-align: center;
      color: #ea5550;
      font-weight: 600;
@@ -929,12 +681,12 @@ textarea#comment-text {
 
  .room-report {
    padding: 10px 0 10px 0;
-   margin-top: 50px;
+   margin-top: 150px;
    vertical-align: middle;
    border-top: 1px solid $gray-border-light;
    p {
      margin: 0 auto;
-     width: 240px;
+     width: 200px;
      text-align: center;
      color: #ea5550;
      font-weight: 600;
@@ -950,7 +702,7 @@ textarea#comment-text {
    width: 90%;
    margin: 0 auto;
    .report-title {
-     width: 300px;
+     width: 200px;
      margin: 40px auto;
    }
    h2 {
@@ -1002,4 +754,288 @@ textarea#comment-text {
    color: #fff;
    padding: 5px 12px 5px 12px;
  }
+
+
+// room-comment-main1(current_user側)(スマホ)=====================
+
+.room-post-ribbon {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 89px;
+  height: 91px;
+  overflow: hidden;
+  .ribbon1 {
+    display: inline-block;
+    position: absolute;
+    padding: 7px 0;
+    left: -23px;
+    top: 22px;
+    width: 160px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 16px;
+    background: $pink-borderbottom;
+    color: #fff;
+    letter-spacing: 0.05em;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    &:after, &:before {
+      position: absolute;
+      content: "";
+      border-top: 4px solid #b2751b;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      bottom: -4px;
+    }
+    &:before {
+      left: 14px;
+    }
+    &:after {
+      right: 18px;
+    }
+  }
+}
+
+.room-wrapper {
+  padding-bottom: 35px;
+  .room-post-wrapper {
+    border: 1px solid $gray-border-light;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    margin: 50px 0 0 0px;
+    padding: 20px;
+    position: relative;
+    .room-post-upper {
+      margin-top: 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $gray-border-light;
+      .room-post-user {
+        width: 100px;
+        margin: 0 auto;
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 60%;
+          object-fit: cover;
+        }
+        p {
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+      .room-post-title {
+        margin: 20px 0 0 0;
+        p {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $gray-medium-dark;
+        }
+      }
+    }
+
+    .room-post-under-title {
+      text-align: center;
+      padding: 15px 0 15px 0;
+      border-bottom: 1px solid $gray-border-light;
+      p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $gray-medium-dark;
+        margin: 0;
+      }
+    }
+
+    .room-post-under {
+      @include mediaIpad {display: flex; justify-content: space-around;};
+      margin: 20px 0 0 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $gray-border-light;
+      label {
+        margin: 0;
+        color: $gray-medium-dark;
+      }
+      p {
+        font-weight: 300;
+        color: $gray-medium-light;
+      }
+    }
+
+    .room-post-content-title {
+      padding: 15px 0 15px 0;
+      border-bottom: 1px solid $gray-border-light;
+      text-align: center;
+      p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $gray-medium-dark;
+        margin: 0;
+      }
+    }
+
+    .room-post-under-content {
+      padding: 15px 0 15px 0;
+      p {
+        color: $gray-medium-dark;
+      }
+    }
+  }
+}
+
+// room-comment-body(PC)==============================================
+
+.room-comment-wrapper {
+  margin-top: 50px;
+}
+
+.room-comment-wrap1 {
+  margin: 40px 40px 40px 0;
+  .room-comment-text {
+    width: 200px;
+    min-height: 80px;
+    margin-left: auto;
+    padding: 15px;
+    border: 1px solid $gray-border-light;
+    border-radius: 0px 0px 5px 5px / 5px 5px 5px 5px;
+    position: relative;
+    span {
+      color: $gray-medium-dark;
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      right: -40px;
+      top: -1px;
+      border-left: 20px solid #cfcfcf;
+      border-top: 20px solid #cfcfcf;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid transparent;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      right: -38px;
+      top: 0px;
+      border-left: 20px solid #fff;
+      border-top: 20px solid #fff;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid transparent;
+    }
+  }
+}
+
+.comment-contents {
+  display: flex;
+}
+
+.room-comment-wrap2 {
+  margin: 40px 0 40px 0px;
+  .room-comment-text {
+    position: relative;
+    width: 200px;
+    min-height: 80px;
+    margin-left: 50px;
+    margin-right: auto;
+    padding: 15px;
+    border: 1px solid $gray-border-light;
+    border-radius: 0px 0px 5px 5px / 5px 5px 5px 5px;
+    span {
+      color: $gray-medium-dark;
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      left: -40px;
+      top: -1px;
+      border-left: 20px solid transparent;
+      border-top: 20px solid $gray-border-light;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid $gray-border-light;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      left: -38px;
+      top: 0px;
+      border-left: 20px solid transparent;
+      border-top: 20px solid #fff;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid #fff;
+    }
+  }
+  .room-user-picture {
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 60%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+// comment-form(タブレット、PC用)=========================
+
+.room-comment-form-wrap {
+  padding-top: 20px;
+  border-top: 1px solid $gray-border-light;
+  .room-comment-form {
+    display: flex;
+    .room-comment-user {
+      margin-right: 20px;
+      margin-left: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 60%;
+        object-fit: cover;
+      }
+    }
+    textarea#comment-text {
+      @include mediaIphone5 {width: 200px;};
+      width: 260px;
+      height: 100px;
+      padding: 10px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border: transparent;
+      &:focus {
+        outline: 1px solid $green-logo-color;
+      }
+      &::placeholder {
+        color: $gray-medium-light;
+      }
+    }
+  }
+  .room-comment-submit {
+    width: 120px;
+    margin-left: auto;
+    margin-right: 10px;
+    #room-comment-submit {
+      @include button(110px, $green-logo-color, 10px 15px 10px 15px);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+   }
+}
 }

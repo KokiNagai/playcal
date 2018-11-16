@@ -1,14 +1,29 @@
-$pc: 1024px;
-$tab: 1023px;
+$pc: 1023px;
+$tab: 768px;
+$ip5s: 320px;
+$ip7: 374px;
 
-@mixin mediaPC {
+@mixin mediaMinPC {
   @media screen and (min-width: $pc) {
 
   }
 }
 
+@mixin mediaIpad {
+  @media (min-width: $tab) and (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin mediaIphone5 {
+  @media (min-width: $ip5s) and (max-width: ($ip7)) {
+    @content;
+  }
+}
+
+
 @mixin mediaaTab {
-  @media screen and (max-width: $pc) {
+  @media screen and (min-width: $tab) {
 
   }
 }

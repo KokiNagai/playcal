@@ -16,14 +16,19 @@
     <%= f.hidden_field :from_id, :value => current_user.id %>
     <%= f.hidden_field :to_id, :value => @room.post.user.id %>
     <%= f.hidden_field :room_id, :value => @room.id %>
-<div class="comment-form-main">
-  <div class="field">
-    <%= f.label :募集者に聞きたいことを聞いてみよう, id: "comment-label" %>
-    <p><%= f.text_area :body, id: "comment-text" %></p>
+<div class="room-comment-form-wrap">
+  <div class="room-comment-form">
+    <div class="room-comment-user">
+      <% if current_user.picture.present? %>
+      <p><%= image_tag(current_user.picture_url, class: "chat-user-picture" ) %></p>
+      <% else %>
+      <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "chat-user-picture" ) %></p>
+      <% end %>
+    </div>
+    <p><%= f.text_area :body, id: "comment-text", placeholder: "コメントする..." %></p>
   </div>
-
-  <div class="actions">
-    <%= f.submit "コメントする", class: "btn btn-success" %>
+  <div class="room-comment-submit">
+    <%= f.submit "コメントする", class: "btn btn-success", id: "room-comment-submit" %>
   </div>
 <% end %>
 </div>
