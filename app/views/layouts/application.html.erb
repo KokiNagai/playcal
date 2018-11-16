@@ -35,6 +35,14 @@
     <meta name="google-site-verification" content="xTlX7ksziRvNkZSEX5TXeFH-vtMMmOZscowwFjfxYn4" />
     <link rel="stylesheet" href="assets/css/fakeLoader.css">
     <script src="assets/fakeloader/fakeLoader.js"></script>
+    <% twitter_card = get_twitter_card_info() %>
+  <meta name="twitter:card" content=<%=twitter_card[:card]%> />
+  <meta name="twitter:site" content=<%=twitter_card[:site]%> />
+  <meta property="og:url" content=<%=twitter_card[:url]%> />
+  <meta property="og:title" content=<%=twitter_card[:title]%> />
+  <meta property="og:description" content=<%=twitter_card[:description]%> />
+  <meta property="og:image" content=<%=twitter_card[:image]%> />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body ontouchstart="">
     <div id='fakeloader'  class="fakeloader"></div>
