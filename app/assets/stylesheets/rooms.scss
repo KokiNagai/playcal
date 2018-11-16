@@ -379,7 +379,7 @@
     margin-left: auto;
     padding: 15px;
     border: 1px solid $gray-border-light;
-    border-radius: 0px 0px 5px 5px / 5px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
     position: relative;
     span {
       color: $gray-medium-dark;
@@ -429,7 +429,7 @@
     margin-right: auto;
     padding: 15px;
     border: 1px solid $gray-border-light;
-    border-radius: 0px 0px 5px 5px / 5px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
     span {
       color: $gray-medium-dark;
       letter-spacing: 1px;
@@ -849,7 +849,8 @@
     }
 
     .room-post-under {
-      @include mediaIpad {display: flex; justify-content: space-around;};
+      display: flex;
+      justify-content: space-around;
       margin: 20px 0 0 0;
       padding-bottom: 20px;
       border-bottom: 1px solid $gray-border-light;
@@ -898,7 +899,7 @@
     margin-left: auto;
     padding: 15px;
     border: 1px solid $gray-border-light;
-    border-radius: 0px 0px 5px 5px / 5px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
     position: relative;
     span {
       color: $gray-medium-dark;
@@ -948,7 +949,7 @@
     margin-right: auto;
     padding: 15px;
     border: 1px solid $gray-border-light;
-    border-radius: 0px 0px 5px 5px / 5px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
     span {
       color: $gray-medium-dark;
       letter-spacing: 1px;
