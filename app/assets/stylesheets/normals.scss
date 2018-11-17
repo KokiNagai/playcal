@@ -493,7 +493,7 @@ footer {
  header {
    font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular', sans-serif;
    box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
-   height: 70px;
+   height: 60px;
  }
 
  #header-home {
@@ -503,9 +503,9 @@ footer {
  #logo {
    font-family: 'Courier';
    float: left;
-   margin-top: 13px;
+   margin-top: 15px;
    margin-right: 10px;
-   font-size: 29px;
+   font-size: 2rem;
    color: $green-logo-color;
    letter-spacing: -1px;
    padding-top: 4px;
@@ -524,6 +524,10 @@ footer {
   left: 0;
   z-index: 1030;
   margin-bottom: 0;
+ }
+
+ ul .navbar-right {
+   margin: 0;
  }
 
  .header-picture {
@@ -555,7 +559,7 @@ footer {
  .smartphone-dropdown {
    text-align: right;
    margin-right: 30px;
-   margin-top: 20px;
+   margin-top: 10px;
    .fa {
      margin-top: 5px;
      font-size: 23px;

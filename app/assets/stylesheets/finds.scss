@@ -802,7 +802,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px !important;
         list-style: none;
-        height: 50px;
+        height: 40px;
         li {
           float: left;
           margin-left: 10px;
@@ -819,20 +819,19 @@
 
       .gender-JS {
         position: absolute;
-        top: 20%;
+        top: 0%;
         left: 8%;
         font-size: 1.4rem !important;
         font-weight: 500;
         color: $gray-word;
         line-height: 18px !important;
         letter-spacing: normal !important;
-        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
         color: rgb(72, 72, 72) !important;
         padding-top: 6px !important;
         padding-bottom: 6px !important;
         background-color: #fff !important;
         border: 1px solid $gray-border-light !important;
-        border-radius: 4px !important;
+        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
         cursor: pointer !important;
         display: inline-block !important;
         padding-left: 12px !important;
@@ -841,6 +840,11 @@
         text-decoration: none !important;
         width: 100px !important;
         box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+        &:hover {
+          border: none;
+          color: #fff;
+          background: $pink-borderbottom;
+        }
       }
 
       .gender-JS:active {
