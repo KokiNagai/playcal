@@ -665,11 +665,11 @@
      .find-post1 {
        margin: 20px auto;
        border: 1px solid $gray-border-light;
-       border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+       border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
        width: 90%;
        padding: 15px;
        margin-bottom: 40px;
-       box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+       box-shadow: 0 2px 4px rgba(0,0,0,0.3);
        time {
          font-size: 13px;
          text-align: right;
@@ -689,6 +689,7 @@
 
      .find-post-user {
        display: flex;
+       padding: 20px 0 0px 0;
        h2 {
          margin-left: 20px;
          font-weight: 600;
@@ -723,18 +724,19 @@
      }
 
      .find-post-detail {
-       border: 3px solid $pink-borderbottom;
+       border: 1px solid $gray-border-light;
        padding: 2px 5px 2px 5px;
        border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
-       width: 130px;
-       margin: 10px auto;
+       width: 90px;
+       margin-left: auto;
+       margin: 20px 20px 0 auto;
        text-align: center;
        cursor: pointer;
        .fa {
-         margin-right: 10px;
+         margin-left: 10px;
        }
        span {
-         color: $pink-borderbottom;
+         color: $gray-medium-light;
        }
        &:hover {
          background: $pink-borderbottom;
@@ -751,6 +753,7 @@
      .find-user-upper {
        border-bottom: 1px solid $gray-border-light;
        margin-bottom: 10px;
+       padding-bottom: 20px;
      }
 
 

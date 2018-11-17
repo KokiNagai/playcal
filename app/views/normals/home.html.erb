@@ -157,14 +157,9 @@
             <% end %>
             <p><h2><%= post.title.truncate(25) %></h2></p>
           </div>
-            <div class="find-title">
-              <%= link_to post.user.name.truncate(8), post.user, class: "find-user-name" %>
-            </div>
-            <div class="find-post-detail">
-              <%= link_to post, id: "find-post-detail" do %>
-              <span><i class="fa fa-search"></i>詳細を見る</span>
-              <% end %>
-            </div>
+          <div class="find-title">
+            <%= link_to post.user.name.truncate(8), post.user, class: "find-user-name" %>
+          </div>
         </div>
         <div class="find-post-under">
           <div class="post-show-under">
@@ -177,6 +172,11 @@
               <p><label>練習の内容</label></br class="visible-xs"><%= post.style.truncate(9) %></p>
             </div>
           </div>
+        </div>
+        <div class="find-post-detail">
+          <%= link_to post, id: "find-post-detail" do %>
+          <span>詳細<i class="fa fa-angle-double-right"></i></span>
+          <% end %>
         </div>
       </div>
         <% end %>
@@ -250,11 +250,6 @@
         </div>
     </div>
 
-    <div class="visible-xs" style="width: 300px; margin: 0 auto;">
-    <a href="https://hb.afl.rakuten.co.jp/hgc/1759f2a0.792558e7.1759f2a1.1bceaf2c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-artis%2Fs-5339%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fauc-artis%2Fi%2F10009012%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjMwMHgzMDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjF9" target="_blank" rel="nofollow" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/1759f2a0.792558e7.1759f2a1.1bceaf2c/?me_id=1236731&item_id=10009012&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_gold%2Fauc-artis%2Fimage%2Fs5339-5.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_gold%2Fauc-artis%2Fimage%2Fs5339-5.jpg%3F_ex%3D300x300&s=300x300&t=pict" border="0" style="margin:2px" alt="" title=""></a>
-    </div>
-
-    <div class="hidden-xs">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- playcal-foot -->
       <ins class="adsbygoogle"
@@ -266,7 +261,6 @@
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
-    </div>
 
   </div>
 <% end %>

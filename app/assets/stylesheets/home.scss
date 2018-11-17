@@ -338,6 +338,7 @@
       background-color: rgba(0,0,0,0.5);
       display: inline-block;
       h1 {
+        font-family: 'Arial Black','Arial Black',sans-serif;
         position: absolute;
         color: #fff;
         font-size: 3.9rem;
@@ -388,7 +389,7 @@
 
   .top-news {
       position: relative;
-      margin: 40px auto;
+      margin: 70px auto;
       padding: 1.2em 1em;
       border: solid 3px $pink-borderbottom;
       border-radius: 8px;
@@ -433,11 +434,10 @@
     }
     p {
       width: 250px;
-      margin-left:  30px;
+      margin: 0 auto;
       font-size: 1.2rem;
       margin-top: 20px;
       color: $gray-medium-light;
-      margin: 0;
       padding: 0;
     }
     &:after {
