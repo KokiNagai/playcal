@@ -633,7 +633,7 @@ footer {
    text-align: left;
    .fa {
      margin-right: 20px;
-     font-size: 16px;
+     font-size: 1.7rem;
    }
  }
 
@@ -1016,10 +1016,12 @@ footer {
 }
 
 
+
+/*
 .tennis {
-  width: 400px;
-  height: 400px;
-  text-align: center;
+  width: 650px;
+  height: 650px;
+  // text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1041,13 +1043,30 @@ footer {
     transform: rotate(-45deg);
     font-family: 'Arial Black',sans-serif;
   }
-  span {
-    font-size: 1.5rem;
+  #tennis1 {
+    font-size: 2rem;
     color: #fff;
     font-weight: 600;
-    margin-top: 40px;
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
+    margin-bottom: 80px;
+    // display: flex;
+    // align-items: baseline;
+    // justify-content: flex-end;
+  }
+  #tennis2 {
+    line-height: 1.9;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 60px;
+    // display: flex;
+    // align-items: baseline;
+    // justify-content: flex-end;
+  }
+  #tennis3 {
+    font-size: 2.5rem;
+  }
+  #tennis3 {
+    font-size: 2.5rem;
   }
 }
+*/
