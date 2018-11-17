@@ -281,9 +281,11 @@
         color: #e8383d;
         font-size: 13px;
       }
-      .checkbox {
-        label {
-          margin-left: 20px;
+      .login-mail {
+        margin: 10px 0 10px 0;
+        .checkbox {
+          width: 300px;
+          margin: 0 auto;
         }
       }
       .login-form {
