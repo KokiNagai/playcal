@@ -20,10 +20,10 @@
         <% else %>
         <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ) %></p>
         <% end %>
-        <p><%= link_to(@room.post.user.name.truncate(8), @room.post.user) %></p>
+        <p><%= link_to(@room.post.user.name, @room.post.user) %></p>
       </div>
       <div class="post-show-title">
-        <p><%= @post.title.truncate(25) %></p>
+        <p><%= @post.title.truncate(35) %></p>
       </div>
       <div class="post-delete">
         <% if @post.user == current_user %>

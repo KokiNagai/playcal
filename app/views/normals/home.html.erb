@@ -228,7 +228,9 @@
     </div>
   </div>
     <div class="top-chatbox-bottom">
-      <p><%= link_to "過去の大会や開催予定の大会はこちら", "/tourlists", style: "color: #ff6666;" %></p>
+      <%= link_to tourlists_path do %>
+      <p>過去の大会や開催予定の大会はこちら</p>
+      <% end %>
     </div>
   </div>
 
