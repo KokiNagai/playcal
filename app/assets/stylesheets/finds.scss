@@ -943,6 +943,10 @@
         z-index: 1000 !important;
         background: rgba(255, 255, 255, 0.85) !important;
         display: none;
+        .close-modal2 {
+          width: 40px;
+          margin-left: auto;
+        }
       }
 
       .search-modal {
@@ -1006,7 +1010,7 @@
       .JS-search-pref {
         text-align: left;
         margin-left: 20px;
-        margin-top: 5px;
+        margin-top: 0px;
       }
 
       .JS-search-city {

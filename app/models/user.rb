@@ -23,10 +23,10 @@ class User < ApplicationRecord
    with_options on: :update do
    validates :name, presence: true, length: {maximum: 20}, uniqueness: true
    validates :live, presence: true
+   validates :gender, presence: true
    validates :password, presence: true, length: { minimum: 7 }, unless: :snslogin_edit1
    validates :password, presence: true, length: { minimum: 7 }, allow_nil: true, unless: :snslogin_edit
    validates :email, presence: true, length: { maximum: 255 }
-   validates :gender, presence: true
  end
 
  def snslogin_edit
@@ -35,7 +35,7 @@ class User < ApplicationRecord
  end
 
  def snslogin_edit1
-   return true if self.gender.present?
+   return true if self.gender.present? || self.live.present?
    false
  end
 
