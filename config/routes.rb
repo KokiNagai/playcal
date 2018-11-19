@@ -23,12 +23,6 @@ Rails.application.routes.draw do
   get 'edit_confirmation', to: 'registrations#edit_confirmation'
 end
 
-
-get '*not_found' => 'application#routing_error'
-post '*not_found' => 'application#routing_error'
-
-
-
   get 'rooms/show'
   get '/find', to: 'normals#find'
   post '/find', to: 'normals#find'
