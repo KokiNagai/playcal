@@ -122,7 +122,7 @@
 
   <div class="top-wrapper">
     <div class="top-upper">
-      <div class="top-section">
+      <div class="top-section hidden-xs">
         <img src="assets/Playcal-top.jpg", alt="トップ写真">
         <h1>Playcal</h1>
         <h2>「シンプルで楽しく」テニス仲間や練習相手が見つかる！</h2>
@@ -133,6 +133,29 @@
         <p class="hidden-xs" id="top-signup-botton">新規登録</p>
         <% end %>
       </div>
+
+      <div class="top-section visible-xs">
+        <h1>「シンプルで気軽に」</h1>
+        <h2>テニスの練習相手や仲間が見つかる！</h2>
+        <div class="home-register-button">
+          <div class="home-facebook">
+            <%= link_to user_facebook_omniauth_authorize_path do %>
+            <p><i class="fa fa-facebook-f"></i>facebookアカウントで登録する</p>
+          <% end %>
+          </div>
+          <div class="home-google">
+            <%= link_to user_google_oauth2_omniauth_authorize_path do %>
+            <p><i class="fa fa-google"></i>googleアカウントで登録する</p>
+            <% end %>
+          </div>
+          <div class="home-email">
+            <%= link_to new_user_session_path do %>
+            <p><i class="fa fa-envelope-o"></i>メールアドレスで登録する</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="top-news">
@@ -277,4 +300,29 @@
       </script>
 
   </div>
+  <script>
+  function init() {
+    const px_change = 400;
+    $('.navbar-fixed-top').addClass('header-scr2');
+    $('.logo').css('color', '#fff');
+    $('.dropdown-hamberger').css('color', '#fff');
+    window.addEventListener('scroll', function(e) {
+      if ($(window).scrollTop() > px_change) {
+       $('.logo').css('color', '#9cd75b');
+       $('.navbar-fixed-top').addClass('header-scr');
+       $('.navbar-fixed-top').css('background', 'transparent');
+       $('.dropdown-hamberger').css('color', '#4c4c4c');
+       $('header').css('box-shadow', '-1px 1px 1px rgba(0,0,0,0.1)');
+     } else if ($('.navbar-fixed-top').hasClass('header-scr')) {
+       $('.logo').css('color', '#fff');
+       $('.navbar-fixed-top').removeClass('header-scr');
+       $('.navbar-fixed-top').css('background', '');
+       $('.navbar-fixed-top').addClass('header-scr2');
+       $('.dropdown-hamberger').css('color', '#fff');
+       $('header').css('box-shadow', '');
+     }
+    })
+  }
+  window.onload = init();
+  </script>
 <% end %>

@@ -5,7 +5,7 @@ $(function(){
         $("#fakeloader").fakeLoader({
             timeToHide: 1500,
             spinner: "spinner3",
-            bgColor: "#9cd75b"
+            bgColor: "#B9E682",
         });
     });
 
@@ -13,7 +13,7 @@ $(function(){
         console.log('fake_1 PUSH!!');
         $('#fakeloader_1').fakeLoader({
             timeToHide:1200,
-            bgColor:"#9b59b6",
+            bgColor: "#B9E682",
             spinner:"spinner7"
         });
     });

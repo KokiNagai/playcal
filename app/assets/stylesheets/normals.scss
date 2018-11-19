@@ -12,7 +12,7 @@ html,body{margin:0;padding:0;}
 
 @media screen and (max-width: 1024px) {
   body {
-    padding-top: 73px;
+    padding-top: 60px;
     background-color: #fff;
     font-family: 'Ropa Sans', -apple-system, "Helvetica Neue", "Arial", "hiragino kaku gothic pron", sans-serif;
   }
@@ -107,7 +107,7 @@ header {
   color: #666666;
 }
 
-#logo {
+.logo {
   font-family: 'Courier';
   float: left;
   margin-top: 13px;
@@ -492,7 +492,6 @@ footer {
 
  header {
    font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular', sans-serif;
-   box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
    height: 60px;
  }
 
@@ -500,7 +499,20 @@ footer {
    color: #666666;
  }
 
- #logo {
+ a#logo:active {
+   color: #99ff66;
+ }
+
+ .navbar-fixed-top {
+  background: #fff;
+  border-bottom: 1px solid #dcdcdc;
+  top: 0;
+  right:0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0;
+ }
+ .logo {
    font-family: 'Courier';
    float: left;
    margin-top: 15px;
@@ -511,20 +523,6 @@ footer {
    padding-top: 4px;
    font-weight: bold;
   }
-
-    a#logo:active {
-      color: #99ff66;
-    }
-
- .navbar-fixed-top {
-  background-color: #fff;
-  border-bottom: 1px solid #dcdcdc;
-  top: 0;
-  right:0;
-  left: 0;
-  z-index: 1030;
-  margin-bottom: 0;
- }
 
  ul .navbar-right {
    margin: 0;
@@ -554,15 +552,31 @@ footer {
    margin-bottom: 200px;
  }
 
+ .header-scr {
+   background: transparent;
+ }
+
+ .header-scr2 {
+   background: #B9E682;
+   background: -webkit-linear-gradient(to left, #77bb58, #B9E682);
+   background: linear-gradient(to left, #77bb58, #B9E682);
+   border-bottom: none;
+ }
+
+ .header-scr3 {
+   color: $gray-medium-dark;
+ }
+
  // ヘッダードロップダウン=(スマホ)===============
 
  .smartphone-dropdown {
    text-align: right;
    margin-right: 30px;
    margin-top: 10px;
-   .fa {
+   .dropdown-hamberger {
      margin-top: 5px;
      font-size: 23px;
+     color: $gray-medium-dark;
    }
  }
 
@@ -602,7 +616,7 @@ footer {
      font-weight: 900;
      color: $green-logo-color; /* fallback for old browsers */
    }
- }
+  }
  }
 
  .dropdown-modal {

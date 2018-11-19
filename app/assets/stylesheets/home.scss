@@ -335,54 +335,63 @@
   .top-wrapper {
     padding-bottom: 35px;
     .top-section {
-      position: relative;
-      background-color: rgba(0,0,0,0.5);
-      display: inline-block;
+      background: #B9E682;
+      background: -webkit-linear-gradient(to left, #77bb58, #B9E682);
+      background: linear-gradient(to left, #77bb58, #B9E682);
+      height: 500px;
+      width: 100%;
       h1 {
         font-family: 'Arial Black','Arial Black',sans-serif;
-        position: absolute;
         color: #fff;
-        font-size: 3.9rem;
+        font-size: 2.5rem;
         font-weight: 900;
-        left: 5%;
-        top: 7%;
         letter-spacing: 0.06em;
-
+        margin-top: 0;
+        padding-top: 20px;
       }
       h2 {
-        position: absolute;
-        color: white;
-        line-height: 1.5;
-        font-size: 1.5rem;
-        font-weight: 600;
-        left: 3%;
-        right: 4%;
-        top: 26%;
-      }
-      #top-signup-botton {
-        @include button(auto, $green-logo-color, 10px 23px 10px 23px);
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        -ms-transform: translate(-50%,-50%);
-        -webkit-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%);
-        margin:0;
         color: #fff;
-        font-size: 17px;
+        line-height: 1.5;
+        font-size: 2rem;
         font-weight: 600;
-        &:hover {
-          background: #fff;
-          color: $green-logo-color;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-bottom: 60px;
+      }
+      .home-register-button {
+        background-color: #fff;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 260px;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+        box-shadow: 2px 5px 10px rgba(0,0,0,0.25);
+      }
+      .home-facebook {
+        @include facebook(250px);
+        margin-top: 0;
+        margin: 10px 0 10px 0;
+      }
+      .home-google {
+        @include google(250px);
+        margin-bottom: 0;
+        margin: 10px 0 10px 0;
+        p {
+          margin: 10px auto;
         }
       }
-      img {
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 0%;
-        opacity: 0.8;
-        display: block;
+      .home-email {
+        @include google(250px);
+        margin-bottom: 0;
+        margin: 10px 0 10px 0;
+        p {
+          margin: 10px auto;
+          background-color: $green-logo-color;
+        }
       }
     }
   }

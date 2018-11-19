@@ -1,6 +1,8 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "Playcal", root_path, id: "logo" %>
+        <%= link_to root_path do %>
+        <span class="logo">Playcal</span>
+        <% end %>
         <nav>
         <ul class="nav navbar-nav navbar-right">
           <ul class="nonloggedin-right">
@@ -52,7 +54,7 @@
               </div>
 
                 <div class="smartphone-dropdown visible-xs">
-                   <i class="fa fa-navicon fa-1.5x down-color"  id="dropdown-fontawesome" ontouchstart=""></i>
+                   <i class="fa fa-navicon fa-1.5x dropdown-hamberger" id="dropdown-fontawesome" ontouchstart=""></i>
                       <%= render 'layouts/dropdown' %>
                   </div>
                   <% end %>
@@ -61,7 +63,7 @@
             <li  class="hidden-xs"><%= link_to "登録", new_user_registration_path, id: "sub" %></li>
             <li  class="hidden-xs"><%= link_to "ログイン", new_user_session_path, id: "sub" %></li>
             <div class="smartphone-dropdown visible-xs">
-                <p><i class="fa fa-navicon fa-1.5x down-color"  id="dropdown-fontawesome"></i></p>
+                <p><i class="fa fa-navicon fa-1.5x dropdown-hamberger"  id="dropdown-fontawesome"></i></p>
                 <%= render 'layouts/dropdown' %>
               </div>
             <% end %>
