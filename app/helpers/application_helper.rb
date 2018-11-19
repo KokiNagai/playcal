@@ -31,12 +31,12 @@ end
   def get_twitter_card_info()
    twitter_card = {}
    twitter_card[:url] = 'https://www.playcal.jp'
-   twitter_card[:title] = '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる'
-   twitter_card[:description] = '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる！'
+   twitter_card[:title] = '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる',
+   twitter_card[:description] = '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる'
    twitter_card[:image] = 'https://s3-ap-northeast-1.amazonaws.com/playcal-picture/playcal/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88+2018-11-16+23.15.52.png'
    twitter_card[:card] = 'summary'
    twitter_card[:site] = 'Playcal'
-   twitter_card[:sitename] = 'Playcal'
+   twitter_card
  end
 
   def default_meta_tags
