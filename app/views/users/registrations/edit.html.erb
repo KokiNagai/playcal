@@ -4,7 +4,7 @@
   <div class="edit-user-main">
     <% if current_user.gender.present? %>
     <div class="edit-user-title">
-      <h2>プロフィールを編集する</h2>
+      <h1>プロフィールを編集する</h1>
     </div>
     <div class="edit-user-after-alert">
       <%= render 'shared/error_messages', object: f.object %>

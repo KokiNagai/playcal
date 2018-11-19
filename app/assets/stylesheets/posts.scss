@@ -58,7 +58,7 @@ span.picture {
 
 /* post_form=(タブレット,PC用)=========================== */
 
-.posting-title h2 {
+.posting-title h1 {
   font-size: 25px;
   font-weight: 600;
   color: $gray-medium-dark;
@@ -269,7 +269,7 @@ span.picture {
   text-align: center;
   color: $green-highlight;
   margin-top: 40px;
-  h2 {
+  h1 {
     font-size: 18px;
     font-weight: 600;
   }
@@ -560,7 +560,7 @@ button#post-message-submit:active {
     padding-bottom: 35px;
   }
 
-  .posting-title h2 {
+  .posting-title h1 {
     font-size: 20px;
     font-weight: 600;
     color: $gray-medium-dark;
@@ -772,7 +772,7 @@ button#post-message-submit:active {
     text-align: center;
     color: $green-highlight;
     margin-top: 40px;
-    h2 {
+    h1 {
       font-size: 18px;
       font-weight: 600;
     }

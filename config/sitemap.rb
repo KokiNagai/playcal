@@ -4,23 +4,30 @@ SitemapGenerator::Sitemap.default_host = "https://www.playcal.jp"
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
 
+
   add find_path, priority: 0.6, changefreq: 'daily'
   add search_path, priority: 0.6, changefreq: 'daily'
+  add tourlists_path, priority: 0.6, changefreq: 'daily'
   add about_path, priority: 0.1, changefreq: 'monthly'
+  add new_user_registration_path, priority: 0.1, changefreq: 'monthly'
+  add new_user_session_path, priority: 0.1, changefreq: 'monthly'
   add new_contacts_path, priority: 0.1, changefreq: 'monthly'
+  add new_user_password_path, priority: 0.1, changefreq: 'monthly'
+  add new_user_confirmation_path, priority: 0.1, changefreq: 'monthly'
+  add new_user_unlock_path, priority: 0.1, changefreq: 'monthly'
+
+
+  Chatbox.find_each do |chatbox|
+    add "/#{chatbox.chatname}", priority: 0.3, lastmod: chatbox.created_at, changefreq: 'daily'
+  end
 
   User.find_each do |user|
-   add user_path(user), priority: 0.3, lastmod: user.created_at, changefreq: 'daily'
+   add "/#{user.name}", priority: 0.3, lastmod: user.created_at, changefreq: 'daily'
+ end
 
- user.posts.find_each do |post|
+   Post.find_each do |post|
   add post_path(post), priority: 0.3, lastmod: post.created_at, changefreq: 'daily'
  end
-
- user.rooms.find_each do |room|
-  add room_path(room), priority: 0.3, lastmod: room.created_at, changefreq: 'daily'
- end
-end
-
 
 
 
