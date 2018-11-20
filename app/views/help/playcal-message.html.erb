@@ -1,0 +1,37 @@
+<div class="h-wrapper">
+  <div class="h-nav">
+    <%= link_to help_path do %>
+    <span>Help</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span id="h-nav-now">メッセージの送り方について</span>
+    <% end %>
+  </div>
+  <div class="h-wrap">
+    <div class="h-title">
+      <h1>メッセージの送り方について</h1>
+    </div>
+    <div class="h-main">
+      <div class="h-5-main1">
+        <h2>1. 投稿の詳細画面に遷移</h2>
+        <p>探す画面で気になった投稿の詳細ボタンをクリックしますと、投稿の詳細を見る事が出来ます。（左の図）</p>
+        <p>投稿の詳細画面では右の図のようなメッセージを送るボタンがありますのでクリックします。</p>
+        <div class="h-5-main1-img">
+          <span><%= image_tag("/help/h-5-1.png") %></span>
+          <span><%= image_tag("/help/h-5-2.png") %></span>
+        </div>
+        <p>※ 投稿の詳細を見るためにはログインが必要です。</p>
+      </div>
+      <div class="h-5-main2">
+        <h2>2. メッセージのやり取りについて</h2>
+        <p>メッセージルームでは、募集者とメッセージでやり取りすることが出来ます。</br>
+          メッセージのやり取りでは募集内容の詳細や、参加可否の確認、当日の練習内容や日時、場所、人数等を確認しましょう。</p>
+          <p>もし不審な内容が送られてきた場合は、<%= link_to("通報の仕方", "#") %>で通報の仕方を確認して通報してください。</p>
+          <div class="h-5-main2-img">
+            <span><%= image_tag("/help/h-5-3.png") %></span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

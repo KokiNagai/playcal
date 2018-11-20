@@ -9,6 +9,18 @@ $ip7: 374px;
   }
 }
 
+@mixin mediaPC {
+  @media screen and (min-width: $tab) {
+    @content;
+  }
+}
+
+@mixin mediaSP {
+  @media screen and (max-width: $tab) {
+    @content;
+  }
+}
+
 @mixin mediaIpad {
   @media (min-width: $tab) and (max-width: ($pc)) {
     @content;

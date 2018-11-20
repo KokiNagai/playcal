@@ -1,0 +1,25 @@
+<div class="h-wrapper">
+  <div class="h-nav">
+    <%= link_to help_path do %>
+    <span>Help</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span id="h-nav-now">退会方法について</span>
+    <% end %>
+  </div>
+  <div class="h-wrap">
+    <div class="h-title">
+      <h1>退会方法について</h1>
+    </div>
+    <div class="h-main">
+      <div class="h-7-main1">
+        <h2>1. 退会画面に遷移</h2>
+        <p>退会するには、[設定] → [退会] をクリックします。</p>
+        <div class="h-7-main1-img">
+          <span><%= image_tag("/help/h-7-1.png") %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

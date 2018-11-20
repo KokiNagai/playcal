@@ -31,26 +31,29 @@ end
   get '/setting', to: 'normals#setting'
   get '/mail_confirm', to: "normals#after_mail"
   get '/message', to: "normals#message"
-
   get '/inquiry/confirm', to: "contacts#inquiry"
-
   get 'notifications/:id/link_through', to: 'notifications#link_through', as: :link_through
-
-
   get '/posting', to: 'posts#posting'
   get '/posts/:id/post_end', to: 'posts#post_end'
-
   post "/likes/:post_id/create", to: 'likes#create'
   post "/likes/:post_id/destroy", to: 'likes#destroy'
-
   post   '/good/:chat_id' => 'goods#create',   as: 'good'
   delete '/good/:chat_id' => 'goods#destroy', as: 'nongood'
-
   post "/reports", to: "report#create"
-
   post "/chats", to: "chats#create"
-
   get "/tourlists", to: "normals#tourlist"
+
+  # help
+  get '/help', to: 'help#help'
+  get '/help/playcal-login', to: 'help#playcal-login'
+  get '/help/playcal-register', to: 'help#playcal-register'
+  get '/help/playcal-post', to: 'help#playcal-post'
+  get '/help/playcal-message', to: 'help#playcal-message'
+  get '/help/playcal-report', to: 'help#playcal-report'
+  get '/help/playcal-find', to: 'help#playcal-find'
+  get '/help/playcal-safe', to: 'help#playcal-safe'
+  get '/help/playcal-sponsors', to: 'help#playcal-sponsors'
+  get '/help/playcal-withdraw', to: 'help#playcal-withdraw'
 
 
   resources :users, param: :name, only: [:show] do

@@ -1,0 +1,51 @@
+<div class="h-wrapper">
+  <div class="h-nav">
+    <%= link_to help_path do %>
+    <span>Help</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span id="h-nav-now">登録の仕方について</span>
+    <% end %>
+  </div>
+  <div class="h-wrap">
+    <div class="h-title">
+      <h1>登録の仕方について</h1>
+    </div>
+    <div class="h-main">
+      <div class="h-1-main1">
+        <h2>1. 登録画面に遷移する</h2>
+        <p>登録画面に行くためにはホーム画面の以下のボタンをクリックします。</p>
+        <div class="h-1-main1-img">
+          <span><%= image_tag("/help/h-1-1.png") %></span>
+          <span><%= image_tag("/help/h-1-2.png") %></span>
+        </div>
+        <p>※ Facebook登録とGoogle登録にはそれぞれのアカウントが必要です。</p>
+      </div>
+      <div class="h-1-main2">
+        <h2>2. 登録画面での入力</h2>
+        <p>①、②、③を入力し、④の認証メールボタンをクリックします。</p>
+        <p>メール送信には時間がかかるときがございますので、ご了承ください。</p>
+        <div class="h-1-main2-img">
+          <%= image_tag("/help/h-1-3.png") %>
+        </div>
+        <p>FacebookアカウントやGoogleアカウントをお持ちの方は1ステップで登録が完了いたしますので、</br>
+        スムーズにアカウントを登録することが出来ます。</p>
+      </div>
+      <div class="h-1-main3">
+        <h2>3. メール認証後</h2>
+        <p>メール認証後は、以下のような画面に遷移いたしますので、認証メール受信をお待ち下さい。</p>
+        <p>認証メールが受信されない方は、迷惑メールボックスを確認いただくか、<%= link_to("認証メールの再送信を行ってください。", "/users/confirmation/new") %> </p>
+        <div class="h-1-main3-img">
+          <%= image_tag("/help/h-1-4.png") %>
+        </div>
+        <p>メールを受信しましたら、メールに記載のリンクをクリックしていただき、</br>
+          メール認証の際に入力したメールアドレスとパスワードを入力してログインしてください。</p>
+        <p>ログインすると以下のような画面に遷移しますので、必須項目をすべて入力してアカウント登録を完了してください。</p>
+        <div class="h-1-main4-img">
+          <span><%= image_tag("/help/h-1-5.png") %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

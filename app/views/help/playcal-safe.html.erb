@@ -1,0 +1,26 @@
+<div class="h-wrapper">
+  <div class="h-nav">
+    <%= link_to help_path do %>
+    <span>Help</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span id="h-nav-now">安全に使って頂くために</span>
+    <% end %>
+  </div>
+  <div class="h-wrap">
+    <div class="h-title">
+      <h1>安全に使って頂くために</h1>
+    </div>
+    <div class="h-main">
+      <div class="h-2-main1">
+        <p>Playcalではテニスの練習相手をオンライン上で探し、テニスコートで実際にその方と練習するマッチングサイトです。</p>
+        <p>そのため、メッセージのやり取りをしている際に怪しい文や不快な文言を言われた相手とは会わないようにしましょう。
+          そして<%= link_to("お問い合わせフォーム", "/contacts/new") %>にてその報告をしていただくと、今後のPlaycalの安全性向上に繋がります。
+        </p>
+      </br>
+      <p></p>
+      </div>
+    </div>
+  </div>
+</div>

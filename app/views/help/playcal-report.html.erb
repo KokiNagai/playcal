@@ -1,0 +1,28 @@
+<div class="h-wrapper">
+  <div class="h-nav">
+    <%= link_to help_path do %>
+    <span>Help</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span id="h-nav-now">通報の仕方について</span>
+    <% end %>
+  </div>
+  <div class="h-wrap">
+    <div class="h-title">
+      <h1>通報の仕方について</h1>
+    </div>
+    <div class="h-main">
+      <div class="h-6-main1">
+        <h2>1. 通報の画面について</h2>
+        <p>通報の仕方には主に二種類あります。</br>
+          １つ目はお問い合わせフォームからの通報で画面の一番下の「お問い合わせ」というリンクからお問い合わせフォームに遷移して通報してください。</p>
+          <p>２つ目はメッセージのやり取り全般に関する通報で、メッセージルーム画面の下部に通報するという欄があります。そこをクリックし、通報の種類を選択して通報してください。</p>
+          <div class="h-6-main1-img">
+            <span><%= image_tag("/help/h-6-1.png") %></span>
+            <span><%= image_tag("/help/h-6-2.png") %></span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="h-wrapper">
+  <div class="h-nav">
+    <%= link_to help_path do %>
+    <span>Help</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span id="h-nav-now">スポンサー募集に関して</span>
+    <% end %>
+  </div>
+  <div class="h-wrap">
+    <div class="h-title">
+      <h1>スポンサー募集に関して</h1>
+    </div>
+    <div class="h-main">
+      <div class="h-2-main1">
+        <p>Playcalの理念はテニス人口を増やし、日本のテニスを活性化することにあります。
+          そのため、スポンサーに関してもこの理念に賛同していただける全国の企業や団体、個人の方々を募集させていただきたいと考えています。</p>
+          <p>ご興味がある方は<%= link_to("お問い合わせフォーム", "/new/contacts") %>にて受け付けております。</p>
+      </div>
+    </div>
+  </div>
+</div>

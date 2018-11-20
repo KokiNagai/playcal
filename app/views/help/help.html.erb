@@ -1,0 +1,50 @@
+<div class="help-wrapper">
+  <div class="help-title">
+    <h1>Playcalヘルプデスク</h1>
+  </div>
+  <div class="help-main">
+    <div class="help-left">
+      <h2>Playcalとは</h2>
+      <ul>
+        <%= link_to about_path do %>
+        <li>Playcalとは</li>
+        <% end %>
+      </ul>
+      <h2>使い方</h2>
+      <ul>
+        <%= link_to("/help/playcal-register") do %>
+        <li>登録の仕方について</li>
+        <% end %>
+        <%= link_to("/help/playcal-login") do %>
+        <li>ログインについて</li>
+        <% end %>
+        <%= link_to("/help/playcal-post") do %>
+        <li>投稿について</li>
+        <% end %>
+        <%= link_to("/help/playcal-find") do %>
+        <li>募集者の探し方について</li>
+        <% end %>
+        <%= link_to("/help/playcal-message") do %>
+        <li>メッセージの送り方について</li>
+        <% end %>
+        <%= link_to("/help/playcal-report") do %>
+        <li>通報について</li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="help-right">
+      <h2>その他</h2>
+      <ul>
+        <%= link_to("/help/playcal-withdraw") do %>
+        <li>退会方法</li>
+        <% end %>
+        <%= link_to("/help/playcal-sponsors") do %>
+        <li>スポンサー募集に関して</li>
+        <% end %>
+        <%= link_to("/help/playcal-safe") do %>
+        <li>安全に使っていただくために</li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

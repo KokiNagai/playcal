@@ -1,0 +1,38 @@
+<div class="h-wrapper">
+  <div class="h-nav">
+    <%= link_to help_path do %>
+    <span>Help</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span id="h-nav-now">投稿の仕方について</span>
+    <% end %>
+  </div>
+  <div class="h-wrap">
+    <div class="h-title">
+      <h1>投稿の仕方について</h1>
+    </div>
+    <div class="h-main">
+      <div class="h-3-main1">
+        <h2>1. 投稿画面へ遷移</h2>
+        <p>投稿画面へ遷移するためにはログイン後、右上のドロップダウンボタンをクリックした後、
+          以下のボタンをクリックします。（左の図）</p>
+          <p>または、ログイン後のホーム画面を下にスクロールすると右の図のような欄がありますので、募集するをクリックします。</p>
+          <div class="h-3-main1-img">
+            <span><%= image_tag("/help/h-3-1.png") %></span>
+            <span><%= image_tag("/help/h-3-2.png") %></span>
+          </div>
+      </div>
+      <div class="h-3-main2">
+        <h2>2. 投稿の仕方</h2>
+        <p>投稿画面へ遷移しましたら、以下のような画面になります。</p>
+        <p>投稿画面にて必須と書かれた項目に関しては、必ず記載してください。また、他のSNSへの誘導、宣伝、性的な発言、
+          暴力的な表現に関しては禁止されています。
+        </p>
+        <div class="h-3-main2-img">
+          <span><%= image_tag("/help/h-3-3.png") %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

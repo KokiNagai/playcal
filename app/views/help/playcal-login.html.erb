@@ -1,0 +1,31 @@
+<div class="h-wrapper">
+  <div class="h-nav">
+    <%= link_to help_path do %>
+    <span>Help</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span id="h-nav-now">ログインの仕方について</span>
+    <% end %>
+  </div>
+  <div class="h-wrap">
+    <div class="h-title">
+      <h1>ログインの仕方について</h1>
+    </div>
+    <div class="h-main">
+      <div class="h-2-main1">
+        <h2>1. ログイン画面に遷移</h2>
+        <p>以下の画面にログイン画面に遷移するボタンがありますので、そこをクリックします。</p>
+        <div class="h-2-main1-img">
+          <span><%= image_tag("/help/h-2-1.png") %></span>
+        </div>
+        <p>ログイン画面に遷移すると以下のような画面が表示されます。</p>
+        <p>登録したメールアドレスとパスワードを入力すると、ログインが完了いたします。</p>
+        <div class="h-2-main1-img">
+          <span><%= image_tag("/help/h-2-2.png") %></span>
+        </div>
+        <p>パスワードを忘れてしまった方は、<%= link_to("こちらから再設定を行ってください。", "/users/password/new") %></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="h-wrapper">
+  <div class="h-nav">
+    <%= link_to help_path do %>
+    <span>Help</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span id="h-nav-now">募集者の探し方について</span>
+    <% end %>
+  </div>
+  <div class="h-wrap">
+    <div class="h-title">
+      <h1>募集者の探し方について</h1>
+    </div>
+    <div class="h-main">
+      <div class="h-4-main1">
+        <h2>1. 募集画面へ遷移</h2>
+        <p>投稿画面へ遷移するためにはログイン後、右上のドロップダウンボタンをクリックした後、
+          以下のボタンをクリックします。（左の図）</p>
+          <p>または、ホーム画面を下にスクロールすると右の図のような欄がありますので、括弧の部分をクリックします。</p>
+          <div class="h-4-main1-img">
+            <span><%= image_tag("/help/h-4-1.png") %></span>
+            <span><%= image_tag("/help/h-4-2.png") %></span>
+          </div>
+      </div>
+      <div class="h-4-main2">
+        <h2>2. 検索の仕方</h2>
+        <p>探す画面に遷移しましたら、左上に検索条件のボタンがありますのでクリックしますと、</br>
+          「都道府県、市町村、練習日、性別、練習内容」を条件として検索フィルターをかける事が出来ます。</p>
+          <div class="h-4-main2-img">
+            <span><%= image_tag("/help/h-4-3.png") %></span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
