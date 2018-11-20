@@ -7,7 +7,7 @@
   </div>
   <% if Post.where(prefecture: current_user.live).present? %>
   <div class="home-user-prefecture">
-    <h2><%= current_user.name %>さんが住む都道府県の募集はこちら</h2>
+    <h1><%= current_user.name %>さんが住む都道府県の募集はこちら</h1>
   </div>
   <%= render 'layouts/loggedinpost1' %>
   <% else %>
