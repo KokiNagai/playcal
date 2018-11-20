@@ -15,6 +15,15 @@ SitemapGenerator::Sitemap.create do
   add new_user_password_path, priority: 0.1, changefreq: 'monthly'
   add new_user_confirmation_path, priority: 0.1, changefreq: 'monthly'
   add new_user_unlock_path, priority: 0.1, changefreq: 'monthly'
+  add help_path, priority: 0.2, changefreq: 'monthly'
+  add help_playcal_login_path, priority: 0.1, changefreq: 'monthly'
+  add help_playcal_register_path, priority: 0.1, changefreq: 'monthly'
+  add help_playcal_message_path, priority: 0.1, changefreq: 'monthly'
+  add help_playcal_post_path, priority: 0.1, changefreq: 'monthly'
+  add help_playcal_find_path, priority: 0.1, changefreq: 'monthly'
+  add help_playcal_safe_path, priority: 0.1, changefreq: 'monthly'
+  add help_playcal_sponsors_path, priority: 0.1, changefreq: 'monthly'
+  add help_playcal_withdraw_path, priority: 0.1, changefreq: 'monthly'
 
 
   Chatbox.find_each do |chatbox|
