@@ -99,7 +99,7 @@ class NormalsController < ApplicationController
          ['鹿児島県', '鹿児島県'],
          ['沖縄県', '沖縄県'],]
 
-         @q = Post.where(term: true).search(params[:q])
+         @q = Post.search(params[:q])
          @posts = @q.result.paginate(page: params[:page], per_page: 10).order(created_at: :desc)
      end
 
@@ -174,7 +174,7 @@ def search
          @word = hash4.values.first
          @style = hash5.values.first
 
-       @q = Post.where(term: true).search(search_params)
+       @q = Post.search(search_params)
        @posts = @q.result.paginate(page: params[:page], per_page: 10).order(created_at: :desc)
 else
   @posts = Post.all.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
