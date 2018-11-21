@@ -32,17 +32,17 @@ end
     {
       site: 'Playcal',
       sitename: 'Playcal',
-      title: '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる',
+      title: '「シンプルで簡単に」テニスの練習相手や仲間が見つかる',
       reverse: true,
       charset: 'utf-8',
-      description: '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかるテニスマッチングサイト「Playcal」です！',
+      description: 'テニスをより楽しく、より上手に。テニスのマッチングサービス「Playcal」でテニスの練習相手や仲間を見つけてみませんか？',
       keywords: 'テニス, テニス仲間, 練習相手, マッチング,  オフ会, 掲示板, テニス友達, コミュニティ',
       canonical: request.original_url,
       separator: '-',
       og: {
         site_name: 'Playcal',
-        title: '「シンプルで楽しく」テニス仲間や練習相手がここで見つかる',
-        description: 'Playcalは「シンプルで気軽に」テニス仲間や練習相手を見つけることができるテニスコミュニティサイトです。',
+        title: '「シンプルで簡単に」テニスの練習相手や仲間が見つかる',
+        description: 'テニスをより楽しく、より上手に。テニスのマッチングサービス「Playcal」でテニスの練習相手や仲間を見つけてみませんか？',
         image: image_url("https://s3-ap-northeast-1.amazonaws.com/playcal-picture/playcal/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88+2018-11-19+10.47.45.png"),
         type: 'website',
         url: request.original_url,
@@ -51,8 +51,8 @@ end
       twitter: {
         card: 'summary',
         site: '@PlaycalOfficial',
-        title: '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる',
-        description: '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかるテニスマッチングサイト「Playcal」です！',
+        title: '「シンプルで簡単に」テニスの練習相手や仲間が見つかる',
+        description: 'テニスをより楽しく、より上手に。テニスのマッチングサービス「Playcal」でテニスの練習相手や仲間を見つけてみませんか？',
         image: image_url("https://s3-ap-northeast-1.amazonaws.com/playcal-picture/playcal/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88+2018-11-19+10.47.45.png"),
       }
     }
