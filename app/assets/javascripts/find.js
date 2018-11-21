@@ -1,6 +1,6 @@
 $(function(){
 	$('.pref-btn1').on('click', function(){
-		$('.find-pref-button1').toggleClass('dropdown_toggle').children('.find-pref-1').slideToggle(040);
+		$('.find-pref-button1').toggleClass('dropdown_toggle').children('.find-pref-1').slideToggle(400);
 	});
 });
 
