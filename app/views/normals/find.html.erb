@@ -8,107 +8,110 @@
  <%= render 'normals/findfor' %>
 </div>
 
-<div class="find-show-title">
-  <h1>すべての投稿</h1>
-</div>
+<div class="find-container">
 
-<div class="find-wrapper-p">
+  <div class="find-show-title">
+    <h1>すべての投稿</h1>
+  </div>
 
-  <div class="find-wrapper col-md-9 col-sm-12">
-    <div class="find-main">
-      <%= @message %>
-      <% @posts.each do |post| %>
-      <div class="find-post">
-        <time datetime="<%= post.created_at %>">
-          <p><%= time_ago_in_words(post.created_at) %>前</p>
-        </time>
-        <div class="find-user-upper">
-          <div class="find-post-user">
-            <% if post.user.picture.present? %>
-            <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300', :alt => "ユーザーの写真" ) %></p>
-            <% else %>
-            <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300', :alt => "ユーザーの写真" ) %></p>
+  <div class="find-wrapper-p">
+
+    <div class="find-wrapper col-md-9 col-sm-12">
+      <div class="find-main">
+        <%= @message %>
+        <% @posts.each do |post| %>
+        <div class="find-post">
+          <time datetime="<%= post.created_at %>">
+            <p><%= time_ago_in_words(post.created_at) %>前</p>
+          </time>
+          <div class="find-user-upper">
+            <div class="find-post-user">
+              <% if post.user.picture.present? %>
+              <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300', :alt => "ユーザーの写真" ) %></p>
+              <% else %>
+              <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300', :alt => "ユーザーの写真" ) %></p>
+              <% end %>
+              <p><h2><%= post.title.truncate(25) %></h2></p>
+            </div>
+              <div class="find-title">
+                <%= link_to post.user.name.truncate(8), post.user, class: "find-user-name" %>
+              </div>
+          </div>
+          <div class="find-post-under">
+            <div class="post-show-under">
+              <div class="post-show-under-left">
+                <p><label>都道府県</label></br class="visible-xs"><%= post.prefecture %></p>
+                <p><label>都市名</label></br class="visible-xs"><%= post.city %></p>
+              </div>
+              <div class="post-show-under-right">
+                <p><label>練習希望日</label></br class="visible-xs"><%= post.playday %></p>
+                <p><label>練習の内容</label></br class="visible-xs"><%= post.style %></p>
+              </div>
+            </div>
+          </div>
+          <div class="find-post-detail">
+            <%= link_to post, id: "find-post-detail" do %>
+            <span>詳細<i class="fa fa-angle-double-right"></i></span>
             <% end %>
-            <p><h2><%= post.title.truncate(25) %></h2></p>
-          </div>
-            <div class="find-title">
-              <%= link_to post.user.name.truncate(8), post.user, class: "find-user-name" %>
-            </div>
-        </div>
-        <div class="find-post-under">
-          <div class="post-show-under">
-            <div class="post-show-under-left">
-              <p><label>都道府県</label></br class="visible-xs"><%= post.prefecture %></p>
-              <p><label>都市名</label></br class="visible-xs"><%= post.city %></p>
-            </div>
-            <div class="post-show-under-right">
-              <p><label>練習希望日</label></br class="visible-xs"><%= post.playday %></p>
-              <p><label>練習の内容</label></br class="visible-xs"><%= post.style %></p>
-            </div>
           </div>
         </div>
-        <div class="find-post-detail">
-          <%= link_to post, id: "find-post-detail" do %>
-          <span>詳細<i class="fa fa-angle-double-right"></i></span>
           <% end %>
-        </div>
       </div>
-        <% end %>
-    </div>
-    <div class="side-find">
-        <div class="inbox2-under-picture">
-          <%= link_to 'posting_path' do %>
-          <%= image_tag "adult-1853483_1280.jpg", :alt => "募集ページへ" %>
-          <% end %>
-        </div>
-        <div class="inbox2-under-intro">
-          <h2>練習相手やチームメンバーを募集してみよう</h2>
-          <div class="inbox2-posting-bottom">
-            <%= link_to "募集してみる", posting_path, :style=>"color: white;" %>
+      <div class="side-find">
+          <div class="inbox2-under-picture">
+            <%= link_to 'posting_path' do %>
+            <%= image_tag "adult-1853483_1280.jpg", :alt => "募集ページへ" %>
+            <% end %>
           </div>
-        </div>
+          <div class="inbox2-under-intro">
+            <h2>練習相手やチームメンバーを募集してみよう</h2>
+            <div class="inbox2-posting-bottom">
+              <%= link_to "募集してみる", posting_path, :style=>"color: white;" %>
+            </div>
+          </div>
+      </div>
     </div>
-  </div>
 
-  <div class="google-ad col-md-3 hidden-xs">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- playcal-side -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:600px"
-     data-ad-client="ca-pub-5276826909376331"
-     data-ad-slot="1679934176"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  </div>
-
-</div>
-
-
-<%= will_paginate(@posts, inner_window: 3, previous_label: "前へ", next_label: "次へ", id: "will_paginate") %>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- playcal-home -->
-<ins class="adsbygoogle"
- style="display:block"
- data-ad-client="ca-pub-5276826909376331"
- data-ad-slot="4777220826"
- data-ad-format="auto"
- data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-<div class="hidden-xs">
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- playcal-foot -->
+    <div class="google-ad col-md-3 hidden-xs">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- playcal-side -->
   <ins class="adsbygoogle"
-       style="display:block"
+       style="display:inline-block;width:300px;height:600px"
        data-ad-client="ca-pub-5276826909376331"
-       data-ad-slot="9544189741"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
+       data-ad-slot="1679934176"></ins>
   <script>
   (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
+    </div>
+
+  </div>
+
+
+  <%= will_paginate(@posts, inner_window: 3, previous_label: "前へ", next_label: "次へ", id: "will_paginate") %>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- playcal-home -->
+  <ins class="adsbygoogle"
+   style="display:block"
+   data-ad-client="ca-pub-5276826909376331"
+   data-ad-slot="4777220826"
+   data-ad-format="auto"
+   data-full-width-responsive="true"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <div class="hidden-xs">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- playcal-foot -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5276826909376331"
+         data-ad-slot="9544189741"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
 </div>

@@ -25,7 +25,7 @@
           date_separator: '%s'),
               '年 ', '月 ') + '日' %></div>から</br class="visible-xs">
              <%= raw sprintf(f.date_select(:playday_lteq, use_month_numbers: true, start_year:2018, #
-          end_year: (Time.now.year),
+          end_year: (Time.now.year + 1),
           :include_blank => true,
           date_separator: '%s'),
               '年 ', '月 ') + '日' %></br class="visible-xs">まで
@@ -48,7 +48,7 @@
             <%= f.label :style_eq, "すべて", value: "" %>
           </div>
         </br>
-          <div class="JS-search-gender-label">
+          <!-- <div class="JS-search-gender-label">
             <span>性別</span>
           </div>
           <div class="JS-search-gender">
@@ -60,7 +60,7 @@
 
             <%= f.radio_button :gender_eq, "", checked: true %>
             <%= f.label :gender_eq, "すべて", value: "" %>
-          </div>
+          </div> -->
 
            <div class="search-buttom">
              <%= button_tag sanitize('<i class="fa fa-search"></i> 適用'), :type => "submit", id: "search-submit" %>

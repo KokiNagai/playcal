@@ -600,6 +600,10 @@
 
   @media only screen and (max-width: 767px) {
 
+    .find-container {
+      background: $body-color;
+    }
+
     .find-show-title {
       width: 250px;
       margin: 30px auto;
@@ -657,6 +661,7 @@
        width: 100%;
        padding: 15px;
        margin-bottom: 40px;
+       background: #fff;
        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
        time {
          font-size: 13px;
@@ -802,7 +807,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px !important;
         list-style: none;
-        height: 40px;
+        height: 45px;
         li {
           float: left;
           margin-left: 10px;
@@ -819,7 +824,7 @@
 
       .gender-JS {
         position: absolute;
-        top: 0%;
+        top: 17%;
         left: 8%;
         font-size: 1.4rem !important;
         font-weight: 500;
@@ -838,7 +843,7 @@
         padding-right: 12px !important;
         text-align: center !important;
         text-decoration: none !important;
-        width: 100px !important;
+        width: 90px !important;
         box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
         &:hover {
           border: none;
