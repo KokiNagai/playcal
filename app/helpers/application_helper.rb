@@ -32,7 +32,7 @@ end
    twitter_card = {}
    twitter_card[:url] = 'https://www.playcal.jp'
    twitter_card[:title] = '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる',
-   twitter_card[:description] = '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる'
+   twitter_card[:description] = '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかるテニスマッチングサイト「Playcal」'
    twitter_card[:image] = 'https://s3-ap-northeast-1.amazonaws.com/playcal-picture/playcal/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88+2018-11-16+23.15.52.png'
    twitter_card[:card] = 'summary'
    twitter_card[:site] = 'Playcal'
@@ -43,11 +43,11 @@ end
     {
       site: 'Playcal',
       sitename: 'Playcal',
-      title: '「シンプルで楽しく」テニスの練習相手や仲間がここで見つかる',
+      title: '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる',
       reverse: true,
       charset: 'utf-8',
-      description: 'Playcalは「シンプルで気軽に」テニス仲間や練習相手を見つけることができるテニスコミュニティサイトです。',
-      keywords: 'テニス, テニス仲間, 練習相手, オフ会, 掲示板, テニス友達, コミュニティ',
+      description: '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかるテニスマッチングサイト「Playcal」です！',
+      keywords: 'テニス, テニス仲間, 練習相手, マッチング,  オフ会, 掲示板, テニス友達, コミュニティ',
       canonical: request.original_url,
       separator: '-',
       og: {
@@ -61,7 +61,9 @@ end
       },
       twitter: {
         card: 'summary',
-        site: '@playcal_official',
+        site: '@PlaycalOfficial',
+        title: '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかる',
+        description: '「シンプルで気軽に」テニスの練習相手や仲間がここで見つかるテニスマッチングサイト「Playcal」です！',
         image: image_url("https://s3-ap-northeast-1.amazonaws.com/playcal-picture/playcal/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88+2018-10-13+12.33.54.png"),
       }
     }
