@@ -283,9 +283,10 @@
     margin: 10px auto;
     width: 90%;
     h3 {
+      text-align: center;
       font-weight: 600;
       color: $gray-medium-dark;
-      width: 100px;
+      width: 120px;
       border-bottom: 3px solid $green-highlight;
     }
     .searched-main {
@@ -603,6 +604,9 @@
     .find-container {
       background: $body-color;
     }
+    .find-wrapper-p {
+      background: $body-color;
+    }
 
     .find-show-title {
       width: 250px;
@@ -662,7 +666,7 @@
        padding: 15px;
        margin-bottom: 40px;
        background: #fff;
-       box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+       box-shadow: 1px 2px 6px rgba(0,0,0,0.25);
        time {
          font-size: 13px;
          text-align: right;
@@ -785,19 +789,17 @@
         color: #fff;
         font-size: 1.7rem;
         padding: 5px 10px 5px 10px;
-        border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
         background: #ff9966;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
         background: linear-gradient(to right, #ff5e62, #ff9966);
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-        border-bottom: solid 3px #ff9966;
         margin: 10px auto;
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
-    .inbox2-posting-bottom:active {
-      box-shadow: none;
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-    }
+
 
 
     // 上部検索画面(スマホ)===================================
@@ -884,6 +886,7 @@
       .searched-message {
         padding-top: 20px;
         text-align: center;
+        background: $body-color;
         h2 {
           font-size: 16px;
           font-weight: 600;
