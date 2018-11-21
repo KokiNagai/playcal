@@ -639,6 +639,7 @@ button#post-message-submit:active {
        margin: 0 auto;
        width: 300px;
        color: $gray-medium-dark;
+       -webkit-appearance: none;
    }
 
    .rails-bootstrap-forms-date-select {

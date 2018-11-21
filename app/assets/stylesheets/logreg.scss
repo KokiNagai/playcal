@@ -44,6 +44,9 @@
         font-size: 1.5rem;
         font-family: FontAwesome;
       }
+      .login-check {
+        width: 300px;
+      }
       .checkbox {
         label {
           margin-left: 40px;
@@ -123,6 +126,7 @@
         font-size: 1.5rem;
         margin: 0 auto;
         font-family: FontAwesome;
+        -webkit-appearance: none;
       }
       .facebook-signup {
         @include facebook(300px)
@@ -306,6 +310,10 @@
         font-size: 1.5rem;
         margin: 0 auto;
         font-family: FontAwesome;
+        -webkit-appearance: none;
+      }
+      .login-check {
+        width: 300px;
       }
       .facebook-signup {
         @include facebook(300px)
@@ -369,6 +377,7 @@
         font-size: 1.5rem;
         margin: 0 auto;
         font-family: FontAwesome;
+        -webkit-appearance: none;
       }
       .facebook-signup {
         @include facebook(300px)
@@ -476,6 +485,7 @@
   .introduction-edit {
     #edit-form {
       height: 200px;
+      -webkit-appearance: none;
     }
     @include edit_form(300px)
   }
