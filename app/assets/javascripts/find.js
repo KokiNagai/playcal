@@ -49,7 +49,7 @@ $(function(){
 $(function(){
 	$('.pref-btn8').on('click', function(){
 		$('.find-pref-button8').toggleClass('dropdown_toggle').children('.find-pref-8').slideToggle(400);
-    $('.find-pref-button9').toggleClass('find-pref-btn-shadow');
+    $('.find-pref-button8').toggleClass('find-pref-btn-shadow');
 	});
 });
 $(function(){
