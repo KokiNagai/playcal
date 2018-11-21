@@ -826,6 +826,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
 
 
 
+
     // 上部検索画面(スマホ)===================================
       .search-area {
         position: relative;
@@ -945,7 +946,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
              width: 80px;
              border: 1px solid $gray-border-light;
              border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
-             color: $gray-medium-light;
+             color: $gray-medium-dark;
              padding: 0px 7px 5px 9px;
              background: #fff;
              .fa {
@@ -960,7 +961,9 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
         p {
           margin-top: 10px;
           color: $green-highlight;
-
+          &:active {
+            opacity: 0.8;
+          }
         }
       }
     }
@@ -991,6 +994,10 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
         .find-pref-#{$fp} {
           display: none;
         }
+      }
+
+      .find-pref-btn-shadow {
+        box-shadow: 1px 2px 6px rgba(0,0,0,0.25);
       }
       // findfor-パーシャル=======================
 
