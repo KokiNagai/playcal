@@ -151,9 +151,7 @@
     }
   }
 
-  .form-control {
-    box-shadow: none;
-  }
+
   // edit(PC)============================================
 
   .edit-user-wrapper {
@@ -396,6 +394,10 @@
        }
      }
     }
+  }
+
+  .form-control {
+    box-shadow: none;
   }
   // edit(スマホ)=========================================
   .edit-user-wrapper {
