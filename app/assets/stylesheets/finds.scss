@@ -39,7 +39,13 @@
     }
 }
 
-.google-ad1 {
+.google-ad1, .google-ad3, .google-ad5 {
+  @include mediaSP {
+    display: none;
+  }
+}
+
+.google-ad1, .google.ad4 {
   @include mediaSP {
     display: none;
   }
