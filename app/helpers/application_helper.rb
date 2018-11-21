@@ -49,7 +49,7 @@ end
         locale: 'ja_JP',
       },
       twitter: {
-        card: 'summary',
+        card: 'summary_large_image',
         site: '@PlaycalOfficial',
         title: '「シンプルで簡単に」テニスの練習相手や仲間が見つかる',
         description: 'テニスをより楽しく、より上手に。テニスのマッチングサービス「Playcal」でテニスの練習相手や仲間を見つけてみませんか？',
