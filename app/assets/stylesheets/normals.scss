@@ -70,6 +70,7 @@ textarea {
 
 #will_paginate {
   margin: 0 auto;
+  width: 90%;
 }
 
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
@@ -77,19 +78,20 @@ textarea {
     color: #fff;
     background-color: $green-logo-color;
     border-color: $green-logo-color;
-    cursor: default;
+    cursor: pointer;
 }
 
 .pagination > li > a, .pagination > li > span {
     position: relative;
     float: left;
-    padding: 6px 12px;
+    padding: 4px 10px;
     line-height: 1.428571429;
     text-decoration: none;
     color: $green-highlight;
     background-color: #fff;
     border: 1px solid #ddd;
-    margin-left: -1px;
+    border-radius: 5px;
+    margin-left: 4px;
 }
 // タブレット、PC用画面==================================================================
 
