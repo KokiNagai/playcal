@@ -370,6 +370,7 @@
         margin: 0 auto;
         font-family: FontAwesome;
         box-shadow: none;
+        transition: none;
       }
       .facebook-signup {
         @include facebook(300px)
