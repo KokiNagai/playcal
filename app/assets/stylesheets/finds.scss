@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'colors';
+@import 'style';
 
 
 
@@ -185,35 +186,66 @@
 }
 
 .find-show-title {
-  width: 250px;
-  margin: 50px 0 50px 200px;
-  position: relative;
-  padding: 2em 0.7em;
-  background: $pink-borderbottom;
-  font-weight: bold;
-  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-  h1 {
-    text-align: center;
-    font-weight: 600;
-    color: #fff;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+  .find-pref-wrap {
+    width: 90px;
+    margin: 5px 10px 7px 10px;
+    @each $btn in $btns {
+     .find-pref-button#{$btn} {
+       text-align: center;
+       width: 80px;
+       border: 1px solid $gray-border-light;
+       border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+       color: $gray-medium-light;
+       padding: 0px 7px 5px 9px;
+       background: #fff;
+       .fa {
+         margin-left: 5px;
+       }
+     }
+    }
   }
 }
+@each $btn in $btns {
+.find-pref-#{$btn} {
+  p {
+    margin-top: 10px;
+    color: $green-highlight;
 
-.find-show-title:after {
-  position: absolute;
-  content: '';
-  top: 100%;
-  left: 30px;
-  border: 15px solid transparent;
-  border-top: 15px solid $pink-borderbottom;
-  width: 0;
-  height: 0;
+  }
+}
 }
 
 
+#arrow {
+  width: 15px;
+  height: 15px;
+  fill: $green-highlight;
+  margin: 5px 0 0 5px;
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  -o-transition: all .15s linear;
+  transition: all .15s linear;
+}
+
+.dropdown_toggle #arrow{
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin-top: 10px;
+  }
+
+
+
+
+$fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
+@each $fp in $fps {
+  .find-pref-#{$fp} {
+    display: none;
+  }
+}
 
 // 検索画面上部(タブレット、PC用)================================
 
@@ -276,6 +308,14 @@
     .search-bottom {
       display: inline-block;
       text-align: left;
+    }
+  }
+
+  .search-nav {
+    margin: 20px 0 0 20px;
+    span {
+      color: $green-highlight;
+      border-bottom: 1px solid $green-highlight;
     }
   }
 
@@ -608,37 +648,6 @@
       background: $body-color;
     }
 
-    .find-show-title {
-      width: 250px;
-      margin: 30px auto;
-      position: relative;
-      padding: 2em 0.7em;
-      background: $pink-borderbottom;
-      font-weight: bold;
-      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
-      h1 {
-        text-align: center;
-        font-weight: 600;
-        color: #fff;
-        font-size: 20px;
-        margin: 0;
-        padding: 0;
-      }
-      .fa {
-        margin-right: 10px;
-      }
-    }
-
-    .find-show-title:after {
-      position: absolute;
-      content: '';
-      top: 100%;
-      left: 30px;
-      border: 15px solid transparent;
-      border-top: 15px solid $pink-borderbottom;
-      width: 0;
-      height: 0;
-    }
 
     .find-wrapper {
       display: flex;
@@ -858,6 +867,14 @@
         background-color: #cfcfcf;
       }
 
+      .search-nav {
+        margin: 10px 0 20px 20px;
+        span {
+          color: $green-highlight;
+          border-bottom: 1px solid $green-highlight;
+        }
+      }
+
       .searched-info {
         padding: 0 20px 30px 20px;
 
@@ -897,7 +914,69 @@
         }
       }
 
+      // search-prefecture================
 
+      .find-show-title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 0 10px 0;
+        .find-pref-wrap {
+          width: 90px;
+          margin: 5px 10px 7px 10px;
+          @each $btn in $btns {
+           .find-pref-button#{$btn} {
+             text-align: center;
+             width: 80px;
+             border: 1px solid $gray-border-light;
+             border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+             color: $gray-medium-light;
+             padding: 0px 7px 5px 9px;
+             background: #fff;
+             .fa {
+               margin-left: 5px;
+             }
+           }
+          }
+        }
+      }
+@each $btn in $btns {
+      .find-pref-#{$btn} {
+        p {
+          margin-top: 10px;
+          color: $green-highlight;
+
+        }
+      }
+    }
+
+
+      #arrow {
+        width: 15px;
+        height: 15px;
+        fill: $green-highlight;
+        margin: 5px 0 0 5px;
+        -webkit-transition: all .15s linear;
+        -moz-transition: all .15s linear;
+        -o-transition: all .15s linear;
+        transition: all .15s linear;
+      }
+
+      .dropdown_toggle #arrow{
+         	-webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          margin-top: 10px;
+        }
+
+
+
+
+      $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
+      @each $fp in $fps {
+        .find-pref-#{$fp} {
+          display: none;
+        }
+      }
       // findfor-パーシャル=======================
 
 
