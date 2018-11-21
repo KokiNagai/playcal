@@ -8,11 +8,11 @@
     <h3><%= flash[:alert] %></h3>
 
     <div class="login-mail">
-      <%= f.email_field :email, class: 'login-form', hide_label: true, placeholder: "メールアドレス"%>
+      <%= f.email_field :email, class: 'login-form', hide_label: true, placeholder: "\uF003   メールアドレス"%>
     </div>
 
     <div class="login-password">
-      <%= f.password_field :password, class: 'login-form', hide_label: true, placeholder: "パスワード" %>
+      <%= f.password_field :password, class: 'login-form', hide_label: true, placeholder: "\uF023   パスワード" %>
     </div>
 
     <% if devise_mapping.rememberable? -%>

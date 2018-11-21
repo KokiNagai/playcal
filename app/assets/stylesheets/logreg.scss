@@ -40,6 +40,9 @@
       #user_email, #user_password {
         width: 300px;
         margin: 0 auto;
+        height: 50px;
+        font-size: 1.5rem;
+        font-family: FontAwesome;
       }
       .checkbox {
         label {
@@ -116,6 +119,10 @@
       #new-form {
         width: 300px;
         margin: 5px auto;
+        height: 50px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        font-family: FontAwesome;
       }
       .facebook-signup {
         @include facebook(300px)
@@ -293,7 +300,10 @@
       }
       #user_email, #user_password {
         width: 300px;
+        height: 50px;
+        font-size: 1.5rem;
         margin: 0 auto;
+        font-family: FontAwesome;
       }
       .facebook-signup {
         @include facebook(300px)
@@ -353,6 +363,10 @@
       #new-form {
         width: 300px;
         margin: 5px auto;
+        height: 50px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        font-family: FontAwesome;
       }
       .facebook-signup {
         @include facebook(300px)
