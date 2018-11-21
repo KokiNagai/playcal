@@ -45,8 +45,8 @@
   }
 }
 
-.google-ad1, .google.ad4 {
-  @include mediaSP {
+.google-ad2, .google.ad4 {
+  @include mediaPC {
     display: none;
   }
 }
