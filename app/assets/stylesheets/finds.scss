@@ -39,17 +39,7 @@
     }
 }
 
-.google-ad1, .google-ad3, .google-ad5 {
-  @include mediaSP {
-    display: none;
-  }
-}
 
-.google-ad2, .google.ad4 {
-  @include mediaPC {
-    display: none;
-  }
-}
 
 // タブレット、PC用画面=======================================================
 

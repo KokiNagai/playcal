@@ -5,6 +5,7 @@
 @import "bootstrap";
 @import 'colors';
 @import 'mixin';
+@import 'style';
 
 
 
@@ -63,6 +64,18 @@ textarea {
   @extend .has-error;
   .form-control {
     color: #ff6347;
+  }
+}
+
+.google-ad1, .google-ad3, .google-ad5 {
+  @include mediaSP {
+    display: none;
+  }
+}
+
+.google-ad2, .google-ad4 {
+  @include mediaPC {
+    display: none;
   }
 }
 
