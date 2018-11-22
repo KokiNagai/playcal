@@ -657,6 +657,7 @@ button#post-message-submit:active {
    #posting-submit {
      margin: 0 auto;
      display: block;
+     font-weight: bold;
      @include button(300px, $green-logo-color,  10px 15px 10px 15px);
    }
 

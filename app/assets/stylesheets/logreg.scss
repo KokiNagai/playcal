@@ -323,6 +323,7 @@
       }
       #login-submit {
         font-size: 1.5rem;
+        font-weight: bold;
       }
       input#login-submit {
         @include button(300px, $green-logo-color, 10px 15px 10px 15px);
@@ -387,6 +388,7 @@
       }
       #new-submit {
         font-size: 1.5rem;
+        font-weight: bold;
       }
       input#new-submit {
         @include button(300px, $green-logo-color, 10px 15px 10px 15px);
@@ -494,6 +496,10 @@
     @include button(300px, $green-logo-color, 10px 15px 10px 15px);
     display: block;
     margin: 40px auto;
+}
+
+  #edit-submit {
+    font-weight: bold;
   }
 
   input#edit-form:focus, select#edit-form:focus, textarea#edit-form:focus {

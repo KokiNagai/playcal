@@ -6,6 +6,7 @@
     margin: 10px auto;
     color: #fff;
     font-size: 1.3rem;
+    font-weight: bold;
     background-color: #305097;
     padding: 10px 15px 10px 15px;
     border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
@@ -29,6 +30,7 @@
       margin: 20px auto;
       color: #fff;
       font-size: 1.3rem;
+      font-weight: bold;
       background-color: #DD5144;
       padding: 10px 15px 10px 15px;
       border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
@@ -55,6 +57,7 @@
     }
     #edit-form {
       width: $width;
+      -webkit-appearance: none;
     }
     p {
       color: $gray-medium-light;
