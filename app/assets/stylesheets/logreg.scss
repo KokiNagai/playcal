@@ -217,25 +217,35 @@
   }
 
   .picture-edit {
+    p {
+      margin: 20px auto;
+      width: 200px;
+    }
     img {
-      margin: 10px auto;
       width: 200px;
       height: 200px;
       border-radius: 5%;
       object-fit: cover;
     }
-    #edit-pic-btn {
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-    padding: 15px 30px;
-    display: inline-block;
-  }
-  input {
-    background: none;
-    box-shadow: none;
-    border: none;
-  }
+    .form-group {
+      width: 200px;
+      margin: 20px auto;
+    }
+    label {
+      margin-top: 0;
+    }
+    .btn {
+      height: 34px;
+      background: $gray-border-light;
+      border: none;
+      i {
+        padding-top: 2px;
+        color: #fff;
+        border: #fff;
+        font-size: 2rem;
+        margin-bottom: 7px;
+      }
+    }
 }
   .introduction-edit {
     #edit-form {
@@ -506,12 +516,34 @@
   }
 
   .picture-edit {
+    p {
+      width: 200px;
+      margin: 0px auto;
+    }
     img {
-      margin: 10px auto;
       width: 200px;
       height: 200px;
       border-radius: 5%;
       object-fit: cover;
+    }
+    .form-group {
+      width: 200px;
+      margin: 20px auto;
+    }
+    label {
+      margin-top: 0;
+    }
+    .btn {
+      height: 34px;
+      background: $gray-border-light;
+      border: none;
+      i {
+        padding-top: 2px;
+        color: #fff;
+        border: #fff;
+        font-size: 2rem;
+        margin-bottom: 7px;
+      }
     }
   }
 
