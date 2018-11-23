@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(comment_params)
     @comment.room.touch
     @user = User.find_by(id: @comment.to_id)
-    NotificationMailer.inquiry3(@user, @comment.user).deliver
+    # NotificationMailer.inquiry3(@user, @comment.user).deliver
     respond_to do |format|
     if @comment.save
       format.html { redirect_to request.referrer || root_url }
