@@ -216,6 +216,27 @@
     @include edit_form(400px)
   }
 
+  .picture-edit {
+    img {
+      margin: 10px auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 5%;
+      object-fit: cover;
+    }
+    #edit-pic-btn {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 30px;
+    display: inline-block;
+  }
+  input {
+    background: none;
+    box-shadow: none;
+    border: none;
+  }
+}
   .introduction-edit {
     #edit-form {
       height: 200px;
@@ -482,6 +503,16 @@
   .picture-edit, .name-edit, .birth-edit, .email-edit, .prefecture-edit,
    .skill-edit {
     @include edit_form(300px)
+  }
+
+  .picture-edit {
+    img {
+      margin: 10px auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 5%;
+      object-fit: cover;
+    }
   }
 
   .introduction-edit {

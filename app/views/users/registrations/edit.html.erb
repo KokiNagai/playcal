@@ -22,7 +22,12 @@
 
     <div class="picture-edit">
       <%= f.label :プロフィール画像 %>
-      <%= f.file_field :picture, id: "edit-form", hide_label: true %>
+      <% if current_user.picture.present? %>
+      <p><%= image_tag(current_user.picture_url, :alt => "ユーザーの写真", :id => "edit-pic") %></p>
+      <% else %>
+      <p><%= image_tag('blank-profile-picture-973460_1280.png', :alt => "ユーザーの写真", :id => "edit-pic") %></p>
+      <% end %>
+      <%= f.file_field :picture, id: "edit-file-input", class: "edit-img", hide_label: true %>
     </div>
 
       <div class="name-edit">
