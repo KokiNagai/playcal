@@ -46,13 +46,13 @@ end
       if @comment.post.user == current_user && @comment.body.present?
         @room = Room.find_by(id: @comment.room_id)
         Notification.create(user_id: @room.user_id, notified_by_id: current_user.id, post_id: @room.post.id, notified_type: 'コメント')
-        NotificationMailer.inquiry3(@user, @comment.user).deliver
+        # NotificationMailer.inquiry3(@user, @comment.user).deliver
     end
 
     if @comment.post.user != current_user && @comment.body.present?
       @post = @comment.post
       Notification.create(user_id: @post.user.id, notified_by_id: current_user.id, post_id: @post.id, notified_type: 'コメント')
-      NotificationMailer.inquiry3(@user, @comment.user).deliver
+      # NotificationMailer.inquiry3(@user, @comment.user).deliver
     end
   end
 
