@@ -1,4 +1,4 @@
-class NotificationMailer < ActionMailer::Base
+class NotificationMailer < ApplicationMailer
   def inquiry3(reciever, sender)
     @reciever = reciever
     @sender = sender
