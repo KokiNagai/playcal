@@ -17,13 +17,16 @@ class CommentsController < ApplicationController
   def create
     @comment = current_user.comments.build(comment_params)
     @comment.room.touch
+    @user = User.find_by(id: @comment.to_id)
+    NotificationMailer.inquiry3(@user, @comment.user).deliver
+    respond_to do |format|
     if @comment.save
-      redirect_to request.referrer || root_url
+      format.html { redirect_to request.referrer || root_url }
     else
-        redirect_to request.referrer || root_url
+      format.html {redirect_to request.referrer || root_url}
     end
-
   end
+end
 
 
   def destroy
@@ -43,7 +46,7 @@ class CommentsController < ApplicationController
     def create_notifications
       if @comment.post.user == current_user && @comment.body.present?
         @room = Room.find_by(id: @comment.room_id)
-      Notification.create(user_id: @room.user_id, notified_by_id: current_user.id, post_id: @room.post.id, notified_type: 'コメント')
+        Notification.create(user_id: @room.user_id, notified_by_id: current_user.id, post_id: @room.post.id, notified_type: 'コメント')
     end
 
     if @comment.post.user != current_user && @comment.body.present?
