@@ -1,8 +1,17 @@
 <div class="posting-wrapper">
+  <div class="h-nav">
+    <%= link_to :back do %>
+    <span id="h-nav-now">戻る</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span>投稿</span>
+    <% end %>
+  </div>
   <%= bootstrap_form_for(@post, layout: :horizontal) do |f| %>
   <div class="posting-form">
     <div class="posting-title">
-      <h1><i class="fa fa-pencil-square-o"></i>投稿する</h1>
+      <h1>投稿する</h1>
     </div>
     <%= render 'shared/error_messages', object: f.object %>
 
@@ -10,7 +19,6 @@
         <h2><i class="fa fa-flag-o"></i>投稿に関する注意</h2>
         <h3>この募集画面には個人情報やSNSに誘致するような内容は書き込まないようにしましょう。</h3>
       </div>
-
     <div class="title-field">
       <div><%= f.label :タイトル, id: "posting-label" %></br class="visible-xs"></div>
       <div><%= f.text_field :title, id: "title-field", placeholder: "(例)◯◯市でテニス出来る人募集！！", hide_label: true, onKeyDown: "postingCount(value, 'posting-text-count1', 35)" %>
@@ -44,7 +52,7 @@
     </div>
 
         <div class="people">
-         <div><%= f.label :希望する人数, id: "posting-label" %></br><small>任意</small></div></br class="visible-xs">
+         <div class="flex-p-l"><%= f.label :希望する人数, id: "posting-label" %><small>任意</small></div></br class="visible-xs">
          <div><%= f.select :member,  [
            ['未定', '未定'],['1人', '1人'],['2人', '2人'], ['3人', '3人'],['4人', '4人'],['5人', '5人'], ['6人', '6人'],
            ['7人', '7人'],['8人', '8人'], ['9人', '9人'],['10人', '10人'],['11人', '11人'], ['12人', '12人'],['12人以上', '12人以上']],
@@ -54,7 +62,7 @@
           </div>
 
           <div class="skill">
-            <div><%= f.label :希望する技術レベル, id: "posting-label" %></br><small>任意</small></div></br class="visible-xs">
+            <div><%= f.label :希望する技術レベル, id: "posting-label" %><small>任意</small></div></br class="visible-xs">
             <div><%= f.select :skill,
               [['未経験', '未経験'],['初心者', '初心者'],['中級者', '中級者'], ['上級者', '上級者'],['誰でもOK', '誰でもOK']],
               {include_blank: '選択してください', hide_label: true}, id: "skill-field" %>
@@ -151,8 +159,6 @@
               </div>
             </div>
             <% end %>
-          </div>
-
           <script>
           function postingCount(text, el, max) {
             document.getElementById(el).innerHTML = 'あと' + (max - text.length) + '字です'

@@ -58,7 +58,21 @@ span.picture {
 
 /* post_form=(タブレット,PC用)=========================== */
 
-.posting-title h1 {
+.posting-wrapper {
+  padding-bottom: 35px;
+  background: $body-color;
+  .posting-form {
+    width: 700px;
+    background: #fff;
+    margin: 40px auto;
+    padding: 30px 0 30px 0;
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+  }
+}
+
+.posting-title {
+  text-align: center;
+  h1 {
   font-size: 25px;
   font-weight: 600;
   color: $gray-medium-dark;
@@ -66,6 +80,7 @@ span.picture {
   .fa {
     margin-right: 10px;
   }
+}
 }
 
 
@@ -95,14 +110,17 @@ span.picture {
 }
 
 .posting-form {
-  width: 700px;
-  margin: 0 auto;
   small {
-    margin-left: 150px;
+    text-align: center;
     color: red;
     border: 1px solid red;
+    border-radius: 5px;
     padding: 1px;
     font-size: 11px;
+    width: 30px;
+    margin-left: auto;
+    margin-right: 20px;
+    display: block;
   }
   p {
     font-size: 12px;
@@ -119,6 +137,10 @@ span.picture {
   font-size: 16px;
   margin-right: 20px;
   text-align: right;
+}
+
+.flex-p-l {
+  display: column;
 }
 
 
@@ -558,16 +580,34 @@ button#post-message-submit:active {
 
   .posting-wrapper {
     padding-bottom: 35px;
+    background: $body-color;
+    .posting-form {
+      width: 90%;
+      background: #fff;
+      margin: 40px auto;
+      padding: 0px 0 30px 0;
+      border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+    }
   }
 
-  .posting-title h1 {
-    font-size: 20px;
-    font-weight: 600;
-    color: $gray-medium-dark;
-    margin-left: 20px;
+  .posting-title {
+    text-align: center;
     margin-bottom: 50px;
-    .fa {
-      margin-right: 10px;
+    padding: 15px 0 15px 0;
+    border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 60%;
+      margin-left: 0px;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      color: $gray-medium-dark;
+      .fa {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -600,7 +640,7 @@ button#post-message-submit:active {
     width: 100%;
     margin: 0 auto;
     small {
-      margin-left: 120px;
+      margin-left: 10px;
       color: red;
       border: 1px solid red;
       padding: 1px;
@@ -621,11 +661,11 @@ button#post-message-submit:active {
 
   #posting-label {
     width: 150px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: $gray-medium-dark;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
-    margin-left: 60px;
+    margin-left: 40px;
   }
 
 
