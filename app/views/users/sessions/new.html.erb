@@ -15,12 +15,6 @@
       <%= f.password_field :password, class: 'login-form', hide_label: true, placeholder: "\uF023   パスワード" %>
     </div>
 
-    <% if devise_mapping.rememberable? -%>
-    <div class="login-mail">
-      <%= f.check_box :remember_me, hide_label: true, class: 'login-check' %>
-    </div>
-    <% end %>
-
     <%= f.submit "ログイン", class: "btn btn-success", id: "login-submit" %>
     <% end %>
 
