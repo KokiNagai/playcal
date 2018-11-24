@@ -1,5 +1,16 @@
 <% set_meta_tags title: "プロフィールを編集する", noindex: true %>
 <div class="edit-user-wrapper">
+  <% if current_user.gender.present? %>
+  <div class="h-nav">
+    <%= link_to :back do %>
+    <span id="h-nav-now">戻る</span>
+    <% end %>
+    <span> > </span>
+    <%= link_to request.url do %>
+    <span>プロフィールを編集する</span>
+    <% end %>
+  </div>
+  <% end %>
   <%= bootstrap_form_for(resource, as: resource_name, url: edit_path, html: { method: :put }) do |f| %>
   <div class="edit-user-main">
     <% if current_user.gender.present? %>
