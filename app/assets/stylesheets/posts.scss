@@ -631,7 +631,8 @@ button#post-message-submit:active {
       text-align: left;
       display: inline-block;
       font-size: 12px;
-      width: 90%;
+      width: 100%;
+      margin-top: 10px;
       color: $gray-medium-light;
     }
   }
@@ -660,7 +661,7 @@ button#post-message-submit:active {
 
 
   #posting-label {
-    width: 150px;
+    width: auto;
     margin-bottom: 5px;
     color: $gray-medium-dark;
     font-weight: 600;
