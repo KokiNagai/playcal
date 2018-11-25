@@ -28,7 +28,7 @@
     -ms-transition: -ms-transform 0.5s linear;
     transition: transform 0.5s linear;
     cursor: pointer;
-   &:active {
+   &:hover {
      -webkit-transform: scale(2);
      -moz-transform: scale(2);
      -o-transform: scale(2);

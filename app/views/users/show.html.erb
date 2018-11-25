@@ -70,6 +70,17 @@
 
       <% else %>
       <h2><i class="fa fa-frown-o"></i>投稿はありません</h2>
+      <div class="non-post-user">
+        <div class="non-post-img">
+          <%= image_tag('playcal-p1.jpg') %>
+        </div>
+        <div class="non-post-button-wrap">
+          <p>投稿して練習相手を募集しよう！</p>
+          <%= link_to posting_path do %>
+          <div class="non-post-button">募集する</div>
+          <% end %>
+        </div>
+      </div>
       <% end %>
     </div>
   </div>

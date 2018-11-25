@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'colors';
+@import 'mixin';
 
 // タブレット,PC用=========================================================
 
@@ -323,6 +324,35 @@
        margin-left: 20px;
        width: 90%;
      }
+     .non-post-user {
+       .non-post-img {
+         img {
+           width: 60%;
+           height: 200px;
+           object-fit: cover;
+           margin: 20px auto;
+           border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+         }
+       }
+       .non-post-button-wrap {
+         p {
+           width: 90%;
+           margin: 20px auto;
+           color: $gray-medium-dark;
+           font-weight: bold;
+           font-size: 1.6rem;
+         }
+         .non-post-button {
+           text-align: center;
+           margin: 20px auto;
+           margin-top: 30px;
+           font-size: 1.7rem;
+           color: #fff;
+           font-weight: bold;
+           @include button(150px, $green-logo-color, 10px 15px 10px 15px);
+         }
+       }
+     }
 }
 
 // スマホ用画面================================================================
@@ -616,6 +646,36 @@
         span {
           color: $gray-medium-dark;
           margin-left: 23px;
+        }
+      }
+    }
+
+    .non-post-user {
+      .non-post-img {
+        img {
+          width: 90%;
+          height: 200px;
+          object-fit: cover;
+          margin: 20px auto;
+          border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+        }
+      }
+      .non-post-button-wrap {
+        p {
+          width: 90%;
+          margin: 20px auto;
+          color: $gray-medium-dark;
+          font-weight: bold;
+          font-size: 1.6rem;
+        }
+        .non-post-button {
+          text-align: center;
+          margin: 20px auto;
+          margin-top: 30px;
+          font-size: 1.7rem;
+          color: #fff;
+          font-weight: bold;
+          @include button(150px, $green-logo-color, 10px 15px 10px 15px);
         }
       }
     }
