@@ -48,6 +48,7 @@
 
 .like-wrap {
   @include mediaPC {
+    padding-top: 40px;
     background: $body-color;
     h1 {
       font-size: 2rem;
@@ -62,6 +63,7 @@
   }
   @include mediaSP {
     background: $body-color;
+    padding-top: 40px;
     h1 {
       font-size: 1.6rem;
       font-weight: bold;

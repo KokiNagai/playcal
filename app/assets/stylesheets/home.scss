@@ -190,6 +190,8 @@
      height: 288px;
      color: $gray-medium-light;
      font-size: 15px;
+     display: flex;
+     flex-direction: column;
    }
   }
 
@@ -205,6 +207,21 @@
     img {
       width: 480px;
       border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    }
+  }
+  .top-under-find {
+    margin: 30px auto;
+    p {
+      display: inline-block;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 5px 10px 5px 10px;
+      @include button(140px, #fff, 10px 15px 10px 15px);
+      background: #ff9966;
+      background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+      background: linear-gradient(to right, #ff5e62, #ff9966);
     }
   }
 
