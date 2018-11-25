@@ -43,7 +43,9 @@
   <body ontouchstart="">
     <div id='fakeloader'  class="fakeloader"></div>
     <%= render 'layouts/header' %>
-     <%= yield %>
+    <div class="body-main">
+      <%= yield %>
+    </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>

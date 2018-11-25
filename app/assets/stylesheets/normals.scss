@@ -12,9 +12,11 @@ html, body {
   padding: 0;
 }
 
+
+
 @media screen and (max-width: 1024px) {
-  body {
-    padding-top: 60px;
+  .body-main {
+    padding-top: 70px;
     background-color: #fff;
     font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
   }
@@ -22,10 +24,12 @@ html, body {
 
 @media screen and (min-width: 1024px) {
   body {
+    background-color: $body-color;
+  }
+  .body-main {
     width: 1024px;
     margin: 0 auto;
-    padding-top: 73px;
-    background-color: #fff;
+    padding-top: 70px;
     font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
   }
 }
@@ -216,7 +220,6 @@ footer {
   border-top: 1px solid #dcdcdc;
   color: #666666;
   background-color:#fff;
-  bottom: 0;
   a {
     color: white;
     font-weight: 300;
@@ -228,6 +231,7 @@ footer {
 
   .footer-under {
     display: flex;
+    justify-content: space-between;
     margin-top: 40px;
     margin-left: 8%;
     #footer-logo {
@@ -239,6 +243,17 @@ footer {
     p {
       margin-right: 20px;
     }
+  }
+}
+.footer-logo13 {
+  display: flex;
+  
+}
+
+.footer-sns {
+  margin: 0 100px 0 0px;
+  p {
+    margin-top: 20px;
   }
 }
 
@@ -487,6 +502,7 @@ footer {
       padding-top: 20px;
       width: 570px;
       margin: 0 auto;
+      background: #fff;
       p {
 
         margin-left: 20px;

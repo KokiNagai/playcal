@@ -17,15 +17,80 @@
   display: flex;
   justify-content: space-around;
 }
+.user-show-message-wrap {
+  border: 1px solid $gray-border-light;
+  border-radius: 10px 10px 10px 10px /10px 10px 10px 10px;
+  background: #fff;
+  padding: 10px;
+}
 .user-message {
   margin-left: 100px;
-  .user-show-post-main {
+  .user-show-message {
+    padding: 13px 0 5px 0;
     width: 500px;
-    border-right: 1px solid $gray-border-light;
-    border-left: 1px solid $gray-border-light;
+    border-bottom: 1px solid $gray-border-light;
+    .user-show-post-flex {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    .user-show-post-picture {
+      width: 20%;
+      img {
+        margin-top: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 60%;
+        object-fit: cover;
+      }
+    }
+    .user-show-post-title {
+      width: 80%;
+      h2 {
+        color: $green-highlight;
+        text-align: left;
+        margin-top: 10px;
+        color: $gray-medium-dark;
+      }
+    }
+    .user-show-post-under-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      .user-show-post-under-info {
+        display: flex;
+        span {
+          padding-top: 2px;
+          font-size: 1.2rem;
+          margin-right: 15px;
+          color: $gray-medium-dark;
+          background-color:#dfdfdf;
+          padding: 0px 5px 0px 5px;
+          border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+          .fa {
+            margin-right: 10px;
+          }
+        }
+        #user-show-post-under-info-tag {
+          padding-top: 2px;
+          background-color: $pink-hightlight;
+          color: #fff;
+        }
+        #user-show-post-under-info-tag2 {
+          padding-top: 2px;
+          background-color: $pink-borderbottom;
+          color: #fff;
+        }
+      }
+    }
+    .user-show-post-under {
+      text-align: right;
+      margin-right: 10px;
+      span {
+        color: $gray-medium-dark;
+        margin-left: 23px;
+      }
+    }
   }
   .user-message-count {
-  border-bottom: 1px solid $gray-border-light;
   width: 500px;
   span {
     background-color: $pink-borderbottom;
@@ -37,6 +102,7 @@
     }
   }
 }
+
   .user-message-title {
     padding: 1em 1em;
     margin: 2em 0;
@@ -51,7 +117,7 @@
       margin: 0;
       padding: 0;
       color: $gray-medium-dark;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 600;
       text-align: center;
       .fa {

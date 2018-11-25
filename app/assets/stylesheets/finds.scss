@@ -270,7 +270,9 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px !important;
     list-style: none;
+    border-radius: 0 0 15px 15px /0 0 15px 15px;
     height: 70px;
+    background-color: #fff;
     li {
       float: left;
       margin-left: 10px;
@@ -407,7 +409,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
   width: 100% !important;
   top: 64px !important;
   z-index: 1 !important;
-  background: rgba(255, 255, 255, 0.85) !important;
+  background-color: rgba(0,0,0,0.5);
   display: none;
 }
 
@@ -416,7 +418,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
   top: 3%;
   left: 0%;
   width: 500px;
-  height: 650px;
+  height: 570px;
   padding-right: 10px;
   text-align: center;
   z-index: 10 !important;
@@ -430,6 +432,9 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
   border-color: rgba(0, 0, 0, 0.2) !important;
   border-image: initial !important;
   border-radius: 4px !important;
+  #close-modal {
+    cursor: pointer;
+  }
 }
 
 
@@ -608,7 +613,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
 #search-submit {
   position: absolute;
   top: 90%;
-  left: 80%;
+  left: 90%;
   color: $green-highlight;
   font-size: 22px;
   font-weight: 600;
@@ -617,6 +622,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
  }
 
  .inbox2-under-intro {
+   background-color: #fff;
    h2 {
      width: 80%;
      margin: 20px auto;
@@ -795,6 +801,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
     }
 
     .inbox2-under-intro {
+      background-color: #fff;
       h2 {
         width: 80%;
         margin: 20px auto;
@@ -1045,6 +1052,10 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
           -moz-osx-font-smoothing: grayscale;
       }
 
+      .search-modal-display {
+        display: block;
+      }
+
 
       .search-modal-wrapper {
         position: fixed !important;
@@ -1052,7 +1063,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
         width: 100% !important;
         top: 40px !important;
         z-index: 1000 !important;
-        background: rgba(255, 255, 255, 0.85) !important;
+        background-color: rgba(0,0,0,0.5);
         display: none;
         .close-modal2 {
           width: 40px;
@@ -1254,10 +1265,10 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
       #search-submit {
         position: absolute;
         top: 7%;
-        left: 73%;
+        left: 75%;
         color: $green-highlight;
-        font-size: 1.7rem;
-        font-weight: 600;
+        font-size: 2rem;
+        font-weight: bold;
         border: none;
         background-color: #fff;
         width: 100px;
