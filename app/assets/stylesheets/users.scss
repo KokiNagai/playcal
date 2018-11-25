@@ -439,8 +439,8 @@
         font-size: 2rem;
         color: $gray-medium-light;
         border-radius: 60%;
-        padding: 10px;
-        &:hover {
+        padding: 15px;
+        &:active {
           background: #efffef;
         }
        }
@@ -651,6 +651,7 @@
     }
 
     .non-post-user {
+      margin-top: 30px;
       .non-post-img {
         img {
           width: 90%;
