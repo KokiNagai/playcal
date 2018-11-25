@@ -6,6 +6,8 @@
   <% end %>
   <% if post.likes.count.to_i > 0 %>
   <span><%= post.likes.count %></span>
+  <% else %>
+  <span>0</span>
   <% end %>
 </div>
 
@@ -16,6 +18,8 @@
   <% end %>
   <% if post.likes.count.to_i > 0 %>
   <span><%= post.likes.count %></span>
+  <% else %>
+  <span>0</span>
   <% end %>
 </div>
 <% end %>
