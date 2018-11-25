@@ -364,6 +364,10 @@ span.picture {
     font-weight: 600;
     color: $gray-medium-light;
   }
+  .post-show-under-left, .post-show-under-right {
+    width: 45%;
+    margin: 0 auto;
+  }
 }
 
 .post-show-under-content {

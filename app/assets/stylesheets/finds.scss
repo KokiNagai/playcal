@@ -46,6 +46,9 @@
 // 検索画面全体======================================
 
 @media only screen and (min-width: 768px) {
+  .find-row {
+    background-color: $body-color;
+  }
   .find-container {
     width: 90%;
   }
@@ -74,10 +77,11 @@
    .find-post {
      margin-left: 50px;
      border: 1px solid $gray-border-light;
-     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+     border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
      width: 400px;
      padding: 15px;
      margin-bottom: 40px;
+     background: #fff;
      box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
      time {
        font-size: 13px;
@@ -87,11 +91,12 @@
    }
    .find-post1 {
      border: 1px solid $gray-border-light;
-     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+     border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
      width: 400px;
      padding: 15px;
      margin-right: 20px;
      margin-bottom: 40px;
+     background: #fff;
      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
      time {
        font-size: 13px;
@@ -285,15 +290,12 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
     position: absolute;
     top: 30%;
     left: 5%;
+    background-color: #fff;
     font-size: 14px !important;
-    line-height: 18px !important;
-    letter-spacing: normal !important;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
     color: rgb(72, 72, 72) !important;
     padding-top: 6px !important;
     padding-bottom: 6px !important;
-    background: none !important;
-    border: 1px solid $gray-medium-light !important;
+    border: 1px solid $gray-border-light !important;
     border-radius: 4px !important;
     cursor: pointer !important;
     display: inline-block !important;
@@ -331,7 +333,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
 
   .searched-info {
     margin: 10px auto;
-    width: 90%;
+    width: 95%;
     h3 {
       text-align: center;
       font-weight: 600;
@@ -709,9 +711,8 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
      .side-find {
       .inbox2-under-picture {
          img {
-           width: 90%;
+           width: 100%;
            height: 200px;
-           margin-left: 20px;
            border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
          }
       }
@@ -741,7 +742,7 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
      .find-title {
        margin-left: 0px;
        text-align: left;
-       margin-left: 20px;
+       margin-left: 15px;
        width: 70px;
        .find-user-name {
          font-size: 1.2rem;
