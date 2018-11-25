@@ -93,6 +93,12 @@ $(function() {
  });
 });
 
+$(function() {
+  $('#user-menu').on('click', function() {
+    $('.user-show-menu-wrap').toggleClass('user-menu-toggle').slideToggle(400);;
+  })
+})
+
 
 // $(function() {
 //      $('#edit-file-input').css({
