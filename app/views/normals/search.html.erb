@@ -64,7 +64,9 @@
           <% else %>
           <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300' ) %></p>
           <% end %>
+          <%= link_to post do %>
           <p><h2><%= post.title.truncate(25) %></h2></p>
+          <% end %>
         </div>
           <div class="find-title">
             <%= link_to post.user.name.truncate(8), post.user, class: "find-user-name" %>

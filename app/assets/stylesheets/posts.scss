@@ -678,7 +678,7 @@ button#post-message-submit:active {
    input#title-field, select#gender-field, select#people-field, select#prefecture-field,
     select#skill-field, input#city-field, textarea#content-field {
        margin: 0 auto;
-       width: 300px;
+       width: 90%;
        color: $gray-medium-dark;
        -webkit-appearance: none;
    }
@@ -888,6 +888,10 @@ button#post-message-submit:active {
       font-size: 1.4rem;
       font-weight: 100;
       color: $gray-medium-light;
+    }
+    .post-show-under-left, .post-show-under-right {
+      width: 40%;
+      margin: 0 auto;
     }
   }
 

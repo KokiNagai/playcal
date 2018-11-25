@@ -143,8 +143,9 @@
 
                 <div class="city">
                   <div><%= f.label :市町村名, id: "posting-label" %></div></br class="visible-xs">
-                  <div><%= f.text_field :city, id: "city-field", placeholder: "(例)◯◯市や◯◯郡など", hide_label: true %>
-                    <p>この欄には練習予定の都市名（例： 大阪市や広島市など）</p></div>
+                  <div><%= f.text_field :city, id: "city-field", placeholder: "(例)◯◯市や◯◯郡など", hide_label: true, onKeyDown: "postingCount(value, 'posting-text-count3', 20)" %>
+                    <p>この欄には練習予定の都市名（例： 大阪市や広島市など）</p>
+                    <p id="posting-text-count3">あと20字です</p></div>
                 </div>
 
                 <div class="content">
