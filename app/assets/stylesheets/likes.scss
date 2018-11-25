@@ -22,11 +22,11 @@
     color: $gray-medium-light;
     font-weight: 600;
     opacity: 0.8;
-    -moz-transition: -moz-transform 0.5s linear;
-    -webkit-transition: -webkit-transform 0.5s linear;
-    -o-transition: -o-transform 0.5s linear;
-    -ms-transition: -ms-transform 0.5s linear;
-    transition: transform 0.5s linear;
+    -moz-transition: -moz-transform 0.2s linear;
+    -webkit-transition: -webkit-transform 0.2s linear;
+    -o-transition: -o-transform 0.2s linear;
+    -ms-transition: -ms-transform 0.2s linear;
+    transition: transform 0.2s linear;
     cursor: pointer;
    &:active {
      -webkit-transform: scale(2.5);
