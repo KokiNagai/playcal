@@ -294,6 +294,15 @@
         font-size: 4rem;
       }
     }
+
+    .top-chatbox-sub {
+      width: 90%;
+      margin: 20px auto;
+      p {
+        color: $gray-medium-dark;
+        text-align: left;
+      }
+    }
       .top-chatbox-under {
         width: 90%;
         margin: 0 auto;
@@ -1035,6 +1044,15 @@
         font-weight: 600;
         cursor: pointer;
     }
+  }
+}
+
+.top-chatbox-sub {
+  width: 90%;
+  margin: 20px auto;
+  p {
+    color: $gray-medium-dark;
+    text-align: left;
   }
 }
 
