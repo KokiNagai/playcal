@@ -32,7 +32,9 @@
               <div class="find-title">
                 <%= link_to post.user.name.truncate(8), post.user, class: "find-user-name" %>
               </div>
-              
+              <div id="post_likes_<%= post.id %>">
+                <%= render partial: 'likes/postLikes', locals: {post: post} %>
+              </div>
           </div>
           <div class="find-post-under">
             <div class="post-show-under">
