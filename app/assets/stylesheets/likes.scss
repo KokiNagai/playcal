@@ -1,3 +1,76 @@
 // Place all the styles related to the Likes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'colors';
+@import 'mixin';
+@import 'style';
+
+.nonlike, .like {
+  text-align: right;
+  .fa {
+    font-size: 1.7rem;
+  }
+  span {
+    font-size: 1.5rem;
+    color: $gray-medium-dark;
+  }
+}
+
+.like {
+  .fa {
+    color: $gray-medium-light;
+    font-weight: 600;
+    opacity: 0.8;
+    -moz-transition: -moz-transform 0.5s linear;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -o-transition: -o-transform 0.5s linear;
+    -ms-transition: -ms-transform 0.5s linear;
+    transition: transform 0.5s linear;
+    cursor: pointer;
+   &:active {
+     -webkit-transform: scale(2);
+     -moz-transform: scale(2);
+     -o-transform: scale(2);
+     -ms-transform: scale(2);
+     transform: scale(2);
+   }
+  }
+}
+
+.nonlike {
+  .fa {
+    color: #e2041b;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.like-wrap {
+  @include mediaPC {
+    background: $body-color;
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $gray-medium-dark;
+      text-align: center;
+      margin: 40px 0 40px 0;
+    }
+    .find-post1 {
+      background: #fff;
+    }
+  }
+  @include mediaSP {
+    background: $body-color;
+    h1 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: $gray-medium-dark;
+      text-align: center;
+      margin: 40px 0 40px 0;
+    }
+    .find-post1 {
+      background: #fff;
+    }
+  }
+}

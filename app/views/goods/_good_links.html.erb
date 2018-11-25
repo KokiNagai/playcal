@@ -1,7 +1,6 @@
-<div id="good-link-#{chat.id}">
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
   <% if current_user.goods.find_by(chat_id: chat.id) %>
-    <%= link_to nongood_path(chat_id: chat.id ,id: chat.goods[0].id), method: :delete, remote: true do %>
+    <%= link_to nongood_path(chat_id: chat.id), method: :delete, remote: true do %>
           <div class="nongood">
             <i class="fa fa-thumbs-up" id="good"></i>
             <% if chat.goods_count.to_i > 0 %>
@@ -25,4 +24,3 @@
       <span><%= chat.goods_count %></span>
   </div>
   <% end %>
-</div>

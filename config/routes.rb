@@ -35,8 +35,8 @@ end
   get 'notifications/:id/link_through', to: 'notifications#link_through', as: :link_through
   get '/posting', to: 'posts#posting'
   get '/posts/:id/post_end', to: 'posts#post_end'
-  post "/likes/:post_id/create", to: 'likes#create'
-  post "/likes/:post_id/destroy", to: 'likes#destroy'
+  post "/likes/:post_id/create", to: 'likes#create', as: "like"
+  delete "/likes/:post_id/destroy", to: 'likes#destroy', as: "dislike"
   post   '/good/:chat_id' => 'goods#create',   as: 'good'
   delete '/good/:chat_id' => 'goods#destroy', as: 'nongood'
   post "/reports", to: "report#create"

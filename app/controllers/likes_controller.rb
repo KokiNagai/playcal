@@ -1,19 +1,23 @@
 class LikesController < ApplicationController
   before_action :authenticate_user!, only: [:create, :destroy]
   before_action :new_user
+  before_action :set_likes
 
   def create
-    @like = Like.new(user_id: current_user.id, post_id: params[:post_id])
-    if @like.save
-      redirect_to("/posts/#{params[:post_id]}")
-    end
+    @like = Like.create(user_id: current_user.id, post_id: params[:post_id])
+    @post.reload
   end
 
   def destroy
     @like = Like.find_by(user_id: current_user.id, post_id: params[:post_id])
-    if @like.destroy
-      redirect_to("/posts/#{params[:post_id]}")
-    end
+    @like.destroy
+    @post.reload
+  end
+
+  private
+
+  def set_likes
+    @post = Post.find(params[:post_id])
   end
 
   def new_user

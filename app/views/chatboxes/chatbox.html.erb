@@ -53,7 +53,7 @@
         </div>
         <div class="chat-time-good">
           <div id="goods_buttons_<%= chat.id %>">
-          <%= render partial: 'goods/good_links', locals: { chat: chat, goods: @goods} %>
+          <%= render partial: 'goods/good_links', locals: { chat: chat} %>
         </div>
           <div class="chatbox-time">
           <p><%= time_ago_in_words(chat.created_at) %>前</p>

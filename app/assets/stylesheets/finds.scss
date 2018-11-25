@@ -197,7 +197,7 @@
   justify-content: center;
   margin: 10px 0 40px 0;
   .find-pref-wrap {
-    width: 90px;
+    width: 80px;
     margin: 5px 10px 7px 10px;
     @each $btn in $btns {
      .find-pref-button#{$btn} {
@@ -208,6 +208,8 @@
        color: $gray-medium-light;
        padding: 0px 7px 5px 9px;
        background: #fff;
+       box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+       cursor: pointer;
        .fa {
          margin-left: 5px;
        }
@@ -259,6 +261,8 @@ $fps: 1, 2, 3, 4, 5, 6, 7, 8, 9;
     position: relative;
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px !important;
     list-style: none;
     height: 70px;
