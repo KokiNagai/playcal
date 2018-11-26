@@ -2,6 +2,15 @@
     <%= @message %>
     <% @posts.where(term: true).each do |post| %>
   <div class="user-show-post-main">
+    <p id="post-menuP"><span><i class="fa fa-ellipsis-h" id="post-menu1"></i></span></p>
+    <div class="post-menu-list1">
+      <%= link_to("/posts/#{post.id}/edit") do %>
+      <p><i class="fa fa-edit"></i>投稿を編集する</p>
+      <% end %>
+      <%= link_to "/posts/#{post.id}/post_end", data: {confirm: "投稿を終了しますか？ 一度締め切ると再び表示することは出来なくなります。"} do %>
+      <p><i class="fa fa-trash-o"></i>投稿を消去する</p>
+      <% end %>
+    </div>
     <div class="user-show-post-flex">
       <div class="user-show-post-picture">
         <% if post.user.picture.present? %>

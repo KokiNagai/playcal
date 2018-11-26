@@ -23,6 +23,19 @@ class PostsController < ApplicationController
     end
  end
 
+ def edit
+   @post = Post.find(params[:id])
+ end
+
+ def update
+   @post = Post.find(params[:id])
+   @post.update(params_update)
+   if @post.save
+     redirect_to current_user
+   end
+ end
+
+
    def destroy
       @post = Post.includes(:user).find(params[:id])
       @post.destroy
@@ -47,6 +60,10 @@ class PostsController < ApplicationController
 
     def posts_params
         params.require(:post).permit(:content, :prefecture, :city, :title, :member, :skill, :gender, :playday, :style)
+    end
+
+    def params_update
+      params.require(:post).permit(:content, :prefecture, :city, :title, :member, :skill, :gender, :playday, :style)
     end
 
     def correct_user

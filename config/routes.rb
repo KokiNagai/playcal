@@ -66,7 +66,7 @@ end
 
   resources :comments
   resources :reports
-  resources :posts, only: [:create, :destroy, :show]
+  resources :posts, only: [:create, :destroy, :show, :update, :edit]
   resources :rooms, only: [:create, :destroy, :show, :inbox]
   resource :contacts, only: [:new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
