@@ -1,9 +1,11 @@
 <!-- ログイン後の画面 -->
 <% if user_signed_in? %>
 <div class="top-wrap">
-  <div class="top-news">
-    <span class="top-news-title">Playcal News</span>
-    <p>2018年11月8日 - テニスチャットカフェに「ATPワールドツアー・ファイナルズ」カフェがオープンしました！</p>
+  <div class="top-new-wrap">
+    <div class="top-news">
+      <span class="top-news-title">Playcal News</span>
+      <p>2018年11月8日 - テニスチャットカフェに「ATPワールドツアー・ファイナルズ」カフェがオープンしました！</p>
+    </div>
   </div>
   <% if Post.where(prefecture: current_user.live).present? %>
   <div class="home-user-prefecture">
@@ -11,8 +13,14 @@
   </div>
   <%= render 'layouts/loggedinpost1' %>
   <% else %>
-  <div class="home-user-prefecture">
-    <h1>現在募集している投稿はこちら</h1>
+  <!-- <div class="home-user-prefecture">
+    <h1>募集中の投稿はこちら</h1>
+  </div> -->
+  <div class="sample-wrap">
+    <div class="sample100">
+      <%= image_tag('top-pic2.png') %>
+      <h2>募集中の投稿はこちら</h2>
+    </div>
   </div>
   <%= render 'layouts/loggedinpost2' %>
   <% end %>
@@ -180,7 +188,7 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-    <div class="top-news">
+    <div class="top-news1">
     <span class="top-news-title">Playcal News</span>
     <p>2018年11月8日 - テニスチャットカフェに「ATPワールドツアー・ファイナルズ」カフェがオープンしました！</p>
   </div>

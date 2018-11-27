@@ -258,6 +258,7 @@
         position: relative;
         background-color: rgba(0,0,0,0.5);
         display: inline-block;
+        border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
         h2 {
           font-size: 1.8rem;
           font-weight: 600;
@@ -274,6 +275,7 @@
           border-radius: 0%;
           opacity: 0.6;
           display: block;
+          border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
         }
         h2 {
           position: absolute;
@@ -1013,6 +1015,9 @@
   .top-chatbox-wrapper {
     width: 100%;
     margin: 60px auto;
+    background: #fff;
+    padding-bottom: 30px;
+    border-radius: 0 0 20px 20px / 0 0 20px 20px;
     .top-chatbox-title {
       text-align: center;
       position: relative;

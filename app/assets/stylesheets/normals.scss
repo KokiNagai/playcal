@@ -17,7 +17,7 @@ html, body {
 @media screen and (max-width: 1024px) {
   .body-main {
     padding-top: 60px;
-    background-color: #fff;
+    background-color: $body-color;
     font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
   }
 }
@@ -1044,6 +1044,7 @@ footer {
       padding-top: 20px;
       width: 270px;
       margin: 0 auto;
+      background: #fff;
       p {
         margin-bottom: 20px;
         padding-bottom: 5px;

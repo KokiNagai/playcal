@@ -24,7 +24,11 @@
         <% end %>
       </div>
       <div class="user-show-post-title">
+        <% if post.term == true %>
+        <h2><%= link_to(post.title.truncate(20),  post, :style=>"font-size: 1.7rem; color: #5f9ea0; font-weight: 600;") %></h2>
+        <% else %>
         <h2><%= link_to(post.title.truncate(20),  post, :style=>"font-size: 1.7rem; color: #5f9ea0; font-weight: 500;") %></h2>
+        <% end %>
       </div>
     </div>
     <div class="user-show-post-under-wrapper">
