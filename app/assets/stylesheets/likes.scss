@@ -8,19 +8,19 @@
 
 .nonlike, .like {
   text-align: right;
-  .fa {
+  .far, .fas {
     font-size: 1.7rem;
   }
   span {
     font-size: 1.5rem;
-    color: $gray-medium-dark;
+    color: #e2041b;
   }
 }
 
 .like {
-  .fa {
-    color: $gray-medium-light;
-    font-weight: 600;
+  .far {
+    color: #e2041b;
+    font-weight: 500;
     opacity: 0.8;
     -moz-transition: -moz-transform 0.2s linear;
     -webkit-transition: -webkit-transform 0.2s linear;
@@ -39,7 +39,7 @@
 }
 
 .nonlike {
-  .fa {
+  .far, .fas {
     color: #e2041b;
     opacity: 0.8;
     cursor: pointer;

@@ -6,7 +6,7 @@
      <i class="fa fa-times fa-2x" id="close-cross"></i>
     </div>
     <div class="notification-non">
-      <h2><i class="fa fa-bell-o"></i>通知はありません</h2>
+      <h2><i class="far fa-bell"></i>通知はありません</h2>
     </div>
     </div>
   </div>
@@ -19,7 +19,7 @@
       <div class="close-cross">
        <i class="fa fa-times fa-2x" id="close-cross"></i>
       </div>
-      <h2><i class="fa fa-bell-o"></i>通知</h2>
+      <h2><i class="far fa-bell"></i>>通知</h2>
       <div class="notification-present">
         <%= render current_user.notifications.where(read: false).order('created_at DESC').last(5) %>
       </div>

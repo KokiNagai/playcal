@@ -74,7 +74,7 @@
     margin-right: 10px;
     height: 20px;
   }
-  .fa {
+  .fa, .far {
     font-size: 15px;
   }
   }
@@ -104,7 +104,7 @@
     font-size: 17px;
     font-weight: 600;
     color: $gray-medium-dark;
-    .fa {
+    .fa, .far {
       margin-right: 10px;
     }
   }
@@ -120,7 +120,7 @@
     color: $gray-medium-dark;
     margin-top: 10px;
   }
-  .fa {
+  .fa, .far {
     font-size: 15px;
     margin-right: 10px;
   }
@@ -170,7 +170,7 @@
       color: white;
       right: 24%;
     }
-    .fa {
+    .fa, .far {
       font-size: 2rem;
     }
   }
@@ -247,7 +247,7 @@
     font-size: 17px;
     font-weight: 600;
     color: $gray-medium-dark;
-    .fa {
+    .fa, .far {
       margin-right: 10px;
     }
   }
@@ -261,7 +261,7 @@
     color: $gray-medium-dark;
     margin-top: 0px;
     margin-right: 20px;
-    .fa {
+    .fa, .far {
       margin-right: 10px;
     }
   }

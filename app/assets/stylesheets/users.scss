@@ -79,7 +79,7 @@
    }
    .find-post1 {
      width: 90%;
-     margin: 0 auto;
+     margin: 10px auto;
    }
  }
  @media screen and (min-width: 1024px) {
@@ -261,7 +261,7 @@
       margin-bottom: 0;
       position: relative;
       cursor: pointer;
-      .fa {
+      .fa, .far {
         color: $gray-medium-light;
         font-size: 2rem;
       }
@@ -304,7 +304,7 @@
         font-size: 1.3rem;
         color: $green-highlight;
       }
-      .fa {
+      .fa, .far {
         margin-right: 5px;
       }
     }
@@ -349,7 +349,7 @@
        font-size: 1.3rem;
        color: $green-highlight;
      }
-     .fa {
+     .fa, .far {
        margin-right: 5px;
      }
    }
@@ -694,7 +694,7 @@
     margin-right: 20px;
     margin-bottom: 0;
     position: relative;
-    .fa {
+    .fa, .far {
       color: $gray-medium-light;
       font-size: 2rem;
     }
@@ -737,7 +737,7 @@ $i: 0;
       font-size: 1.3rem;
       color: $green-highlight;
     }
-    .fa {
+    .fa, .far {
       margin-right: 5px;
     }
   }
@@ -779,7 +779,7 @@ $i: 0;
     font-size: 1.3rem;
     color: $green-highlight;
   }
-  .fa {
+  .fa, .far {
     margin-right: 5px;
   }
 }

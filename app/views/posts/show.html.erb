@@ -21,7 +21,7 @@
           <p><i class="fa fa-edit"></i>投稿を編集する</p>
           <% end %>
           <%= link_to "/posts/#{@post.id}/post_end", data: {confirm: "投稿を終了しますか？ 一度締め切ると再び表示することは出来なくなります。"} do %>
-          <p><i class="fa fa-trash-o"></i>投稿を消去する</p>
+          <p><i class="far fa-trash-alt"></i>投稿を消去する</p>
           <% end %>
         </div>
       </div>
@@ -42,7 +42,7 @@
       <div class="post-delete">
         <% if @post.user == current_user %>
         <%= link_to @post, method: :delete, data: { confirm: '削除しますか？' } do %>
-          <p><i class="fa fa-trash-o"></i></p>
+          <p><i class="far fa-trash-alt"></i></p>
         <% end %>
         <% end %>
       </div>
@@ -90,7 +90,7 @@
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="post-message-submit">
     <button type="submit", class="btn btn-success", id="post-message-submit">
-      <i class="fa fa-paper-plane-o"></i>メッセージを送る
+      <i class="far fa-paper-plane"></i>メッセージを送る
      </button>
   </div>
   <% end %>

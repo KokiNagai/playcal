@@ -2,7 +2,7 @@
 <% if current_user.likes.find_by(post_id: post.id) %>
 <div class="nonlike">
   <%= link_to dislike_path(post_id: post.id, id: post.likes[0].id), method: :delete, remote: true do %>
-  <i class="fa fa-heart btn-heart"></i>
+  <i class="fas fa-heart"></i>
   <% end %>
   <% if post.likes.count.to_i > 0 %>
   <span><%= post.likes.count %></span>
@@ -14,7 +14,7 @@
 <% else %>
 <div class="like">
   <%= link_to like_path(post.id), method: :post, remote: true do %>
-  <i class="fa fa-heart-o btn-e-heart"></i>
+  <i class="far fa-heart"></i>
   <% end %>
   <% if post.likes.count.to_i > 0 %>
   <span><%= post.likes.count %></span>
@@ -26,7 +26,7 @@
 
     <% else %>
     <div class="like">
-      <i class="fa fa-heart-o btn-e-heart"></i>
+      <i class="far fa-heart"></i>
       <% if post.likes.count.to_i > 0 %>
         <span><%= post.likes.count %></span>
         <% else %>

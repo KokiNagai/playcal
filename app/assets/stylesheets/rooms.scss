@@ -170,11 +170,12 @@
   border: 1px solid $gray-border-light;
   border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
   margin-bottom: 50px;
+  background-color: #fff;
   h2 {
     font-size: 16px;
     font-weight: 600;
     color: $gray-medium-dark;
-    .fa {
+    .fa, .far {
       margin-right: 10px;
     }
   }
@@ -240,7 +241,7 @@
      font-weight: 600;
      margin-bottom: 0px;
    }
-   .fa {
+   .fa, .far {
      margin-right: 10px;
    }
  }
@@ -349,12 +350,16 @@
 }
 
 .room-wrapper {
+  .col-md-8 {
+    background: #fff;
+  }
   .room-post-wrapper {
     border: 1px solid $gray-border-light;
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
     margin: 50px 0 0 20px;
     padding: 20px;
     position: relative;
+    background: #fff;
     .room-post-upper {
       margin-top: 50px;
       padding-bottom: 20px;
@@ -447,6 +452,7 @@
     border: 1px solid $gray-border-light;
     border-radius: 5px 0px 5px 5px / 5px 0px 5px 5px;
     position: relative;
+    background: #fff;
     span {
       color: $gray-medium-dark;
       letter-spacing: 1px;
@@ -496,6 +502,7 @@
     padding: 15px;
     border: 1px solid $gray-border-light;
     border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
+    background: #fff;
     span {
       color: $gray-medium-dark;
       letter-spacing: 1px;
@@ -741,6 +748,11 @@
       margin: 0px;
     }
   }
+
+  .room-show-main {
+    background: #fff;
+    padding: 30px 0;
+  }
 // 共通room-comment(タブレット、PC用)======================
 
 .room-show-alert {
@@ -750,11 +762,12 @@
   border: 1px solid $gray-border-light;
   border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
   margin-bottom: 50px;
+  background: #fff;
   h2 {
     font-size: 16px;
     font-weight: 600;
     color: $gray-medium-dark;
-    .fa {
+    .fa, .far {
       margin-right: 10px;
     }
   }
@@ -821,7 +834,7 @@
      font-weight: 600;
      margin-bottom: 0px;
    }
-   .fa {
+   .fa, .far  {
      margin-right: 10px;
    }
  }
@@ -931,12 +944,16 @@
 
 .room-wrapper {
   padding-bottom: 35px;
+  .col-md-8 {
+    background: #fff;
+  }
   .room-post-wrapper {
     border: 1px solid $gray-border-light;
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
     margin: 50px 0 0 0px;
     padding: 20px;
     position: relative;
+    background: #fff;
     .room-post-upper {
       margin-top: 50px;
       padding-bottom: 20px;
@@ -1030,6 +1047,7 @@
     border: 1px solid $gray-border-light;
     border-radius: 5px 0px 5px 5px / 5px 0px 5px 5px;
     position: relative;
+    background: #fff;
     span {
       color: $gray-medium-dark;
       letter-spacing: 1px;
@@ -1079,6 +1097,7 @@
     padding: 15px;
     border: 1px solid $gray-border-light;
     border-radius: 0px 5px 5px 5px / 0px 5px 5px 5px;
+    background: #fff;
     span {
       color: $gray-medium-dark;
       letter-spacing: 1px;

@@ -473,7 +473,7 @@
               color: $green-highlight;
               margin: 0px;
             }
-            .fa {
+            .fa, .far {
               margin: 0 5px 0px 10px;
               font-size: 2rem;
             }
@@ -506,7 +506,7 @@
               border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
               font-size: 1.2rem;
             }
-            .fa {
+            .fa, .far {
               margin-right: 5px;
             }
           }
@@ -554,7 +554,7 @@
             color: $green-highlight;
             margin: 0px;
           }
-          .fa {
+          .fa, .far {
             margin: 0 5px 0px 10px;
             font-size: 2rem;
           }
@@ -587,7 +587,7 @@
             border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
             font-size: 1.2rem;
           }
-          .fa {
+          .fa, .far {
             margin-right: 5px;
         }
       }
@@ -629,7 +629,7 @@
            color: $green-highlight;
            margin: 0px;
          }
-         .fa {
+         .fa, .far {
            margin: 0 5px 0px 10px;
            font-size: 2rem;
 
@@ -663,7 +663,7 @@
            border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
            font-size: 1.1rem;
          }
-         .fa {
+         .fa, .far  {
            margin-right: 5px;
        }
      }
@@ -1195,7 +1195,7 @@
             color: $gray-medium-dark;
             margin: 0px;
           }
-          .fa {
+          .fa, .far {
             margin: 0 5px 0px 15px;
             font-size: 1.5rem;
           }
@@ -1228,7 +1228,7 @@
             border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
             font-size: 1.1rem;
           }
-          .fa {
+          .fa, .far {
             margin-right: 5px;
           }
         }
@@ -1273,7 +1273,7 @@
           color: $gray-medium-dark;
           margin: 0px;
         }
-        .fa {
+        .fa, .far {
           margin: 0 5px 0px 15px;
           font-size: 1.5rem;
         }
@@ -1306,7 +1306,7 @@
           border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
           font-size: 1.1rem;
         }
-        .fa {
+        .fa, .far {
           margin-right: 5px;
       }
     }
@@ -1350,7 +1350,7 @@
          color: $gray-medium-dark;
          margin: 0px;
        }
-       .fa {
+       .fa, .far {
          margin: 0 5px 0px 15px;
          font-size: 1.5rem;
        }
@@ -1383,7 +1383,7 @@
          border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
          font-size: 1.1rem;
        }
-       .fa {
+       .fa, .far {
          margin-right: 5px;
      }
    }
