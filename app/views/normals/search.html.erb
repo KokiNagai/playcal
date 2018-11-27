@@ -51,52 +51,7 @@
 
   <div class="find-wrapper-p">
    <div class="find-wrapper col-md-8 col-sm-12">
-    <div class="find-main">
-      <%= @message %>
-      <% @posts.each do |post| %>
-      <div class="find-post">
-        <time datetime="<%= post.created_at %>">
-          <p><%= time_ago_in_words(post.created_at) %>前</p>
-        </time>
-        <div class="find-user-upper">
-          <div class="find-post-user">
-           <% if post.user.picture.present? %>
-            <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300' ) %></p>
-            <% else %>
-            <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300' ) %></p>
-            <% end %>
-            <%= link_to post do %>
-            <p><h2><%= post.title.truncate(25) %></h2></p>
-            <% end %>
-          </div>
-            <div class="find-title">
-              <%= link_to post.user.name.truncate(8), post.user, class: "find-user-name" %>
-            </div>
-            <div id="post_likes_<%= post.id %>">
-              <%= render partial: 'likes/postLikes', locals: {post: post} %>
-            </div>
-        </div>
-        <div class="find-post-under">
-          <div class="post-show-under">
-            <div class="post-show-under-left">
-              <p><label>都道府県</label></br class="visible-xs"><%= post.prefecture %></p>
-              <p><label>都市名</label></br class="visible-xs"><%= post.city %></p>
-            </div>
-            <div class="post-show-under-right">
-              <p><label>練習希望日</label></br class="visible-xs"><%= post.playday %></p>
-              <p><label>練習の内容</label></br class="visible-xs"><%= post.style %></p>
-            </div>
-          </div>
-        </div>
-        <div class="find-post-detail">
-          <%= link_to post, id: "find-post-detail" do %>
-          <span>詳細<i class="fa fa-angle-double-right"></i></span>
-          <% end %>
-        </div>
-      </div>
-        <% end %>
-        <%= will_paginate(@posts, inner_window: 3, previous_label: "前へ", next_label: "次へ", id: "will_paginate") %>
-    </div>
+     <%= render 'normals/post-comp3' %>
 
     <div class="google-ad2">
       <div class="sponsors-link">

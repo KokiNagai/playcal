@@ -1,45 +1,4 @@
 <div class="like-wrap">
   <h1>お気に入りした投稿</h1>
-  <div class="find-main">
-    <%= @message %>
-    <% @likes.each do |like| %>
-    <div class="find-post1">
-      <div class="find-user-upper">
-        <div class="find-post-user">
-          <% if like.post.user.picture.present? %>
-          <p><%= image_tag(like.post.user.picture_url, class: "find-user-picture", :size =>'300x300' ) %></p>
-          <% else %>
-          <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300' ) %></p>
-          <% end %>
-          <%= link_to like.post do %>
-          <p><h2><%= like.post.title.truncate(25) %></h2></p>
-          <% end %>
-        </div>
-          <div class="find-title">
-            <%= link_to like.post.user.name.truncate(8), like.post.user, class: "find-user-name" %>
-          </div>
-          <div id="post_likes_<%= like.post.id %>">
-            <%= render partial: 'likes/postLikes', locals: {post: like.post} %>
-          </div>
-      </div>
-      <div class="find-post-under">
-        <div class="post-show-under">
-          <div class="post-show-under-left">
-            <p><label>都道府県</label></br class="visible-xs"><%= like.post.prefecture %></p>
-            <p><label>都市名</label></br class="visible-xs"><%= like.post.city %></p>
-          </div>
-          <div class="post-show-under-right">
-            <p><label>練習希望日</label></br class="visible-xs"><%= like.post.playday %></p>
-            <p><label>練習の内容</label></br class="visible-xs"><%= like.post.style.truncate(8) %></p>
-          </div>
-        </div>
-      </div>
-      <div class="find-post-detail">
-        <%= link_to like.post, id: "find-post-detail" do %>
-        <span>詳細<i class="fa fa-angle-double-right"></i></span>
-        <% end %>
-      </div>
-    </div>
-      <% end %>
-  </div>
+  <%= render 'normals/post-comp4' %>
 </div>

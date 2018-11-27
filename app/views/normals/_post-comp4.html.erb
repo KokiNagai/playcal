@@ -1,0 +1,42 @@
+<div class="p-container">
+  <%= @message %>
+  <% @likes.each do |like| %>
+  <div class="p-wrap">
+    <time datetime="<%= like.post.created_at %>">
+      <p><%= time_ago_in_words(like.post.created_at) %>前</p>
+    </time>
+    <div class="p-upper">
+      <div class="p-user-wrap">
+        <div class="p-user">
+          <% if like.post.user.picture.present? %>
+          <p><%= image_tag(like.post.user.picture_url, class: "find-user-picture", :size =>'300x300', :alt => "募集者の写真" ) %></p>
+          <% else %>
+          <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300', :alt => "募集者の写真" ) %></p>
+          <% end %>
+          <div class="p-name">
+            <p><%= link_to like.post.user.name.truncate(10), like.post.user, class: "find-user-name" %></p>
+          </div>
+        </div>
+        <div class="p-title">
+          <%= link_to new_user_session_path do %>
+          <h2><%= like.post.title.truncate(25) %></h2>
+          <% end %>
+        </div>
+      </div>
+      <div id="post_likes_<%= like.post.id %>">
+        <%= render partial: 'likes/postLikes', locals: {post: like.post} %>
+      </div>
+    </div>
+    <div class="p-under">
+      <div class="p-el">
+        <span><i class="fas fa-map-marker-alt"></i><%= like.post.prefecture %></span>
+        <span><i class="far fa-calendar-alt"></i><%= like.post.playday %></span>
+        <span><i class="fas fa-baseball-ball"></i><%= like.post.style.truncate(8) %></span>
+      </div>
+      <div class="p-dcr">
+        <p><%= like.post.content.truncate(40) %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

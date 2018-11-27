@@ -1,0 +1,43 @@
+<div class="p-container">
+  <%= @message %>
+  <% @posts.each do |post| %>
+  <div class="p-wrap">
+    <time datetime="<%= post.created_at %>">
+      <p><%= time_ago_in_words(post.created_at) %>前</p>
+    </time>
+    <div class="p-upper">
+      <div class="p-user-wrap">
+        <div class="p-user">
+          <% if post.user.picture.present? %>
+          <p><%= image_tag(post.user.picture_url, class: "find-user-picture", :size =>'300x300', :alt => "募集者の写真" ) %></p>
+          <% else %>
+          <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300', :alt => "募集者の写真" ) %></p>
+          <% end %>
+          <div class="p-name">
+            <p><%= link_to post.user.name.truncate(10), post.user, class: "find-user-name" %></p>
+          </div>
+        </div>
+        <div class="p-title">
+          <%= link_to new_user_session_path do %>
+          <h2><%= post.title.truncate(25) %></h2>
+          <% end %>
+        </div>
+      </div>
+      <div id="post_likes_<%= post.id %>">
+        <%= render partial: 'likes/postLikes', locals: {post: post} %>
+      </div>
+    </div>
+    <div class="p-under">
+      <div class="p-el">
+        <span><i class="fas fa-map-marker-alt"></i><%= post.prefecture %></span>
+        <span><i class="far fa-calendar-alt"></i><%= post.playday %></span>
+        <span><i class="fas fa-baseball-ball"></i><%= post.style.truncate(8) %></span>
+      </div>
+      <div class="p-dcr">
+        <p><%= post.content.truncate(40) %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <%= will_paginate(@posts, inner_window: 3, previous_label: "前へ", next_label: "次へ", id: "will_paginate") %>
+</div>

@@ -1,0 +1,157 @@
+@import 'colors';
+@import 'mixin';
+@import 'style';
+
+.p-container {
+  @include mediaPC {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:  wrap;
+  }
+  @include mediaSP {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.p-wrap {
+  @include mediaPC {
+    border: 2px solid $gray-border-light;
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background: #fff;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,.2);
+    }
+  }
+  @include mediaSP {
+    border: 2px solid $gray-border-light;
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    &:hover {
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,.2);
+    }
+  }
+  time {
+    text-align: right;
+    p {
+      margin: 0;
+      color: $gray-medium-light;
+      font-size: 1rem;
+    }
+  }
+}
+
+.p-user-wrap {
+  @include mediaPC {
+    display: flex;
+    .p-user {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10px 15px 0 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 60%;
+        object-fit: cover;
+      }
+      .p-name {
+        text-align: center;
+      }
+    }
+  }
+  @include mediaSP {
+    display: flex;
+    .p-user {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10px 15px 0 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 60%;
+        object-fit: cover;
+      }
+      .p-name {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.p-title {
+  @include mediaPC {
+    h2 {
+      color: $gray-medium-dark;
+      font-weight: 600;
+      font-size: 1.6rem;
+      &:hover {
+        color: $green-highlight;
+      }
+    }
+  }
+  @include mediaSP {
+    h2 {
+      color: $gray-medium-dark;
+      font-weight: 600;
+      font-size: 1.6rem;
+      &:active {
+        color: $green-highlight;
+      }
+    }
+  }
+}
+
+.p-el {
+  @include mediaPC {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    span {
+      color: $green-highlight;
+      margin-right: 10px;
+      .fas, .far {
+        margin-right: 5px;
+      }
+    }
+  }
+  @include mediaSP {
+    margin-top: 10px;
+    display: flex;
+    span {
+      color: $green-highlight;
+      margin-right: 10px;
+      font-size: 0.8em;
+      .fas, .far {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.p-dcr {
+  @include mediaPC {
+    width: 95%;
+    margin: 10px;
+    p {
+      color: $gray-medium-light;
+      font-size: 1.4rem;
+    }
+  }
+  @include mediaSP {
+    width: 95%;
+    margin: 10px;
+    p {
+      color: $gray-medium-light;
+      font-size: 1.3rem;
+    }
+  }
+}
