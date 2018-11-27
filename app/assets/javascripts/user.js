@@ -17,9 +17,3 @@ function postList2(number1) {
     pl.style.display = "none";
   }
 };
-
-$(function() {
-  $('#post-menu3').on('click', function() {
-    $('.post-menu-list2').toggleClass('post-show-toggle').fadeToggle(400);
-  })
-})
