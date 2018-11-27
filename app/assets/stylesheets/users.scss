@@ -256,29 +256,104 @@
     #post-menuP {
       text-align: right;
       height: 15px;
+      margin-top: 0px;
       margin-right: 20px;
       margin-bottom: 0;
       position: relative;
+      cursor: pointer;
       .fa {
         color: $gray-medium-light;
         font-size: 2rem;
-        cursor: pointer;
       }
     }
 
-    .post-menu-list {
-      display: none;
-      right: 10%;
+  $i: 0;
+  @while $i <= 1000 {
+    .post-menu-list-#{$i}, .post-menu-list1-#{$i}  {
+      margin-top: 22px;
+      right: 5%;
       position: absolute;
       border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
       border: 1px solid $gray-border-light;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-      padding: 10px;
+      padding: 15px 12px 5px 12px;
       background: #fff;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 80%;
+        margin-left: -15px;
+        border: 8px solid transparent;
+        border-bottom: 12px solid #FFF;
+        z-index: 2;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: 80%;
+        margin-left: -17px;
+        border: 10px solid transparent;
+        border-bottom: 14px solid $gray-border-light;
+        z-index: 1;
+      }
+      p {
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 1.3rem;
+        color: $green-highlight;
+      }
+      .fa {
+        margin-right: 5px;
+      }
     }
-    .post-menu-list-display {
-      display: block;
-    }
+    $i: $i + 1;
+  }
+
+  .post-show-toggle {
+    display: block;
+  }
+
+   .post-menu-list2 {
+     margin-top: 22px;
+     position: relative;
+     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+     border: 1px solid $gray-border-light;
+     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+     padding: 15px 12px 5px 12px;
+     background: #fff;
+     &:before {
+       content: "";
+       position: absolute;
+       top: -20px;
+       left: 80%;
+       margin-left: -15px;
+       border: 8px solid transparent;
+       border-bottom: 12px solid #FFF;
+       z-index: 2;
+     }
+     &:after {
+       content: "";
+       position: absolute;
+       top: -24px;
+       left: 80%;
+       margin-left: -17px;
+       border: 10px solid transparent;
+       border-bottom: 14px solid $gray-border-light;
+       z-index: 1;
+     }
+     p {
+       margin: 0;
+       margin-bottom: 5px;
+       font-size: 1.3rem;
+       color: $green-highlight;
+     }
+     .fa {
+       margin-right: 5px;
+     }
+   }
+
 
 
      .user-show-post-main {
@@ -625,8 +700,9 @@
     }
   }
 
-  .post-menu-list, .post-menu-list1  {
-    display: none;
+$i: 0;
+@while $i <= 1000 {
+  .post-menu-list-#{$i}, .post-menu-list1-#{$i}  {
     margin-top: 22px;
     right: 2%;
     position: absolute;
@@ -665,6 +741,49 @@
       margin-right: 5px;
     }
   }
+  $i: $i + 1;
+}
+
+.post-menu-list2 {
+  margin-top: 22px;
+  position: absolute;
+  right: 8%;
+  border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+  border: 1px solid $gray-border-light;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  padding: 15px 12px 5px 12px;
+  background: #fff;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 80%;
+    margin-left: -15px;
+    border: 8px solid transparent;
+    border-bottom: 12px solid #FFF;
+    z-index: 2;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: 80%;
+    margin-left: -17px;
+    border: 10px solid transparent;
+    border-bottom: 14px solid $gray-border-light;
+    z-index: 1;
+  }
+  p {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: $green-highlight;
+  }
+  .fa {
+    margin-right: 5px;
+  }
+}
+
 
     .user-show-post-main {
       padding: 5px 0 5px 0;

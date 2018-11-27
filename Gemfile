@@ -10,6 +10,8 @@ gem 'bcrypt', '3.1.11'
 
 gem 'bootstrap-sass'
 
+gem 'webpacker', github: 'rails/webpacker'
+
 gem 'jp_prefecture'
 
 gem 'fog'
