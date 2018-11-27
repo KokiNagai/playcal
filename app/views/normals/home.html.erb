@@ -7,18 +7,10 @@
       <p>2018年11月8日 - テニスチャットカフェに「ATPワールドツアー・ファイナルズ」カフェがオープンしました！</p>
     </div>
   </div>
-  <% if Post.where(prefecture: current_user.live).present? %>
-  <div class="home-user-prefecture">
-    <h1><%= current_user.name %>さんが住む都道府県の募集はこちら</h1>
-  </div>
-  <%= render 'layouts/loggedinpost1' %>
-  <% else %>
   <div class="home-user-prefecture">
     <h1>募集中の投稿はこちら</h1>
   </div>
-
   <%= render 'layouts/loggedinpost2' %>
-  <% end %>
 
   <div class="home-section">
     <div class="home-section-1">
