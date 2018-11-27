@@ -2,6 +2,7 @@
     <%= @message %>
     <% @posts.each_with_index do |post, index| %>
   <div class="user-show-post-main">
+    <% if post.user == current_user %>
     <div id="post-menus">
       <p id="post-menuP"><span><i class="fa fa-ellipsis-h" id="post-menu" onclick="postList(<%= index %>)"></i></span></p>
       <div class="post-menu-list-<%= index %>" style="display: none;">
@@ -13,6 +14,7 @@
         <% end %>
       </div>
     </div>
+    <% end %>
     <div class="user-show-post-flex">
       <div class="user-show-post-picture">
         <% if post.user.picture.present? %>

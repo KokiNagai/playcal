@@ -9,7 +9,7 @@
           <p><%= image_tag('blank-profile-picture-973460_1280.png', :alt => "ユーザーの写真") %></p>
           <% end %>
         </div>
-        <% if current_user %>
+        <% if @user == current_user %>
         <div class="user-show-name">
           <h2><%= @user.name %></h2>
           <span><i class="fa fa-ellipsis-h" id="user-menu"></i></span>

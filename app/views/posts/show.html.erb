@@ -13,6 +13,7 @@
         <p id="post-recrut-label1">募集は終了しました</p>
         <% end %>
       </div>
+      <% if @post.user = current_user %>
       <div class="post-show-menu">
         <p id="post-menuP"><span><i class="fa fa-ellipsis-h" id="post-menu3"></i></span></p>
         <div class="post-menu-list2" style="display: none;">
@@ -24,6 +25,7 @@
           <% end %>
         </div>
       </div>
+      <% end %>
     </div>
     <div class="post-show-upper">
       <div class="post-show-user">

@@ -2,6 +2,7 @@
     <%= @message %>
     <% @posts.where(term: true).each_with_index do |post, index| %>
   <div class="user-show-post-main">
+    <% if post.user == current_user %>
     <p id="post-menuP"><span><i class="fa fa-ellipsis-h" id="post-menu1" onclick="postList2(<%= index %>)"></i></span></p>
     <div class="post-menu-list1-<%= index %>" style="display: none;">
       <%= link_to("/posts/#{post.id}/edit") do %>
@@ -11,6 +12,7 @@
       <p><i class="fa fa-trash-o"></i>投稿を消去する</p>
       <% end %>
     </div>
+    <% end %>
     <div class="user-show-post-flex">
       <div class="user-show-post-picture">
         <% if post.user.picture.present? %>
