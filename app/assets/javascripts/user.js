@@ -5,6 +5,7 @@ function postList(number) {
     pl.style.display = "block";
   } else if (style.display == "block") {
     pl.style.display = "none";
+
   }
 };
 
@@ -13,7 +14,9 @@ function postList2(number1) {
   var style = (pl.currentStyle || document.defaultView.getComputedStyle(pl, ''));
   if (style.display == "none") {
     pl.style.display = "block";
+
   } else if (style.display == "block") {
     pl.style.display = "none";
+
   }
 };

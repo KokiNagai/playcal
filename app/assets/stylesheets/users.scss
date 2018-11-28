@@ -74,6 +74,7 @@
       height: 150px;
       border-radius: 3%;
       display: block;
+      object-fit: cover;
       margin: 0 auto;
     }
    }
@@ -91,6 +92,7 @@
        border-radius: 3%;
        display: block;
        margin: 0 auto;
+       object-fit: cover;
      }
     }
   }
@@ -259,7 +261,6 @@
       margin-top: 0px;
       margin-right: 20px;
       margin-bottom: 0;
-      position: relative;
       cursor: pointer;
       .fa, .far {
         color: $gray-medium-light;
@@ -271,7 +272,7 @@
   @while $i <= 1000 {
     .post-menu-list-#{$i}, .post-menu-list1-#{$i}  {
       margin-top: 22px;
-      right: 5%;
+      right: 0%;
       position: absolute;
       border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
       border: 1px solid $gray-border-light;
@@ -361,6 +362,7 @@
        border-bottom: 1px solid $gray-border-light;
        border-left: 1px solid $gray-border-light;
        border-right: 1px solid $gray-border-light;
+       position: relative;
        .user-show-post-flex {
          display: flex;
          margin-bottom: 10px;

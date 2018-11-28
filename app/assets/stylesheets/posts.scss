@@ -194,7 +194,9 @@ span.picture {
 // show.html(タブレット,PC用)============================
 
 .main-pref {
-  padding-bottom: 35px;
+  padding: 35px 0;
+  background-color: #fff;
+  border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
 }
 
 .post-show-wrapper {
@@ -208,6 +210,7 @@ span.picture {
   margin: 0 auto;
   margin-top: 40px;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+  background: #fff;
 }
 
 .post-upper-flex {
