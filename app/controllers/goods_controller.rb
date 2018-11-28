@@ -1,6 +1,8 @@
 class GoodsController < ApplicationController
   before_action :set_chat
   before_action :new_user
+  before_action :authenticate_user!
+  
   def create
     @good = Good.create(user_id: current_user.id, chat_id: params[:chat_id])
     @chat.reload

@@ -481,11 +481,11 @@
       position: relative;
       margin: 0px auto;
       padding: 1.2em 1em;
-      border: solid 3px $green-highlight;
+      border: solid 2px $green-highlight;
       border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
       width: 90%;
       p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: $gray-medium-dark;
         margin: 0;
         padding: 0;
@@ -497,7 +497,7 @@
         left: 10px;
         padding: 0 9px;
         line-height: 1;
-        font-size: 19px;
+        font-size: 1.5rem;
         background: #fff;
         color: $green-highlight;
         font-weight: bold;
@@ -508,7 +508,7 @@
         position: relative;
         margin: 30px auto;
         padding: 1.2em 1em;
-        border: solid 3px $green-highlight;
+        border: solid 2px $green-highlight;
         border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
         width: 90%;
         p {
@@ -524,7 +524,7 @@
           left: 10px;
           padding: 0 9px;
           line-height: 1;
-          font-size: 19px;
+          font-size: 1.3rem;
           background: $body-color;
           color: $green-highlight;
           font-weight: bold;
@@ -538,7 +538,7 @@
     margin-bottom: 20px;
     position: relative;
     padding: 1.6em 0.7em;
-    border: 2px solid $green-highlight;
+    border: 3px solid $green-highlight;
     background: #fff;
     font-weight: bold;
     border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;

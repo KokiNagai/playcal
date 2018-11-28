@@ -1,5 +1,5 @@
 class NormalsController < ApplicationController
-  before_action :authenticate_user!, only: [:inbox, :outbox]
+  before_action :authenticate_user!, only: [:message, :setting]
   before_action :new_user
 
 
@@ -21,17 +21,7 @@ class NormalsController < ApplicationController
     @chatboxes1 = Chatbox.where(touropen: false).where.not(chatname: "総合テニスチャットカフェ").order(created_at: :desc).limit(5)
   end
 
-  def outbox
-    @post = current_user.posts.build
-    @comments = current_user.comments
-  end
-
   def message
-  end
-
-  def inbox
-    @post = current_user.posts.build
-    @posts = current_user.posts
   end
 
 
