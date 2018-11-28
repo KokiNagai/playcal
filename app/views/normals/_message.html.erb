@@ -1,0 +1,72 @@
+<div class="m-container">
+  <h1><i class="far fa-comments"></i>メッセージボックス</h1>
+      <% Room.where(user_id: current_user.id).or(Room.where(to_id: current_user.id)).order(updated_at: :desc).each do |room| %>
+      <% if room.present? && room.comments.present? %>
+        <div class="m-wrap">
+          <p id="m-time"><%= time_ago_in_words(room.updated_at) %>前</p>
+          <div class="m-user">
+            <% if room.comments.first.user.picture.present? && room.post.user == current_user %>
+            <div class="m-user-pic">
+              <%= link_to image_tag(room.comments.first.user.picture_url, class: "post-show-picture" ), room.comments.first.user %>
+            </div>
+            <div class="m-user-body">
+              <%= link_to room do %>
+              <div class="m-user-name">
+                <span><%= room.comments.first.user.name %></span>
+              </div>
+              <div class="m-under-body">
+                <p><%= room.comments.last.body.truncate(15) %></p>
+              </div>
+              <% end %>
+            </div>
+            <% end %>
+            <% if room.comments.first.user.picture_url.nil? && room.post.user == current_user %>
+            <div class="m-user-pic">
+              <%= link_to image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ), room.comments.first.user %>
+            </div>
+            <div class="m-user-body">
+              <%= link_to room do %>
+              <div class="m-user-name">
+                <span><%= link_to room.comments.first.user.name %></span>
+              </div>
+              <div class="m-under-body">
+                <p><%= room.comments.last.body.truncate(15) %></p>
+              </div>
+              <% end %>
+            </div>
+            <% end %>
+            <% if room.post.user.picture.present? && room.post.user != current_user %>
+            <div class="m-user-pic">
+              <%= link_to image_tag(room.post.user.picture_url, class: "post-show-picture" ), room.post.user %>
+            </div>
+            <div class="m-user-body">
+              <%= link_to room do %>
+              <div class="m-user-name">
+                <span><%= link_to room.post.user.name,  room.post.user %></span>
+              </div>
+              <div class="m-under-body">
+                <p><%= room.comments.last.body.truncate(15) %></p>
+              </div>
+              <% end %>
+            </div>
+            <% end %>
+            <% if room.post.user.picture_url.nil? && room.post.user != current_user %>
+            <div class="m-user-pic">
+              <%= link_to image_tag('blank-profile-picture-973460_1280.png', class: "post-showr-picture" ), room.post.user %>
+            </div>
+            <div class="m-user-body">
+              <%= link_to room do %>
+              <div class="m-user-name">
+                <span><%= link_to room.post.user.name,  room.post.user %></span>
+              </div>
+              <div class="m-under-body">
+                <p><%= room.comments.last.body.truncate(15) %></p>
+              </div>
+              <% end %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>

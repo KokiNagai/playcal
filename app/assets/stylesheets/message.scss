@@ -1,0 +1,132 @@
+@import 'colors';
+@import 'mixin';
+@import 'style';
+
+.m-container {
+  @include mediaPC {
+    margin: 50px 0;
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: $gray-medium-dark;
+      font-weight: 600;
+      margin-bottom: 20px;
+      .far {
+        margin-right: 10px;
+      }
+    }
+  }
+  @include mediaSP {
+    margin: 50px 0;
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: $gray-medium-dark;
+      font-weight: 600;
+      margin-bottom: 20px;
+      .far {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.m-wrap {
+  @include mediaPC {
+    padding: 10px;
+    border: 1px solid $gray-border-light;
+    width: 600px;
+    background-color: #fff;
+    #m-time {
+       text-align: right;
+       color: $gray-medium-light;
+       font-size: 1rem;
+       margin:0;
+    }
+  }
+  @include mediaSP {
+    padding: 10px;
+    border: 1px solid $gray-border-light;
+    background-color: #fff;
+    #m-time {
+       text-align: right;
+       color: $gray-medium-light;
+       font-size: 1rem;
+       margin:0;
+    }
+  }
+}
+
+.m-user {
+  @include mediaPC {
+    display: flex;
+    .m-user-pic {
+      margin-left: 10px;
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 60%;
+        object-fit: cover;
+      }
+    }
+  }
+  @include mediaSP {
+    display: flex;
+    .m-user-pic {
+      margin-left: 10px;
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 60%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.m-user-body {
+  @include mediaPC {
+    display: flex;
+    flex-direction: column;
+    .m-user-name {
+      span {
+        font-weight: 500;
+        color: $gray-medium-dark;
+        margin-left: 20px;
+        font-size: 1.5rem;
+      }
+    }
+    .m-under-body {
+      margin-left: 20px;
+      p {
+        font-weight: 500;
+        color: $gray-medium-light;
+        margin-left: 20px;
+        font-size: 1.4rem;
+        margin: 0;
+      }
+    }
+  }
+  @include mediaSP {
+    display: flex;
+    flex-direction: column;
+    .m-user-name {
+      span {
+        font-weight: 500;
+        color: $gray-medium-dark;
+        margin-left: 20px;
+        font-size: 1.5rem;
+      }
+    }
+    .m-under-body {
+      margin-left: 20px;
+      p {
+        font-weight: 500;
+        color: $gray-medium-light;
+        margin-left: 20px;
+        font-size: 1.4rem;
+        margin: 0;
+      }
+    }
+  }
+}

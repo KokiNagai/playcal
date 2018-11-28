@@ -180,6 +180,29 @@
      }
   }
 
+  .top-post-more {
+    width: 200px;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    p {
+      border: 2px solid $green-highlight;
+      border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+      background: #fff;
+      padding: 10px 0 10px 0;
+      width: 200px;
+      text-align: center;
+      color: $green-highlight;
+      font-weight: bold;
+      margin: 0;
+      &:hover {
+        color: #fff;
+        background-color: $green-highlight;
+      }
+    }
+  }
+
   @media screen and (max-width: 1023px) {
   .top-under {
     display: flex;
