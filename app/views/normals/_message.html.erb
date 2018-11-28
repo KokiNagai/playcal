@@ -27,7 +27,7 @@
             <div class="m-user-body">
               <%= link_to room do %>
               <div class="m-user-name">
-                <span><%= link_to room.comments.first.user.name %></span>
+                <span><%= room.comments.first.user.name %></span>
               </div>
               <div class="m-under-body">
                 <p><%= room.comments.last.body.truncate(15) %></p>
@@ -42,7 +42,7 @@
             <div class="m-user-body">
               <%= link_to room do %>
               <div class="m-user-name">
-                <span><%= link_to room.post.user.name,  room.post.user %></span>
+                <span><%= room.post.user.name %></span>
               </div>
               <div class="m-under-body">
                 <p><%= room.comments.last.body.truncate(15) %></p>
@@ -57,7 +57,7 @@
             <div class="m-user-body">
               <%= link_to room do %>
               <div class="m-user-name">
-                <span><%= link_to room.post.user.name,  room.post.user %></span>
+                <span><%= room.post.user.name %></span>
               </div>
               <div class="m-under-body">
                 <p><%= room.comments.last.body.truncate(15) %></p>
