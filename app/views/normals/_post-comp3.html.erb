@@ -2,9 +2,11 @@
   <%= @message %>
   <% @posts.each do |post| %>
   <div class="p-wrap1">
+    <% if user_signed_in? %>
     <time datetime="<%= post.created_at %>">
       <p><%= time_ago_in_words(post.created_at) %>前</p>
     </time>
+    <% end %>
     <div class="p-upper">
       <div class="p-user-wrap">
         <div class="p-user">
