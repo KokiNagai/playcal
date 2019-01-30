@@ -72,7 +72,7 @@
             <% if current_user.gender.nil? %>
             <li class="hidden-xs"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, style: "color: #4c4c4c; font-weight: 600;" %></li>
               <div class="smartphone-dropdown visible-xs">
-                <p><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, style: "color: #4c4c4c; font-weight: 600; background: #fff; border: none;" %></p>
+                <p><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, style: "color: #4c4c4c; font-weight: 700; background: #fff; border: none;" %></p>
               </div>
             <% end %>
             <% end %>
