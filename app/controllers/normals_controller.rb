@@ -5,14 +5,14 @@ class NormalsController < ApplicationController
 
   def home
     date_format = "%Y%m%d"
-    @posts = Post.where(term: true).where(playday: Date.today.strftime(date_format).to_i..Float::INFINITY).order("RANDOM()").limit(8)
+    @posts = Post.where(term: true).order("RANDOM()")
     @chatboxes = Chatbox.where(touropen: true).where.not(tourgrade: nil).limit(8)
     if user_signed_in?
     @post = current_user.posts.build
     @user = User.find_by(name: params[:name])
     @chatboxes = Chatbox.where(touropen: true).where.not(chatname: "総合テニスチャットカフェ").limit(8)
     @posts = Post.where(prefecture: current_user.live)
-    @posts2 = Post.where(term: true).where(playday: Date.today.strftime(date_format).to_i..Float::INFINITY).order("RANDOM()").limit(8)
+    @posts2 = Post.where(term: true).order("RANDOM()").limit(8)
   end
   end
 
