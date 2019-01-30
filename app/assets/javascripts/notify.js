@@ -1,8 +1,9 @@
 $(function() {
-  $('.JS-bell').fastClick(function() {
+  var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+  $('.JS-bell').on(_touch, function() {
     $('.notification-wrapper').fadeIn();
   });
-  $('.close-cross').fastClick(function() {
+  $('.close-cross').on(_touch, function() {
     $('.notification-wrapper').fadeOut();
   });
 });

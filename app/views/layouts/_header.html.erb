@@ -55,7 +55,7 @@
               </div>
 
                 <div class="smartphone-dropdown visible-xs">
-                   <i class="fa fa-navicon fa-1.5x dropdown-hamberger" id="dropdown-fontawesome" ontouchstart=""></i>
+                   <i class="fa fa-navicon fa-1.5x dropdown-hamberger" id="dropdown-fontawesome"></i>
                       <%= render 'layouts/dropdown' %>
                   </div>
                   <% end %>
@@ -81,3 +81,167 @@
         </nav>
       </div>
     </header>
+
+    <script type="text/javascript">
+    $(function() {
+      var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+      $('#dropdown-fontawesome').on(_touch, function () {
+        $('.dropdown-modal-wrapper').slideDown();
+      });
+
+      $('#close-modal').on(_touch, function() {
+        $('.dropdown-modal-wrapper').slideUp();
+      });
+    });
+
+    $(function() {
+      var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+      $('.JS-bell').on(_touch, function() {
+        $('.notification-wrapper').fadeIn();
+      });
+      $('.close-cross').on(_touch, function() {
+        $('.notification-wrapper').fadeOut();
+      });
+    });
+
+    $(function(){
+    var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+    $('#post-pop').on(_touch, function (){
+        $('#post-modal').fadeIn();
+    });
+
+    $('.close-modal').on(_touch, function(){
+        $('#post-modal').fadeOut();
+    })
+    });
+
+    $(function() {
+      var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+      $('.reply').on(_touch, function () {
+        $('.inbox-main-wrapper1').show();
+        $('.inbox-main-wrapper2').hide();
+        $('.reply').css('background-color','#ffd6d6');
+        $('.no-reply').css('background-color','#fff');
+        $('.reply p').css('color','#919191');
+        $('.no-reply p').css('color','#919191');
+        $('.no-reply').css('border', '1px solid #cfcfcf');
+      });
+      $('.no-reply').on(_touch, function () {
+        $('.inbox-main-wrapper1').hide();
+        $('.inbox-main-wrapper2').show();
+        $('.no-reply').css('background-color','#ffd6d6');
+        $('.reply').css('background-color','#fff');
+        $('.reply p').css('color','#919191');
+        $('.no-reply p').css('color','#919191');
+        $('.reply').css('border', '1px solid #cfcfcf');
+    });
+
+    });
+
+
+
+    $(function(){
+    var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+    $('#signin-pop').on(_touch, function (){
+        $('#login-modal').fadeIn();
+    });
+
+    $('.close-modal').on(_touch, function(){
+        $('#login-modal').fadeOut();
+    })
+    });
+
+    $(function() {
+      var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+      $('.gender-JS').on('click', function() {
+        $('.search-modal-wrapper').toggleClass('search-modal-display').fadeIn(400);
+      })
+      $('i#close-modal').on('click', function() {
+        $('.search-modal-wrapper').toggleClass('search-modal-display').fadeOut(400);
+      })
+    })
+
+    $(function() {
+      var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+      $('.user-post-recrut').on(_touch, function() {
+        $('.user-post-show-2').show();
+        $('.user-post-show-1').hide();
+        $('.user-post-recrut').css('border-bottom', '4px solid #9cd75b');
+        $('.user-post-recrut p').css('color', '#9cd75b');
+        $('.user-post-count p').css('color', '#919191');
+        $('.user-post-count').css('border-bottom', 'none');
+      });
+
+      $('.user-post-count').on(_touch, function() {
+        $('.user-post-show-2').hide();
+        $('.user-post-show-1').show();
+        $('.user-post-count').css('border-bottom', '4px solid #9cd75b');
+        $('.user-post-count p').css('color', '#9cd75b');
+        $('.user-post-recrut p').css('color', '#919191');
+        $('.user-post-recrut').css('border-bottom', 'none');
+      });
+
+    });
+
+    $(function() {
+      var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+      $('#room-report').on(_touch, function () {
+        $('.report-wrapper').show();
+        });
+        $('.report-close span').on(_touch, function () {
+          $('.report-wrapper').hide();
+        })
+    })
+
+    window.onpageshow = function(event) {
+    	if (event.persisted) {
+    		 window.location.reload();
+    	}
+    };
+
+    $(function() {
+     function readURL(input) {
+       if (input.files && input.files[0]) {
+         var reader = new FileReader();
+         reader.onload = function (e) {
+           $('#edit-pic').attr('src', e.target.result);
+         }
+         reader.readAsDataURL(input.files[0]);
+       }
+     }
+     $(".edit-img").change(function(){
+       readURL(this);
+     });
+    });
+
+    $(function() {
+      $('#user-menu').on('click', function() {
+        $('.user-show-menu-wrap').toggleClass('user-menu-toggle').slideToggle(400);;
+      })
+    })
+
+
+
+    function postList(number) {
+      let pl = document.querySelector('.post-menu-list-' + number )
+      var style = (pl.currentStyle || document.defaultView.getComputedStyle(pl, ''));
+      if (style.display == "none") {
+        pl.style.display = "block";
+      } else if (style.display == "block") {
+        pl.style.display = "none";
+
+      }
+    };
+
+    function postList2(number1) {
+      let pl = document.querySelector('.post-menu-list1-' + number1 )
+      var style = (pl.currentStyle || document.defaultView.getComputedStyle(pl, ''));
+      if (style.display == "none") {
+        pl.style.display = "block";
+
+      } else if (style.display == "block") {
+        pl.style.display = "none";
+
+      }
+    };
+    </script>

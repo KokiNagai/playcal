@@ -1,16 +1,17 @@
 $(function(){
-
-$('#post-pop').fastClick(function (){
+var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+$('#post-pop').on(_touch, function (){
     $('#post-modal').fadeIn();
 });
 
-$('.close-modal').fastClick(function(){
+$('.close-modal').on(_touch, function(){
     $('#post-modal').fadeOut();
 })
 });
 
 $(function() {
-  $('.reply').fastClick(function () {
+  var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+  $('.reply').on(_touch, function () {
     $('.inbox-main-wrapper1').show();
     $('.inbox-main-wrapper2').hide();
     $('.reply').css('background-color','#ffd6d6');
@@ -19,7 +20,7 @@ $(function() {
     $('.no-reply p').css('color','#919191');
     $('.no-reply').css('border', '1px solid #cfcfcf');
   });
-  $('.no-reply').fastClick(function () {
+  $('.no-reply').on(_touch, function () {
     $('.inbox-main-wrapper1').hide();
     $('.inbox-main-wrapper2').show();
     $('.no-reply').css('background-color','#ffd6d6');
