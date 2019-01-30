@@ -16,7 +16,7 @@
     <p id="dropdown-list-p"><i class="far fa-edit"></i><%= link_to "募集する", posting_path, id: "dropdown-list", ontouchstart: "" %></p>
     <p id="dropdown-list-p"><i class="far fa-envelope"></i><%= link_to "メッセージ", "/message", id: "dropdown-list", ontouchstart: "" %></p>
     <p id="dropdown-list-p"><i class="fa fa-coffee"></i><%= link_to 'テニスチャットカフェ', tourlists_path, id: "dropdown-list", ontouchstart: "" %></p>
-    <p><i class="fas fa-sign-out-alt"></i><%= link_to "ログアウト", destroy_user_session_path, id: "dropdown-list", ontouchstart: "", method: :delete %></p>
+    <p><i class="fas fa-sign-out-alt"></i><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, style: "background: #fff; border: none;" %></p>
     <p><i class="fas fa-cogs"></i><%= link_to "設定", setting_path, id: "dropdown-list", ontouchstart: "" %></p>
 
     <% if current_user.email == 'kokinagai10@gmail.com' %>
