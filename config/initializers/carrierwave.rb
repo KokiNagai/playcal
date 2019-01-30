@@ -4,8 +4,8 @@ CarrierWave.configure do |config|
      when 'production'
       config.fog_credentials = {
       provider:                'AWS',
-      aws_access_key_id: "AKIAJNXQBHRWHLT4ZKAA",
-      aws_secret_access_key: "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",
+      aws_access_key_id: "AKIAI5AIUPKWX5NFRQOA",
+      aws_secret_access_key: "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",
       region:                  'ap-northeast-1'
      }
        config.fog_directory = 'playcal-picture'
@@ -15,8 +15,8 @@ CarrierWave.configure do |config|
      when 'staging'
       config.fog_credentials = {
         provider:                'AWS',
-        aws_access_key_id: "AKIAJNXQBHRWHLT4ZKAA",
-        aws_secret_access_key: "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",
+        aws_access_key_id: "AKIAI5AIUPKWX5NFRQOA",
+        aws_secret_access_key: "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",
         region:                  'ap-northeast-1'
     }
        config.fog_directory = 'playcal-picture'
