@@ -399,6 +399,42 @@
       }
    }
   }
+// ViIQリンク
+.tennis-question-wrap {
+  margin: 40px 0;
+  .tennis-question-inner {
+    width: 95%;
+    margin: 0 auto;
+    background: #fff;
+    border: 2px solid $font-border-light;
+    border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
+    padding: 20px 10px;
+    text-align: center;
+    h2 {
+      color: $blue1;
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+    .tennis-q-link {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 40px;
+      p {
+        color: $font-dark;
+        margin-bottom: 20px;
+      }
+      span {
+        color: #fff;
+        padding: 8px 17px;
+        border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+        font-weight: bold;
+        font-size: 2rem;
+        background: $blue1;
+      }
+    }
+  }
+}
 }
 
 // スマホ======================================================
@@ -782,5 +818,40 @@
        }
     }
    }
-
+   // ViiQリンク＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+   .tennis-question-wrap {
+     margin: 40px 0;
+     .tennis-question-inner {
+       width: 95%;
+       margin: 0 auto;
+       background: #fff;
+       border: 2px solid $font-border-light;
+       border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
+       padding: 20px 10px;
+       text-align: center;
+       h2 {
+         color: $blue1;
+         font-size: 1.7rem;
+         font-weight: bold;
+       }
+       .tennis-q-link {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         margin-bottom: 40px;
+         p {
+           color: $font-dark;
+           margin-bottom: 20px;
+         }
+         span {
+           color: #fff;
+           padding: 8px 17px;
+           border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+           font-weight: bold;
+           font-size: 2rem;
+           background: $blue1;
+         }
+       }
+     }
+   }
  }
