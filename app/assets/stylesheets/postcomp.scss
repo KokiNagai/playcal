@@ -30,7 +30,7 @@
   @include mediaSP {
     border: 2px solid $gray-border-light;
     border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
-    width: 90%;
+    width: 95%;
     margin: 20px auto;
     padding: 10px;
     background: #fff;
@@ -131,12 +131,16 @@
   }
   @include mediaSP {
     h2 {
-      color: $gray-medium-dark;
+      color: $green-highlight;
       font-weight: 600;
       font-size: 1.6rem;
       &:active {
         color: $green-highlight;
       }
+    }
+    a {
+      text-decoration: underline;
+      color: $green-highlight;
     }
   }
 }

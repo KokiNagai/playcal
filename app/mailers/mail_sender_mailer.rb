@@ -11,7 +11,7 @@ class MailSenderMailer < ApplicationMailer
   end
 
   def inquiry1(contact)
-    @contact = contact 
+    @contact = contact
     mail(to: 'playcalinfo@gmail.com')
   end
 end

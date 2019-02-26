@@ -5,6 +5,7 @@ class LikesController < ApplicationController
 
   def create
     @like = Like.create(user_id: current_user.id, post_id: params[:post_id])
+    NotificationMailer.send_like_to_user(@like.post.user).deliver_later
     @post.reload
   end
 
