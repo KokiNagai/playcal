@@ -8,7 +8,7 @@
           <%= search_form_for(@q, url:search_path) do |f| %>
           <div class="JS-search-pref">
             <%= f.label :prefecture, "都道府県", id: "findfor-label" %></br class="visible-xs">
-            <%= f.select :prefecture_eq, options_for_select(@prefecture),  {:include_blank => ""}, {:id => "pref-search-select", :class => 'form-control'} %>
+            <%= f.select :prefecture_eq, Post.prefectures.keys,  {:include_blank => ""}, {:id => "pref-search-select", :class => 'form-control'} %>
           </div>
 
           <div class="JS-search-city">

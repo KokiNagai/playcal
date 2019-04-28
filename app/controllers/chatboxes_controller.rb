@@ -3,23 +3,20 @@ class ChatboxesController < ApplicationController
 
   def chatbox
     @chatbox = Chatbox.find_by(id: params[:id])
-    if @chatbox.present?
-    @chats = Chat.where(chatbox_id: @chatbox.id).order(created_at: :ASC)
-    if user_signed_in?
-    @chat = current_user.chats.build(chatbox_id: @chatbox.id, user_id: current_user.id)
+    @chats = Chat.where(chatbox_id: @chatbox.id).order(created_at: :ASC) if @chatbox.present?
+      if user_signed_in?
+      @chat = current_user.chats.build(chatbox_id: @chatbox.id, user_id: current_user.id)
+      end
   end
-end
-end
 
-private
-
-def new_user
-  if user_signed_in?
-  unless current_user.gender.present?
-  redirect_to edit_user_registration_path
-  flash[:alert] = "※ プロフィールの編集を完了してください。"
-end
-end
-end
-
+  private
+  # プロフィール完成前アクセス拒否
+  def new_user
+    if user_signed_in?
+      unless current_user.gender.present?
+       redirect_to edit_user_registration_path
+       flash[:alert] = "※ プロフィールの編集を完了してください。"
+      end
+    end
+  end
 end
