@@ -13,50 +13,50 @@ class PostsController < ApplicationController
 
 
     def create
-    @post = current_user.posts.build(posts_params)
-    @place = @post.prefecture
-    if @post.save
+      @post = current_user.posts.build(posts_params)
+      @place = @post.prefecture
+      if @post.save
         @posts = Post.where(prefecture: @post.prefecture).paginate(page: params[:page], per_page: 10)
         redirect_to("/find")
-      else
-       render 'posting'
+       else
+        render 'posting'
+      end
     end
- end
 
- def edit
-   @post = Post.find(params[:id])
- end
+    def edit
+      @post = Post.find(params[:id])
+    end
 
- def update
-   @post = Post.find(params[:id])
-   @post.update(params_update)
-   if @post.save
-     redirect_to current_user
-   end
- end
+    def update
+      @post = Post.find(params[:id])
+      @post.update(params_update)
+      if @post.save
+        redirect_to current_user
+      end
+    end
 
 
-   def destroy
+    def destroy
       @post = Post.includes(:user).find(params[:id])
       @post.destroy
       redirect_to current_user
-  end
+    end
 
-  def posting
-    @post = current_user.posts.build
-    @user = User.find_by(name: params[:name])
-  end
-
-
-  def post_end
-    @post = Post.find_by(id: params[:id])
-    @post.update term: false
-    redirect_to @post
-  end
+    def posting
+      @post = current_user.posts.build
+      @user = User.find_by(name: params[:name])
+    end
 
 
+    def post_end
+      @post = Post.find_by(id: params[:id])
+      @post.update term: false
+      redirect_to @post
+    end
 
- private
+
+
+    private
 
     def posts_params
         params.require(:post).permit(:content, :prefecture, :city, :title, :member, :skill, :gender, :playday, :style)
@@ -68,19 +68,16 @@ class PostsController < ApplicationController
 
     def correct_user
       @post = Post.find_by(id: params[:id])
-      if current_user != @post.user
-        redirect_to root_path
+        redirect_to root_path if current_user !+ @post.user
+    end
+
+    # プロフィール完成前アクセス拒否
+  def new_user
+    if user_signed_in?
+      unless current_user.gender.present?
+        redirect_to edit_user_registration_path
+        flash[:alert] = "※ プロフィールの編集を完了してください。"
       end
     end
-
-    def new_user
-      if user_signed_in?
-      unless current_user.gender.present?
-      redirect_to edit_user_registration_path
-      flash[:alert] = "※ プロフィールの編集を完了してください。"
-    end
-    end
-    end
-
-
+  end
 end

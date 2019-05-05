@@ -55,6 +55,8 @@
   .wrapper-user {
     display: flex;
     background-color: #fff;
+    border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
+    margin-top: 30px;
     .user-post .find-main {
       display: flex;
       flex-direction: column;

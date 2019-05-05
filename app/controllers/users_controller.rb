@@ -22,11 +22,6 @@ class UsersController < ApplicationController
     @user = User.find_by(name: params[:name])
   end
 
-  def likes
-    @likes = Like.where(user_id: current_user.id).limit(20).order(created_at: :desc)
-  end
-
-
   private
     def set_user
       @user = User.find_by(name: params[:name])
@@ -43,13 +38,14 @@ class UsersController < ApplicationController
       end
     end
 
-    def new_user
-      if user_signed_in?
+  # プロフィール完成前アクセス拒否
+  def new_user
+    if user_signed_in?
       unless current_user.gender.present?
-      redirect_to edit_user_registration_path
-      flash[:alert] = "※ プロフィールの編集を完了してください。"
+        redirect_to edit_user_registration_path
+        flash[:alert] = "※ プロフィールの編集を完了してください。"
+      end
     end
-    end
-    end
+  end
 
 end

@@ -67,12 +67,12 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = {host: 'https://www.playcal.jp/' }
+  config.action_mailer.default_url_options = {host: 'https://www.playcal.jp/'}
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :user_name => "playcalinfo@gmail.com",
-      :password => "gqkoxeulgztoiodh",
+      :user_name => "Your_mail",
+      :password => "Your_gmailPassword",
       :domain => "heroku.com",
       :address => "smtp.gmail.com",
       :port => 587,

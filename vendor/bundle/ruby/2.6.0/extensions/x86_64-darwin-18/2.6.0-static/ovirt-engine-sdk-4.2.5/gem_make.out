@@ -1,13 +1,13 @@
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/ovirt-engine-sdk-4.2.5/ext/ovirtsdk4c
-/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190428-28816-1depktn.rb extconf.rb
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/ovirt-engine-sdk-4.2.5/ext/ovirtsdk4c
+/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190429-67398-1ob0oxh.rb extconf.rb
 checking for xml2-config... yes
 checking for curl-config... yes
 creating Makefile
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/ovirt-engine-sdk-4.2.5/ext/ovirtsdk4c
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/ovirt-engine-sdk-4.2.5/ext/ovirtsdk4c
 make "DESTDIR=" clean
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/ovirt-engine-sdk-4.2.5/ext/ovirtsdk4c
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/ovirt-engine-sdk-4.2.5/ext/ovirtsdk4c
 make "DESTDIR="
 compiling ov_error.c
 compiling ov_http_client.c
@@ -31,6 +31,6 @@ ov_xml_writer.c:184:46: warning: incompatible pointer to integer conversion init
 compiling ovirtsdk4c.c
 linking shared-object ovirtsdk4c.bundle
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/ovirt-engine-sdk-4.2.5/ext/ovirtsdk4c
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/ovirt-engine-sdk-4.2.5/ext/ovirtsdk4c
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ovirtsdk4c.bundle ./.gem.20190428-28816-t9o62j
+/usr/bin/install -c -m 0755 ovirtsdk4c.bundle ./.gem.20190429-67398-1jnkrbz

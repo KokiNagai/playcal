@@ -1,12 +1,12 @@
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/unf_ext-0.0.7.5/ext/unf_ext
-/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190428-28816-4ggqqk.rb extconf.rb
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/unf_ext-0.0.7.5/ext/unf_ext
+/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190429-67398-1dpck5t.rb extconf.rb
 checking for -lstdc++... yes
 creating Makefile
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/unf_ext-0.0.7.5/ext/unf_ext
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/unf_ext-0.0.7.5/ext/unf_ext
 make "DESTDIR=" clean
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/unf_ext-0.0.7.5/ext/unf_ext
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/unf_ext-0.0.7.5/ext/unf_ext
 make "DESTDIR="
 compiling unf.cc
 In file included from unf.cc:1:
@@ -33,6 +33,6 @@ In file included from unf.cc:1:
 5 warnings generated.
 linking shared-object unf_ext.bundle
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/unf_ext-0.0.7.5/ext/unf_ext
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/unf_ext-0.0.7.5/ext/unf_ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20190428-28816-1ki8s1z
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20190429-67398-t5atud

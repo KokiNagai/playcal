@@ -332,9 +332,6 @@
         font-size: 1.5rem;
         text-align: left;
       }
-      img {
-
-      }
     }
     .home-section-2 {
       position: relative;
@@ -361,7 +358,7 @@
       height: 250px;
       object-fit: cover;
       border-radius: 0%;
-      border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+      border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px;
     }
   }
 
@@ -855,3 +852,22 @@
      }
    }
  }
+
+ html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+}
+.message-login {
+  float: left;
+  margin-top: 30px;
+  p {
+      margin-top: 5px;
+  }
+}

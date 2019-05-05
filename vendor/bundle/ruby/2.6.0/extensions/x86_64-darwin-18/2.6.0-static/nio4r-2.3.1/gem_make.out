@@ -1,5 +1,5 @@
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/nio4r-2.3.1/ext/nio4r
-/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190428-28816-27nead.rb extconf.rb
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/nio4r-2.3.1/ext/nio4r
+/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190429-67398-5ihnu1.rb extconf.rb
 checking for unistd.h... yes
 checking for sys/select.h... yes
 checking for port_event_t in poll.h... no
@@ -10,10 +10,10 @@ checking for port_event_t in port.h... no
 checking for sys/resource.h... yes
 creating Makefile
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/nio4r-2.3.1/ext/nio4r
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/nio4r-2.3.1/ext/nio4r
 make "DESTDIR=" clean
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/nio4r-2.3.1/ext/nio4r
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/nio4r-2.3.1/ext/nio4r
 make "DESTDIR="
 compiling bytebuffer.c
 compiling monitor.c
@@ -245,6 +245,6 @@ ev_set_allocator (void *(*cb)(void *ptr, long size) EV_THROW) EV_THROW
 compiling selector.c
 linking shared-object nio4r_ext.bundle
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/nio4r-2.3.1/ext/nio4r
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/nio4r-2.3.1/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20190428-28816-1fil7d9
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20190429-67398-9j1jwv

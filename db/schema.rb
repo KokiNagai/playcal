@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_29_174906) do
+ActiveRecord::Schema.define(version: 2018_10_29_074332) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 2018_10_29_174906) do
     t.string "chatname"
     t.string "chatterm"
     t.string "tourgrade"
-    t.string "tourlogo"
   end
 
   create_table "chats", force: :cascade do |t|
@@ -98,17 +97,17 @@ ActiveRecord::Schema.define(version: 2018_10_29_174906) do
   create_table "posts", force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
+    t.integer "prefecture"
+    t.integer "skill"
+    t.integer "member"
+    t.integer "gender"
+    t.integer "style"
+    t.boolean "term", default: true, null: false
+    t.date "playday"
+    t.string "city"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "prefecture"
-    t.string "title"
-    t.string "city"
-    t.string "skill"
-    t.string "member"
-    t.string "gender"
-    t.date "playday"
-    t.string "style"
-    t.boolean "term", default: true, null: false
     t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
@@ -150,12 +149,12 @@ ActiveRecord::Schema.define(version: 2018_10_29_174906) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
-    t.string "live"
+    t.integer "live"
     t.datetime "birth_date"
     t.string "picture"
     t.text "introduction"
-    t.string "history"
-    t.string "gender"
+    t.integer "history"
+    t.integer "gender"
     t.string "uid"
     t.string "provider"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

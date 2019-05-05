@@ -1,11 +1,11 @@
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/byebug-10.0.2/ext/byebug
-/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190428-28816-1pfisbg.rb extconf.rb
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/byebug-10.0.2/ext/byebug
+/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190429-67398-oedw6y.rb extconf.rb
 creating Makefile
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/byebug-10.0.2/ext/byebug
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/byebug-10.0.2/ext/byebug
 make "DESTDIR=" clean
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/byebug-10.0.2/ext/byebug
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/byebug-10.0.2/ext/byebug
 make "DESTDIR="
 compiling breakpoint.c
 compiling byebug.c
@@ -14,6 +14,6 @@ compiling locker.c
 compiling threads.c
 linking shared-object byebug/byebug.bundle
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/byebug-10.0.2/ext/byebug
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/byebug-10.0.2/ext/byebug
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20190428-28816-y5eb8v/byebug
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20190429-67398-a8a864/byebug

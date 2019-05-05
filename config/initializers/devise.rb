@@ -177,7 +177,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+    config.timeout_in = 200.hours
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
@@ -216,9 +216,9 @@ Devise.setup do |config|
   config.reset_password_within = 3.hours
 
 
-config.omniauth :facebook, '2262468903996625', '5e20dc9bafce0a40a62c581752976b11', scope: 'email', info_fields: 'email,name'
-config.omniauth :google_oauth2, '444591786868-dffp06iahp2fdfqclrbk2onu28spingr.apps.googleusercontent.com',
- 'YOaqqAgzAp3MIrWb-mubcQng', scope: 'email', info_fields: 'email,name'
+config.omniauth :facebook, 'APP_ID', 'APP_SECRET', scope: 'email', info_fields: 'email,name'
+config.omniauth :google_oauth2, 'APP_ID',
+ 'APP_SECRET', scope: 'email', info_fields: 'email,name'
 
 config.scoped_views = true
 

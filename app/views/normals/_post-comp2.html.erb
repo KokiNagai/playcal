@@ -2,6 +2,7 @@
   <%= @message %>
   <% @posts2.each do |post| %>
   <div class="p-wrap">
+  <%= link_to post do %>
     <div class="p-upper">
       <div class="p-user-wrap">
         <div class="p-user">
@@ -11,13 +12,11 @@
           <p><%= image_tag('blank-profile-picture-973460_1280.png', class: "find-user-picture", :size =>'300x300', :alt => "募集者の写真" ) %></p>
           <% end %>
           <div class="p-name">
-            <p><%= link_to post.user.name.truncate(10), post.user, class: "find-user-name" %></p>
+            <p><%= post.user.name.truncate(10) %></p>
           </div>
         </div>
         <div class="p-title">
-          <%= link_to post do %>
           <h2><%= post.title.truncate(25) %></h2>
-          <% end %>
         </div>
       </div>
       <div id="post_likes_<%= post.id %>">
@@ -34,6 +33,7 @@
         <p><%= post.content.truncate(40) %></p>
       </div>
     </div>
+    <% end %>
   </div>
   <% end %>
 </div>

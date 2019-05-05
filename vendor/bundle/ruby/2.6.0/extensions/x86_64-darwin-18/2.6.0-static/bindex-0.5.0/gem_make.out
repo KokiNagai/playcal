@@ -1,15 +1,15 @@
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/bindex-0.5.0/ext/bindex
-/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190428-28816-wuenf4.rb extconf.rb
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/bindex-0.5.0/ext/bindex
+/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190429-67398-1le1g38.rb extconf.rb
 creating Makefile
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/bindex-0.5.0/ext/bindex
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR=" clean
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/bindex-0.5.0/ext/bindex
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR="
 compiling cruby.c
 linking shared-object bindex/cruby.bundle
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/bindex-0.5.0/ext/bindex
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20190428-28816-j5lqbq/bindex
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20190429-67398-1ogllp8/bindex

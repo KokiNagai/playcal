@@ -65,14 +65,17 @@ class RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up for inactive accounts.
 
+  # メールアドレス登録後のメール送信完了画面遷移
   def after_inactive_sign_up_path_for(resource)
    confirm_email_path
   end
 
+  # 最初のユーザプロフィール編集画面遷移
   def after_sign_up_path_for(resource)
     edit_user_registration_path
   end
 
+  # プロフィール編集後繊維
   def after_update_path_for(resource)
     edit_confirmation_path
   end
@@ -84,8 +87,6 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update_resource(resource, params)
      resource.update_without_current_password(params)
-   end
-
-
+  end
 
 end

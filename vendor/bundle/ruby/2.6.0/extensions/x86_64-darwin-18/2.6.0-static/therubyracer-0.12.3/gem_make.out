@@ -1,13 +1,13 @@
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/therubyracer-0.12.3/ext/v8
-/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190428-28816-7zr8gy.rb extconf.rb
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/therubyracer-0.12.3/ext/v8
+/Users/koki/.rbenv/versions/2.6.2/bin/ruby -I /Users/koki/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20190429-67398-sg2tuw.rb extconf.rb
 checking for -lpthread... yes
 checking for -lobjc... yes
 creating Makefile
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/therubyracer-0.12.3/ext/v8
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/therubyracer-0.12.3/ext/v8
 make "DESTDIR=" clean
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/therubyracer-0.12.3/ext/v8
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/therubyracer-0.12.3/ext/v8
 make "DESTDIR="
 compiling accessor.cc
 clang: warning: argument unused during compilation: '-rdynamic' [-Wunused-command-line-argument]
@@ -81,6 +81,6 @@ compiling value.cc
 clang: warning: argument unused during compilation: '-rdynamic' [-Wunused-command-line-argument]
 linking shared-object v8/init.bundle
 
-current directory: /Users/koki/Playcal-2/vendor/bundle/ruby/2.6.0/gems/therubyracer-0.12.3/ext/v8
+current directory: /Users/koki/Playcal_alias/vendor/bundle/ruby/2.6.0/gems/therubyracer-0.12.3/ext/v8
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 init.bundle ./.gem.20190428-28816-1i87sr1/v8
+/usr/bin/install -c -m 0755 init.bundle ./.gem.20190429-67398-1qimobx/v8
