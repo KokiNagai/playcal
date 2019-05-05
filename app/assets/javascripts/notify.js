@@ -1,3 +1,4 @@
+// 通知プルダウン
 $(function() {
   var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
   $('.JS-bell').on(_touch, function() {

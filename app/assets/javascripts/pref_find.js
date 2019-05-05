@@ -1,3 +1,4 @@
+// 県名プルダウン（検索）
 $(function(){
   var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
 	$('.pref-btn1').on(_touch, function(){
@@ -66,4 +67,27 @@ $(function(){
 		$('.find-pref-button9').toggleClass('dropdown_toggle').children('.find-pref-9').slideToggle(400);
     $('.find-pref-button9').toggleClass('find-pref-btn-shadow');
 	});
+});
+
+
+// 投稿検索ドロップダウン
+$(function() {
+  $('.gender-JS').on('click', function() {
+    $('.search-modal-wrapper').toggleClass('search-modal-display').fadeIn(400);
+  })
+  $('i#close-modal').on('click', function() {
+    $('.search-modal-wrapper').toggleClass('search-modal-display').fadeOut(400);
+  })
+})
+
+
+// スマホ　ハンバーガードロップダウン
+$(function() {
+  $('#dropdown-fontawesome').fastClick(function () {
+    $('.dropdown-modal-wrapper').slideDown();
+  });
+
+  $('#close-modal').fastClick(function() {
+    $('.dropdown-modal-wrapper').slideUp();
+  });
 });

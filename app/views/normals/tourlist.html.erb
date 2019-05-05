@@ -61,25 +61,6 @@
     </div>
   </div>
 
-  <div class="tour-chat-compre-wrapper">
-    <div class="tour-chat-compre">
-      <p>Always open</p>
-    </div>
-    <div class="top-chatbox-main-close">
-      <div class="tour-name-flex-wrapper-label">
-        </div>
-      <div class="tour-name-flex-wrapper">
-        <div class="tour-name-flex">
-          <% compre_cafe = Chatbox.find_by(chatname: "総合テニスチャットカフェ") %>
-          <%= link_to "/#{compre_cafe.chatname}" do %>
-          <span><%= image_tag("tennisball.png", :alt => "テニスの試合の写真")  %>なんでもテニスチャットカフェ1</span>
-          <% end %>
-          <p><i class="far fa-comments"></i><%= compre_cafe.chats.count %>件</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="atp-schedule">
     <div class="atp-schedule-title">
       <h2>2018年大会スケジュール</h2>
